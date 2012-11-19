@@ -195,21 +195,30 @@ bragg
 
 \section{Auswertung}
 \subsection{Bestimmung von $\sigma_{1,0}$}
-Um die Abschirmkonstate $\sigma_{1,0}$ zu bestimmen verwendet man
+Um die Abschirmkonstate $\sigma_{1,0}$ zu bestimmen verwendet man Gleichung %\ref{9}.
+Da sich innerhalb der K-Schale kaum Elektronen aufhalten, geht $s_{1,0}\rightarrow 0$, wodurch sich die Formel zu
 \begin{align}
-h\nu_{K,abs}=R_\infty[(z-\sigma_{1,0})+\frac{1}{4}\alpha(z-s_{1,0})].----------------
-\end{align}
-Da sich innerhalb der K-Schale kaum Elektronen aufhalten, geht $\alpha\rightarrow 0$, wodurch sich die Formel vereinfacht und nach 
-\begin{align}
-\sigma-2\sigma+z-\frac{h\nu_{K,abs}}{R_\infty}=0
+\sigma^2-2\sigma z+z^2-\frac{h\nu_{K,abs}}{R_\infty}+\frac{\alpha^2z^4}{4}
 \end{align}
 umstellen lässt.
 Durch Anwendung der Mitternachtsformel errechnet sich $\sigma_{1,0}$ zu
 \begin{align}
-\sigma_{1,0}=z\pm\sqrt{z+\frac{h\nu_{K,abs}}{R_\infty}}.
+\sigma_{1,0}=z\pm\sqrt{\frac{h\nu_{K,abs}}{R_\infty}-\frac{\alpha^2z^4}{4})}.
 \end{align}
 
-\subsection{Bestimmung von s_{2,1}}
+\subsection{Bestimmung von $s_{2,1}$}
+Um die innere Abschirmkonstante $s_{2,1}$ zu bestimmen, bildet man die Differenz aus %\ref{11} und \ref{12}
+\begin{align}
+\Delta E = h\nu_{L,abs,II}-h\nu_{L,abs,III} = R_\infty\alpha^2\frac{(z-s_{2,1})^4}{16}
+\end{align}
+und stellt dies nach $s_{2,1}$ um, so errechnet sich die innere Abschirmkonstante zu
+\begin{align}
+s_{2,1} = z-\sqrt[4]{\frac{16\cdot\Delta E}{\alpha^2 R_\infty}}
+\end{align}
+
+\subsection{Bestimmung der Energieauflösung anhand der K-alpha Linie von Kupfer}
+Obwohl die Emissionsspektren der Röntgenstrahlung diskreten Energien zugrunde liegen, weisen die Transmissionskurven einen differenzierbaren Verlauf aus. Mittels Formel %\ref{15}
+ lässt sich der Zusammenhang zwischen 
 \section{Diskussion}
 
 % ========================================

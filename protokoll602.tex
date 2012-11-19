@@ -76,11 +76,12 @@ thermisch emittiert, woraufhin sie in einem evakuierten Glaskolben mittels einer
 auf und durch im Folgenden aufgeführte Prozesse entsteht Röntgenstrahlung.
 
 \begin{figure}[H]
-\includegraphics[width=0.7\textwidth] {602a.png}
+\includegraphics[width=0.7\textwidth] {pics/602a.png}
 \centering
 \caption{Schematischer Aufbau einer Röntgenröhre}
 \end{figure}
 \subsubsection[Arten von Röntgenstrahlen]{Bremsstrahlung und charakteristische Röntgenstrahlung}
+\label{BcR}
 
 Mit einer geringen Wahrscheinlichkeit können die schnellen Elektronen tiefer in die Atome des Anodenmaterials eintreten und
 damit in das Coulombpotenzial des Kerns. Durch die dort wirkenden elektromagnetischen Kräfte erfahren die freien Elektronen
@@ -95,9 +96,10 @@ besitzen Elektronen eine eindeutige Bindungsenergie zum Kern, was bedeutet, dass
 Energiedifferenzen verbunden ist. Diese Differenzen führen zur Entstehung von Photonen im Energiebereich der Röntgenstrahlung.
 
 \begin{figure}[H]
-\includegraphics[width=0.7\textwidth] {602b.png}
+\includegraphics[width=0.7\textwidth] {pics/602b.png}
 \centering
 \caption{Intensitätsverteilung der Röntgenstrahlen in Abhängigkeit der Wellenlänge}
+\label{602b}
 \end{figure}
 
 Da die kinetische Energie der Elektronen durch die Beschleunigungsspannung festgelegt ist, wird die kürzeste Wellenlänge eines 
@@ -110,7 +112,7 @@ Photons wie folgt ausgedrückt:
  \caption*{\small{(h = Plancksches Wirkungsquantum, $e_0$ = Elementarladung, c = Lichtgeschwindigkeit)}}
 \end{formel}
  
-\subsubsection{Grobstruktur des Emissionsspektrums}
+\subsubsection[Die Grobstruktur]{Grobstruktur des Emissionsspektrums}
 \label{grob}
 Da die Röntgenemission ein Vielteilchenproblem ist, wird um an die Energieeigenwerte heranzukommen, eine Einelektronenanregung
 betrachtet. Hierbei wird der Einfluss des Kerns sowie der anderen Elektronen auf ein beteiligtes Elektron hergenommen und durch
@@ -131,22 +133,22 @@ zu sehen ist, dass die L-Serie, also alle Übergänge auf das L-Niveau, energeti
 n und m. So entsteht Röntgenstrahlung auch nur, wenn Wechselwirkungen mit den innersten Schalen vorkommen.
 
 \begin{figure}[H]
-\includegraphics[width=0.7\textwidth] {602c.png}
+\includegraphics[width=0.7\textwidth] {pics/602c.png}
 \centering
 \caption{Mögliche Röntgenübergänge in einer Elektronenhülle}
 \label{Niveaus}
 \end{figure}
 
-\subsubsection{Feinstruktur des Emissionsspektrums}
+\subsubsection[Die Feinstruktur]{Feinstruktur des Emissionsspektrums}
 Anders als Gleichung (2) bietet im Rahmen der Störungsrechnung die Sommerfeldsche Feinstrukturformel eine bessere Näherung
 für m $\rightarrow \infty$.
 
 \begin{formel}
 \begin{equation}
   h\cdot\nu_{n,j} = -R_{\infty}  \left\{ z_{eff_{1}}^2 \cdot \frac{1}{n^2} + \alpha^2 z_{eff_{2}}^4 \cdot \frac{1}{n^3} \left( \frac{1}{j+\frac12}-\frac{3}{4n}\right)\right\}
+  \label{Enj}
 \end{equation}
 \caption*{\small{($\alpha$ = Sommerfeldsche Feinstrukturkonstante, j = Gesamtdrehimpulszahl)}}
-\label{Enj}
 \end{formel}
 
 wobei sich j und $z_{eff_{1,2}}$ folgendermaßen ergeben:
@@ -162,7 +164,7 @@ der n-ten Schale bestimmt. Andere Einflüsse der Kernladung sind nicht feststell
 
 
 \begin{figure}[H]
-\includegraphics[height=0.56\textheight] {602d.png}
+\includegraphics[height=0.56\textheight] {pics/602d.png}
 \centering
 \caption{Feinstruktur-Aufspaltung}
 \label{FS}
@@ -179,46 +181,144 @@ Zum einen darf die Änderung des Bahndrehimpuls zweier beteiligter Niveaus nur $
 alle Übergänge für $\Delta n \ge 3$ als sehr unwahrscheinlich angesehen.
 
 \subsection{Das Absorbtionsspektrum}
+Die Intensität der Röntgenstrahlen nimmt beim Passieren von Materie energie- und materialabhängig ab. Im Wesentlichen 
+ist das auf Absorbtion zurückzuführen. Geringfügig auch auf Streuung.
+\subsubsection{Innerer Photo-Effekt}
+Diese Absorbtion wird innerer Photo-Effekt genannt. Hierbei dringt ein hoch energetisches Photon in die inneren Schalen
+des Atoms vor, im Gegensatz zum äußeren Photo-Effekt, und überträgt einem Elektron seine Energie. Da die umliegenden Schalen
+allesamt besetzt sind, ist eben dieser Energiebetrag erforderlich, um das gestoßene Elektron aus dem Atom mit einer endlichen
+kinetischen Restenergie zu befördern. Daher muss dieser Lichtquant auch mindestens diese Energie aufbringen. Speziell für die
+K-Schale gilt daher nach \eqref{Enj}:
 
+\begin{equation}
+ h\nu_{K_{Abs}} = E_{1,\frac12} - E_{\infty} = R_{\infty}\left\{(z-\sigma_{1,0})^2 + \alpha^2(z - s_{1,0})^4\cdot \frac14\right\}
+ \label{K1}
+\end{equation}
 
+$s_{1,0}$ verschwindet für wenige Elektronen, was auf der K-Schale für zwei Elektronen gegeben ist. So lässt sich nun $\sigma_{1,0}$
+durch eine Messung von $h\nu_{K_{Abs}}$ bestimmen. Die drei L-Absorbtionsenergien lassen sich als weiteres Beispiel wie folgt 
+aus \eqref{Enj} ermitteln:
 
-\newpage
+\begin{align}
+  h\nu_{L_{Abs,I}} &= E_{2,0,\frac12} - E_{\infty} = R_{\infty}\left\{\frac{(z-\sigma_{2,0})^2}{8} + \alpha^2\frac{(z - s_{2,0})^4}{8}\cdot \frac58\right\}, 
+  \label{L1} \\
+  h\nu_{L_{Abs,II}} &= E_{2,1,\frac12} - E_{\infty} = R_{\infty}\left\{\frac{(z-\sigma_{2,1})^2}{4} + \alpha^2\frac{(z - s_{2,1})^4}{8}\cdot \frac58\right\},
+ \label{L2}\intertext{sowie}
+  h\nu_{L_{Abs,III}} &= E_{2,1,\frac32} - E_{\infty} = R_{\infty}\left\{\frac{(z-\sigma_{2,1})^2}{4} + \alpha^2\frac{(z - s_{1,0})^4}{8}\cdot \frac18\right\}.
+ \label{L3}
+\end{align}
 
----absorbtionsspektrum (WW mit materie)
-Photoeffekt
-absorbtionskante
-fluoreszensstrahlung
-compton
----messung
-bragg
+$s_{2,1}$ lässt sich nun über die Differenz von \eqref{L2} und \eqref{L3} berechnen.
+
+\begin{equation}
+ h\nu_{L_{Abs,II}} - h\nu_{L_{Abs,III}} = R_{\infty}\, \alpha^2 \frac{(z-s_{2,1})^4}{16}
+\end{equation}
+
+\subsubsection{Fluoreszens-Strahlung und Compton-Effekt}
+Weitere Effekte, die bei der Wechselwirkung von Röntgenstrahlung und Materie auftreten sind die Floureszens-Strahlung und 
+der Compton-Effekt. Ähnlich wie bei der charakteristischen Röntgenstrahlung unter \ref{BcR} auf Seite \pageref{BcR} entstehen
+durch das Emittieren eines inneren Elektrons kaskadenartige Elektronenübergänge äußerer Schalen auf innere. Hierbei wird ebenfalls
+für das Material charakteristische Röntgenstrahlung frei. Im Gegensatz zum Photo-Effekt ionsiert ein Photon nicht das Atom,
+sondern gibt lediglich einen Teil seiner Energie und seines Impulses an ein nahezu freies Elektron ab und bewegt sich danach
+mit verringertem Energie- und Impulswert in geänderter Richtung fort. Das erklärt die Abnahme der Intensität in diesen 
+Energiebereichen (Compton-Kontinuum).
+
+\subsection{Messung von Intensität und Energie der Röntgenstrahlung}
+Die in \eqref{K1},  \eqref{L1},  \eqref{L2}  und \eqref{L3} aufgeführten Absorbtionsenergien müssen nun auch experimentell
+bestimmt werden. Hierzu wird eine Probe des betrachteten Materials mit geringer Dicke mit monoenergetischen Röntgenquanten
+bestrahlt und die Intensität, also die Messungen pro Zeit und Fläche, in Abhängigkeit der Energie aufgetragen. 
+Wenn die Energie ausreicht, werden Elektronen innerer Schalen herausgestoßen und die Intensitätskurve erhält an dieser Stelle 
+eine Unstetigkeitsstelle,die idealerweise eine Kante ergibt (Abbildung \eqref{602b}), daher auch Absorbtionskante. Wegen
+der ionisierenden Wirkung der Röntgenstrahlung wird zur Intensitätsmessung häufig ein Geiger-Müller-Zählrohr in
+Verbindung mit einem elektronischen Zählwerk genutzt. Mit aufwendigeren Messgeräten, wie einem Szintillations-Detektor können
+auch Energiewerte der Quanten ermittelt werden, indem bei Registrierung eines Quants ein zur Quantenenergie proportionaler 
+elektrischer Impuls abgegeben wird.
+
+Für dieses Experiment wird jedoch die Welleneigenschaft der Röntgenstrahlung zur Energiewertbestimmung genutzt. Kristalle,
+mit ihrer räumlich periodischen Anordnung sind geeignet, um einfallende Photonen in alle Raumrichtungen elastisch zu streuen. 
+Das Interferenzmodell sagt aus, dass dann konstruktive Interferenz entsteht, wenn der Gangunderschied $\Delta$s ein 
+ganzzahliges Vielfaches der Wellenlänge $\lambda$ ist.
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/602e.png}
+\centering
+\caption{Interferenz am Kristallgitter ($\Delta s$ ist der Weg, den ein benachbarter Strahl mehr zurücklegen muss)}
+\label{Gitter}
+\end{figure}
+
+Für den Gangunterschied gilt:
+\begin{equation}
+ \Delta s = n \cdot \lambda = 2d\sin(\theta) \qquad \text{mit} \qquad n \in \mathbb{N}.
+\end{equation}
+
+Diese Gleichung wird als Braggsche Reflexionsbedingung bezeichnet. d ist hierbei der Gitterabstand, $\theta$ ist der 
+Einfallswinkel der Röntgenstrahlen und $\lambda$ ihre Wellenlänge. Die Energie der Röntgenstrahlung kann nun wie folgt
+berechnet werden:
+
+\begin{align}
+E = h\nu = \frac{h c}{\lambda} = \frac{h c\cdot n}{2d\sin(\theta)}
+\label{Bragg}
+\end{align}
+
+Neben dem Nutzen, eine einfache Energie-Winkel-Beziehung zu haben, kann man mit einem Kristall aus polyenergetischer
+Strahlung nahezu monoenergetische erzeugen.
+
 \section{Durchführung}
+Die für die Auswertung interessanten Parameter des in Abbildung \ref{Aufbau} dargestellten Versuchsaufbaus für das Experiment
+sind gegeben durch:
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+ \begin{tabular}{|c|c|}
+\hline
+Beschleunigungsspannung $U_b$ & 10-24 kV\\
+\hline
+Anodenmaterial & Kupfer ($_{29}$Cu)\\
+\hline
+Schwenkkristall & LiF-Einkristall\\
+\hline
+Netzabstand d  & 2,01 \AA \\
+\hline
+Interferenzordnung n & 1\\
+\hline
+\end{tabular}
+\caption{Parameter des Versuchsaufbaus}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/602f.png}
+\centering
+\caption{Schematischer Aufbau}
+\label{Aufbau}
+\end{figure}
+
+
+Die Winkel des Einkristalls und des Zählrohrs sind beide voll automatisch über den Computer einstellbar. Ein Impulsratemeter
+kann die vom Zählrohr erfassten Impulse verarbeiten. Aufgrund der Tatsache, dass die Emission von Röntgenquanten nicht
+einheitlich ist und damit unregelmäßigen Schwankungen unterliegt, wird die Messgenauigkeit herabgesetzt. Hierzu wird die
+Zeitkonstante des Impulsmeters mit dem PC auf 10 s gesetzt. Dies wiederum hat den Nachteil, dass rapide Zählratenänderungen
+übergangen werden und damit beispielsweise die Absorbtionskanten nicht mehr wahrgenommen. Daher sind mehrere Durchführungen
+mit verschiedenen Zeitkonstanten erforderlich, um die besten Messergebnisse zu erzielen. Da die beiden Winkel ein Verhältnis
+von 2:1 haben, ist stets die Bragg-Reflexionsbedingung gegeben, womit die Strahlintensität in Abhängigkeit des Winkels
+$\theta$ und damit die Energie nach \eqref{Bragg} aufgetragen werden kann. 
+
+Das Emissionsspektrum wird ohne Befestigung einer Materialprobe in einem Winkelbereich für $7^\circ \le \theta \le 30^\circ$ ausgemessen.
+Zur Aufnahme des Absorbtionsspektrums wird die Probe auf die Blende des Zählrohrs geschraubt und in einem Winkelbereich von
+$9^\circ \le \theta \le 20^\circ$ erstellt.\\
+Untersuchte Materialien sind: $_{32}$Germanium, $_{38}$Strontium, $_{79}$Gold, $_{83}$Wismut
 
 \section{Auswertung}
-\subsection{Bestimmung von $\sigma_{1,0}$}
-Um die Abschirmkonstate $\sigma_{1,0}$ zu bestimmen verwendet man
-\begin{align}
-h\nu_{K,abs}=R_\infty[(z-\sigma_{1,0})+\frac{1}{4}\alpha(z-s_{1,0})].----------------
-\end{align}
-Da sich innerhalb der K-Schale kaum Elektronen aufhalten, geht $\alpha\rightarrow 0$, wodurch sich die Formel vereinfacht und nach 
-\begin{align}
-\sigma-2\sigma+z-\frac{h\nu_{K,abs}}{R_\infty}=0
-\end{align}
-umstellen lässt.
-Durch Anwendung der Mitternachtsformel errechnet sich $\sigma_{1,0}$ zu
-\begin{align}
-\sigma_{1,0}=z\pm\sqrt{z+\frac{h\nu_{K,abs}}{R_\infty}}.
-\end{align}
 
-\subsection{Bestimmung von s_{2,1}}
 \section{Diskussion}
 
 % ========================================
 %	Literaturverzeichnis
 % ========================================
-
+$_{32}$
 %\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
 %\bibliography{BIBDATEI}			% Literaturverzeichnis
-
+$_{32}$
 % ========================================
 %	Das Dokument endent
 % ========================================

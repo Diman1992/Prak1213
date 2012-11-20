@@ -321,6 +321,87 @@ Durch Anwendung der Mitternachtsformel errechnet sich $\sigma_{1,0}$ zu
 \begin{align}
 \sigma_{1,0}=z\pm\sqrt{\frac{h\nu_{K,abs}}{R_\infty}-\frac{\alpha^2z^4}{4})}.
 \end{align}
+Für die ausgemessenen Metalle ergibt sich jedoch kein korrekter Wert für die Abschirmkonstante $\sigma_{1,0}$, da der 
+Term unter der Wurzel negativ wird. Alle Energien liegen im Bereich von $2,7\cdot10^{-16}$J bis  
+$9,5\cdot10^{-16}$J. Mit der Rydbergkonstante in der Größenordnung $1\cdot 10^{-8}$ und einem $\alpha$ von etwa 
+$7,3\cdot 10{-3}$ ergibt sich
+\begin{align*}
+\sqrt{\frac{2\cdot10^{-16}}{10^{-8}}-\frac{10^{-6}*z^4}{4}}
+\end{align*}
+wobei z>1 und somit der Term negativ wird. Grund könnte höchstens eine falsch berechnete Energie sein, jedoch ist nach Gleichung \ref{Bragg} h das planksche Wirkungsquantum von etwa $10^{-34}$, der Lichtgeschwindigkeit c = $3\cdot10^{8}$m/s, einem Gitterabstand d = $2,01A = 2,01\cdot10^{-10}$m und einem Winkel $\Theta$ von ungefähr $10^\circ$ ergibt dies
+\begin{align*}
+\frac{3\cdot^{8}\cdot10^{-34}}{4,02\cdot10^{-10}\cdot sin\Theta}
+\end{align*}
+wobei $sin(\Theta)>0,17$ und somit nicht klein genug, um den Wert um mehrere Zehnerpotenzen zu heben.
+
+Die Analyse der Proben ergab folgende Kurven:
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/germanium01.png}
+\centering
+\caption{Beugungsfigur von Germanium mit Auflösung 1 Grad}
+\label{Aufbau}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/germanium02.png}
+\centering
+\caption{Germanium mit Auflösung 0,2 Grad}
+\label{Aufbau}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/strontium01.png}
+\centering
+\caption{Beugungsfigur von Strontium mit Auflösung 1 Grad}
+\label{Aufbau}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/strontium02.png}
+\centering
+\caption{Strontium mit Auflösung 0,2 Grad}
+\label{Aufbau}
+\end{figure}
+
+Abgelesen bzw. berechnet werden die Gradzahl der K-Kanten und die zugehörigen Energien :\\ \\
+\begin{tabular}{|c|c|c|}
+\hline 
+Element & Winkel $\Theta$ der K-Kante & Zugehörige Energie \\ 
+\hline 
+Germanium (32) & $16,6^\circ$ & $2,7528\cdot10^{-16}$J \\ 
+\hline 
+Strontium (38) & $11,5^\circ$ & $3,9447\cdot10^{-16}$J \\ 
+\hline 
+\end{tabular} 
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/gold01.png}
+\centering
+\caption{Gold mit Auflösung 1 Grad}
+\label{gold1}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/gold02.png}
+\centering
+\caption{Gold mit Auflösung 0,2 Grad}
+\label{gold2}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/wismut01.png}
+\centering
+\caption{Wismut mit Auflösung 1 Grad}
+\label{wism1}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/wismut02.png}
+\centering
+\caption{Wismut mit Auflösung 0,2 Grad}
+\label{wism2}
+\end{figure}
 
 \subsection{Bestimmung von $s_{2,1}$}
 Um die innere Abschirmkonstante $s_{2,1}$ zu bestimmen, bildet man die Differenz aus %\ref{11} und \ref{12}
@@ -330,22 +411,51 @@ Um die innere Abschirmkonstante $s_{2,1}$ zu bestimmen, bildet man die Differenz
 und stellt dies nach $s_{2,1}$ um, so errechnet sich die innere Abschirmkonstante zu
 \begin{align}
 s_{2,1} = z-\sqrt[4]{\frac{16\cdot\Delta E}{\alpha^2 R_\infty}}
+\label{s21}
 \end{align}
 
-\subsection{Bestimmung der Energieauflösung anhand der K-alpha Linie von Kupfer}
+In folgender Tabelle sind die Metalle Gold und Wismut zusammen mit ihren $L_{II}$ und $L_{III}$ Winkeln und den zugehören Energien eingetragen\\
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Metall mit Ordnungszahl & $L_{II}$ Winkel & $L_{III}$ Winkel & $E_{II}$ & $E_{III}$ \\ 
+\hline 
+Gold (79) & $9,5^\circ$ & $15,5^\circ$ & $2,9428\cdot10^{-16}$J & $4,765\cdot10^{-16}$J \\ 
+\hline 
+Wismut (83) & $11,85^\circ$ & $13,7^\circ$ & $3,8298\cdot10^{-16}$J & $3,3206\cdot10^{-16}$J \\ 
+\hline
+\label{tab_s21}
+
+\end{tabular} 
+
+Einsetzten der Werte aus der Tabelle in Formel \ref{s21} ergibt für die beiden Metalle:
+\begin{align*}
+Gold: s_{2,1}=78,99995
+Wismut: s_{2,1}=82,99996
+\end{align*}
+
+\subsection{Bestimmung von $\sigma_{1/2}$ anhand der $K_\alpha$ und $K_\beta$ Linie von Kupfer}
+Um $\sigma_1$ zu bestimmen, wird näherungsweise Formel \ref{Bragg} und Formel %\ref{}
+auf den Winkel $K_\alpha$ angewendet. Hier tritt jedoch das gleiche Problem auf wie zuvor, denn auch hier wird der Term unter der Wurzel negativ und es lässt sich kein Wert für die beiden $\sigma$ bestimmen.
+
+\subsection{Bestimmung der Energieauflösung anhand der $K_\alpha$ Linie von Kupfer}
 Lässt man die Röntgenstrahlen nur auf Kupfer treffen, so entsteht ein Beugungsbild mit den beiden sehr charakteristischen $K_\alpha$ und $K_\beta$ Linien. 
-\begin{figure}[H]
-\includegraphics[width=0.8\textwidth] {pics/kalpha_b.bmp}
+\begin{figure}[htbp]
+\includegraphics[width=0.8\textwidth] {pics/kupfer_ab.png}
 \centering
-\caption{$K_\alpha und K_\beta Linie von Kupfer$}
+\caption{$K_\alpha \text{ und } K_\beta$ Linie von Kupfer}
 \label{Aufbau}
 \end{figure}
+
 Obwohl es sich dabei um diskrete Energien handelt, weist das Beugungsbild dennoch eine Ausdehnung $\Theta_{1/2}$ auf. Der Spektrograph ist demnach nicht in der Lage, die infinitesimal kleine Ausdehnung der Kurve darzustellen und verschmiert sie über einen breiteren Bereich, welcher der kleinstmöglichen Auflösung des Gerätes entspricht.
-Mittels Formel %\ref{15}
-lässt sich der Zusammenhang zwischen der Energie und des Beugungswinkels einer bestimmten Intensitätslinie herstellen.  
-Bildet man also die Differenz der Energien für die Winkel $\Theta_1$, bei welchem das Maximum beginnt und $\Theta_2$, bei welchem es aufhört, so erhält man den Betrag der kleinsten Energie $\Delta E$, die noch von dem Gerät aufgelöst werden kann.
+Mittels Formel \ref{Bragg}lässt sich der Zusammenhang zwischen der Energie und des Beugungswinkels einer bestimmten Intensitätslinie herstellen.  
+Bildet man also die Differenz der Energien für die Winkel $\Theta_1$, bei welchem das Maximum beginnt und $\Theta_2$, bei welchem es aufhört, so erhält man den Betrag der kleinsten Energie $\Delta E$, die noch von dem Gerät aufgelöst werden kann.\\
+Für die Breite des Energiepeaks lassen sich die Winkel $\Theta_1 = 40,4^\circ$ und $\Theta_2 = 41,7^\circ$ ablesen. Eingesetzt in Formel \ref{Bragg} ergibt dies eine Energie von $1,21343\cdot10{-16}$J bzw $1,18222\cdot10^{-16}$J. Bildet man die Differenz, so erhält man den Wert $0,03121\cdot^{-16}$ für die kleinste, mit dem Gerät auflösbare, Energie. Dies entspricht einer Energie von 19,47eV.
  
 \section{Diskussion}
+Da die Messungen zu kleine Energien für die Absorptionskanten ergeben, lassen sich größtenteils die Folgerechnungen nicht durchführen. Dies ist entweder auf einen Fehler bei der Auswertung zurückzuführen oder die Messwerte sind einfach zu ungenau. Die Berechnung des Auflösungsvermögens des Gerätes ergibt einen Wert von 19,47eV, was einfach viel zu viel ist für einen derartige Präzisionsversuch. Der Wert liegt sogar deutlich über der Ionisierungsenergie von Wasserstoff (13,6eV) und verfälscht somit die Ergebnisse stark.\\
+Zudem lassen sich die Absorptionskanten aus den Graphen nicht zufriedenstellend ablesen. Die Kanten sind bei einer Auflösung von $1^\circ$ viel zu grob abgegrenzt und bei einer Erhöhung der Auflösung auf $0,2^\circ$ musste die Messdauer pro Winkel halbiert werden, damit die Messung nicht zu lange dauert, wodurch sich viele statistische Fehler ergeben haben. Diese waren zum Teil so stark, dass die Kurven nicht mehr zur Auswertung verwendet werden konnte, da sie teilweise die Größenordnung weiterer L-Kanten hatten.
+
 
 % ========================================
 % Literaturverzeichnis

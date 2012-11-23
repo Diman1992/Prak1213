@@ -1,0 +1,5 @@
+git add "dateiname"
+
+git commit
+
+git push

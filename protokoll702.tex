@@ -139,7 +139,7 @@ beschreibt die Anzahl der noch nicht zerfallenen Kerne eines radioaktiven Stoffe
 \end{align}
 Umstellen nach $t_{\frac{1}{2}}$ ergibt dann die Halbwertszeit zu
 \begin{align}
-	t_{\frac{1}{2}}=\ln\left(\frac{\lambda}{2}\right)
+	t_{\frac{1}{2}}=\frac{\ln 2}{\lambda}
 	\label{halbwertszeit}
 \end{align}
 Da es unmöglich ist, die genaue Stoffmenge $N(t)$ zu messen, bildet man stattdessen die Differenz von \ref{zerfall} zu zwei beliebigen Zeitpunkten und erhält eine Gleichung, die von der Anzahl der zerfallenen Kerne $\Delta N(t)$ im Zeitraum $\Delta t$ abhängt
@@ -173,9 +173,73 @@ Nach einer frei wählbaren Messzeit wechselt der Zählkanal, so dass der eben ge
 Bei der Durchführung wurde zunächst die sog. Nullrate bestimmt. Dies ist die Grundradioaktivität, die ständig um uns herum herrscht. Da sie die Ergebnisse verfälschen würde, wird sie im Voraus über einen sehr langen Zeitraum gemessen und danach bei jeder Messung von dem Ergebnis abgezogen.
 Anschließend wurden eine Probe aus Indium und eine aus Rhodium aktiviert und über eine Dauer von 60 bzw 12 min ihre Aktivität gemessen.
 
-	\section{Auswertung}
+\section{Auswertung}
+\subsection{Nulleffekt}
+Um den Einfluss des Nulleffekts Z$_U$zu ermitteln, wird zweimal über einen Zeitraum von 900 Sekunden gemessen. Für
+die weiteren Messungen wird der Wert mit den jeweiligen Zeitperioden der anderen Messungen $\Delta t_X$ multipliziert und
+von den gemessenen Impulsen subtrahiert, um dadurch seinen Einfluss minimal zu halten. 
 
-	\section{Diskussion}
+\begin{equation}
+ Z_U = \frac{N}{\Delta t} = \frac{300 + 248}{2 \cdot 900 \text{s}} = \frac{548}{1800 \text{s}} = 0,304 \text{s}^{-1}
+\end{equation}
+
+Der absolute Fehler $S_N$ für eine gemessene Rate $N$ ermittelt sich dadurch, dass die Raten poissonverteilt sind.
+
+\begin{equation}
+ s_N = \sqrt{N}
+\end{equation}
+
+\subsection{Halbwertszeit für $^{116}_{49}$Indium}
+Um die Halbwertszeit zu bestimmen, werden die Impulse über 15 Perioden von je 240 Sekunden Dauer gemessen. Die vom
+Nulleffekt bereinigten Werte werden logarithmiert und gegen die Zeit $t$ aufgetragen. Hierdurch werden die Exponential-
+abhängigkeiten linearisiert und über die Steigung der Geraden die Zerfallskonstante $\lambda$ bestimmt. Mit ihr lässt sich
+über die Gleichung \eqref{halbwertszeit} die Halbwertszeit angeben. Der logarithmierte Fehler drückt sich dann so aus:
+
+\begin{equation}
+ s_{\ln(N)^{\pm}} = \pm \left|\ln(N)-\ln(N\pm s_N)\right|
+\end{equation}
+
+Hieraus ergibt sich folgende Tabelle
+
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[h]
+ \begin{tabular}{c|c|c|c|c|c|c}
+ $i$ & $t$ & $N$ & $s_N$ & ln($N$) & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
+ \hline
+ 1&	240&	2680&	47,35&	7,89&	0,0175&	-0,0178\\
+2&	480&	2476&	45,35&	7,81&	0,0181&	-0,0185\\
+3&	720&	2399&	44,57&	7,78&	0,0184&	-0,0188\\
+4&	960&	2284&	43,38&	7,73&	0,0188&	-0,0192\\
+5&	1200&	2179&	42,27&	7,69&	0,0192&	-0,0196\\
+6&	1440&	2095&	41,36&	7,65&	0,0195&	-0,0199\\
+7&	1680&	2027&	40,61&	7,61&	0,0198&	-0,0202\\
+8&	1920&	1826&	38,32&	7,51&	0,0208&	-0,0212\\
+9&	2160&	1858&	38,69&	7,53&	0,0206&	-0,0210\\
+10&	2400&	1743&	37,34&	7,46&	0,0212&	-0,0217\\
+11&	2640&	1670&	36,45&	7,42&	0,0216&	-0,0221\\
+12&	2880&	1579&	35,32&	7,36&	0,0221&	-0,0226\\
+13&	3120&	1570&	35,21&	7,36&	0,0222&	-0,0227\\
+14&	3360&	1395&	32,94&	7,24&	0,0233&	-0,0239\\
+15&	3600&	1400&	33,00&	7,24&	0,0233&	-0,0239\\
+\end{tabular}
+\caption{Wertetabelle für $^{116}_{49}$In}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Aus linearer Ausgleichsrechnung mit Gnuplot ergibt sich ein Wert für die Zerfallskonstante 
+
+\begin{align}
+\lambda_{\text{In}} = 1,905 \cdot 10^{-4} \pm 5,218 \cdot 10^{-6} \frac{1}{\text{s}}.
+\end{align}
+
+Somit ist Halbwertszeit
+
+\begin{align}
+ t_{\frac12} = 3638,57 \text{s}
+\end{align}
+
+
+\section{Diskussion}
 
 
 % ========================================

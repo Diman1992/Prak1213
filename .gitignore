@@ -1,0 +1,7 @@
+*.aux
+*.toc
+*~
+*.log
+*.out
+*.fot
+*.backup

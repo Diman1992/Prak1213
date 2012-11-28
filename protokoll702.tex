@@ -62,7 +62,7 @@ Dimitrios Skodras\\			% Name Praktikumspartner B
 % ========================================
 
 	\section{Einleitung}				% Bei Bedarf
-Abgesehen vom Wasserstoffatom, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
+Abgesehen vom Wasserstoffatom, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
 	\section{Theorie}
 	\subsection{Aktivierung}
 Dieses Verhalten kann für die Untersuchung des Zerfallsgesetztes genutzt werden.
@@ -96,6 +96,7 @@ Wichtig für den durchgeführten Versuch sind insbesondere die Zerfallsreihen vo
 \cee{^{103}_{45}Rh +^1_0n } 
 \begin{cases} \ce{->[{10\%}] ^{104i}_{45}Rh -> ^{104}_{45}Rh +\gamma -> ^{104}_{46}Pd + \beta^- + \overline{\nu_e}}\\ 
 \cee{ ->[{90\%}] ^{104}_{45}Rh -> ^{104}_{46}Pd + \beta^- + \overline{\nu_e}} \end{cases}
+\label{Rhodium}
 \end{align}
 
 	\subsection{Wirkungsquerschnitt}
@@ -120,7 +121,7 @@ was vorher auch schon argumentativ angenommen wurde.
 	\subsection{Langsame Neutronen}
 Neutronen sind als freie Teilchen instabil und kommen deshalb in der Natur nicht vor. Um sie für die Aktivierung von Atomkernen zu nutzen, müssen sie somit zunächst durch andere Radioaktive Zerfälle erzeugt werden. Im Versuch geschieht dies durch den Beschuss von $\ce{^9Be}$ mit $\alpha$-Teilchen
 \begin{align}
-	\ce{^9_4 Be + ^4_2\alpha \bond{->} ^{12}_6 c + ^1_0n}
+	\ce{^9_4 Be + ^4_2\alpha \bond{->} ^{12}_6 C + ^1_0n}
 \end{align}
 Es entstehen Neutronen mit einem kontinuierlichen Energie-Spektrum von bis zu 13,7MeV, die abgebremst werden, indem man sie elastisch mit anderen leichten Kernen stoßen lässt. Das $\ce{^9_4 Be}$ befindet sich in einem Tank mit Wasserstoff, da diese in etwa die gleiche Masse wie Neutronen haben und daher die übertragene Energie $E = E_0 \frac{4Mm}{(M+m)^2}$ für den elastischen Stoß maximal wird.
 \begin{figure}[H]
@@ -129,6 +130,7 @@ Es entstehen Neutronen mit einem kontinuierlichen Energie-Spektrum von bis zu 13
 \end{figure}
 Die Neutronen erreichen schließlich eine mittlere Geschwindigkeit von 2,2 $\frac{km}{s}$. Neutronen mit dieser kinetischen Energie werden auch thermische Neutronen genannt.
 	\subsection{Zerfallsgesetz}
+	\label{zerfallsgesetz}
 \begin{align}
 	N(t)=N_0e^{-\lambda t}
 	\label{zerfall}
@@ -232,15 +234,120 @@ Aus linearer Ausgleichsrechnung mit Gnuplot ergibt sich ein Wert für die Zerfal
 \lambda_{\text{In}} = 1,905 \cdot 10^{-4} \pm 5,218 \cdot 10^{-6} \frac{1}{\text{s}}.
 \end{align}
 
-Somit ist Halbwertszeit
+Somit ist die Halbwertszeit für $^{116}_{49}$Indium
 
 \begin{align}
- t_{\frac12} = 3638,57 \text{s}
+ t_{\frac12} = 3638,57 \pm 99,74 \text{s}.
+ \label{in}
 \end{align}
+
+\begin{figure}[h]
+	\includegraphics[width=1\textwidth]{pics/indium.png}
+	\caption{Zerfall von Indium auf halblogarithmischer Skala}
+\end{figure}
+
+\subsection{Halbwertszeit für $^{104}_{45}$Rhodium}
+Im Gegensatz zu Indium, zerfällt das betrachtete Rhodiumisotop wie in \eqref{Rhodium} formuliert in zwei Zerfallsreihen.
+Am Ende von Abschnitt \ref{zerfallsgesetz} wird die Methode geschildert, welche zur Ermittlung der Halbwertszeiten der beiden
+Rhodiumisotope $^{104\text{i}}_{45}$Rh und$^{104}_{45}$Rh angewandt wird.
+
+\renewcommand{\arraystretch}{1.1}
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c|c|c}
+ $i$ & $t$ & $N$ & $s_N$ & ln($N$) & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
+ \hline
+1&	12&	494&	20,28&	6,20&	0,0402&	-0,0419\\
+2&	24&	450&	19,27&	6,11&	0,0419&	-0,0437\\
+3&	36&	364&	17,14&	5,90&	0,0460&	-0,0482\\
+4&	48&	341&	16,53&	5,83&	0,0473&	-0,0496\\
+5&	60&	249&	13,84&	5,52&	0,0540&	-0,0571\\
+6&	72&	218&	12,83&	5,39&	0,0571&	-0,0605\\
+7&	84&	180&	11,48&	5,19&	0,0617&	-0,0658\\
+8&	96&	125&	9,25&	4,83&	0,0712&	-0,0766\\
+9&	108&	127&	9,33&	4,85&	0,0707&	-0,0761\\
+10&	120&	107&	8,41&	4,68&	0,0754&	-0,0816\\
+\hline
+11&	132&	92&	7,66&	4,53&	0,0797&	-0,0866\\
+12&	144&	87&	7,40&	4,47&	0,0813&	-0,0885\\
+13&	156&	81&	7,07&	4,40&	0,0833&	-0,0909\\
+14&	168&	74&	6,67&	4,31&	0,0859&	-0,0940\\
+15&	180&	58&	5,69&	4,07&	0,0930&	-0,1026\\
+16&	192&	48&	5,00&	3,88&	0,0985&	-0,1092\\
+17&	204&	62&	5,95&	4,13&	0,0911&	-0,1002\\
+18&	216&	59&	5,75&	4,08&	0,0925&	-0,1020\\
+19&	228&	37&	4,16&	3,62&	0,1056&	-0,1181\\
+20&	240&	44&	4,71&	3,79&	0,1009&	-0,1123\\
+21&	252&	40&	4,40&	3,70&	0,1036&	-0,1155\\
+22&	264&	29&	3,47&	3,38&	0,1117&	-0,1257\\
+23&	276&	36&	4,08&	3,59&	0,1064&	-0,1190\\
+24&	288&	23&	2,88&	3,15&	0,1164&	-0,1317\\
+25&	300&	19&	2,45&	2,96&	0,1192&	-0,1353\\
+26&	312&	23&	2,88&	3,15&	0,1164&	-0,1317\\
+\hline
+27&	324&	13&	1,70&	2,59&	0,1201&	-0,1365\\
+28&	336&	19&	2,45&	2,96&	0,1192&	-0,1353\\
+29&	348&	20&	2,56&	3,01&	0,1185&	-0,1345\\
+30&	360&	27&	3,28&	3,31&	0,1133&	-0,1277\\
+31&	372&	20&	2,56&	3,01&	0,1185&	-0,1345\\
+32&	384&	20&	2,56&	3,01&	0,1185&	-0,1345\\
+33&	396&	25&	3,08&	3,23&	0,1148&	-0,1298\\
+34&	408&	18&	2,33&	2,91&	0,1197&	-0,1360\\
+35&	420&	21&	2,67&	3,06&	0,1179&	-0,1336\\
+36&	432&	16&	2,09&	2,79&	0,1205&	-0,1370\\
+37&	444&	21&	2,67&	3,06&	0,1179&	-0,1336\\
+38&	456&	14&	1,84&	2,66&	0,1205&	-0,1371\\
+39&	468&	14&	1,84&	2,66&	0,1205&	-0,1371\\
+40&	480&	5&	0,36&	1,68&	0,0656&	-0,0702\\
+\end{tabular}
+\caption{Wertetabelle für $^{104(\text{i})}_{45}$Rh}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Somit ergeben sich für die Rhodiumisotope die Zerfallskonstanten zu
+
+\begin{align}
+\lambda_{^{104\text{i}}\text{Rh}} = 2,665\cdot 10^{-3} \pm 1,342 \cdot 10^{-5} \frac{1}{\text{s}}\\
+\lambda_{^{104}\text{Rh}} = 1,449 \cdot 10^{-2} \pm  6,72 \cdot 10^{-4} \frac{1}{\text{s}}.
+\end{align}
+
+Die jeweiligen Halbwertszeiten sind nun
+
+\begin{equation}
+   t_{\frac12,\text{104i}} = 260,10 \pm 1,31 \text{s}\\
+\label{rh1}
+\end{equation}
+\begin{equation}
+ t_{\frac12,\text{104}} = 47,94 \pm 2,22 \text{s}.
+ \label{rh2}
+\end{equation}
+
+\begin{figure}[h]
+	\includegraphics[width=1\textwidth]{pics/rhodium.png}
+	\caption{Zerfall beider Rhodiumisotope auf halblogarithmischer Skala}
+\end{figure}
 
 
 \section{Diskussion}
+\subsection{Indium}
+Die aus dem Experiment ermittelte Halbwertszeit von $t_{\frac12,\text{In}} = 3638,57 \pm 99,74 \text{s}$ aus \eqref{in} liegt mit 11,7 \% über dem
+Literaturwert von 54,29 min (= 3257,40 s)\footnote[1]{Firestone, R.B. (2000), Isotopes of Indium URL: \href{http://ie.lbl.gov/education/parent/In\_iso.htm}{http://ie.lbl.gov/education/parent/In\_iso.htm}}.
+Der gemessene Wert liegt in der richtigen Größenordnung und die Abweichung ist nicht überaus groß. Wichtig zu erwähnen ist, dass es
+sich bei dem referenzierten Wert um eine anders aufgeführte, spezielle Zerfallsreihe des $^{116}$Indium-Isotops handelt. So wäre hier
+das $^{116m1}$In-Isotop herzunehmen, was aber dadurch gerechtfertigt werden kann, dass das Isotop ausschließlich im Zuge des $\beta^-$-Zerfall
+zerfällt, so wie im Experiment. Grundsätzlich problematisch bei der Messung ist, dass der radioaktive Zerfall starken statistischen Schwankungen unterworfen ist. In diesem Experiment
+ist die Nullrate ungewöhnlich hoch, was auf mögliche Rückstände von Proben vorangehender Versuche oder auf eine zu hoch
+eingestellte Spannung am Geiger-Müller-Zählrohr zurückzuführen ist. Das hat speziell Impulsmessungen gegen Ende der Messreihe
+stark beeinflusst und somit zum Fehler beigetragen. So sind einige Werte höher als ihre Vorangehenden, was nicht durch den
+Zerfall der Indiumkerne allein erklärbar wäre.
 
+\subsection{Rhodium}
+Zusätzlich zu den Einflüssen im Falle der Indiumprobe kommt bei Rhodium beschwerend hinzu, dass das kurzlebige Isotop ab einer gewissen
+Zeit zwar als nicht mehr vorhanden angesehen wird, es aber möglicherweise immernoch vorhanden ist, sowie die Tatsache, dass jener Zeitpunkten
+willkürlich durch die Versuchsdurchführenden festgelegt werden muss. So werden in der Auswertung zwei Messbereiche aus der Berechnung
+herausgelassen, um die Abweichungen zu den Referenzwerten\footnote[2]{Firestone, R.B. (2000), Isotopes of Rhodium URL: \href{http://ie.lbl.gov/education/parent/Rh\_iso.htm}{http://ie.lbl.gov/education/parent/Rh\_iso.htm}}. gering zu halten. Mit der gemessenen Halbwertszeit $t_{\frac12,\text{104i}} = 260,10 \pm 1,31 \text{s}$ aus \eqref{rh1}
+liegt der Fehler bei 0,12 \%, sowie bei $t_{\frac12,\text{104}} = 47,94 \pm 2,22 \text{s}.$ aus \eqref{rh2} bei 13,3 \%. Der geringe Fehler
+bei Rh$_{104\text{i}}$ kommt durch den entsprechend gut gewählten Wertebereich (der 3. Abschnitt in Tabelle (2), der 
+in die Berechnung aufgenommen wurde.
 
 % ========================================
 %	Literaturverzeichnis

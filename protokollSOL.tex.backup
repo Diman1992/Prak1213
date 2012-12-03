@@ -1,0 +1,88 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Versuch\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Max Mustermann\\			% Name Praktikumspartner A
+{\small \href{max.mustermann@tu-dortmund.de}{max.mustermann@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+sofie.bauer\\					% Name Praktikumspartner B
+{\small \href{sofie.bauer@tu-dortmund.de}{sofie.bauer@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+\section{Einleitung}				% Bei Bedarf
+Im Zuge des Erneuerbare-Energien-Gesetz wird neben der Wasserkraft oder Windenergie auch Solarenergie durch Photovoltaikanlagen 
+(Solarzellen) vom Staat  gefördert. Sie haben den Vorteil, dass sie nach menschlichen Maßstäben unerschöpfliche Energiequellen 
+darstellen. Die Erklärung des physikalischen Prozesses, der hinter einer Solarzelle steckt,  wurde im 19. Jahrhundert von 
+Physikern wie Bequerel und Hallwachs vorangebracht und 1905 von Albert Einstein durch den Photoeffekt 
+
+
+\section{Theorie}
+
+
+\section{Durchführung}
+
+
+\section{Auswertung}
+
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

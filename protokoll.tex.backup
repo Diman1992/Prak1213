@@ -1,0 +1,86 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Versuch\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Max Mustermann\\			% Name Praktikumspartner A
+{\small \href{max.mustermann@tu-dortmund.de}{max.mustermann@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+sofie.bauer\\					% Name Praktikumspartner B
+{\small \href{sofie.bauer@tu-dortmund.de}{sofie.bauer@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+\section{Einleitung}				% Bei Bedarf
+
+\section{Theorie}
+
+\section{Durchführung}
+
+\section{Auswertung}
+Hauptbetrachtungspunkt dieses Experiments ist die Bestimmung der Zeitkonstanten des bereitgestellten RC-Gliedes nach verschiedenen Methoden
+\subsection{Auf- und Entladung des Kondensators}
+Nach dem oben aufgeführten Schaltbild wurde das RC-Glied aufgebaut. Es wurde mit einer niederfrequenten Rechtecksspannung betrieben.
+Dadurch wird der Kondensator über eine halbe Periode aufgeladen und danach entladen. Die Frequenz hierbei beträgt f = 42 Hz und die Ladespannung
+U = 5V. Der in der folgenden Abbildung dargesteller
+
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

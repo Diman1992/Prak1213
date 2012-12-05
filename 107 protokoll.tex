@@ -1,0 +1,103 @@
+	% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+\usepackage{float}
+\usepackage{caption}
+
+\newfloat{formel}{htbp}{for}
+\floatname{formel}{Formel}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Das Kugelfall Viskosimeter nach Höppler\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Jan Adam\\			% Name Praktikumspartner A
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+Dimitrios Skodras\\			% Name Praktikumspartner B
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt einen interaktiven Link
+}
+\date{04.12.12}					% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+%	\section{Einleitung}				% Bei Bedarf
+
+	\section{Theorie}
+Auf bewegte Körper in Flüssigkeiten oder Gasen wirkt, ähnlich wie auf rollende oder gleitende Körper, eine Reibungskraft
+\begin{align}
+\vec F_R=6 \pi \eta v r,
+\label{stokes}
+\end{align}
+ die der Bewegung entgegen wirkt. Wichtig ist hier die Viskosität $\eta $, eine Stoffeigenschaft, die das Fließverhalten von Flüssigkeiten und Gasen beschreibt und proportional auf die Reibungskraft einwirkt. Sie ist zudem die einzige stoffspezifische Größe, die Einfluss auf die Reibungskraft hat. Die restlichen Größen hängen von der Körpergeometrie ab, so dass nach Bestimmung der Viskosität, die Reibungskraft für beliebige Körper im entsprechenden Medium berechnet werden kann.
+ Zu beachten ist, dass die Stokes'sche Reibung \eqref{stokes} nur für laminare Flüssigkeiten gilt. Laminare Flüssigkeiten bilden keine Verwirbelungen, sondern umfließen den Körper homogen. Eine Flüssigkeit wird als laminar bezeichnet, wenn die Reynoldszahl
+ \begin{align}
+ Re= \frac{\rho v d}{\eta} = \frac{v d}{\nu}
+ \end{align}
+des Aufbaus unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten nicht mehr als laminar bezeichnet, jedoch können sich verwirbelungen schon viel früher bilden, so dass  $Re \ll 2000$ sein sollte. 
+	\section{Durchführung}
+Im durgeführten Versuch soll die Viskosität von destillierem Wasser mit Hilfe des Kugelfall-Viskosimeters nach Höppler bestimmt werden. Dabei wird eine Kugel in einen mit destilliertem Wasser gefüllten Zylinder gelegt und dieser so aufgestellt, dass die Kugel hindurchfällt. Wichtig ist dabei, dass der Kugeldurchmesser nur geringfügig kleiner ist als der des Zylinders und dass dieser leicht geneigt ist, damit die Kugel nicht chaotisch an die Ränder stößt und Wirbel verursacht, sondern gleichmäßig herabgleitet.\\
+Beim Fallen wirken folgende Kräfte auf die Kugel: die Gewichtskraft $F_g$, die die Kugel nach unten beschleunigt, die Auftriebskraft $F_A$, die die Kugel nach oben treibt und die Reibungskraft \eqref{stokes}, die proportional zur Fallgeschwindigkeit ist und ihr entgegen wirkt. Nach dem Fallenlassen nimmt die Geschwindigkeit der Kugel zunächst immer weiter zu, bis sich durch Zunahme der Reibungskraft ein Kräftegleichgewicht einstellt und die Kugel gleichmäßig absinkt.
+Es wird nun die Zeit gemessen, die die Kugel braucht um eine gewisse Strecke $d \vec{s}$ zurückzulegen. Hieraus lässt sich die Geschwindigkeit der Kugel und schließlich mit \eqref{stokes} die Viskosität des Wassers errechnen.\\
+Der Versuch wird zweimal bei Raumtemperatur mit verschiedenen Kugeln und dann mit einer Kugel bei verschiedenen Wassertemperaturen von $20 ^\circ $ bis $50 ^\circ $ C durchgeführt, da die Viskosität stark von der Temperatur abhängig ist. Halblogarithmisches Auftragen der Daten ermöglicht ein Ablesen der Konstanten A und B aus Gleichung
+\begin{align}
+	\eta(T)=Ae^{\frac{B}{T}},
+\end{align}
+welche die Viskosität in Abhängigkeit von der Temperatur beschreibt.
+	\section{Auswertung}
+
+	\section{Diskussion}
+
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

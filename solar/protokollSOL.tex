@@ -6,8 +6,6 @@
 \usepackage{wrapfig}
 \usepackage{caption}
 \usepackage{float}
-\usepackage{blindtext}
-
 
 \newfloat{formel}{H}{for}
 \floatname{formel}{Formel}
@@ -67,8 +65,8 @@ sofie.bauer\\					% Name Praktikumspartner B
 \section{Einleitung}				% Bei Bedarf
 Die Erklärung des physikalischen Prozesses, der hinter einer Solarzelle steckt, wurde im 19. Jahrhundert von 
 Physikern wie Bequerel und Hallwachs vorangebracht und 1905 von Albert Einstein durch den Photoeffekt vervollständigt (Nobelpreis 1921).
-Im Zuge des Erneuerbare-Energien-Gesetz wird neben der Wasserkraft oder Windenergie auch Solarenergie durch Photovoltaikanlagen 
-(Solarzellen) vom Staat  gefördert. Sie haben den Vorteil, dass sie nach menschlichen Maßstäben unerschöpfliche Energiequellen 
+Im Zuge der Energiekrise und der Einführung des Erneuerbare-Energien-Gesetzes wird neben der Wasserkraft oder Windenergie auch Solarenergie durch Photovoltaikanlagen 
+(Solarzellen) vom Staat gefördert. Sie haben den Vorteil, dass sie nach menschlichen Maßstäben unerschöpfliche Energiequellen 
 darstellen.
 
 
@@ -138,16 +136,172 @@ setzt sich aus dem Verhältnis des maximalen Leistung und der eingestrahlten Lei
 \end{equation}
 
 \section{Durchführung}
-Ziel des Versuchs ist die Ermittlung der Strom-Spannungskennlinien einer Solarzelle für verschiedene Beleuchtungsstärken und daraus
-die abgegebene Leistung und der Wirkungsgrad berechnet werden. Darüber hinaus sollen die Leerlaufspannung und der Kurzschlussstrom 
+Ziel des Versuchs ist die Ermittlung der Strom-Spannungskennlinien einer Solarzelle für verschiedene Beleuchtungsstärken und daraus soll
+die abgegebene Leistung der Solarzelle und deren Wirkungsgrad berechnet werden. Darüber hinaus sollen die Leerlaufspannung und der Kurzschlussstrom 
 ebenfalls als Funktion der Beleuchtungsstärke bestimmt werden.\\
 Hierzu wird die Solarzelle mit einer Lampe verstellbarer Höhe beleuchtet. Die Beleuchtungsstärke nimmt mit zunehmendem Abstand ab. 
-Mit zwei Messgeräten werden die anliegende Spannung und der Strom für manuell einstellbare ohmsche Widerstände zwischen 5 und 100 $\Omega$
-notiert. 
+Mit einem Volt- und einem Amperemeter werden die anliegende Spannung und der Strom für manuell einstellbare ohmsche Widerstände von 5 bis 300 $\Omega$ notiert. 
 
 \section{Auswertung}
+Zunächst sollen die U-I-Kennlinien für vier verschiedene Abstände von der Lampe aufgenommen werden. Man misst dazu den Strom und die anliegende Spannung für verschiedene Widerstände und trägt beide gegeneinander auf. Zusätzlich steht in der Tabelle die Leistung $P=U \cdot I$ in [mW] für spätere Auswertungen.
 
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Widerstand [$\Omega$]	&Strom [mA]	&Spannung [V]	&Leistung [mW]\\	
+\hline
+5	&27.8	&0.15	&4.2812\\
+10	&27.9	&0.30	&8.2305\\
+15	&27.7	&0.44	&12.1049\\
+20	&27.8	&0.58	&16.1796\\
+25	&27.7	&0.72	&19.8609\\
+30	&27.4	&0.86	&23.4544\\
+35	&27.4	&0.99	&27.0986\\
+40	&27.3	&1.11	&30.3030\\
+45	&27.0	&1.24	&33.4800\\
+50	&26.7	&1.49	&39.7830\\
+55	&26.3	&1.60	&42.0800\\
+60	&25.5	&1.68	&42.8400\\
+65	&24.8	&1.74	&43.1520\\
+70	&23.9	&1.79	&42.7810\\
+75	&22.9	&1.82	&41.6780\\
+80	&22.0	&1.85	&40.7000\\
+85	&21.0	&1.87	&39.2700\\
+90	&20.1	&1.88	&37.7880\\
+95	&19.2	&1.90	&36.4800\\
+100	&18.5	&1.91	&35.3350\\
+\hline 
+\end{tabular}
+\caption{Werte aufgenommen im Abstand von 70cm}
+\end{table}
+ 
+ \begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Widerstand [$\Omega$]	&Strom [mA]	&Spannung [V]	&Leistung [mW]\\	
+\hline
+5	&48.7	&0.30	&14.6100\\
+10	&48.5	&0.53	&25.7050\\
+15	&48.7	&0.77	&37.4990\\
+20	&48.7	&1.03	&50.1610\\
+25	&48.5	&1.25	&60.6250\\
+30	&48.2	&1.49	&71.8180\\
+35	&46.3	&1.66	&76.8580\\
+40	&43.2	&1.76	&76.0320\\
+45	&39.8	&1.83	&72.8340\\
+50	&36.8	&1.87	&68.8160\\
+55	&33.9	&1.89	&64.0710\\
+60	&31.4	&1.91	&59.9740\\
+65	&29.2	&1.93	&56.3560\\
+70	&27.4	&1.94	&53.1560\\
+75	&25.7	&1.95	&50.1150\\
+80	&24.2	&1.96	&47.4320\\
+85	&22.9	&1.97	&45.1130\\
+90	&21.7	&1.97	&42.7490\\
+95	&20.6	&1.98	&40.7880\\
+100	&19.7	&1.98	&39.0060\\
+150	&13.4	&2.02	&27.0680\\
+200	&10.1	&2.03	&20.5030\\
+250	&8.1	&2.03	&16.4633\\
+300	&6.7	&2.03	&13.6010\\
+\hline 
+\end{tabular}
+\caption{Werte aufgenommen im Abstand von 60cm} 
+\end{table}
 
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Widerstand [$\Omega$]	&Strom [mA]	&Spannung [V]	&Leistung [mW]\\	 
+\hline 
+5	&68.8	&0.38	&26.1440\\
+10	&68.6	&0.73	&50.0780\\
+15	&68.2	&1.00	&68.2000\\
+20	&66.8	&1.38	&92.1840\\
+25	&63.3	&1.63	&103.1790\\
+30	&57.2	&1.76	&100.6720\\
+35	&51.3	&1.83	&93.8790\\
+40	&46.2	&1.87	&86.3940\\
+45	&41.6	&1.90	&79.0400\\
+50	&37.8	&1.92	&72.5760\\
+55	&34.7	&1.93	&66.9710\\
+60	&32.1	&1.95	&62.5950\\
+65	&29.8	&1.96	&58.4080\\
+70	&27.9	&1.97	&54.9630\\
+75	&26.2	&1.98	&51.8760\\
+80	&24.5	&1.98	&48.5100\\
+85	&23.2	&1.99	&46.1680\\
+90	&22.0	&1.99	&43.7800\\
+95	&20.8	&1.99	&41.3920\\
+100	&19.9	&1.99	&39.6010\\
+150	&13.4	&2.02	&27.0680\\
+200	&10.1	&2.03	&20.5030\\
+250	& & &		\\
+300	&6.8	&2.05	&13.9400\\
+\hline 
+\end{tabular}
+\caption{Werte aufgenommen im Abstand von 50cm}
+\end{table}
+
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Widerstand [$\Omega$]	&Strom [mA]	&Spannung [V]	&Leistung [mW]\\	
+\hline
+5	&78.3	&0.46	&36.0180\\
+10	&78.5	&0.84	&65.9400\\
+15	&78.9	&1.23	&97.0470\\
+20	&77.9	&1.61	&125.4190\\
+25	&71.4	&1.83	&130.6620\\
+30	&61.8	&1.90	&117.4200\\
+35	&53.9	&1.92	&103.4880\\
+40	&47.9	&1.95	&93.4050\\
+45	&42.9	&1.96	&84.0840\\
+50	&39.1	&1.98	&77.4180\\
+55	&35.7	&1.99	&71.0430\\
+60	&32.9	&2.00	&65.8000\\
+65	&30.5	&2.01	&61.3050\\
+70	&28.5	&2.01	&57.2850\\
+75	&26.7	&2.02	&53.9340\\
+80	&25.1	&2.02	&50.7020\\
+85	&23.6	&2.03	&47.9080\\
+90	&22.4	&2.03	&45.4720\\
+95	&21.2	&2.03	&43.0360\\
+100	&20.2	&2.03	&41.0060\\
+150	&13.6	&2.05	&27.8800\\
+200	&10.3	&2.06	&21.2180\\
+250	&8.2	&2.07	&16.9740\\
+300	&8.9	&2.07	&18.4230 \\
+\hline 
+\end{tabular}
+\caption{Werte aufgenommen im Abstand von 40cm}
+\end{table}
+
+Die abgegebene Leistung ist abhängig vom Verhältnis zwischen der Spannung und dem Strom und weißt daher  ein Maximum auf. Dieses kann man bestimmen, indem man entweder das größtmöglichste Rechteck in den U-I-Graphen zeichnet, dessen Fläche entspricht der maximalen Ausgangsleistung der Solarzelle. Alternativ multipliziert man alle Spannungen mit den entsprechenden Strömen, trägt die Werte in einen Graphen ein und bestimmt den größten Wert. Da dies genauer ist, wurde die Leistung über diese Methode bestimmt.
+
+Der Wirkungsgrad einer Solarzelle ist das Verhältnis zwischen der aufgenommenen Leistung (Licht) und der ausgegebenen Leistung (Elektrizität).
+Die aufgenommene Leistung errechnet sich über eine kalibrierungskurve. In ihr wird die abgestrahlte Leistung der Lampe pro Fläche $[mW/cm^2]$ gegen den Abstand d dargestellt.
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Abstand & Leistung pro $cm^2$ & Gesamteingangsleistung & Gesamtausgangsleistung & Wirkungsgrad $\eta$ \\ 
+\hline 
+70cm & 9mW & 445,48mW & 43,15mW & 0,0969 \\ 
+\hline 
+60cm & 12mW & 593,76mW & 76,86mW & 0,1242 \\ 
+\hline 
+50cm & 16mW & 791,68mW & 103,18mW & 0,1303 \\ 
+\hline 
+40cm  & 21mW & 1093,08mW & 130,66mW & 0,1258 \\ 
+\hline 
+\end{tabular} \\
+
+Das Ausmessen der Solarzelle ergab eine Fläche von $49,48cm^2$. Durch Multiplikation dieses Wertes mit der abgestrahlten Leistung pro Fläche erhält man den Gesamtwert der aufgenommenen Leistung und aus Tabellen 1 bis 4 entnimmt man die maximale Gesamtausgangsleistung. Durch Division dieser beider Werte erhält man den Wirkungsgrad $\eta$ der Solarzelle. 
+Gemittelt erhält man so
+\begin{align*}
+	\eta=0,1205 \pm 0,000253
+\end{align*} 
+Dieser Wert passt sehr gut mit den tatsächlichen Wirkungsgraden von polykristalinen Solarzellen überein, welche typischerweise Wirkungsgrade zwischen 14 und 20\% haben.
 \section{Diskussion}
 
 % ========================================

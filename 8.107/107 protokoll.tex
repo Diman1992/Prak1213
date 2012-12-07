@@ -5,6 +5,7 @@
 \input{longheader.tex}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{wrapfig}
 
 \newfloat{formel}{htbp}{for}
 \floatname{formel}{Formel}
@@ -69,19 +70,30 @@ Auf bewegte Körper in Flüssigkeiten oder Gasen wirkt, ähnlich wie auf rollend
 \vec F_R=6 \pi \eta v r,
 \label{stokes}
 \end{align}
- die der Bewegung entgegen wirkt. Wichtig ist hier die Viskosität $\eta $, eine Stoffeigenschaft, die das Fließverhalten von Flüssigkeiten und Gasen beschreibt und proportional auf die Reibungskraft einwirkt. Sie ist zudem die einzige stoffspezifische Größe, die Einfluss auf die Reibungskraft hat. Die restlichen Größen hängen von der Körpergeometrie ab, so dass nach Bestimmung der Viskosität, die Reibungskraft für beliebige Körper im entsprechenden Medium berechnet werden kann.
- Zu beachten ist, dass die Stokes'sche Reibung \eqref{stokes} nur für laminare Flüssigkeiten gilt. Laminare Flüssigkeiten bilden keine Verwirbelungen, sondern umfließen den Körper homogen. Eine Flüssigkeit wird als laminar bezeichnet, wenn die Reynoldszahl
+ die der Bewegung entgegen wirkt. Wichtig ist hier die Viskosität $\eta $, eine Stoffeigenschaft, die das Fließverhalten von Flüssigkeiten und Gasen beschreibt und proportional auf die Reibungskraft einwirkt. Sie ist zudem die einzige stoffspezifische Größe, die Einfluss auf die Reibungskraft hat. Die restlichen Größen hängen lediglich von der Körpergeometrie ab, so dass nach Bestimmung der Viskosität, die Reibungskraft für beliebige Körper im entsprechenden Medium berechnet werden kann.
+ Zu beachten ist, dass die Stokes'sche Reibung \eqref{stokes} nur für laminare Flüssigkeiten gilt. Laminare Flüssigkeiten bilden keine Verwirbelungen, sondern umfließen den Körper homogen. Eine Flüssigkeit wird als laminar bezeichnet, wenn ihre Reynoldszahl
  \begin{align}
  Re= \frac{\rho v d}{\eta} = \frac{v d}{\nu}
  \end{align}
-des Aufbaus unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten nicht mehr als laminar bezeichnet, jedoch können sich verwirbelungen schon viel früher bilden, so dass  $Re \ll 2000$ sein sollte. 
+unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten nicht mehr als laminar bezeichnet, jedoch können sich Verwirbelungen schon viel früher bilden, so dass  $Re \ll 2000$ sein sollte. 
+	\section{Aufbau}
+\begin{wrapfigure}{r}{5cm}
+	\includegraphics[width=0.35\textwidth]{pics/aufbau.jpg}
+	\caption{Viskosimeter}
+	\label{aufbau}
+\end{wrapfigure}
+
+Beim Kugelfall-Viskosimeters nach Höppler handelt es sich um zwei ineinander eingelassene Hohlzylinder aus Glas, welche mit Flüssigkeiten befüllt und hermetisch abgeschlossen werden können. Auf Abbildung \ref{aufbau} \footnote{Viskosimeter nach Höppler - Das Bild ist aus der Versuchsanleitung entnommen} ist das Viskosimeter zu erkennen.\\
+Der innere Zylinder weißt Markierunge auf, durch die eine Strecke von 10cm abgesteckt werden. Er wird während des Versuchs mit der Flüssigkeit befüllt, deren Viskosität bestimmt werden soll und man legt eine Kugel hinein, deren Durchmesser nur geringfügig kleiner ist, als der des Zylinders. An einem Schanier kann man das Viskosimeter vertikal drehen, so dass die Kugel abzusinken beginnt. Dank der Markierungen kann man durch Messen der Zeit errechnen, welche Geschwindigkeit die Kugel erreicht.
+Über ein Termometer kann abgelesen werden, welche Temperatur die Probe zur Zeit hat und mit einer Libelle wird sichergestellt, dass das Viskosimeter im richtigen Winkel steht.\\
+Der äußere Zylinder hat zwei Anschlüsse, durch die temperiertes Wasser fließen und man somit die Temperatur der Probe beliebig verändern kann. Dies ist wichtig, da die Viskosität stark Temperaturabhängig ist und man sie so für verschiedene Temperaturen messen kann. 
 	\section{Durchführung}
-Im durgeführten Versuch soll die Viskosität von destillierem Wasser mit Hilfe des Kugelfall-Viskosimeters nach Höppler bestimmt werden. Dabei wird eine Kugel in einen mit destilliertem Wasser gefüllten Zylinder gelegt und dieser so aufgestellt, dass die Kugel hindurchfällt. Wichtig ist dabei, dass der Kugeldurchmesser nur geringfügig kleiner ist als der des Zylinders und dass dieser leicht geneigt ist, damit die Kugel nicht chaotisch an die Ränder stößt und Wirbel verursacht, sondern gleichmäßig herabgleitet.\\
-Beim Fallen wirken folgende Kräfte auf die Kugel: die Gewichtskraft $F_g$, die die Kugel nach unten beschleunigt, die Auftriebskraft $F_A$, die die Kugel nach oben treibt und die Reibungskraft \eqref{stokes}, die proportional zur Fallgeschwindigkeit ist und ihr entgegen wirkt. Nach dem Fallenlassen nimmt die Geschwindigkeit der Kugel zunächst immer weiter zu, bis sich durch Zunahme der Reibungskraft ein Kräftegleichgewicht einstellt und die Kugel gleichmäßig absinkt.
+Im durgeführten Versuch soll die Viskosität von destillierem Wasser mit Hilfe des Kugelfall-Viskosimeters nach Höppler bestimmt werden. Dabei wird eine Kugel in einen, mit destilliertem Wasser gefüllten, Zylinder gelegt und dieser so aufgestellt, dass die Kugel hindurchfällt. Wichtig ist dabei, dass der Kugeldurchmesser nur geringfügig kleiner ist als der des Zylinders und dass dieser leicht geneigt ist, damit die Kugel nicht chaotisch an die Ränder stößt und Wirbel verursacht, sondern gleichmäßig herabgleitet.\\
+Beim Fallen wirken folgende Kräfte auf die Kugel: die Gewichtskraft $F_g$, die die Kugel nach unten beschleunigt, die Auftriebskraft $F_A$, die die Kugel nach oben treibt und die Reibungskraft \eqref{stokes}, die proportional zur Fallgeschwindigkeit ist und ihr entgegen wirkt. Nach dem Fallenlassen nimmt die Geschwindigkeit der Kugel zunächst immer weiter zu, bis sich durch Zunahme der Reibungskraft ein Kräftegleichgewicht einstellt und die Kugel mit konstanter Geschwindigkeit absinkt.
 Es wird nun die Zeit gemessen, die die Kugel braucht um eine gewisse Strecke $d \vec{s}$ zurückzulegen. Hieraus lässt sich die Geschwindigkeit der Kugel und schließlich mit \eqref{stokes} die Viskosität des Wassers errechnen.\\
-Der Versuch wird zweimal bei Raumtemperatur mit verschiedenen Kugeln und dann mit einer Kugel bei verschiedenen Wassertemperaturen von $20 ^\circ $ bis $50 ^\circ $ C durchgeführt, da die Viskosität stark von der Temperatur abhängig ist. Halblogarithmisches Auftragen der Daten ermöglicht ein Ablesen der Konstanten A und B aus Gleichung
+Der Versuch wird zweimal bei Raumtemperatur mit verschiedenen Kugeln und dann mit nur einer Kugel bei verschiedenen Wassertemperaturen von $20 ^\circ $ bis $50 ^\circ $ C durchgeführt, da die Viskosität stark von der Temperatur abhängig ist. Halblogarithmisches Auftragen der Daten ermöglicht ein Ablesen der Konstanten A und B aus Gleichung
 \begin{align}
-	\eta(T)=Ae^{\frac{B}{T}},
+	\eta(T)=Ae^{\left(\frac{B}{T}\right)},
 \end{align}
 welche die Viskosität in Abhängigkeit von der Temperatur beschreibt.
 	\section{Auswertung}

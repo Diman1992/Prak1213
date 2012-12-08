@@ -1,0 +1,149 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{Header.tex}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Relaxationsverhalten eines RC-Schwingkreises\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Dimitrios Skodras\\			% Name Praktikumspartner A
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfÃ¼gen
+Jan Adam\\					% Name Praktikumspartner B
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{23.Oktober 2012}				% Das Datum der VersuchsdurchfÃ¼hrung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+
+\thispagestyle{empty} 				% Weder Kopfzeile noch FuÃŸzeile
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+%\section{Einleitung}				% Bei Bedarf
+ 
+
+\section{Theorie}
+Relaxation bezeichnet das Zurückkehren eines angeregten Systems in seinen Ruhezustand. Wird  beispielsweise ein stark gedämpftes Pendel ausgelenkt, so entsteht eine Rückstellkraft, die es wieder in seine Ruheposition zurückführt. Die asymptotische Annäherung, wird durch das Relaxationsverhalten beschrieben.\\
+In diesem Versuch soll ein RC-Schwingkreis auf sein Relaxationsverhalten untersucht werden. Dieser besteht aus einem Kondensator mit der Kapazität C, der über einen Widerstand R mit einer Spannung $U_0$ auf- und entladen wird.\\
+\begin{figure}[htbp]
+\includegraphics[width=8cm]{_pics/aufbau}
+\centering
+\end{figure}
+
+Mit Hilfe des Kirchhoffschen und Ohmschen Gesetztes lässt sich fürs Auf- und Entladen die folgende Differentialgleichung 
+für dieses System herleiten:
+\begin{align}
+\dot Q(t)=-\frac{1}{RC} Q(t)
+\end{align}
+
+deren Lösungen folgende Exponentialfunktionen sind:
+\begin{align}
+Q(t)&=Q_0(1-e^{-\frac{1}{RC}t)}\\
+Q(t)&=Q_0 e^{-\frac{1}{RC}t}
+\end{align}
+
+Der Exponent $-\frac{1}{RC}$ beschreibt dabei, wie schnell sich die Ladung des Kondensators ändert, bzw. wie schnell sich das System seinem Endzustand nähert. In folgender Tabelle ist die Zeit als Vielfaches der Konstante RC gegenüber dem relativen Anteil des Anfangswertes des Systems aufgetragen.
+\begin{align*}
+\begin{tabular}[t]{c|c|c|c|c|c}
+Zeit in RC Einheiten 	&1 &2 &3 &4 &5\\ \hline
+Restprozent 			&0,37 &0,14 &0,05 &0,02 &0,01\\
+\end{tabular}
+\end{align*}
+
+RC ermöglicht es somit allgemein, qualitative Aussagen über relaxative Systeme zu treffen und wird deshalb auch als  Zeitkonstante $\tau$ des Relaxationsvorganges bezeichnet.\\
+
+Zunächst wird das RC-Element mit einer relativ niederfrequenten ($\omega\ll\frac{1}{RC}$) Rechteckspannung $U_0$ betrieben. Die Frequenz wird so gewählt, damit sich der Kondensator bei jedem Phasendurchlauf immer noch vollständig auf- und entladen kann.
+Im späteren Verlauf wird die Frequenz jedoch erhöht. Es bildet sich schließlich eine Phasenverschiebung 
+\begin{align}
+\varphi(\omega)=arctan(-\omega RC)
+\label{varphi}
+\end{align}
+
+zwischen der Kondensatorspannung und der Generatorspannung heraus, da sich der Kondensator wegen des Widerstandes nicht instantan entladen kann.\\
+
+Bei weiterer Erhöhung der Frequenz, ist die Dauer der Phase irgendwann nicht mehr lang genug, um den Kondensator vollständig zu entladen, bzw. ihn vollständig aufzuladen.
+Die Amplitude der Kondensatorspannung erreicht dann nicht mehr den Maximalwert $U_0$ und hat keinen Nulldurchlauf mehr.
+\begin{align}
+A(\omega)= \frac{U_0}{\sqrt{1+\omega^2(RC)^2}}
+\label{A_omega}
+\end{align}
+Gleichung \eqref{A_omega} beschreibt die reduzierte Amplitudenhöhe in Abhängigkeit von der Frequenz $\omega$.
+Das RC-Glied behindert somit den Durchfluss des Wechselstroms bei höheren Frequenzen und wird deshalb auch als Tiefpass bezeichnet, da es Ströme mit langsamen Frequenzen ungehindert durchfließen lässt, während hochfrequente Signale abgemildert werden.\\
+
+Bei hohen Frequenzen $\omega\gg\frac{1}{RC}$ arbeitet der RC-Kreis des weiteren als Integrator. Beliebige eingegebene Signale können am Kondensator in integrierter Form abgegriffen werden, ähnlich als würde man eine Funktion integrieren.
+\begin{align}
+U(t)=\frac{1}{RC} \int_0^t U(t')dt'
+\label{int}
+\end{align}
+
+Gleichung \eqref{int} zeigt das Verhältnis zwischen der angelegten Wechselspannung U(t) und der am Kondensator abgegriffenen Spannung $U_c$. 
+Wie man sehen kann, taucht wieder die Konstante $\frac{1}{RC}$ als charakteristische Größe auf. Diesmal ist sie der Proportionalitätsfaktor zwischen den beiden Spannungen.\\
+
+\section{Durchführung}
+\subsection{}
+Zunächst soll die Zeitkonstante RC bestimmt werden. Hierzu erzeugt der Generator eine Rechteckspannung mit einer hinreichend kleinen Frequenz $\omega\ll\frac{1}{RC}$, damit der Kondensator noch vollständig auf- und entladen wird und zunächst vom Wechselstrom unbeeinflusst bleibt.
+Zu verschiedenen Zeitpunkten wird während der Entladung die Kondensatorspannung $U_c$ gemessen und die Daten später halblogarithmisch aufgetragen. Die Steigung der sich ergebenden Geraden entspricht der Konstanten RC.
+
+\subsection{}
+Im nächsten Schritt wird der Schaltkreis mit einer Sinusspannung betrieben und die Frequenz $\omega$ schrittweise erhöht. Zu jeder Frequenz wird die Amplitude der Kondensatorspannung gemessen und alles als Graph dargestellt. Zu zeigen ist, dass bei höheren Frequenzen die Amplitude abnimmt, da die Phasendauer des Stroms zu kurz wird um den Kondensator noch vollständig aufzuladen, bzw. zu entladen. Desweiteren lässt sich mit Gleichung \eqref{A_omega} ebenfalls RC bestimmen. Die beiden Werte sollen anschließend miteinander verglichen und diskutiert werden.
+
+\subsection{}
+Der Versuch aus Teil b wird wiederholt, nur diesmal wird anstelle der Amplitude die Phasenverschiebung $\varphi$ gemessen und überprüft ob diese der Gleichung \eqref{varphi} genügt.
+
+\subsection{}
+Abschließend soll verifiziert werden, inwieweit das RC-Glied als Integrator arbeitet. Hierzu werden vom Generator nacheinander eine Sinus-, Dreieck-, und zwei verschiedene Rechteckspannungen erzeugt. 
+Für die erfolgreiche Integration wird eine entsprechend hohe Frequenz gewählt und die erzeugten Graphen werden übereinander aufgetragen. Anschließend kann man beide miteinander vergleichen und qualitativ auswerten.
+
+\section{Auswertung}
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswÃ¤hlen
+%\bibliography{BIBDATEI}				% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

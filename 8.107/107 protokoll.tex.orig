@@ -73,13 +73,12 @@ Auf bewegte Körper in Flüssigkeiten oder Gasen wirkt, ähnlich wie auf rollend
 \vec F_R=-6 \pi \eta \vec{v} r,
 \label{stokes}
 \end{align}
- die der Bewegung entgegen wirkt. Wichtig ist hier die Viskosität $\eta $, eine Stoffeigenschaft, die das Fließverhalten von Flüssigkeiten und Gasen beschreibt und proportional auf die Reibungskraft einwirkt. Sie ist zudem die einzige stoffspezifische Größe, die Einfluss auf die Reibungskraft hat. Die restlichen Größen hängen lediglich von der Körpergeometrie ab, sodass man die Viskosität mit einer für den Versuch vereinfachten Formel ermitteln lässt. K ist der Parameter, welcher jene Geometriegrößen, sowie die Fallhöhe enthält, t die gemessene Fallzeit, und die beiden Dichten die Kugeldichte $\rho_K$ und die Flüssigkeitsdichte $\rho_{Fl}$.
- 
+ die der Bewegung entgegen wirkt. Wichtig ist hier die Viskosität $\eta $, eine Stoffeigenschaft, die das Fließverhalten von Flüssigkeiten und Gasen beschreibt und proportional auf die Reibungskraft einwirkt. Sie ist zudem die einzige stoffspezifische Größe, die Einfluss auf die Reibungskraft hat. Die restlichen Größen hängen lediglich von der Körpergeometrie ab, sodass man die Viskosität mit einer für den Versuch vereinfachten Formel ermitteln lässt. 
  \begin{equation}
   \eta = K(\rho_K - \rho_{Fl})\cdot t
   \label{viskos}
  \end{equation}
-
+ K ist der Parameter, welcher jene Geometriegrößen, sowie die Fallhöhe enthält, t die gemessene Fallzeit, und die beiden Dichten die Kugeldichte $\rho_K$ und die Flüssigkeitsdichte $\rho_{Fl}$.
  Zu beachten ist, dass die Stokes'sche Reibung \eqref{stokes} nur für laminare Flüssigkeiten gilt. Laminare Flüssigkeiten bilden keine Verwirbelungen, sondern umfließen den Körper homogen. Eine Flüssigkeit wird als laminar bezeichnet, wenn ihre Reynoldszahl
  \begin{align}
  Re= \frac{\rho v d}{\eta} = \frac{v d}{\nu}
@@ -92,8 +91,7 @@ unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten 
 	\caption{Viskosimeter}
 	\label{aufbau}
 \end{wrapfigure}
-
-Beim Kugelfall-Viskosimeters nach Höppler handelt es sich um zwei ineinander eingelassene Hohlzylinder aus Glas, welche mit Flüssigkeiten befüllt und hermetisch abgeschlossen werden können. Auf Abbildung \ref{aufbau} \footnote{Viskosimeter nach Höppler - Das Bild ist aus der Versuchsanleitung entnommen} ist das Viskosimeter zu erkennen.\\
+Beim Kugelfall-Viskosimeters nach Höppler handelt es sich um zwei ineinander eingelassene Hohlzylinder aus Glas, welche mit Flüssigkeiten befüllt und hermetisch abgeschlossen werden können. Auf Abbildung \ref{aufbau} \footnote{Viskosimeter nach Höppler\\Das Bild ist aus der Versuchsanleitung entnommen} ist das Viskosimeter zu erkennen.\\
 Der innere Zylinder weißt Markierunge auf, durch die eine Strecke von 10cm abgesteckt werden. Er wird während des Versuchs mit der Flüssigkeit befüllt, deren Viskosität bestimmt werden soll und man legt eine Kugel hinein, deren Durchmesser nur geringfügig kleiner ist, als der des Zylinders. An einem Schanier kann man das Viskosimeter vertikal drehen, so dass die Kugel abzusinken beginnt. Dank der Markierungen kann man durch Messen der Zeit errechnen, welche Geschwindigkeit die Kugel erreicht.
 Über ein Termometer kann abgelesen werden, welche Temperatur die Probe zur Zeit hat und mit einer Libelle wird sichergestellt, dass das Viskosimeter im richtigen Winkel steht.\\
 Der äußere Zylinder hat zwei Anschlüsse, durch die temperiertes Wasser fließen und man somit die Temperatur der Probe beliebig verändern kann. Dies ist wichtig, da die Viskosität stark Temperaturabhängig ist und man sie so für verschiedene Temperaturen messen kann. 
@@ -173,6 +171,7 @@ $K_{gr}$ sind neben der errechneten Viskosität die Dichte $\rho_{gr}$ aus gemes
  \hline
   $d_{kl}$ & 1,37 mm & 0,02 mm\footnote[2]{von Schieblehre angegebener Fehler}\\
   $d_{gr}$ & 1,38 mm & 0,02 mm\\
+<<<<<<< HEAD
 \hline
   $m_{kl}$ & 4,4531 g & - \\
   $m_{gr}$ & 5,0 g & 0,1 g\footnote[3]{kleinste Größenordnung der Messung durch Waage}\\
@@ -182,6 +181,17 @@ $K_{gr}$ sind neben der errechneten Viskosität die Dichte $\rho_{gr}$ aus gemes
   $\rho_{Fl}$ & 0,998 $\frac{\text{g}}{\text{cm$^3$}}$\footnote[4]{Wasser.de (2010), Dichtetabelle von Wasser bei verschiedenen Temperaturen URL: \href{http://www.wasser.de/aktuell/forum/index.pl?job=thema&tnr=100000000001135}{www.wasser.de/aktuell/forum} } & -\\
 \hline  
 $K_{kl}$ & 0,07640 $\frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}$ & -
+=======
+  \hline
+  $m_{kl}$ & 4,4531 g & - \\
+  $m_{gr}$ & 5,0 g & 0,1 g\footnote[3]{kleinste Größenordnung der Messung durch Waage}\\
+  \hline
+  $\rho_{kl}$ & 13,556 $\frac{\text{g}}{\text{cm$^3$}}$& 0,048 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{gr}$ & 15,220 $\frac{\text{g}}{\text{cm$^3$}}$& 0,111 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{Fl}$ &~~0,998 $\frac{\text{g}}{\text{cm$^3$}}$\footnote[4]{Wasser.de (2010), Dichtetabelle von Wasser bei verschiedenen Temperaturen URL: \href{http://www.wasser.de/aktuell/forum/index.pl?job=thema&tnr=100000000001135}{www.wasser.de/aktuell/forum} } & -\\
+  \hline
+  $K_{kl}$ & 0,07640 $\frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}$ & -
+>>>>>>> 115a8f75530a579e59b3f9ba297d1631b87abdd5
  \end{tabular}
 \caption{relevante Kenngrößen}
 \end{table}
@@ -240,16 +250,18 @@ Um aus dem Exponentialzusammenhang eine lineare Beziehung herzustellen, um durch
 die Koeffizienten zu bestimmen,
 werden folgende Umformungsschritte unternommen:
 
-\begin{align*}
-\eta(T) &= A \exp \left(\frac{B}{T}\right) \\
-\ln \left( \frac{\eta}{A}\right) &= \frac{B}{T}\\ 
-\ln [\underbrace{K_{gr}(\rho_{gr}-\rho_{Fl})}_{=c}] + \underbrace{\ln(t)}_{=y} &= \underbrace{\frac{B}{T}}_{=a\cdot x} + \ln(A)\\
-y & = a\cdot x + \underbrace{\ln \left(\frac{A}{c}\right)}_{=b}\\
-y & = a\cdot x + b 
-\end{align*}
-\begin{equation}
-\text{mit } a = 21,048\pm 1,72 \quad \text{und} \quad b = 3,464\pm0,05.\\
-\end{equation}
+\begin{align}
+\nonumber
+ \eta(T) &= A \exp \left(\frac{B}{T}\right) 
+ \nonumber\\
+ \ln \left( \frac{\eta}{A}\right) &= \frac{B}{T} 
+ \nonumber\\
+ \ln [\underbrace{K_{gr}(\rho_{gr}-\rho_{Fl})}_{=c}] + \underbrace{\ln(t)}_{=y} &= \underbrace{\frac{B}{T}}_{=a\cdot x} + \ln(A)
+ \nonumber\\
+ y & = a\cdot x + \underbrace{\ln \left(\frac{A}{c}\right)}_{=b}
+ \nonumber\\
+ y & = a\cdot x + b \intertext{mit} a = 21,048\pm 1,72 \quad \text{und} \quad b = 3,464\pm0,05.
+\end{align}
 
 Zurücktransferiert erhält man wieder A und B zu
 

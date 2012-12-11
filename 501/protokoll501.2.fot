@@ -1,0 +1,4 @@
+\relax 
+\c@footnote \z@ 
+\advance\c@footnote \@ne \expandafter\xdef \csname f@1\endcsname {\number\c@footnote }
+\c@footnote \z@ 

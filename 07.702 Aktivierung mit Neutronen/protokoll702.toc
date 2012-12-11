@@ -1,0 +1,17 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.2}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.3}
+\contentsline {subsection}{\numberline {2.1}Aktivierung}{3}{subsection.4}
+\contentsline {subsection}{\numberline {2.2}Wirkungsquerschnitt}{4}{subsection.10}
+\contentsline {subsection}{\numberline {2.3}Langsame Neutronen}{5}{subsection.15}
+\contentsline {subsection}{\numberline {2.4}Zerfallsgesetz}{5}{subsection.18}
+\contentsline {section}{\numberline {3}Durchf\IeC {\"u}hrung}{7}{section.25}
+\contentsline {subsection}{\numberline {3.1}Aparatur}{7}{subsection.26}
+\contentsline {subsection}{\numberline {3.2}Versuch}{7}{subsection.28}
+\contentsline {section}{\numberline {4}Auswertung}{7}{section.29}
+\contentsline {subsection}{\numberline {4.1}Nulleffekt}{7}{subsection.30}
+\contentsline {subsection}{\numberline {4.2}Halbwertszeit f\IeC {\"u}r $^{116}_{49}$Indium}{8}{subsection.33}
+\contentsline {subsection}{\numberline {4.3}Halbwertszeit f\IeC {\"u}r $\mhchem@ce@xiii {\noexpand ^{\noexpand 1\noexpand 0\noexpand 4}\noexpand _{\noexpand 4\noexpand 5}\noexpand R\noexpand h\noexpand o\noexpand d\noexpand i\noexpand u\noexpand m}$}{9}{subsection.39}
+\contentsline {section}{\numberline {5}Diskussion}{11}{section.46}
+\contentsline {subsection}{\numberline {5.1}Indium}{11}{subsection.47}
+\contentsline {subsection}{\numberline {5.2}Rhodium}{12}{subsection.49}

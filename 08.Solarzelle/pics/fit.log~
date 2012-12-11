@@ -1,0 +1,690 @@
+
+
+*******************************************************************************
+Thu Dec  6 10:15:21 2012
+
+
+FIT:    data read from "solar.txt" using 1:2 index 2
+        format = x:z
+        #datapoints = 24
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 238664            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 77.2946
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1003.71
+rel. change during last iteration : -1.28064e-08
+
+degrees of freedom    (FIT_NDF)                        : 22
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.7545
+variance of residuals (reduced chisquare) = WSSR/ndf   : 45.6233
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = -0.169446        +/- 0.01886      (11.13%)
+b               = 45.1175          +/- 2.061        (4.568%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.743  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 10:15:47 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 9416.93           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = -0.169446
+b               = 45.1175
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : -1.94316e-09
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 10:15:52 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : -1.1244e-15
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 10:15:55 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 10:16:29 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 10:16:59 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 12:33:12 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 68696.8           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : -5.63775e-12
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 12:33:22 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : -3.3732e-16
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 12:33:24 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : -2.2488e-16
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 12:33:53 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 12:34:12 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 12:34:38 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 13:29:44 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 13:32:10 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 
+
+
+*******************************************************************************
+Thu Dec  6 13:33:12 2012
+
+
+FIT:    data read from "solar.txt" using 4:2 index 8
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 126.386           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.804
+
+initial set of free parameter values
+
+a               = 0.291421
+b               = 3.25143
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 126.386
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.9494
+variance of residuals (reduced chisquare) = WSSR/ndf   : 63.193
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.291421         +/- 0.07142      (24.51%)
+b               = 3.25143          +/- 13.41        (412.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.955  1.000 

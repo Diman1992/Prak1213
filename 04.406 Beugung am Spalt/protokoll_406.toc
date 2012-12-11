@@ -1,0 +1,13 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.2}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.3}
+\contentsline {subsection}{\numberline {2.1}Mathematische Beziehungen - Einfachspalt}{4}{subsection.5}
+\contentsline {subsection}{\numberline {2.2}Mathematische Beziehungen - Doppelspalt}{5}{subsection.9}
+\contentsline {subsection}{\numberline {2.3}Fraunhofersche Beugung und Fourier-Transformation}{5}{subsection.11}
+\contentsline {section}{\numberline {3}Durchf\IeC {\"u}hrung}{6}{section.13}
+\contentsline {section}{\numberline {4}Auswertung}{6}{section.15}
+\contentsline {subsection}{\numberline {4.1}Einfachspalt feste Breite}{7}{subsection.27}
+\contentsline {subsection}{\numberline {4.2}Einfachspalt variable Breite}{7}{subsection.28}
+\contentsline {subsection}{\numberline {4.3}Doppelspalt}{13}{subsection.29}
+\contentsline {subsection}{\numberline {4.4}Verwendung des Mikroskops}{13}{subsection.30}
+\contentsline {section}{\numberline {5}Diskussion}{13}{section.31}

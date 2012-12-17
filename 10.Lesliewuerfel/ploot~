@@ -2,15 +2,15 @@
 set term wxt
 #set term jpeg
 #set term postscript enhanced eps
-set title ""
-set xlabel "Zeit t [s]"
+set title "Schwarze Oberfläche"
+set xlabel "Abstand d [cm]"
 set ylabel "Spannung U [mV]"
   #ändert Position von title
-set key bottom right
+set key top right
 
 #Formatierung
 set grid
-#set logscale y
+set logscale y
 #set logscale x
 #set yrange [:]
 #set xrange [0:500]
@@ -21,13 +21,13 @@ set grid
 
 
 #Fitfunktion
-#f(x)=a*(x)+b
+f(x)=a*5.67*10**(-8)*(x)+b
 #f(x)=b*exp(a*x)
 #f(x)=atan(-2*pi*x*a)
 #f(x)=1/(sqrt(1+4*pi**2*x**2*a**2))
 
 #fitting
-#fit f(x) "502_a" using (($2*8*n*m)/(sqrt(125)*r)):($1/(l**2+$1**2)) index 0 via a
+#fit f(x) "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:($1)-0.168 index 1 via a,b
 #fit f(x) "353_c" using 1:(($2*2*pi)/$3) index 0 via a
 #fit f(x) "solar.txt" using 4:2 index 8 via a,b
 
@@ -44,8 +44,8 @@ set grid
 
 #plot
 
-plot "daten" using ($9):(($1**4)-($10**4)) index 1 title "Thermospannung"
-#plot "solar.txt" using ($4):($3) index 8 title "Leerspannung" with lines
+#plot "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:(($1)-0.168) index 1 title "Thermospannung",f(x) title "Ausgleichsgerade"
+plot "daten" using ($1):($2 -0.14) every 2 index 3 title "Thermospannung 1", "daten" using ($1):($2 -0.14) every 2::1 index 3 title "Thermospannung 2"
 #plot "solar.txt" using ($1):($2) index 8 title "Kurzschlussstrom" with lines
 #plot "solar.txt" using ($4):($2) index 8 title "Kurzschlussstrom-Messwerte", f(x) title "Ausgleichsgerade"
 #plot "solar.txt" using 1:2 index 0 title 'Strom 70cm'
@@ -61,7 +61,7 @@ plot "daten" using ($9):(($1**4)-($10**4)) index 1 title "Thermospannung"
 
 #Zurücksetzen
 set term wxt
-#unset logscale y
+unset logscale y
 #unset logscale x
 
 

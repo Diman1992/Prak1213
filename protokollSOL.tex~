@@ -1,0 +1,164 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{blindtext}
+
+
+\newfloat{formel}{H}{for}
+\floatname{formel}{Formel}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Versuch\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Max Mustermann\\			% Name Praktikumspartner A
+{\small \href{max.mustermann@tu-dortmund.de}{max.mustermann@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+sofie.bauer\\					% Name Praktikumspartner B
+{\small \href{sofie.bauer@tu-dortmund.de}{sofie.bauer@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+\section{Einleitung}				% Bei Bedarf
+Die Erklärung des physikalischen Prozesses, der hinter einer Solarzelle steckt, wurde im 19. Jahrhundert von 
+Physikern wie Bequerel und Hallwachs vorangebracht und 1905 von Albert Einstein durch den Photoeffekt vervollständigt (Nobelpreis 1921).
+Im Zuge des Erneuerbare-Energien-Gesetz wird neben der Wasserkraft oder Windenergie auch Solarenergie durch Photovoltaikanlagen 
+(Solarzellen) vom Staat  gefördert. Sie haben den Vorteil, dass sie nach menschlichen Maßstäben unerschöpfliche Energiequellen 
+darstellen.
+
+
+\section{Theorie}
+
+\subsection{Photoeffekt}
+
+\begin{minipage}[h]{0.4\textwidth}
+Der lichtelektrische Effekt beschreibt einen Stoßprozess zwischen einem Lichtquanten und einem im Atom gebundenen Elektron. Ein Photon,
+mit einer gewissen Energie $E_{ph}$ trifft ein Elektron mit einer Bindungsenergie $E_b$ und emittiert es, sofern sie größer als die 
+Bindungsenergie ist und übergibt dem Elektron den Rest in Form von kinetischer Energie $E_{kin}$.
+\begin{equation}
+ E_{ph} = h \cdot \nu = E_{b} + E_{kin}
+\end{equation}
+\end{minipage}
+\begin{minipage}[h]{0.6\textwidth}
+  \includegraphics[width=1\textwidth]{pics/sol1.png}
+\end{minipage}
+
+\subsection{Funktionsweise einer Solarzelle}
+Die Grundlage für Solarzellen sind einkristalline Siliziumkristalle. Sie werden zum Beispiel mit einem fünfwertigen Element (Phosphor)
+dotiert. Das Silizium, mit nur vier Valenzelektronen, benötigt somit ein fremd eingebrachtes Elektron nicht zum Ausbau des Oktetts und der
+Kristall erhält dadurch ein freies Elektron. Der Kristall ist n-leitend. Ähnliches gilt für die Dotierung mit einem dreiwertigen Element,
+wie Bor. Zur Oktettausbildung fehlt ein Elektron. Diese so hervorgerufene Lücke ist ebenfalls frei im Kristall verschiebbar. In diesem Fall
+ist der Kristall p-leitend. In Halbleitern können thermische Anregung, oder durch Lichtabsorbtion Elektronen vom Valenzband ins 
+Leitungsband überführt werden. Wenn die atomaren Orbitale von hinreichend nahen Atomen superponieren, verschmieren die Energiezustände
+zu Energiebändern. Elektronen im Valenzband sind relativ schwach an den Kern gebunden und haben es daher leichter, ins Leitungsband
+zu gelangen. Wenn nun eine dünne Schicht n-dotiertes Silizium in ein Substrat p-dotiertes Silizium hineindiffundiert wird,
+spricht man von einer Solarzelle. Durch die Diffusion der freien Ladungsträger werden Gebiete in der Nähe des p-n-Übergangs elektrisch geladen.
+Das daraus entstehende E-Feld führt zu einem Driftstrom. Ohne Lichteinstrahlung verhält sich eine Solarzelle wie eine Diode, sodass
+sich die Spannungs-Strom-Kennlinie gleich beschreiben lässt zu
+
+\begin{formel}
+\begin{equation}
+ I_{\text{D}} = I_0 \left(\exp\left(\frac{e \cdot U}{k_b T}\right)-1\right)
+\end{equation}
+ \caption*{\small{($I_\text{D}$ = Driftstrom, $I_0$ = Sättigungsstrom, U = Diffusionsspannung)}}
+\end{formel}
+
+und mit Lichteinstrahlung, wodurch aufgrund des Photoeffekts Elektronen-Loch-Paare entstehen und durch das Feld in der 
+Raumladungszone (RLZ) getrennt werden zu
+
+\begin{formel}
+\begin{equation}
+ I_{\text{SZ}} = I_0 \left(\exp\left(\frac{e \cdot U}{k_b T}\right)-1\right) - I_{\text{Ph}}
+\end{equation}
+ \caption*{\small{($I_{\text{SZ}}$ = Solarzellenstrom, $I_{\text{Ph}}$ = Photostrom)}}
+\end{formel}
+
+\subsection{Wirkungsgrad}
+Die Strom-Spannungs-Kennlinie wird durch die Leerlaufspannung $U_{\text{oc}}$ (open circuit) und den Kurzschlussstrom $I_{\text{sc}}$
+(short circuit) bestimmt. Die Leerlaufspannung liegt an, wenn kein Strom fließt. Der Kurzschlussstrom ist der in der Solarzelle maximal
+fließende Strom. Die maximale Leistung ist beim Punkt $P_{\text{max}}$ erreicht. 
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{pics/sol2.png}
+\caption{Kennlinie einer Silizium-Solarzelle}
+\label{Kennlinie}
+\end{figure}
+
+In Abbildung \ref{Kennlinie} schließt die Kennlinie an
+diesem Punkt ein Rechteck A$_1$ ein, welches mit dem Rechteck A$_2$ einen Füllfaktor (FF = A$_1$ / A$_2$) ergibt. Der Wirkungsgrad $\eta$
+setzt sich aus dem Verhältnis des maximalen Leistung und der eingestrahlten Leistung $P_{\text{ein}}$ zusammen.
+
+\begin{equation}
+ \eta = \frac{P_{\text{max}}}{P_{\text{ein}}} = \frac{U_{\text{oc}}\cdot I_{\text{sc}}\cdot \text{FF}}{P_{\text{ein}}}
+\end{equation}
+
+\section{Durchführung}
+Ziel des Versuchs ist die Ermittlung der Strom-Spannungskennlinien einer Solarzelle für verschiedene Beleuchtungsstärken und daraus
+die abgegebene Leistung und der Wirkungsgrad berechnet werden. Darüber hinaus sollen die Leerlaufspannung und der Kurzschlussstrom 
+ebenfalls als Funktion der Beleuchtungsstärke bestimmt werden.\\
+Hierzu wird die Solarzelle mit einer Lampe verstellbarer Höhe beleuchtet. Die Beleuchtungsstärke nimmt mit zunehmendem Abstand ab. 
+Mit zwei Messgeräten werden die anliegende Spannung und der Strom für manuell einstellbare ohmsche Widerstände zwischen 5 und 100 $\Omega$
+notiert. 
+
+\section{Auswertung}
+
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

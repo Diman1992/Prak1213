@@ -2,4 +2,7 @@
 \contentsline {section}{\numberline {1}Theorie}{3}{section.2}
 \contentsline {section}{\numberline {2}Durchf\IeC {\"u}hrung}{4}{section.7}
 \contentsline {section}{\numberline {3}Auswertung}{4}{section.9}
-\contentsline {section}{\numberline {4}Diskussion}{4}{section.10}
+\contentsline {subsection}{\numberline {3.1}Bestimmung der Ansprechzeit}{4}{subsection.10}
+\contentsline {subsection}{\numberline {3.2}Bestimmung des Emissionsverm\IeC {\"o}gens $\epsilon $}{5}{subsection.13}
+\contentsline {subsection}{\numberline {3.3}Strahlintensit\IeC {\"a}t als Funktion des Abstandes}{6}{subsection.15}
+\contentsline {section}{\numberline {4}Diskussion}{6}{section.17}

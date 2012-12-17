@@ -116,8 +116,69 @@ dargestellt durch
 \end{figure}
 
 \section{Auswertung}
+\subsection{Bestimmung der Ansprechzeit}
+Zunächst soll die Ansprechzeit der Thermosäule bestimmt werden. Das ist die Zeit, die die Thermosäule benötigt, um die einfallende Wärme vollständig zu erfassen. Die Ansprechzeit ist daher für den weiteren Verlauf des Versuchs wichtig, denn man muss, nachdem man die Thermosäule auf eine andere Fläche des Würfels richtet, mindestens die Ansprechzeit abwarten, bevor Werte abgelesen werden dürfen.
+
+Nachdem siedendes Wasser in den Würfel gefüllt wurde, wird die Thermospannung alle 10s abgelesen.
+\begin{figure}{H}
+\includegraphics[width=0.9\textwidth]{pics/ansprechz.jpg}
+\caption{Von der Thermosäule erzeugte Thermospannung gegen die Zeit aufgetragen}
+\end{figure}
+
+Gesucht wird nach einem Maximum des Graphens, da dies der Zeitpunkt ist, zu dem die Thermosäule die Wärme komplett anzeigt. Dieses lokale Maximum gibt es jedoch nicht, da die Spannung bereits innerhalb der ersten 5s ihren Endwert erreicht hat. Folglich ist bei den folgenden Messungen darauf zu achten, mindestens 5 Sekunden zu warten, bevor ein Wert abgelesen wird.
+\begin{equation}
+\text{Ansprechzeit }\approx 5[s]
+\end{equation}
+
+\subsection{Bestimmung des Emissionsvermögens $\epsilon$}
+Um das Emissionsvermögen zu bestimmen wird der Würfel erneut mit siedendem Wassergefüllt und in jeweils $5^\circ$ Schritten die Thermospannung für alle 4 Würfelseiten notiert.
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Temperatur & Schimmernd [mV] & Schwarz [mV]& Matt [mV]& Weiß [mV]\\ 
+\hline 
+$82^\circ C$&-0.058	&1.842	&0.192	&1.802\\
+\hline
+$77^\circ C$&-0.078	&1.622	&0.132	&1.592\\
+\hline
+$72^\circ C$&0.612	&1.432	&0.082	&1.382\\
+\hline
+$67^\circ C$&-0.128	&1.232	&0.032	&1.202\\
+\hline
+$62^\circ C$&-0.137	&1.042	&0.002	&1.022\\
+\hline
+$57^\circ C$&-0.151	&0.852	&-0.030	&0.822\\
+\hline
+$52^\circ C$&-0.155	&0.672	&-0.058	&0.662\\
+\hline
+$47^\circ C$&-0.133	&0.530	&-0.068	&0.508\\ 
+\hline
+\end{tabular} 
+\end{table}
+
+Trägt man die gemessenen Spannungen gegen $T^4-T_0^4$ auf und zeichnet eine Ausgleichsgerade ein, so hat diese nach Gleichung \eqref{Boltz} die Steigung $\epsilon\sigma$.
+
+Nach einer Umrechnung der Daten der vier Oberflächen auf Volt errechnet man die Steigungen der Ausgleichsgeraden und dividiert diesen Wert nochmals durch $\sigma = 5,67\cdot 10^{-8}$ um das Emissionsvermögen $\sigma$ zu erhalten.
+\begin{align*}
+\epsilon_{schillernd: }		&= 0,38\cdot10^{-6}     &\pm 0,035\cdot 10^{-6}  \\
+\epsilon_{weiss: } 			&= 4,24\cdot10^{-6}     &\pm 0,028\cdot 10^{-6}  \\
+\epsilon_{schwarz: }	 	&= 4,31\cdot10^{-6}     &\pm 0,031\cdot 10^{-6}  \\
+\epsilon_{matt: }		 	&= 0,86\cdot10^{-6}     &\pm 0,054\cdot 10^{-6}  \\
+\end{align*} 
+
+\subsection{Strahlintensität als Funktion des Abstandes}
+Zum Schluss wird die Thermospannung für verschiedene Abstände von der schwarzen Würfelseite gemessen.
+
+\begin{figure}[H]
+\includegraphics[width=0.9\textwidth]{pics/temp_abstand.jpg}
+\caption{Thermospannung gegen den Abstand zum Würfel aufgetragen}
+\end{figure}
+
+Zur Erhöhung der Genauigkeit wurde im Abstand von etwa zwei Minuten eine zweite Messreihe aufgenommen. Da der Würfel in der Zwischenzeit etwas ausgekühlt ist, werden die Messreihen farbig unterschieden.
 
 \section{Diskussion}
+
 
 % ========================================
 %	Literaturverzeichnis

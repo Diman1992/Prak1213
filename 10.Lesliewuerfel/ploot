@@ -27,7 +27,7 @@ f(x)=a*5.67*10**(-8)*(x)+b
 #f(x)=1/(sqrt(1+4*pi**2*x**2*a**2))
 
 #fitting
-#fit f(x) "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:($1)-0.168 index 1 via a,b
+fit f(x) "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:(($4)-0.168)/1000 index 1 via a,b
 #fit f(x) "353_c" using 1:(($2*2*pi)/$3) index 0 via a
 #fit f(x) "solar.txt" using 4:2 index 8 via a,b
 

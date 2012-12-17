@@ -1,0 +1,68 @@
+#Beschriftungen
+set term wxt
+#set term jpeg
+#set term postscript enhanced eps
+set title ""
+set xlabel "Zeit t [s]"
+set ylabel "Spannung U [mV]"
+  #ändert Position von title
+set key top right
+
+#Formatierung
+set grid
+#set logscale y
+#set logscale x
+#set yrange [:]
+#set xrange [0:500]
+#set xrange [0:30]
+#set yrange [-28:0]
+
+#Konstanten definieren
+
+
+#Fitfunktion
+#f(x)=a*(x)+b
+#f(x)=b*exp(a*x)
+#f(x)=atan(-2*pi*x*a)
+#f(x)=1/(sqrt(1+4*pi**2*x**2*a**2))
+
+#fitting
+#fit f(x) "502_a" using (($2*8*n*m)/(sqrt(125)*r)):($1/(l**2+$1**2)) index 0 via a
+#fit f(x) "353_c" using 1:(($2*2*pi)/$3) index 0 via a
+#fit f(x) "solar.txt" using 4:2 index 8 via a,b
+
+#Rechenfunktionen
+#g(x)=450*exp(-0.01449*x)
+#i(x)=56*exp(-0.00266*x)
+#h(x)=g(x)+f(x)
+#j(x)=g(x)+i(x)
+
+#als Bild speichern
+#set term postscript
+
+#set output '70cmUI.jpg'
+
+#plot
+
+plot "daten" using ($1):($2) index 1 title "Thermospannung"
+#plot "solar.txt" using ($4):($3) index 8 title "Leerspannung" with lines
+#plot "solar.txt" using ($1):($2) index 8 title "Kurzschlussstrom" with lines
+#plot "solar.txt" using ($4):($2) index 8 title "Kurzschlussstrom-Messwerte", f(x) title "Ausgleichsgerade"
+#plot "solar.txt" using 1:2 index 0 title 'Strom 70cm'
+#plot "solar.txt" using 1:4 index 0 title 'Leistung 70cm'
+#plot "702" using 1:2:3 index 1:2 with errorbars title 'Messwerte', g(x) title ' ve'# 
+
+#Sonderkram
+#set arrow from 0,-26 to 1.6,-26 lc 2 lw 3 front nohead
+
+
+#Replot
+#replot
+
+#Zurücksetzen
+set term wxt
+#unset logscale y
+#unset logscale x
+
+
+

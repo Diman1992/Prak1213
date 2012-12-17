@@ -1,0 +1,150 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+\usepackage{float}
+\usepackage{caption}
+
+
+\newfloat{formel}{H}{for}
+\floatname{formel}{Formel}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Versuch 207 - Das Stefan-Boltzmann Gesetz\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Jan Adam\\			% Name Praktikumspartner A
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+Dimitrios Skodras\\					% Name Praktikumspartner B
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+\section{Theorie}
+Jedes System im Universum mit einer Temperatur $T > 0 \kelvin $ strahlt Wärmestrahlung aus, da einige seiner Elektronen sich in angeregtem
+Zustand befinden und von dort in den Grundzustand zurückkehren. Ein Körper, der ein breites Spektrum von Wellenlängen absorbiert, kann auch gut emittieren. Laut dem
+Kirchhoffschen Strahlungsgesetz sind Absorption und Emission äquivalent und über das Reflexionsvermögen verknüpft.
+
+\begin{equation}
+ \epsilon(\lambda,T) = A(\lambda,T) = 1 - R(\lambda,T)
+ \label{Kirch}
+\end{equation}
+
+Schwarze Körper (mit $\epsilon$ = 1) weisen eine Strahlungsleistung auf, die lediglich von der Wellenlänge $\lambda$ der Strahlung sowie 
+seiner absoluten Temperatur T abhängt. Ein Hohlraum mit einer kleinen Öffnung kommt dem Bild des idealen schwarzen Körpers am nächsten,
+da die eintretende Strahlung darin mehrfach reflektiert und schließlich endgültig absorbiert wird (Hohlraumstrahlung). Die emittierte
+Strahlung wird gemäß dem Planckschen Strahlungsgesetz ausgedrückt durch
+
+\begin{formel}
+\begin{equation}
+P(\lambda,T) = \frac{\dx P}{\dx \lambda} = \frac{2 \pi c^2 h}{\Omega_0 \lambda^5} \left[ \exp \left(\frac{c\, h}{k_b \lambda \, T}\right) -1 \right]^{-1} .
+\end{equation}
+\caption*{\small{(c = Lichtgeschwindigkeit, h = Plancksches Wirkungsquantum, k$_\text{b}$ = Boltzmann-Konstante)}}
+\label{Planck}
+\end{formel}
+
+$\Omega_0$ ist hierbei der Raumwinkel der abgestrahlten Wärme. Das Wiensche Verschiebungsgesetz besagt eine Verschiebung des Strahlungs
+leistungsmaximum zu kleineren Wellenlängen bei höheren Temperaturen, wie in Abbildung \ref{Spektrum} dargestellt.
+
+\begin{figure}[H]
+ \includegraphics[width=0.75\textwidth]{pics/207a.png}
+ \centering
+ \caption{Plancksches Strahlungsspektrum zu verschiedenen Temperaturen}
+ \label{Spektrum}
+\end{figure}
+
+Das in diesem Versuch zu untersuchende Stefan-Boltzmann-Gesetz beschreibt die Strahlungsdichte P(T) eines schwarzen Körpers und wird
+dargestellt durch
+
+\begin{formel}
+\begin{equation}
+ P(T) = \epsilon \, \sigma \, T^4
+ \end{equation}
+\caption*{\small{($\sigma$ = Stefan-Boltzmann-Konstante)}}
+\label{Boltz}
+\end{formel}
+
+\section{Durchführung}
+<<<<<<< HEAD
+Der Leslie-Würfel ist ein Würfel mit einer öffenbaren Deckelfläche mit einem Loch zur Temperaturmessung und vier verschiedenen Seitenflächen.
+Eine schwarz lackierte, eine weiß lackierte, eine matt und eine glänzend metallische Fläche. Je nach Absorbtionsvermögen wird die Wärme
+des Wassers aufgenommen und in Form von Wärmestrahlung wieder emittiert. Gemessen wird sie durch die Thermosäule nach Moll. Die eintretende
+Strahlung von wird von in Reihe geschhalteten Thermoelementen erfasst, die thermisch mit dem Gehäuse verbunden sind. So wird eine relativ
+zur Gehäusetemperatur T$_0$ ermittelte Temperatur angegeben. Der Wellenlängenbereich, für den die Thermosäule empfindlich ist, bewegt sich
+zwischen $\lambda$ = 0,2 - 50 $\mu$m und mit Schutzfenster bei $\lambda$ = 0,3 - 2,8 $\mu$m.
+=======
+>>>>>>> 9f02ef311632cd6d8b522f91eac6de592ab95dcd
+
+\begin{figure}[H]
+ \includegraphics[width=0.9\textwidth]{pics/207b.png}
+ \centering
+ \caption{Schematischer Versuchsaufbau}
+ \label{Aufbau}
+\end{figure}
+
+Nachdem ein Abstand von 10 cm zwischen der Thermosäule und der frontal gerichteten Würfelseitenfläche eingestellt worden ist, wird 
+Wasser im Wasserkocher auf ungefähr 95 $^\circ$C erhitzt und in den Lesliewürfel gefüllt. Die Temperatur wird unterdessen permanent
+gemessen. Über einen Zeitraum von $t$ = 5 min wird im Zeitintervall $\Delta t$ = 10 s die Thermospannung am Messgerät abgetragen. Das
+nun für weitere Messungen zu kühle Wasser wird ausgeschüttet und durch neu erhitztes ersetzt. Ziel dieses Versuchsteils ist es, ausgehend
+von 100 $^\circ$C im Temperaturintervall $\Delta T$ = 5 $^\circ$C die Thermospannung aller vier Seitenflächen zu messen und durch den
+linearen Fit das Emissionsvermögen $\epsilon$ zu bestimmen. Die Offsetspannung, also jene Spannung, die die Temperatur der Luft
+erzeugt, wird allenthalben vor und nach jeder Messung erfasst.
+
+\section{Auswertung}
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

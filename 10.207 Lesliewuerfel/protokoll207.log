@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.9.23)  18 DEC 2012 00:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.9.23)  18 DEC 2012 00:16
 entering extended mode
  %&-line parsing enabled.
 **protokoll207.tex
@@ -903,7 +903,7 @@ Class scrartcl Info: You've told me to use the font selection of the element
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <6> on input line 66.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 85.
+(Font)              <5> on input line 84.
 
 <pics/207a.png, id=39, 3982.88pt x 2853.66125pt>
 File: pics/207a.png Graphic file (type png)
@@ -913,10 +913,10 @@ File: pics/207b.png Graphic file (type png)
  <use pics/207b.png>
 [4 <./pics/207b.png>] [5] (./protokoll207.aux) ) 
 Here is how much of TeX's memory you used:
- 9085 strings out of 493849
- 130681 string characters out of 1152846
+ 9087 strings out of 493849
+ 130728 string characters out of 1152846
  229455 words of memory out of 3000000
- 12101 multiletter control sequences out of 15000+50000
+ 12103 multiletter control sequences out of 15000+50000
  35777 words of font info for 86 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  45i,8n,51p,292b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -930,7 +930,7 @@ ve/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb>
-Output written on protokoll207.pdf (5 pages, 316682 bytes).
+Output written on protokoll207.pdf (5 pages, 316726 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  16 named destinations out of 1000 (max. 500000)

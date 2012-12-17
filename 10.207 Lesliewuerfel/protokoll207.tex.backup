@@ -109,8 +109,20 @@ dargestellt durch
 
 
 \section{Durchführung}
+Der Leslie-Würfel ist ein Würfel mit einer öffenbaren Deckelfläche mit einem Loch zur Temperaturmessung und vier verschiedenen Seitenflächen.
+Eine schwarz lackierte, eine weiß lackierte, eine matt und eine glänzend metallische Fläche. Je nach Absorbtionsvermögen wird die Wärme
+des Wassers aufgenommen und in Form von Wärmestrahlung wieder emittiert. Gemessen wird sie durch die Thermosäule nach Moll. Die eintretende
+Strahlung von wird von in Reihe geschhalteten Thermoelementen erfasst, die thermisch mit dem Gehäuse verbunden sind. So wird eine relativ
+zur Gehäusetemperatur T$_0$ ermittelte Temperatur angegeben. Der Wellenlängenbereich, für den die Thermosäule empfindlich ist, bewegt sich
+zwischen $\lambda$ = 0,2 - 50 $\mu$m und mit Schutzfenster bei $\lambda$ = 0,3 - 2,8 $\mu$m.
 
 
+\begin{figure}[H]
+ \includegraphics[width=0.9\textwidth]{pics/207b.png}
+ \centering
+ \caption{Schematischer Versuchsaufbau}
+ \label{Aufbau}
+\end{figure}
 
 \section{Auswertung}
 

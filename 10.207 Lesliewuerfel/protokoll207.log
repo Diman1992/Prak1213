@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.9.23)  17 DEC 2012 17:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.9.23)  18 DEC 2012 00:14
 entering extended mode
  %&-line parsing enabled.
 **protokoll207.tex
@@ -905,34 +905,34 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <5> on input line 85.
 
-<pics/207a.png, id=39, 808.01875pt x 570.13pt>
+<pics/207a.png, id=39, 3982.88pt x 2853.66125pt>
 File: pics/207a.png Graphic file (type png)
- <use pics/207a.png> [3 <./pics/207a.png>] <pics/207b.png, id=56, 454.0965pt x 
-250.536pt>
+ <use pics/207a.png> [3 <./pics/207a.png>] <pics/207b.png, id=56, 1844.8925pt x
+ 987.69pt>
 File: pics/207b.png Graphic file (type png)
  <use pics/207b.png>
-[4 <./pics/207b.png>] (./protokoll207.aux) ) 
+[4 <./pics/207b.png>] [5] (./protokoll207.aux) ) 
 Here is how much of TeX's memory you used:
- 9084 strings out of 493849
- 130675 string characters out of 1152846
+ 9085 strings out of 493849
+ 130681 string characters out of 1152846
  229455 words of memory out of 3000000
  12101 multiletter control sequences out of 15000+50000
  35777 words of font info for 86 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  45i,8n,51p,292b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on protokoll207.pdf (4 pages, 170471 bytes).
+</usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb>
+Output written on protokoll207.pdf (5 pages, 316682 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

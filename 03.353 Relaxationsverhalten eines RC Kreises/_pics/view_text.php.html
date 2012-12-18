@@ -1,0 +1,457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="x-dns-prefetch-control" content="off">
+<script type="text/javascript" language="JavaScript">
+<!--
+if (self != top) { try { if (document.domain != top.document.domain) { throw "Clickjacking security violation! Please log out immediately!"; /* this code should never execute - exception should already have been thrown since it's a security violation in this case to even try to access top.document.domain (but it's left here just to be extra safe) */ } } catch (e) { self.location = "/squirrelmail/src/signout.php"; top.location = "/squirrelmail/src/signout.php" } }
+// -->
+</script>
+
+<title>SquirrelMail 1.4.23 [SVN]</title>
+<!--[if IE 6]>
+<style type="text/css">
+/* avoid stupid IE6 bug with frames and scrollbars */
+body {
+    width: expression(document.documentElement.clientWidth - 30);
+}
+</style>
+<![endif]-->
+
+</head>
+
+<body text="#000000" bgcolor="#ffffff" link="#0000cc" vlink="#0000cc" alink="#0000cc" >
+
+<a name="pagetop"></a>
+<table bgcolor="#ffffff" border="0" width="100%" cellspacing="0" cellpadding="2">
+
+<tr bgcolor="#ababab">
+
+<td align="left">
+
+&nbsp;      </td>
+<td align="right">
+<b>
+<a href="/squirrelmail/src/signout.php" target="_top">Abmelden</a></b></td>
+   </tr>
+<tr bgcolor="#ffffff">
+
+<td align="left">
+
+<a href="/squirrelmail/src/compose.php?mailbox=None&amp;startMessage=0">Verfassen</a>&nbsp;&nbsp;
+<a href="/squirrelmail/src/addressbook.php">Adressen</a>&nbsp;&nbsp;
+<a href="/squirrelmail/src/folders.php">Ordner</a>&nbsp;&nbsp;
+<a href="/squirrelmail/src/options.php">Optionen</a>&nbsp;&nbsp;
+<a href="/squirrelmail/src/search.php?mailbox=None">Suchen</a>&nbsp;&nbsp;
+<a href="/squirrelmail/src/help.php">Hilfe</a>&nbsp;&nbsp;
+<a href="/squirrelmail/plugins/avelsieve/table.php">Filter</a>&nbsp;&nbsp
+      </td>
+<td align="right">
+
+<a href="http://squirrelmail.org/" target="_blank">SquirrelMail</a></td>
+   </tr>
+</table><br>
+
+<br /><table width="100%" border="0" cellspacing="0" cellpadding="2" align="center"><tr><td bgcolor="#dcdcdc">
+<b><center>
+Text Anhang anzeigen - <a href="read_body.php?mailbox=INBOX&amp;passed_id=384&amp;startMessage=1&amp;ent_id=0">Nachricht anzeigen</a></b></td><tr><tr><td><center>
+<a href="../src/download.php?mailbox=INBOX&amp;passed_id=384&amp;startMessage=1&amp;ent_id=2&amp;absolute_dl=true">Dies als Datei herunterladen</a></center><br />
+</center></b>
+</td></tr></table>
+<table width="98%" border="0" cellspacing="0" cellpadding="2" align="center"><tr><td bgcolor="#dcdcdc">
+<tr><td bgcolor="#ffffff"><tt>
+<pre>% ========================================
+%        Header einbinden
+% ========================================
+
+\input{longheader.tex}
+
+% ========================================
+%        Angaben f&#195;&#338;r das Titelblatt
+% ========================================
+
+\title{Versuch 353 - Das Relaxationsverhalten eines RC-Kreises\\                                % Titel des
+Versuchs 
+\large TU Dortmund, Fakult&#195;&#8364;t Physik\\ 
+\normalsize Anf&#195;&#8364;nger-Praktikum}
+
+\author{Jan Adam\\                        % Name Praktikumspartner A
+{\small \href{<a href="/squirrelmail/src/compose.php?send_to=jan.adam%40tu-dortmund.de">jan.adam@tu-dortmund.de</a>}{<a href="/squirrelmail/src/compose.php?send_to=jan.adam%40tu-dortmund.de">jan.adam@tu-dortmund.de</a>}}        % Erzeugt
+interaktiven einen Link
+\and                                                % um einen weiteren Author hinzuzf&#195;&#338;gen
+Dimitrios Skodras\\                                        % Name Praktikumspartner B
+{\small
+\href{<a href="/squirrelmail/src/compose.php?send_to=dimitrios.skodras%40tu-dortmund.de">dimitrios.skodras@tu-dortmund.de</a>}{<a href="/squirrelmail/src/compose.php?send_to=dimitrios.skodras%40tu-dortmund.de">dimitrios.skodras@tu-dortmund.de</a>}}                %
+Erzeugt interaktiven einen Link
+}
+\date{23.Oktober 2012}                                % Das Datum der Versuchsdurchf&#195;&#338;hrung
+
+% ========================================
+%        Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%        Titelblatt erzeugen
+% ========================================
+
+\maketitle                                        % Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty}                                 % Weder Kopfzeile noch Fu&#195;Ÿzeile
+
+% ========================================
+%        Der Vorspann
+% ========================================
+
+%\newpage                                        % Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}                                % Weder Kopf- noch Fu&#195;Ÿzeile f&#195;&#338;r Verzeichnisse
+
+\tableofcontents
+
+%\newpage                                        % eine neue Seite
+%\thispagestyle{empty}                                % Weder Kopf- noch Fu&#195;Ÿzeile f&#195;&#338;r Verzeichnisse
+%\listoffigures                                        % Abbildungsverzeichnis
+
+%\newpage                                        % eine neue Seite
+%\thispagestyle{empty}                                % Weder Kopf- noch Fu&#195;Ÿzeile f&#195;&#338;r Verzeichnisse
+%\listoftables                                        % Tabellenverzeichnis
+\newpage                                        % eine neue Seite
+
+
+% ========================================
+%        Kapitel
+% ========================================
+
+\section{Einleitung}                                % Bei Bedarf
+
+\section{Theorie}
+
+Relaxation bezeichnet das Zur&#195;&#338;ckkehren eines angeregten Systems in seinen
+Ruhezustand. Wird  beispielsweise ein stark ged&#195;&#8364;mpftes Pendel ausgelenkt, so
+entsteht eine R&#195;&#338;ckstellkraft, die es wieder in seine Ruheposition zur&#195;&#338;ckf&#195;&#338;hrt.
+Die asymptotische Ann&#195;&#8364;herung, wird durch das Relaxationsverhalten beschrieben.\\
+In diesem Versuch soll ein RC-Schwingkreis auf sein Relaxationsverhalten untersucht
+werden. Dieser besteht aus einem Kondensator mit der Kapazit&#195;&#8364;t C, der &#195;&#338;ber einen
+Widerstand R mit einer Spannung $U_0$ auf- und entladen wird.\\
+\begin{figure}[htbp]
+\includegraphics[width=8cm]{pics/aufbau.jpg}
+\centering
+\end{figure}
+
+Mit Hilfe des Kirchhoffschen und Ohmschen Gesetztes l&#195;&#8364;sst sich f&#195;&#338;rs Auf- und
+Entladen die folgende Differentialgleichung 
+f&#195;&#338;r dieses System herleiten:
+\begin{align}
+\dot Q(t)=-\frac{1}{RC} Q(t)
+\end{align}
+
+deren L&#195;&#182;sungen folgende Exponentialfunktionen sind:
+\begin{align}
+Q(t)&amp;=Q_0(1-e^{-\frac{1}{RC}t)}\\
+Q(t)&amp;=Q_0 e^{-\frac{1}{RC}t}
+\end{align}
+
+Der Exponent $-\frac{1}{RC}$ beschreibt dabei, wie schnell sich die Ladung des
+Kondensators &#195;&#8364;ndert, bzw. wie schnell sich das System seinem Endzustand n&#195;&#8364;hert. In
+folgender Tabelle ist die Zeit als Vielfaches der Konstante RC gegen&#195;&#338;ber dem
+relativen Anteil des Anfangswertes des Systems aufgetragen.
+\begin{align*}
+\begin{tabular}[t]{c|c|c|c|c|c}
+Zeit in RC Einheiten         &amp;1 &amp;2 &amp;3 &amp;4 &amp;5\\ \hline
+Restprozent                         &amp;0,37 &amp;0,14 &amp;0,05 &amp;0,02 &amp;0,01\\
+\end{tabular}
+\end{align*}
+
+RC erm&#195;&#182;glicht es somit allgemein, qualitative Aussagen &#195;&#338;ber relaxative Systeme zu
+treffen und wird deshalb auch als  Zeitkonstante $\tau$ des Relaxationsvorganges
+bezeichnet.\\
+
+Zun&#195;&#8364;chst wird das RC-Element mit einer relativ niederfrequenten
+($\omega\ll\frac{1}{RC}$) Rechteckspannung $U_0$ betrieben. Die Frequenz wird so
+gew&#195;&#8364;hlt, damit sich der Kondensator bei jedem Phasendurchlauf immer noch
+vollst&#195;&#8364;ndig auf- und entladen kann.
+Im sp&#195;&#8364;teren Verlauf wird die Frequenz jedoch erh&#195;&#182;ht. Es bildet sich schlie&#195;Ÿlich
+eine Phasenverschiebung 
+\begin{align}
+\varphi(\omega)=arctan(-\omega RC)
+\label{varphi}
+\end{align}
+
+zwischen der Kondensatorspannung und der Generatorspannung heraus, da sich der
+Kondensator wegen des Widerstandes nicht instantan entladen kann.\\
+
+Bei weiterer Erh&#195;&#182;hung der Frequenz, ist die Dauer der Phase irgendwann nicht mehr
+lang genug, um den Kondensator vollst&#195;&#8364;ndig zu entladen, bzw. ihn vollst&#195;&#8364;ndig
+aufzuladen.
+Die Amplitude der Kondensatorspannung erreicht dann nicht mehr den Maximalwert $U_0$
+und hat keinen Nulldurchlauf mehr.
+\begin{align}
+A(\omega)= \frac{U_0}{\sqrt{1+\omega^2(RC)^2}}
+\label{A_omega}
+\end{align}
+Gleichung \eqref{A_omega} beschreibt die reduzierte Amplitudenh&#195;&#182;he in Abh&#195;&#8364;ngigkeit
+von der Frequenz $\omega$.
+Das RC-Glied behindert somit den Durchfluss des Wechselstroms bei h&#195;&#182;heren
+Frequenzen und wird deshalb auch als Tiefpass bezeichnet, da es Str&#195;&#182;me mit
+langsamen Frequenzen ungehindert durchflie&#195;Ÿen l&#195;&#8364;sst, w&#195;&#8364;hrend hochfrequente
+Signale abgemildert werden.\\
+
+Bei hohen Frequenzen $\omega\gg\frac{1}{RC}$ arbeitet der RC-Kreis des weiteren als
+Integrator. Beliebige eingegebene Signale k&#195;&#182;nnen am Kondensator in integrierter
+Form abgegriffen werden, &#195;&#8364;hnlich als w&#195;&#338;rde man eine Funktion integrieren.
+\begin{align}
+U(t)=\frac{1}{RC} \int_0^t U(t')dt'
+\label{int}
+\end{align}
+
+Gleichung \eqref{int} zeigt das Verh&#195;&#8364;ltnis zwischen der angelegten Wechselspannung
+U(t) und der am Kondensator abgegriffenen Spannung $U_c$. 
+Wie man sehen kann, taucht wieder die Konstante $\frac{1}{RC}$ als charakteristische
+Gr&#195;&#182;&#195;Ÿe auf. Diesmal ist sie der Proportionalit&#195;&#8364;tsfaktor zwischen den beiden
+Spannungen.\\
+
+\section{Durchf&#195;&#338;hrung}
+\subsection{}
+Zun&#195;&#8364;chst soll die Zeitkonstante RC bestimmt werden. Hierzu erzeugt der Generator
+eine Rechteckspannung mit einer hinreichend kleinen Frequenz
+$\omega\ll\frac{1}{RC}$, damit der Kondensator noch vollst&#195;&#8364;ndig auf- und entladen
+wird und zun&#195;&#8364;chst vom Wechselstrom unbeeinflusst bleibt.
+Zu verschiedenen Zeitpunkten wird w&#195;&#8364;hrend der Entladung die Kondensatorspannung
+$U_c$ gemessen und die Daten sp&#195;&#8364;ter halblogarithmisch aufgetragen. Die Steigung der
+sich ergebenden Geraden entspricht der Konstanten RC.
+
+\subsection{}
+Im n&#195;&#8364;chsten Schritt wird der Schaltkreis mit einer Sinusspannung betrieben und die
+Frequenz $\omega$ schrittweise erh&#195;&#182;ht. Zu jeder Frequenz wird die Amplitude der
+Kondensatorspannung gemessen und alles als Graph dargestellt. Zu zeigen ist, dass
+bei h&#195;&#182;heren Frequenzen die Amplitude abnimmt, da die Phasendauer des Stroms zu kurz
+wird um den Kondensator noch vollst&#195;&#8364;ndig aufzuladen, bzw. zu entladen. Desweiteren
+l&#195;&#8364;sst sich mit Gleichung \eqref{A_omega} ebenfalls RC bestimmen. Die beiden Werte
+sollen anschlie&#195;Ÿend miteinander verglichen und diskutiert werden.
+
+\subsection{}
+Der Versuch aus Teil b wird wiederholt, nur diesmal wird anstelle der Amplitude die
+Phasenverschiebung $\varphi$ gemessen und &#195;&#338;berpr&#195;&#338;ft ob diese der Gleichung
+\eqref{varphi} gen&#195;&#338;gt.
+
+\subsection{}
+Abschlie&#195;Ÿend soll verifiziert werden, inwieweit das RC-Glied als Integrator
+arbeitet. Hierzu werden vom Generator nacheinander eine Sinus-, Dreieck-, und zwei
+verschiedene Rechteckspannungen erzeugt. 
+F&#195;&#338;r die erfolgreiche Integration wird eine entsprechend hohe Frequenz gew&#195;&#8364;hlt und
+die erzeugten Graphen werden &#195;&#338;bereinander aufgetragen. Anschlie&#195;Ÿend kann man beide
+miteinander vergleichen und qualitativ auswerten.
+
+\section{Auswertung}
+Hauptbetrachtungspunkt dieses Experiments ist die Bestimmung der Zeitkonstanten des
+bereitgestellten RC-Gliedes nach verschiedenen Methoden
+
+\subsection{Auf- und Entladung des Kondensators}
+Nach dem oben aufgef&#195;&#338;hrten Schaltbild wurde das RC-Glied aufgebaut. Es wurde mit
+einer niederfrequenten Rechtecksspannung betrieben.
+Dadurch wird der Kondensator &#195;&#338;ber eine halbe Periode aufgeladen und danach
+entladen. Die Frequenz hierbei betr&#195;&#8364;gt f = 42 Hz und die Ladespannung
+U = 5V. Der in der folgenden Abbildung dargestellter exponentielle Abfall entspricht
+der Entladekurve des Kondensators.
+
+
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/TEK0000.JPG}
+\centering
+\end{figure}
+
+
+Um die Zeitkonstante RC zu ermitteln wird zu vielen Zeiten (x-Achse) die Spannung
+(y-Achse) gemessen und in halblogarithmischem Koordinatensystem
+aufgef&#195;&#338;hrt. Durch diese Skalierung wird der Exponent der Exponentialfunktion einer
+Geraden gleichgesetzt. Eine Ausgleichsgerade aus linearer 
+Ausgleichsrechnung hat eine Steigung, die RC enspricht. 
+
+\newpage
+
+
+\begin{figure}
+\begin{minipage}{0.8\textwidth}
+\includegraphics [width=0.7\textwidth] {pics/RC1.png}
+\end{minipage}
+\end{figure}
+\begin{minipage}{0.2\textwidth}
+\begin{tabular}{l|r}
+$t/ms$ &amp; $U/V$\\
+\hline
+0.0 &amp;        5.00\\
+0.1 &amp;        4.62\\
+0.2 &amp;        4.32\\
+0.3 &amp;        3.96\\
+0.4 &amp;        3.66\\
+0.5 &amp;        3.42\\
+0.6 &amp;        3.16\\
+0.7 &amp;        2.92\\
+0.8 &amp;        2.72\\
+0.9 &amp;        2.50\\
+1.0 &amp;        2.32\\
+1.1 &amp;        2.16\\
+1.2 &amp;        2.00\\
+1.7 &amp;        1.36\\
+2.2 &amp;        0.94\\
+2.7 &amp;        0.64\\
+3.2 &amp;        0.44\\
+3.7 &amp;        0.30\\
+4.2 &amp;        0.30\\
+4.7 &amp;        0.12\\
+5.2 &amp;        0.08\\
+5.7 &amp;        0.04 
+\end{tabular}
+\end{minipage}
+
+
+
+Die Steigung der Ausgleichsgeraden bel&#195;&#8364;uft sich auf etwa $-7.62*10^2$. Somit ergibt
+sich f&#195;&#338;r die Exponentialfunktion:
+
+$U(t) = U_0 * exp(\frac{-t}{RC}) = 5V*exp(-7.62*10^{-2}s*t)$
+
+\subsection{Frequenzabh&#195;&#8364;ngige Amplituden}
+Indem das RC-Glied nun mit Sinusspannung h&#195;&#182;herer Frequenz betrieben wird, reicht
+die Periodendauer nicht aus, um 
+den Kondensator komplett aufzuladen beziehungsweise zu entladen. Somit ergibt sich
+eine frequenzabh&#195;&#8364;ngige Amplitude der 
+Kondensatorspannung, die entsprechend des oben aufgef&#195;&#338;hrten Schaltbildes durch
+einen Millivoltmesser ermittelt wird. 
+Die Generatorspannungsamplitude ist frequenzunabh&#195;&#8364;ngig bei U = 3.4 V. 
+
+\begin{minipage}{0.2\textwidth}
+\begin{tabular}{l|r}
+$f/Hz$ &amp; $A(\omega)/U_0$\\
+\hline
+0 &amp;        1\\
+10 &amp;        0.64\\
+50 &amp;        0.6\\
+100 &amp;        0.49\\
+150 &amp;        0.4\\
+200 &amp;        0.33\\
+250 &amp;        0.27\\
+300 &amp;        0.23\\
+350 &amp;        0.20\\
+400 &amp;        0.18\\
+500 &amp;        0.14\\
+600 &amp;        0.12\\
+700 &amp;        0.100\\
+800 &amp;        0.098\\
+900 &amp;        0.074\\
+1000 &amp;        0.068\\
+1200 &amp;        0.053\\
+1400 &amp;        0.044\\
+1600 &amp;        0.038\\
+1800 &amp;        0.032\\
+2000 &amp;        0.024
+\end{tabular}
+\end{minipage}
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/RC2.png}
+\centering
+\end{figure}
+
+Die Messwerte geben ein Verh&#195;&#8364;ltnis von $\frac{A(\omega)}{U}$, welches indirekt
+proportional zu $\omega$ ist. Die genaue
+Abh&#195;&#8364;ngigkeit entspricht der aus Gleichung \eqref{A_omega} mit einem Wert f&#195;&#338;r die
+Zeitkonstante RC von $2.76*10^{-3}s$. Somit
+ist
+
+\begin{align}
+A(\omega)= \frac{5V}{\sqrt{1+\omega^2(2.76*10^{-3})^2}}
+\notag
+\end{align}
+
+Dass der RC-Wert hier von dem unter 4.1 genannten abweicht, liegt an dem
+Innenwiderstand von $R_i = 600 \Omega$.
+
+\subsection{Frequenzabh&#195;&#8364;ngige Phasenverschiebung}
+Bei steigender Frequenz stellt sich eine Phasenverschiebung zwischen der
+Generatorspannung $U_0$ und der Kondensatorspannung 
+$U_C$ ein. Dies l&#195;&#8364;uft auf die Tr&#195;&#8364;gheit des RC-Gliedes hinaus, welche zunehmende
+Werte f&#195;&#338;r $\phi$ hervorruft. Bei einem 
+Zweistrahl-Oszilloskop wird der Generator am ersten Eingang und das RC-Glied am
+zweiten Eingang verbunden, sodass die Kathodenstrahlen
+beider Sinusspannungen simultan angezeigt werden k&#195;&#182;nnen.
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/Phi.JPG}
+\centering
+\end{figure}
+
+Nun wird die zeitliche Differenz der Nulldurchl&#195;&#8364;ufe a beider Schwingungen, sowie
+ihre Periodendauer b ermittelt und aus ihnen
+$\phi$ in Abh&#195;&#8364;ngigkeit der Frequenz der Kondensatorspannung bestimmt.
+
+\begin{tabular}{l|r|r}
+$f/Hz$ &amp; $a/ms$        &amp; $b/ms$\\
+\hline
+100 &amp;        1.14 &amp;        9.91\\
+200 &amp;        0.80 &amp;        5.00\\
+400 &amp;        0.50 &amp;        2.50\\
+1000 &amp;        0.23 &amp;        1.00\\
+2000 &amp;        0.118 &amp;        0.50
+\end{tabular}
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/RC3.png}
+\centering
+\end{figure}
+
+Die von Gnuplot gefittete Ausgleichsfunktion $f(x)$ gibt als RC-Parameter
+$1.14*10^{-3}$ aus. Da diese Zahl in derselben
+Gr&#195;&#182;&#195;Ÿenordnung liegt, wie der richtige Wert der Zeitkonstanten, kann man diese
+Differenz damit erkl&#195;&#8364;ren, dass die Funktion
+nicht vollends die Kurve der Messpunkte beschreibt. $\phi$ ist proportional zum
+arcustangens von $\omega$. F&#195;&#338;r gro&#195;Ÿe Werte
+von $\omega$ beeinflusst die Zeitkonstante das Ergebnis unerheblich und der
+arcustangens n&#195;&#8364;hert sich $\frac{\pi}{2}$ an.
+
+\subsection{RC-Glied als Integrator}
+Bei gleichbleibender Schaltung soll nun mit dem Oszilloskop die Integrierfunktion
+des RC-Gliedes gezeigt werden. 
+Hierzu werden vier verschiedene Spannungstypen angelegt und mit der Ausgabe des
+Kondensators verglichen. An den
+Beispielen ist die Funktionsf&#195;&#8364;higkeit deutlich erkennbar.
+
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/sinus.JPG}
+\centering
+\caption{Sinus zu Cosinus}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/rechteck2.JPG}
+\centering
+\caption{Rechteck zu Dreieck 1}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/rechteck1.JPG}
+\centering
+\caption* {Rechteck zu Dreieck 2}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=8cm] {pics/RC3.png}
+\centering
+\end{figure}
+
+
+
+% ========================================
+%        Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}                        % Bibliographie-Style ausw&#195;&#8364;hlen
+%\bibliography{BIBDATEI}                        % Literaturverzeichnis
+
+% ========================================
+%        Das Dokument endent
+% ========================================
+
+\end{document}
+</pre></tt></td></tr></table>
+</body></html>

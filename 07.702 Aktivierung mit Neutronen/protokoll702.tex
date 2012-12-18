@@ -1,0 +1,362 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+\usepackage{float}
+\usepackage{caption}
+
+\newfloat{formel}{htbp}{for}
+\floatname{formel}{Formel}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Aktivierung durch langsame Neutronen\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Jan Adam\\			% Name Praktikumspartner A
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+Dimitrios Skodras\\			% Name Praktikumspartner B
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt einen interaktiven Link
+}
+\date{20.11.12}					% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+	\section{Einleitung}				% Bei Bedarf
+Abgesehen vom Wasserstoffatom, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
+	\section{Theorie}
+	\subsection{Aktivierung}
+Dieses Verhalten kann für die Untersuchung des Zerfallsgesetztes genutzt werden.
+Indem stabile Atomkerne mit langsamen Neutronen beschossen werden, können sich diese in andere, instabile Isotope umwandeln, deren Radioaktivität im Folgenden mit einem Geiger-Müller-Zählrohr gemessen werden kann. Dieser Vorgang wird als Aktivierung bezeichnet.\\
+Interessant ist die Aktivierung insbesondere deshalb, weil sich so neues radioaktives Material mit kurzen Halbwertszeiten herstellen lässt, welches wegen seinem schnelleren Zerfall nicht gelagert werden kann.
+Die Wahl von Neutronen ist günstig, denn aufgrund ihrer fehlenden Ladung müssen sie nicht nicht die Coulombkräfte des Kerns überwinden um eine Kernreaktion herbeizuführen. Für geladene Teilchen sind hier Energien im Bereich von 10MeV nötig, die nur in Teilchenbeschleunigern erreicht werden können. Neutronen mit der benötigten kinetischen Energie können dagegen problemlos im Labor durch Zerfall anderer radioaktiver Stoffe erzeugt werden.\\
+Geht das Neutron eine Reaktion mit dem Atomkern A ein, so entsteht ein neuer Kern A* auch Zwischenkern genannt, dessen Energie um den Betrag der kinetischen und der Bindungsenergie den Neutrons höher ist als die Energie des Kerns A. Dies wird auch als Aufheizen des Zwischenkerns bezeichnet. Da die Nukleonen starken Wechselwirkungen unterliegen, verteilt sich die aufgenommene Energie jedoch sofort und keines der angeregten Nukleonen hat genug Energie um den Kern direkt wieder zu verlassen. Da es energetisch günstiger ist, wird deshalb nach etwa $10^{-16}$s ein $\gamma$-Quant abgestrahlt und der Kern geht wieder in seinen Grundzustand über.\\
+Es läuft somit folgende Reaktion ab:
+\begin{formel}
+\begin{equation}
+	{\ce{^m_z A + ^1_0 n -> ^{m+1}_z A^* -> ^{m+1}_z A +\gamma}} 
+\end{equation}
+\caption*{m = Massenzahl}
+\end{formel}
+\\
+Der neu entstandene Kern ist normalerweise nicht stabil, da er ein Neutron zuviel besitzt, ist jedoch aufgrund des Energieverlusts durch das $\gamma$-Quant relativ langlebig. Schließlich wandelt er sich aber durch Aussendung eines Elektrons ($\beta^-$-Strahlung) in einen stabilen Kern um
+
+\begin{align}
+	\ce{^{m+1}_zA -> ^{m+1}_{z+1}C +\beta^- + \overline{\nu_e} + E_{kin}.}
+\end{align}
+
+Der Ausgangskern ist leichter als die Summe aller Zerfallprodukte, da ein Teil der Masse in Form von Bindungsenergie zwischen den Nukleonen vorlag. Die Bindungsenergie, die beim Umwandeln frei wird, wird gemäß der Einsteinschen Beziehung
+\begin{align}
+	\Delta E = \Delta mc^2
+\end{align}
+als kinetische Energie an das Elektron bzw. das Antineutrino abgegeben.\\
+Wichtig für den durchgeführten Versuch sind insbesondere die Zerfallsreihen von $\ce{^{116}Indium}$ und $\ce{^{104}Rhodium}$
+\begin{align}
+\cee{^{115}_{49} In +^1_0n -> ^{116}_{49}In -> ^{116}_{50}Sn +\beta- + \overline{\nu_e}}\\
+\vspace{0.5cm}
+\cee{^{103}_{45}Rh +^1_0n } 
+\begin{cases} \ce{->[{10\%}] ^{104i}_{45}Rh -> ^{104}_{45}Rh +\gamma -> ^{104}_{46}Pd + \beta^- + \overline{\nu_e}}\\ 
+\cee{ ->[{90\%}] ^{104}_{45}Rh -> ^{104}_{46}Pd + \beta^- + \overline{\nu_e}} \end{cases}
+\label{Rhodium}
+\end{align}
+
+	\subsection{Wirkungsquerschnitt}
+Kernreaktionen finden zufällig statt und können nicht vorhergesagt werden. Aus diesem Grund wird in der Kernphysik der Wirkungsquerschnitt
+\begin{align}
+	\sigma= \frac{u}{nKd}
+\end{align}
+eingeführt. Dieser beschreibt die Querschnittsfläche, die das Atom haben müsste, damit jedes Neutron, welches diese Fläche passiert, auch vom Kern eingefangen wird. Der Wirkungsquerschnitt verhält sich zudem antiproportional zu der Geschwindigkeit der Neutronen. Je langsamer ein Neutron ist, desto höher ist die Wahrscheinlichkeit, dass es zu einer Kernreaktion kommt, da sich das Neutron so zu sagen länger im Einzugsbereich des Kerns aufhält. Charakteristisch ist hier insbesondere die De-Broglie-Wellenlänge $\lambda$. Sie errechnet sich für Neutronen zu
+\begin{align}
+	\lambda=\frac{\hbar}{m_n v}.
+	\label{broglie}
+\end{align}
+Wegen des Welle-Teilchen-Dualismus kann jedes Teilchen auch als Welle mit einer Wellenlänge nach \ref{broglie} betrachtet werden. Solange $v_n$ so groß ist, dass $\lambda \ll R$ ({\small R= Kerndurchmesser}) ist, überwiegt der Teilchencharakter der Neutronen und die Trefferwahrscheinlichkeit kann geometrisch errechnet werden. Wird jedoch $\lambda \geq R$, so tritt der Wellencharakter in den Vordergrund und am Atomkern treten Interferenzeffekte auf. Nach Breit und Wigner verhält sich der Wirkungsquerschnitt in Abhängigkeit von der Energie des Neutrons wie folgt:
+\begin{align}
+	\sigma (E) = \sigma_0 \sqrt{\frac{{R_r}_i}{E}} \frac{\tilde c}{(E-{E_r}_i)^2 	+ \tilde c}
+\end{align}
+Für kleine Geschwindigkeiten folgt
+\begin{align}
+	\sigma \propto \frac{1}{\sqrt{E}} \propto \frac{1}{v},
+\end{align}
+was vorher auch schon argumentativ angenommen wurde.
+	\subsection{Langsame Neutronen}
+Neutronen sind als freie Teilchen instabil und kommen deshalb in der Natur nicht vor. Um sie für die Aktivierung von Atomkernen zu nutzen, müssen sie somit zunächst durch andere Radioaktive Zerfälle erzeugt werden. Im Versuch geschieht dies durch den Beschuss von $\ce{^9Be}$ mit $\alpha$-Teilchen
+\begin{align}
+	\ce{^9_4 Be + ^4_2\alpha \bond{->} ^{12}_6 C + ^1_0n}
+\end{align}
+Es entstehen Neutronen mit einem kontinuierlichen Energie-Spektrum von bis zu 13,7MeV, die abgebremst werden, indem man sie elastisch mit anderen leichten Kernen stoßen lässt. Das $\ce{^9_4 Be}$ befindet sich in einem Tank mit Wasserstoff, da diese in etwa die gleiche Masse wie Neutronen haben und daher die übertragene Energie $E = E_0 \frac{4Mm}{(M+m)^2}$ für den elastischen Stoß maximal wird.
+\begin{figure}[H]
+\includegraphics[width=10cm] {pics/aktivator.png}
+\caption{Querschnitt durch den Aktivator-Tank - entnommen aus der Versuchsanleitung}
+\end{figure}
+Die Neutronen erreichen schließlich eine mittlere Geschwindigkeit von 2,2 $\frac{km}{s}$. Neutronen mit dieser kinetischen Energie werden auch thermische Neutronen genannt.
+	\subsection{Zerfallsgesetz}
+	\label{zerfallsgesetz}
+\begin{align}
+	N(t)=N_0e^{-\lambda t}
+	\label{zerfall}
+\end{align}
+beschreibt die Anzahl der noch nicht zerfallenen Kerne eines radioaktiven Stoffes. Dabei ist $N_o$ die Anfangsstoffmenge und $\lambda$ die sog. Zerfallskonstante, die stoffspezifisch ist und angibt, wie schnell ein Stoff zerfällt. Da radioaktiver Zerfall zufällig stattfindet, kann man nur Aussagen über größere Stoffmengen machen und führt daher die Halbwertszeit ein, nach der von einem Stoff nur noch die Hälfte des ursprünglichen Materials vorhanden ist. Sie errechnet sich nach dem Ansatz
+\begin{align}
+	\frac{1}{2}N_0=N_0e^{\lambda t_{\frac{1}{2}}}
+\end{align}
+Umstellen nach $t_{\frac{1}{2}}$ ergibt dann die Halbwertszeit zu
+\begin{align}
+	t_{\frac{1}{2}}=\frac{\ln 2}{\lambda}
+	\label{halbwertszeit}
+\end{align}
+Da es unmöglich ist, die genaue Stoffmenge $N(t)$ zu messen, bildet man stattdessen die Differenz von \ref{zerfall} zu zwei beliebigen Zeitpunkten und erhält eine Gleichung, die von der Anzahl der zerfallenen Kerne $\Delta N(t)$ im Zeitraum $\Delta t$ abhängt
+\begin{align}
+	\Delta N(t) &= N_0 e^{-\lambda t_1}-N_0 e^{-\lambda t_1+\Delta t} = N_0 (1-e^{-\lambda \Delta t}) e^{-\lambda t}\\
+	\ln (\Delta N(t)) &= \ln (N_0 (1-e^{-\lambda \Delta t})) -\lambda t.
+	\label{delta N}
+\end{align}
+Da $\ln (N_0 (1-e^{-\lambda \Delta t}))$ konstant ist, ist \ref{delta N} eine lineare Funktion, aus der die Zerfallskonstante $\lambda$ gut abgelesen werden kann.\\
+Einige Stoffe kommen in der Natur als Mischung zweier Isotope vor. Da beide parallel zerfallen, kann man auch nur die kombinierte Aktivität beider Isotope messen.
+Es ist aber dennoch möglich die Zerfallskonstanten von beiden bestimmen, wenn der eine Stoff im Vergleich zum anderen eine sehr kurze Halbwertszeit hat. In diesem Fall ist der erste Stoff nach einer gewissen Dauer praktisch nicht mehr in der Probe vorhanden und es wird nur noch die Aktivität des zweiten gemessen.
+Anschließend zieht man diesen Wert von der gemessenen Anfangsaktivität ab und erhält somit den Anteil, der vom ersten Stoff ausging.
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{pics/zerfall.png}
+	\caption{Beispiel für überlagerte Aktivität von zwei Isotopen - entnommen aus Versuchsanleitung}
+\end{figure}
+
+	\section{Durchführung}
+	\subsection{Aparatur}
+Für die Messungen wird ein Geigermüller-Zählrohr mit zwei separaten Zählern genutzt. Zusätzlich steckt es in einer Abschirmung aus Blei um die Nullrate zu minimieren.
+
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{pics/geiger.png}
+	\caption{Verwandtes Geiger-Müller-Zählrohr mit angeschlossenen Zählern - entnommen aus Versuchsanleitung}
+\end{figure}
+Das Geiger-Müller-Zählrohr besteht aus einer zylinderförmigen Kathode, in deren Mitte die stabförmige Anode steckt. Tritt Strahlung durch das Sichtfenster in das Zählrohr, so ionisiert diese Moleküle. Diese werden dann durch die angelegte Spannung zur Anode bzw. Kathode beschleunigt und ihr Auftreffen wird durch ein elektrisches Signal registriert.\\
+Nach einer frei wählbaren Messzeit wechselt der Zählkanal, so dass der eben gemessene Wert abgelesen und trotzdem weitergezählt werden kann.
+
+	\subsection{Versuch}
+Bei der Durchführung wurde zunächst die sog. Nullrate bestimmt. Dies ist die Grundradioaktivität, die ständig um uns herum herrscht. Da sie die Ergebnisse verfälschen würde, wird sie im Voraus über einen sehr langen Zeitraum gemessen und danach bei jeder Messung von dem Ergebnis abgezogen.
+Anschließend wurden eine Probe aus Indium und eine aus Rhodium aktiviert und über eine Dauer von 60 bzw 12 min ihre Aktivität gemessen.
+
+\section{Auswertung}
+\subsection{Nulleffekt}
+Um den Einfluss des Nulleffekts Z$_U$zu ermitteln, wird zweimal über einen Zeitraum von 900 Sekunden gemessen. Für
+die weiteren Messungen wird der Wert mit den jeweiligen Zeitperioden der anderen Messungen $\Delta t_X$ multipliziert und
+von den gemessenen Impulsen subtrahiert, um dadurch seinen Einfluss minimal zu halten. 
+
+\begin{equation}
+ Z_U = \frac{N}{\Delta t} = \frac{300 + 248}{2 \cdot 900 \text{s}} = \frac{548}{1800 \text{s}} = 0,304 \text{s}^{-1}
+\end{equation}
+
+Der absolute Fehler $S_N$ für eine gemessene Rate $N$ ermittelt sich dadurch, dass die Raten poissonverteilt sind.
+
+\begin{equation}
+ s_N = \sqrt{N}
+\end{equation}
+
+\subsection{Halbwertszeit für $^{116}_{49}$Indium}
+Um die Halbwertszeit zu bestimmen, werden die Impulse über 15 Perioden von je 240 Sekunden Dauer gemessen. Die vom
+Nulleffekt bereinigten Werte werden logarithmiert und gegen die Zeit $t$ aufgetragen. Hierdurch werden die Exponential-Abhängigkeiten linearisiert und man kann über die Steigung der Geraden die Zerfallskonstante $\lambda$ bestimmen. Mit ihr lässt sich
+über die Gleichung \eqref{halbwertszeit} die Halbwertszeit angeben. Der logarithmierte Fehler drückt sich dann so aus:
+
+\begin{equation}
+ s_{\ln(N)^{\pm}} = \pm \left|\ln(N)-\ln(N\pm s_N)\right|
+\end{equation}
+
+Hieraus ergibt sich folgende Tabelle
+
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[h]
+ \begin{tabular}{c|c|c|c|c|c|c}
+ $i$ & $t$ & $N$ & $s_N$ & ln($N$) & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
+ \hline
+ 1&	240&	2680&	47,35&	7,89&	0,0175&	-0,0178\\
+2&	480&	2476&	45,35&	7,81&	0,0181&	-0,0185\\
+3&	720&	2399&	44,57&	7,78&	0,0184&	-0,0188\\
+4&	960&	2284&	43,38&	7,73&	0,0188&	-0,0192\\
+5&	1200&	2179&	42,27&	7,69&	0,0192&	-0,0196\\
+6&	1440&	2095&	41,36&	7,65&	0,0195&	-0,0199\\
+7&	1680&	2027&	40,61&	7,61&	0,0198&	-0,0202\\
+8&	1920&	1826&	38,32&	7,51&	0,0208&	-0,0212\\
+9&	2160&	1858&	38,69&	7,53&	0,0206&	-0,0210\\
+10&	2400&	1743&	37,34&	7,46&	0,0212&	-0,0217\\
+11&	2640&	1670&	36,45&	7,42&	0,0216&	-0,0221\\
+12&	2880&	1579&	35,32&	7,36&	0,0221&	-0,0226\\
+13&	3120&	1570&	35,21&	7,36&	0,0222&	-0,0227\\
+14&	3360&	1395&	32,94&	7,24&	0,0233&	-0,0239\\
+15&	3600&	1400&	33,00&	7,24&	0,0233&	-0,0239\\
+\end{tabular}
+\caption{Wertetabelle für $\ce{^{116}_{49}In}$}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Aus linearer Ausgleichsrechnung mit Gnuplot ergibt sich ein Wert für die Zerfallskonstante 
+
+\begin{align}
+\lambda_{\text{In}} = 1,905 \cdot 10^{-4} \pm 5,218 \cdot 10^{-6} \frac{1}{\text{s}}.
+\end{align}
+
+Somit ist die Halbwertszeit für $^{116}_{49}$Indium
+
+\begin{align}
+ t_{\frac12} = 3638,57 \pm 99,74 \text{s}.
+ \label{in}
+\end{align}
+
+\begin{figure}[h]
+	\includegraphics[width=1\textwidth]{pics/indium.png}
+	\caption{Zerfall von Indium auf halblogarithmischer Skala}
+\end{figure}
+
+\subsection{Halbwertszeit für $\ce{^{104}_{45}Rhodium}$}
+Im Gegensatz zu Indium, zerfällt das betrachtete Rhodiumisotop wie in \eqref{Rhodium} formuliert in zwei Zerfallsreihen.
+Am Ende von Abschnitt \ref{zerfallsgesetz} wird die Methode geschildert, welche zur Ermittlung der Halbwertszeiten der beiden
+Rhodiumisotope $\ce{^{104(i)}_{45}Rh}$ und$\ce{^{104}_{45}Rh}$ angewandt wird.
+
+\renewcommand{\arraystretch}{1.0}
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c|c|c}
+ $i$ & $t$ & $N$ & $s_N$ & ln($N$) & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
+ \hline
+1&	12&	494&	20,28&	6,20&	0,0402&	-0,0419\\
+2&	24&	450&	19,27&	6,11&	0,0419&	-0,0437\\
+3&	36&	364&	17,14&	5,90&	0,0460&	-0,0482\\
+4&	48&	341&	16,53&	5,83&	0,0473&	-0,0496\\
+5&	60&	249&	13,84&	5,52&	0,0540&	-0,0571\\
+6&	72&	218&	12,83&	5,39&	0,0571&	-0,0605\\
+7&	84&	180&	11,48&	5,19&	0,0617&	-0,0658\\
+8&	96&	125&	9,25&	4,83&	0,0712&	-0,0766\\
+9&	108&	127&	9,33&	4,85&	0,0707&	-0,0761\\
+10&	120&	107&	8,41&	4,68&	0,0754&	-0,0816\\
+\hline
+11&	132&	92&	7,66&	4,53&	0,0797&	-0,0866\\
+12&	144&	87&	7,40&	4,47&	0,0813&	-0,0885\\
+13&	156&	81&	7,07&	4,40&	0,0833&	-0,0909\\
+14&	168&	74&	6,67&	4,31&	0,0859&	-0,0940\\
+15&	180&	58&	5,69&	4,07&	0,0930&	-0,1026\\
+16&	192&	48&	5,00&	3,88&	0,0985&	-0,1092\\
+17&	204&	62&	5,95&	4,13&	0,0911&	-0,1002\\
+18&	216&	59&	5,75&	4,08&	0,0925&	-0,1020\\
+19&	228&	37&	4,16&	3,62&	0,1056&	-0,1181\\
+20&	240&	44&	4,71&	3,79&	0,1009&	-0,1123\\
+21&	252&	40&	4,40&	3,70&	0,1036&	-0,1155\\
+22&	264&	29&	3,47&	3,38&	0,1117&	-0,1257\\
+23&	276&	36&	4,08&	3,59&	0,1064&	-0,1190\\
+24&	288&	23&	2,88&	3,15&	0,1164&	-0,1317\\
+25&	300&	19&	2,45&	2,96&	0,1192&	-0,1353\\
+26&	312&	23&	2,88&	3,15&	0,1164&	-0,1317\\
+\hline
+27&	324&	13&	1,70&	2,59&	0,1201&	-0,1365\\
+28&	336&	19&	2,45&	2,96&	0,1192&	-0,1353\\
+29&	348&	20&	2,56&	3,01&	0,1185&	-0,1345\\
+30&	360&	27&	3,28&	3,31&	0,1133&	-0,1277\\
+31&	372&	20&	2,56&	3,01&	0,1185&	-0,1345\\
+32&	384&	20&	2,56&	3,01&	0,1185&	-0,1345\\
+33&	396&	25&	3,08&	3,23&	0,1148&	-0,1298\\
+34&	408&	18&	2,33&	2,91&	0,1197&	-0,1360\\
+35&	420&	21&	2,67&	3,06&	0,1179&	-0,1336\\
+36&	432&	16&	2,09&	2,79&	0,1205&	-0,1370\\
+37&	444&	21&	2,67&	3,06&	0,1179&	-0,1336\\
+38&	456&	14&	1,84&	2,66&	0,1205&	-0,1371\\
+39&	468&	14&	1,84&	2,66&	0,1205&	-0,1371\\
+40&	480&	5&	0,36&	1,68&	0,0656&	-0,0702\\
+\end{tabular}
+\caption{Wertetabelle für $\ce{^{104(i)}_{45}Rh}$ - Die dicken Trennlinien zeigen an, ab wann die Messwerte für die Berechnung von Isotop 1 bzw 2 herangezogen wurden.}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Somit ergeben sich für die Rhodiumisotope die Zerfallskonstanten zu
+
+\begin{align}
+\lambda_{^{104\text{i}}\text{Rh}} = 2,665\cdot 10^{-3} \pm 1,342 \cdot 10^{-5} \frac{1}{\text{s}}\\
+\lambda_{^{104}\text{Rh}} = 1,449 \cdot 10^{-2} \pm  6,72 \cdot 10^{-4} \frac{1}{\text{s}}.
+\end{align}
+
+Die jeweiligen Halbwertszeiten sind nun
+
+\begin{equation}
+   t_{\frac12,\text{104i}} = 260,10 \pm 1,31 \text{s}\\
+\label{rh1}
+\end{equation}
+\begin{equation}
+ t_{\frac12,\text{104}} = 47,94 \pm 2,22 \text{s}.
+ \label{rh2}
+\end{equation}
+
+\begin{figure}[h]
+	\includegraphics[width=1\textwidth]{pics/rhodium.png}
+	\caption{Zerfall beider Rhodiumisotope auf halblogarithmischer Skala}
+\end{figure}
+
+
+\section{Diskussion}
+\subsection{Indium}
+Die aus dem Experiment ermittelte Halbwertszeit von $t_{\frac12,\text{In}} = 3638,57 \pm 99,74 \text{s}$ aus \eqref{in} liegt mit 11,7 \% über dem
+Literaturwert von 54,29 min (= 3257,40 s)\footnote[1]{Firestone, R.B. (2000), Isotopes of Indium URL: \href{http://ie.lbl.gov/education/parent/In\_iso.htm}{http://ie.lbl.gov/education/parent/In\_iso.htm}}.
+Der gemessene Wert liegt in der richtigen Größenordnung und die Abweichung ist nicht zu groß. Wichtig zu erwähnen ist, dass es
+sich bei dem referenzierten Wert um eine anders aufgeführte, spezielle Zerfallsreihe des $^{116}$Indium-Isotops handelt. So wäre hier
+das $\ce{^{116m^1}In}$-Isotop herzunehmen, was aber dadurch gerechtfertigt werden kann, dass das Isotop ausschließlich im Zuge des $\beta^-$-Zerfall
+zerfällt, so wie im Experiment. Grundsätzlich problematisch bei der Messung ist, dass der radioaktive Zerfall starken statistischen Schwankungen unterworfen ist. In diesem Experiment
+ist die Nullrate ungewöhnlich hoch, was auf mögliche Rückstände von Proben vorangehender Versuche oder auf eine zu hoch
+eingestellte Spannung am Geiger-Müller-Zählrohr zurückzuführen ist. Das hat speziell Impulsmessungen gegen Ende der Messreihe
+stark beeinflusst und somit zum Fehler beigetragen. So sind einige Werte höher als ihre Vorangehenden, was nicht durch den
+Zerfall der Indiumkerne allein erklärbar wäre.
+
+\subsection{Rhodium}
+Zusätzlich zu den Einflüssen im Falle der Indiumprobe kommt bei Rhodium erschwerend hinzu, dass das kurzlebige Isotop ab einer gewissen
+Zeit zwar als nicht mehr vorhanden angesehen wird, es aber möglicherweise immernoch vorhanden ist, sowie die Tatsache, dass jener Zeitpunkten
+willkürlich durch die Versuchsdurchführenden festgelegt werden muss. So werden in der Auswertung zwei Messbereiche aus der Berechnung
+herausgelassen, um die Abweichungen zu den Referenzwerten\footnote[2]{Firestone, R.B. (2000), Isotopes of Rhodium URL: \href{http://ie.lbl.gov/education/parent/Rh\_iso.htm}{http://ie.lbl.gov/education/parent/Rh\_iso.htm}}. gering zu halten. Mit der gemessenen Halbwertszeit $t_{\frac12,\text{104i}} = 260,10 \pm 1,31 \text{s}$ aus \eqref{rh1}
+liegt der Fehler bei 0,12 \%, sowie bei $t_{\frac12,\text{104}} = 47,94 \pm 2,22 \text{s}.$ aus \eqref{rh2} bei 13,3 \%. Der geringe Fehler
+bei Rh$_{104\text{i}}$ kommt durch den entsprechend gut gewählten Wertebereich (der 3. Abschnitt in Tabelle (2), der 
+in die Berechnung aufgenommen wurde.
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

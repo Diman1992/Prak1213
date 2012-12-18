@@ -1,0 +1,286 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage{footnote}
+
+\newfloat{formel}{htbp}{for}
+\floatname{formel}{Formel}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Das Kugelfall Viskosimeter nach Höppler\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Jan Adam\\			% Name Praktikumspartner A
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+Dimitrios Skodras\\			% Name Praktikumspartner B
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt einen interaktiven Link
+}
+\date{04.12.12}					% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+%	\section{Einleitung}				% Bei Bedarf
+
+	\section{Theorie}
+Auf bewegte Körper in Flüssigkeiten oder Gasen wirkt, ähnlich wie auf rollende oder gleitende Körper, eine Reibungskraft
+\begin{align}
+\vec F_R=-6 \pi \eta \vec{v} r,
+\label{stokes}
+\end{align}
+ die der Bewegung entgegen wirkt. Wichtig ist hier die Viskosität $\eta $, eine Stoffeigenschaft, die das Fließverhalten von Flüssigkeiten und Gasen beschreibt und proportional auf die Reibungskraft einwirkt. Sie ist zudem die einzige stoffspezifische Größe, die Einfluss auf die Reibungskraft hat. Die restlichen Größen hängen lediglich von der Körpergeometrie ab, sodass man die Viskosität mit einer für den Versuch vereinfachten Formel ermitteln lässt. K ist der Parameter, welcher jene Geometriegrößen, sowie die Fallhöhe enthält, t die gemessene Fallzeit, und die beiden Dichten die Kugeldichte $\rho_K$ und die Flüssigkeitsdichte $\rho_{Fl}$.
+ 
+ \begin{equation}
+  \eta = K(\rho_K - \rho_{Fl})\cdot t
+  \label{viskos}
+ \end{equation}
+
+ Zu beachten ist, dass die Stokes'sche Reibung \eqref{stokes} nur für laminare Flüssigkeiten gilt. Laminare Flüssigkeiten bilden keine Verwirbelungen, sondern umfließen den Körper homogen. Eine Flüssigkeit wird als laminar bezeichnet, wenn ihre Reynoldszahl
+ \begin{align}
+ Re= \frac{\rho v d}{\eta} = \frac{v d}{\nu}
+ \label{rey}
+ \end{align}
+unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten nicht mehr als laminar bezeichnet, jedoch können sich Verwirbelungen schon viel früher bilden, so dass  $Re \ll 2000$ sein sollte. 
+	\section{Aufbau}
+\begin{wrapfigure}[13]{r}{3.5cm}
+	\includegraphics[width=0.25\textwidth]{pics/aufbau.jpg}
+	\caption{Viskosimeter}
+	\label{aufbau}
+\end{wrapfigure}
+
+Beim Kugelfall-Viskosimeters nach Höppler handelt es sich um zwei ineinander eingelassene Hohlzylinder aus Glas, welche mit Flüssigkeiten befüllt und hermetisch abgeschlossen werden können. Auf Abbildung \ref{aufbau} \footnote{Viskosimeter nach Höppler - Das Bild ist aus der Versuchsanleitung entnommen} ist das Viskosimeter zu erkennen.\\
+Der innere Zylinder weißt Markierunge auf, durch die eine Strecke von 10cm abgesteckt werden. Er wird während des Versuchs mit der Flüssigkeit befüllt, deren Viskosität bestimmt werden soll und man legt eine Kugel hinein, deren Durchmesser nur geringfügig kleiner ist, als der des Zylinders. An einem Schanier kann man das Viskosimeter vertikal drehen, so dass die Kugel abzusinken beginnt. Dank der Markierungen kann man durch Messen der Zeit errechnen, welche Geschwindigkeit die Kugel erreicht.
+Über ein Termometer kann abgelesen werden, welche Temperatur die Probe zur Zeit hat und mit einer Libelle wird sichergestellt, dass das Viskosimeter im richtigen Winkel steht.\\
+Der äußere Zylinder hat zwei Anschlüsse, durch die temperiertes Wasser fließen und man somit die Temperatur der Probe beliebig verändern kann. Dies ist wichtig, da die Viskosität stark Temperaturabhängig ist und man sie so für verschiedene Temperaturen messen kann. 
+	\section{Durchführung}
+Im durgeführten Versuch soll die Viskosität von destillierem Wasser mit Hilfe des Kugelfall-Viskosimeters nach Höppler bestimmt werden. Dabei wird eine Kugel in einen, mit destilliertem Wasser gefüllten, Zylinder gelegt und dieser so aufgestellt, dass die Kugel hindurchfällt. Wichtig ist dabei, dass der Kugeldurchmesser nur geringfügig kleiner ist als der des Zylinders und dass dieser leicht geneigt ist, damit die Kugel nicht chaotisch an die Ränder stößt und Wirbel verursacht, sondern gleichmäßig herabgleitet.\\
+Beim Fallen wirken folgende Kräfte auf die Kugel: die Gewichtskraft $F_g$, die die Kugel nach unten beschleunigt, die Auftriebskraft $F_A$, die die Kugel nach oben treibt und die Reibungskraft \eqref{stokes}, die proportional zur Fallgeschwindigkeit ist und ihr entgegen wirkt. Nach dem Fallenlassen nimmt die Geschwindigkeit der Kugel zunächst immer weiter zu, bis sich durch Zunahme der Reibungskraft ein Kräftegleichgewicht einstellt und die Kugel mit konstanter Geschwindigkeit absinkt.
+Es wird nun die Zeit gemessen, die die Kugel braucht um eine gewisse Strecke $d \vec{s}$ zurückzulegen. Hieraus lässt sich die Geschwindigkeit der Kugel und schließlich mit \eqref{viskos} die Viskosität des Wassers errechnen.\\
+Der Versuch wird zweimal bei Raumtemperatur mit verschiedenen Kugeln und dann mit nur einer Kugel bei verschiedenen Wassertemperaturen von $20 ^\circ $ bis $50 ^\circ $ C durchgeführt, da die Viskosität stark von der Temperatur abhängig ist. Halblogarithmisches Auftragen der Daten ermöglicht ein Ablesen der Konstanten A und B aus Gleichung
+\begin{align}
+	\eta(T)=Ae^{\left(\frac{B}{T}\right)},
+	\label{andrade}
+\end{align}
+welche die Viskosität in Abhängigkeit von der Temperatur beschreibt.
+
+\section{Auswertung}
+\subsection{Fehlerrechnung}
+Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
+Größen herauszufinden. Neben den von den Messapparaturen verursachten Fehlern dienen der Mittewert
+\newpage
+\begin{formel}
+\begin{equation}
+ \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
+\end{equation}
+\caption*{\small{$\bar{x}$ = Mittelwert, N = Anzahl der Messungen}}
+\end{formel}
+
+die Gaußsche Fehlerfortpflanzung
+
+\begin{formel}
+\begin{equation}
+\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
+\label{gauss}
+\end{equation}
+\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
+\end{formel}
+
+und die Varianz
+
+\begin{equation}
+ s = \sqrt{\frac{1}{N-1} \sum_{i}^{N} (x_i - \bar{x})^2}.
+\end{equation}
+
+\subsection{Viskosität des Wassers}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
+ \begin{tabular}{c|c||c|c}
+ t$_{kl}$[s] & t$_{kl}$[s] Forts. & t$_{gr}$[s] & t$_{gr}$[s] Forts.\\
+ \hline
+12,42&	12,01&	71,10&	71,13\\
+12,30&	12,30&	71,00&	71,56\\
+11,98&	11,95&	71,35&	70,93\\
+12,30&	11,89&	71,52&	71,43\\
+12,10&	11,90&	71,38&	70,90\\
+12,03&	12,20&	71,32&	71,10\\
+12,02&	12,23&	71,18&	71,06\\
+11,79&	12,15&	71,03&	71,90\\
+11,98&	11,92&	70,96&	71,21\\
+11,88&	12,09&	71,05&	71,36\\
+\hline
+$\bar t_{kl}$[s] &12,072 &$\bar t_{gr}[s] $&71,223\\
+$s_{kl}$[s] & 0,173 & $s_{gr}$[s] & 0,253
+ \end{tabular}
+\caption{Messzeiten für beide Kugeln durch das Fallrohr}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Zur Ermittlung der Viskosität wird Formel \eqref{viskos} verwandt. Der Versuch wird mit zwei verschiedenen Kugeln durchgeführt, wobei
+für eine die Apparaturkonstante $K_{kl}$ bekannt ist. Mit der ebenfalls gegebenen Masse der kleinen Kugel, sowie ihrem gemessenen Durchmesser
+lässt sich die Dichte $\rho_{kl}$ ermitteln. Die Dichte von Wasser wird aus Literaturangaben entnommen. Um die Apparaturkonstante 
+$K_{gr}$ sind neben der errechneten Viskosität die Dichte $\rho_{gr}$ aus gemessenem Durchmesser und gemessener Masse nötig.
+
+\begin{savenotes}
+\begin{table}[h]
+ \begin{tabular}{l|l|l}
+ Größe & Wert & Fehler\\
+ \hline
+  $d_{kl}$ & 1,37 mm & 0,02 mm\footnote[2]{von Schieblehre angegebener Fehler}\\
+  $d_{gr}$ & 1,38 mm & 0,02 mm\\
+\hline
+  $m_{kl}$ & 4,4531 g & - \\
+  $m_{gr}$ & 5,0 g & 0,1 g\footnote[3]{kleinste Größenordnung der Messung durch Waage}\\
+\hline
+  $\rho_{kl}$ & 13,556 $\frac{\text{g}}{\text{cm$^3$}}$& 0,048 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{gr}$ & 15,220 $\frac{\text{g}}{\text{cm$^3$}}$& 0,111 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{Fl}$ & 0,998 $\frac{\text{g}}{\text{cm$^3$}}$\footnote[4]{Wasser.de (2010), Dichtetabelle von Wasser bei verschiedenen Temperaturen URL: \href{http://www.wasser.de/aktuell/forum/index.pl?job=thema&tnr=100000000001135}{www.wasser.de/aktuell/forum} } & -\\
+\hline  
+$K_{kl}$ & 0,07640 $\frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}$ & -
+ \end{tabular}
+\caption{relevante Kenngrößen}
+\end{table}
+\end{savenotes}
+
+Aus den nun bekannten Größen ermittelt sich $\eta$ mit dem Fehler aus \eqref{gauss} zu
+
+\begin{equation}
+ \eta(\rho,t) = (11,583 \pm 0,180) \, \text{mPa}\cdot\text{s}.
+\end{equation}
+
+Die gesuchte Apparaturkonstante $K_{gr}$ lässt sich nun errechnen durch Gleichsetzen:
+
+\begin{align}
+ \nonumber
+ K_{gr}(\rho_{gr} - \rho_{Fl})\cdot &t_{gr} = K_{kl}(\rho_{kl} - \rho_{Fl})\cdot t_{kl} \Leftrightarrow K_{gr} = K_{kl}\frac{(\rho_{kl} - \rho_{Fl})}{(\rho_{gr} - \rho_{Fl})}\cdot\frac{t_{kl}}{t_{gr}}\\
+ &K_{gr} = (0,01143 \pm 3,547\cdot10^{-3})\, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
+\end{align}
+
+Um die Verwendung genannter Formeln zur Ermittlung der Viskosität zu rechtfertigen, muss die Reynoldszahl für diesen Versuch ermittelt und mit 
+der kritischen Reynoldszahl verglichen werden. Nach \eqref{rey} ergibt sich
+
+\begin{equation}
+ Re = \frac{1000\frac{\text{kg}}{\text{m}^3} \cdot 0,00833\frac{\text{m}}{\text{s}} \cdot 0,014 \text{m}}{0,0115 \text{Pa}\cdot\text{s}} \approx 10 \ll 2000,
+\end{equation}
+
+weshalb man von einer laminaren Flüssigkeit sprechen darf und die benutzten Formeln legitim sind.
+
+\subsection{Anwendung der Andrade-Gleichung}
+Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird die Fallzeit zu verschiedenen Temperaturen gemessen.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}
+ \begin{tabular}{c|c|c|c|c|c|c}
+   T [$^\circ$C] & $\frac{1}{\text{T}}$& $t_1$[s] & $t_2$[s] & $\bar t$[s] & $\Delta t$ & ln(t)\\	
+   \hline
+21&	0,0476&	81,16&	81,04&	81,10&	0,06&	4,396\\
+26&	0,0385&	72,87&	72,92&	72,90&	0,02&	4,289\\
+29&	0,0345&	68,27&	68,41&	68,34&	0,07&	4,224\\
+32&	0,0313&	64,44&	64,15&	64,30&	0,14&	4,163\\
+35&	0,0286&	60,41&	60,69&	60,55&	0,14&	4,103\\
+38&	0,0263&	57,61&	57,55&	57,58&	0,03&	4,053\\
+41&	0,0244&	54,61&	54,04&	54,33&	0,29&	3,995\\
+44&	0,0227&	51,32&	51,83&	51,58&	0,25&	3,943\\
+47&	0,0213&	49,00&	49,24&	49,12&	0,12&	3,894\\
+50&	0,0200&	46,58&	46,24&	46,41&	0,17&	3,838\\
+53&	0,0189&	44,47&	44,80&	44,64&	0,17&	3,799\\
+
+
+ \end{tabular}
+\caption{Durch Temperaturerhöhung verringerte Fallzeit}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Um aus dem Exponentialzusammenhang eine lineare Beziehung herzustellen, um durch lineare Regression mittels GNUplot
+die Koeffizienten zu bestimmen,
+werden folgende Umformungsschritte unternommen:
+
+\begin{align*}
+\eta(T) &= A \exp \left(\frac{B}{T}\right) \\
+\ln \left( \frac{\eta}{A}\right) &= \frac{B}{T}\\ 
+\ln [\underbrace{K_{gr}(\rho_{gr}-\rho_{Fl})}_{=c}] + \underbrace{\ln(t)}_{=y} &= \underbrace{\frac{B}{T}}_{=a\cdot x} + \ln(A)\\
+y & = a\cdot x + \underbrace{\ln \left(\frac{A}{c}\right)}_{=b}\\
+y & = a\cdot x + b 
+\end{align*}
+\begin{equation}
+\text{mit } a = 21,048\pm 1,72 \quad \text{und} \quad b = 3,464\pm0,05.\\
+\end{equation}
+
+Zurücktransferiert erhält man wieder A und B zu
+
+\begin{align}
+ A = c \cdot \e^b = 5,193 \pm 0,05\\
+ B = a = 21,048 \pm 1,72
+\end{align}
+
+\begin{figure}[H]
+\includegraphics[width=0.7\textwidth] {pics/Andrade.png}
+\centering
+\caption{lineare Abhängigkeit von $\frac1T$ und ln(t)}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.7\textwidth] {pics/Viskos.png}
+\centering
+\caption{endgültige Andrade-Gleichung}
+\end{figure}
+
+
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

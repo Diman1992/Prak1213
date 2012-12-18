@@ -101,9 +101,9 @@ dargestellt durch
 \begin{formel}
 \begin{equation}
  P(T) = \epsilon \, \sigma \, T^4
+ \label{Boltz}
  \end{equation}
 \caption*{\small{($\sigma$ = Stefan-Boltzmann-Konstante)}}
-\label{Boltz}
 \end{formel}
 
 \section{Durchführung}
@@ -134,6 +134,7 @@ erzeugt, wird allenthalben vor und nach jeder Messung erfasst.
 Zunächst soll die Ansprechzeit der Thermosäule bestimmt werden. Das ist die Zeit, die die Thermosäule benötigt, um die einfallende Wärme vollständig zu erfassen. Die Ansprechzeit ist daher für den weiteren Verlauf des Versuchs wichtig, denn man muss, nachdem man die Thermosäule auf eine andere Fläche des Würfels richtet, mindestens die Ansprechzeit abwarten, bevor Werte abgelesen werden dürfen.
 
 Nachdem siedendes Wasser in den Würfel gefüllt wurde, wird die Thermospannung alle 10s abgelesen.
+
 \begin{figure}{H}
 \includegraphics[width=0.9\textwidth]{pics/ansprechz.jpg}
 \caption{Von der Thermosäule erzeugte Thermospannung gegen die Zeit aufgetragen}
@@ -170,15 +171,41 @@ $47^\circ C$&-0.133	&0.530	&-0.068	&0.508\\
 \hline
 \end{tabular} 
 \end{table}
+Bei der schimmernden Oberfläche wurden die Werte bei $72^\circ C$ und $47^\circ C$ nicht in die Rechnung mit einbezogen, da sie zu stark von den anderen Abweichen. Möglicherweise hat sich das Gehäuse der Thermosäule zu diesen Zeitpunkten erwärmt, so dass die Messung verfälscht wurde.
+
+
+\begin{figure}[H]
+\includegraphics[width=0.9\textwidth]{pics/temp_schillernd.jpg}
+\label{abstand}
+\caption{Thermospannung an der schillernden Würfelseite}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.9\textwidth]{pics/temp_schw.jpg}
+\label{abstand}
+\caption{Thermospannung an der schwarzen Würfelseite}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.9\textwidth]{pics/temp_matt.jpg}
+\label{abstand}
+\caption{Thermospannung an der matten Würfelseite}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.9\textwidth]{pics/temp_weis.jpg}
+\label{abstand}
+\caption{Thermospannung an der weißen Würfelseite}
+\end{figure}
 
 Trägt man die gemessenen Spannungen gegen $T^4-T_0^4$ auf und zeichnet eine Ausgleichsgerade ein, so hat diese nach Gleichung \eqref{Boltz} die Steigung $\epsilon\sigma$.
 
-Nach einer Umrechnung der Daten der vier Oberflächen auf Volt errechnet man die Steigungen der Ausgleichsgeraden und dividiert diesen Wert nochmals durch $\sigma = 5,67\cdot 10^{-8}$ um das Emissionsvermögen $\sigma$ zu erhalten.
+Nach einer Umrechnung der Daten der vier Oberflächen auf Volt errechnet man die Steigungen der Ausgleichsgeraden und dividiert diesen Wert nochmals durch $\sigma = 5,67\cdot 10^{-8}$ um das Emissionsvermögen $\sigma$ zu erhalten. 
 \begin{align*}
 \epsilon_{schillernd: }		&= 0,38\cdot10^{-6}     &\pm 0,035\cdot 10^{-6}  \\
-\epsilon_{weiss: } 			&= 4,24\cdot10^{-6}     &\pm 0,028\cdot 10^{-6}  \\
 \epsilon_{schwarz: }	 	&= 4,31\cdot10^{-6}     &\pm 0,031\cdot 10^{-6}  \\
 \epsilon_{matt: }		 	&= 0,86\cdot10^{-6}     &\pm 0,054\cdot 10^{-6}  \\
+\epsilon_{weiss: } 			&= 4,24\cdot10^{-6}     &\pm 0,028\cdot 10^{-6}  \\
 \end{align*} 
 
 \subsection{Strahlintensität als Funktion des Abstandes}
@@ -187,11 +214,16 @@ Zum Schluss wird die Thermospannung für verschiedene Abstände von der schwarze
 \begin{figure}[H]
 \includegraphics[width=0.9\textwidth]{pics/temp_abstand.jpg}
 \caption{Thermospannung gegen den Abstand zum Würfel aufgetragen}
+\label{abstand}
 \end{figure}
 
 Zur Erhöhung der Genauigkeit wurde im Abstand von etwa zwei Minuten eine zweite Messreihe aufgenommen. Da der Würfel in der Zwischenzeit etwas ausgekühlt ist, werden die Messreihen farbig unterschieden.
 
 \section{Diskussion}
+Das Emissionsvermögen der vier Seiten ist äußerst gering. Alle $\epsilon$ liegen in einer Größenordnung von $10^{-6}$. Interessant ist dabei, dass die weiße und die schwarze Fläche sehr ähnliche Werte haben. Es ist also unerheblich welche Farbe die Oberfläche hat, es kommt mehr auf die beschaffenheit des Materials an. Die metallenen Flächen haben die Wärme deutlich schlechter abgegeben als die mit Farbe bestrichenen. Dennoch kam keine der Flächen einem schwarzen Strahler nah, da die $\epsilon \ll 1$ sind.
+
+Die Abgestrahlte Leistung nimmt wie zu erwarten mit dem Abstand vom Würfel ab. Die bestrahlte Fläche nimmt bei gleichbleibendem Raumwinkel mit $R^2$ zu, so dass die Strahlungsintensität an der Thermosäule mit $\frac{1}{R^2}$ abnimmt. Die aufgetragenen Werte im Graphen \eqref{abstand} belegen dies.
+
 
 
 % ========================================

@@ -1,5 +1,0 @@
-\select@language {german}
-\contentsline {section}{\numberline {1}Theorie}{3}{section.2}
-\contentsline {section}{\numberline {2}Durchf\IeC {\"u}hrung}{4}{section.7}
-\contentsline {section}{\numberline {3}Auswertung}{5}{section.9}
-\contentsline {section}{\numberline {4}Diskussion}{5}{section.10}

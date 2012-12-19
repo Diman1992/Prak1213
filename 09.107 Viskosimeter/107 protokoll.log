@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.20)  11 DEC 2012 14:38
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.20)  19 DEC 2012 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,15 +927,15 @@ LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10.95> not available
 <pics/aufbau.jpg, id=55, 311.66437pt x 406.51875pt>
 File: pics/aufbau.jpg Graphic file (type jpg)
  <use pics/aufbau.jpg>
-Package pdftex.def Info: pics/aufbau.jpg used on input line 91.
+Package pdftex.def Info: pics/aufbau.jpg used on input line 93.
 (pdftex.def)             Requested size: 104.56389pt x 136.39087pt.
 
-Overfull \hbox (4.97925pt too wide) in paragraph at lines 91--92
+Overfull \hbox (4.97925pt too wide) in paragraph at lines 93--94
 [][] 
  []
 
 
-Overfull \hbox (17.84167pt too wide) in paragraph at lines 92--92
+Overfull \hbox (17.84167pt too wide) in paragraph at lines 94--94
 [][]|\T1/aer/m/n/10.95 Viskosime-
  []
 
@@ -943,15 +943,9 @@ Overfull \hbox (17.84167pt too wide) in paragraph at lines 92--92
 \openout3 = `"107 protokoll.fot"'.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 96.
- [3 <./pics/aufbau.jpg>]
-Overfull \hbox (6.84966pt too wide) in paragraph at lines 101--105
-\T1/aer/m/n/10.95 Im durge-führten Ver-such soll die Viskosität von des-til-lie
-rem Wass-er mit Hil-fe des Kugelfall-
- []
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
+(Font)              <5> on input line 98.
+ [3 <./pics/aufbau.jpg>] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 [][]\T1/aer/m/n/9 Wasser.de (2010), Dichtetabelle von Wass-er bei ver-schiede-n
 en Tem-per-a-turen URL:
  []
@@ -959,23 +953,23 @@ en Tem-per-a-turen URL:
 [6] <pics/Andrade.png, id=110, 642.4pt x 481.8pt>
 File: pics/Andrade.png Graphic file (type png)
  <use pics/Andrade.png>
-Package pdftex.def Info: pics/Andrade.png used on input line 262.
+Package pdftex.def Info: pics/Andrade.png used on input line 265.
 (pdftex.def)             Requested size: 292.7776pt x 219.58691pt.
 
 [7] <pics/Viskos.png, id=121, 642.4pt x 481.8pt>
 File: pics/Viskos.png Graphic file (type png)
  <use pics/Viskos.png>
-Package pdftex.def Info: pics/Viskos.png used on input line 268.
+Package pdftex.def Info: pics/Viskos.png used on input line 271.
 (pdftex.def)             Requested size: 292.7776pt x 219.58691pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
  [8 <./pics/Andrade.png> <./pics/Viskos.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./107 protokoll.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `"107 protokoll".out' has not changed.
 (rerunfilecheck)             Checksum: 17F8A59DAD5F009B735E7F516B1F0880;416.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
  10340 strings out of 495059
@@ -984,7 +978,7 @@ Here is how much of TeX's memory you used:
  13232 multiletter control sequences out of 15000+200000
  41339 words of font info for 101 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,16n,51p,695b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,16n,51p,575b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -1009,7 +1003,7 @@ onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "107 protokoll.pdf" (8 pages, 209569 bytes).
+Output written on "107 protokoll.pdf" (8 pages, 209652 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  155 compressed objects within 2 object streams

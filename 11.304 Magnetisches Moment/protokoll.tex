@@ -3,6 +3,15 @@
 % ========================================
 
 \input{longheader.tex}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage{footnote}
+
+\newfloat{formel}{htbp}{for}
+\floatname{formel}{Formel}
 
 % ========================================
 %	Angaben für das Titelblatt
@@ -63,18 +72,231 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 \section{Durchführung}
 
 \section{Auswertung}
-\subsection{Ermittlung der Apparaturkonstanten}
+\subsection{Fehlerrechnung}
+Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
+Größen herauszufinden. Neben den von den Messapparaturen verursachten Fehlern dienen der Mittelwert
 
+\begin{formel}
+\begin{equation}
+ \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
+\end{equation}
+\caption*{\small{$\bar{x}$ = Mittelwert, N = Anzahl der Messungen}}
+\end{formel}
+
+die Gaußsche Fehlerfortpflanzung
+
+\begin{formel}
+\begin{equation}
+\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
+\label{gauss}
+\end{equation}
+\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
+\end{formel}
+
+und die Standardabweichung des Mittelwerts
+
+\begin{equation}
+ \bar s = \sqrt{\frac{1}{N(N-1)} \sum_{i}^{N} (x_i - \bar{x})^2}.
+\end{equation}
+
+\subsection{Ermittlung der Apparaturkonstanten}
+Für die Auswertung des Experiments sind einige, für die Apparatur individuellen Werte nötig. So die Daten des genutzten Helmholtz-Spulenpaars,
+sowie der Billiardkugel. Sie wurden zu Versuchsbeginn aufgenommen. Der Fehler das Masse ergibt sich aus der kleinsten angezeigten Größenordnung
+der zur Messung benutzten Waage. Jener für den Durchmesser ist von der Schieblehre angegeben.
+
+\begin{align*}
+ d_H &= 0,138 \text{m} \\
+ R_H &= 0,109 \text{m}\\
+ N &= 195\\
+ m_K &= 142,53 \text{g} \pm 0,01 \text{g}\\
+ 2r_K &= 53,65 \text{mm} \pm 0,05 \text{mm}
+\end{align*}
+
+Das Trägheitsmoment der Billiardkugel $J_K$ wird ermittelt und der Fehler nach \eqref{gauss} berechnet.
+
+\begin{align}
+\nonumber
+ J_K &= \frac25 m_K r_K^2 \\
+ &= 4,102 \cdot 10^{-5} \, \text{kgm}^2\\
+ \nonumber
+ \Delta J_K &= \sqrt{\left(\frac{\partial J_K}{\partial m_K} \Delta m_K \right)^2 + \left(\frac{\partial J_K}{\partial r_K} \Delta r_K \right)^2 } = J_K \sqrt{\left( \frac{\Delta m_K}{m_K} \right)^2 + \left( \frac{2 \, \Delta r_K}{r_K} \right)^2}\\
+ &= 4,122 \cdot 10^{-9} \, \text{kgm}^2
+\end{align}
 
 \subsection[Ermittlung durch Ausnutzen der Gravitation]{Bestimmung des magnetischen Momentes eines Magnetens unter Ausnutzung der Gravitation}
+Das von der Stromstärke $I$ erzeugte Magnetfeld $B(I)$ wirkt ein Drehmoment auf die kleine Masse $m_{kl}$ = 1,36 g zur Ausgleichung 
+des vom Gravitationsfeld erzeugte Drehmoment.
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c}
+  i & $r$ in mm & $I$ in A & $B$ in mT\\
+  \hline
+1&	45,00&	1,62&	2,20\\
+2&	50,00&	1,75&	2,37\\
+3&	55,00&	1,85&	2,51\\
+4&	60,00&	1,93&	2,62\\
+5&	65,00&	2,10&	2,85\\
+6&	70,00&	2,20&	2,98\\
+7&	75,00&	2,30&	3,12\\
+8&	80,00&	2,42&	3,28\\
+9&	85,00&	2,51&	3,40\\
+10&	90,85&	2,64&	3,58
 
+ \end{tabular}
+\caption{Magnetfeld $B$ in Abhängigkeit des Abstands $r$ der kleinen Masse}
+\label{tabgrav}
+\end{table}
+
+Eine lineare Regression nach Gleichung \eqref{} durch GNUplot führt zu folgenden Parametern.
+
+\begin{align}
+\nonumber
+B &= a \cdot r + b \intertext{mit} 
+a &= (0,030 \pm 5,0 \cdot 10^{-4}) \, \frac{\text{mT}}{\text{mm}}\\
+\nonumber
+b &= (0,853 \pm 0,035) \, \text{mT}
+\end{align}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/Gravitation.png}
+\centering
+\caption{lineare Abhängigkeit von $r$ und $B$}
+\end{figure}
+
+Nun lässt sich das magnetische Moment $\mu_{Grav}$ mitsamt Fehler angeben:
+
+\begin{align}
+ \nonumber
+ \mu_{Grav} &= \frac{m_{kl}\,g}{a} \\
+ &= 0,445\, \text{Am}^2\\
+ \nonumber
+ \Delta \mu_{Grav} &= \sqrt{\left(\frac{\partial \mu}{\partial m_{kl}}\Delta m_{kl} \right)^2 + \left(\frac{\partial \mu}{\partial a}\Delta a \right)^2} = \mu \sqrt{\left( \frac{\Delta m_{kl}}{m_{kl}}\right)^2 + \left( \frac{-\Delta a}{a}\right)^2}\\
+ &= 5,0 \cdot 10^{-4}\, \text{Am}^2
+\end{align}
 
 \subsection[Ermittlung durch Schwingungsdauer]{Bestimmung des magnetischen Momentes über die Schwingungsdauer eines Magnetens}
+Um größere Fehler durch Start-Stopp-Verzögerung zu vermeiden, wird über zehn Schwingungsperioden gemessen und das für jede Stromstärke
+drei mal. 
+
+ \begin{table}[H]
+  \begin{tabular}{c|c|c|c|c|c|c|c}
+i & $I$ in A & $^1T_{10}$ in s & $^2T_{10}$ in s & $^3T_{10}$ in s & $\bar T_{10}$ in s & $ 1/B$ in $1/$mT & $T^2$ in s$^2$\\
+  \hline
+1&	0,4&	25,72&	25,44&	25,72&	25,63&	1,844&	6,567\\
+2&	0,8&	18,22&	18,25&	18,22&	18,23&	0,922&	3,323\\
+3&	1,2&	15,13&	14,94&	15,00&	15,02&	0,615&	2,257\\
+4&	1,6&	12,91&	12,90&	12,87&	12,89&	0,461&	1,662\\
+5&	2,0&	11,50&	11,59&	11,50&	11,53&	0,369&	1,329\\
+6&	2,4&	10,69&	10,59&	10,53&	10,60&	0,307&	1,124\\
+7&	2,8&	9,81&	9,75&	9,81&	9,79&	0,263&	0,958\\
+8&	3,2&	9,10&	9,13&	9,16&	9,13&	0,230&	0,834\\
+9&	3,6&	8,62&	8,63&	8,69&	8,65&	0,205&	0,748\\
+10&	4,0&	8,28&	8,22&	8,22&	8,24&	0,184&	0,679    
+  \end{tabular}
+\caption{Die Schwingungsdauer $T$ in Abhängigkeit der Stromstärke $I$}
+  \label{tabschwing}
+ \end{table}
+
+Gleichung \eqref{} liefert die Abhängigkeit, die durch GNUplot mittels linearer Regression gefittet und mit folgenden Parametern 
+beschrieben wird.
+
+\begin{align}
+\nonumber
+T^2 &= c \cdot \frac1B + d \intertext{mit} 
+c &= (3,554 \pm 0,012) \, \frac{\text{mT}}{\text{s}^2}\\
+\nonumber
+d &= (0,029 \pm 0,009) \, \text{s}^2
+\end{align}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/Schwingung.png}
+\centering
+\caption{lineare Abhängigkeit von $\frac{1}{B}$ und $T^2$}
+\end{figure}
+
+Das magnetische Moment $\mu_{Schw}$ wird nun mitsamt Fehler angeben:
+
+\begin{align}
+ \nonumber
+ \mu_{Schw} &= \frac{4 \pi^2 J_{K}\,g}{c} \\
+ &= 0,446\, \text{Am}^2\\
+ \nonumber
+ \Delta \mu_{Schw} &= \sqrt{\left(\frac{\partial \mu}{\partial J_{K}}\Delta J_{K} \right)^2 + \left(\frac{\partial \mu}{\partial c}\Delta c \right)^2} = \mu \sqrt{\left( \frac{\Delta J_{K}}{J_{K}}\right)^2 + \left( \frac{-\Delta c}{c}\right)^2}\\
+ &= 0,012 \, \text{Am}^2
+\end{align}
+
+\subsection[Ermittlung durch Präzission]{Bestimmung des magnetischen Momentes über die Präzession eines Magneten}
+Bei einer Stroboskopfrequenz $\nu_{Strob}$ von 4,5 Hz erschien der weiße Punkt am Stiehl der Billiardkugel bei jedem Lichtimpuls
+am gleichen Ort. Die vier markierten Werte in Tabelle \ref{tabpräz} entstehen durch Messen über zwei Präzessionsperioden, sodass nur
+ihr halbierter Wert in den Mittelwert $\bar T_{p}$ einfließt.
 
 
-\subsection[Ermittlung durch Prezission]{Bestimmung des magnetischen Momentes über die Präzession eines Magneten}
+ \begin{table}[H]
+  \begin{tabular}{c|c|c|c|c|c|c|c}
+i & $I$ in A & $^1T_{p}$ in s & $^2T_{p}$ in s & $^3T_{p}$ in s & $\bar T_{p}$ in s & $B$ in mT & $1/T$ in 1/s\\
+  \hline
+1&	0,4&	24,63&	24,78&	25,25&	24,89&	0,542&	0,040 \\
+2&	0,8&	13,87&	13,53&	13,82&	13,74&	1,085&	0,073\\
+3&	1,2&	9,38&	9,31&	9,16&	9,28&	1,627&	0,108\\
+4&	1,6&	7,10&	7,41&	7,60&	7,37&	2,170&	0,136\\
+5&	2,0&	5,97&	5,84&	5,88&	5,90&	2,712&	0,170\\
+6&	2,4&	4,84&	5,25&	4,97&	5,02&	3,255&	0,199\\
+7&	2,8&	\bf{7,94}&	4,32&	4,41&	4,23&	3,797&	0,236\\
+8&	3,2&	\bf{7,53}&	3,75&	4,03&	3,85&	4,339&	0,260\\
+9&	3,6&	\bf{6,85}&	3,47&	3,46&	3,45&	4,882&	0,290\\
+10&	4,0&	\bf{6,09}&	3,09&	3,16&	3,10&	5,424&	0,323\\
+
+  \end{tabular}
+\caption{Die Präzessionsdauer $T$ in Abhängigkeit der Stromstärke $I$}
+  \label{tabpräz}
+ \end{table}
+
+Aus Gleichung \eqref{} lassen sich durch GNUplot mittels linearer Ausgleichsrechnung die zur Bestimmung des magnetischen Moments $\mu$ 
+nötigen Parameter bestimmen.
+
+\begin{align}
+\nonumber
+\frac1T &= e \cdot B + f \intertext{mit} 
+e &= (0,0576 \pm 5,79 \cdot 10^{-4}) \, \frac{1}{\text{mTs}}\\
+\nonumber
+f &= (0,0117 \pm 1,95 \cdot 10^{-3}) \, \frac{1}{\text{s}}
+\end{align}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth] {pics/Praezession.png}
+\centering
+\caption{lineare Abhängigkeit von $\frac{1}{B}$ und $T^2$}
+\end{figure}
+
+Das magnetische Moment $\mu_{Praez}$ wird nun mitsamt Fehler angeben:
+
+\begin{align}
+ \nonumber
+ \mu_{Praez} &= 4\pi^2 J_K \nu_{Strob} \cdot e \\
+ &= 0,420\, \text{Am}^2\\
+ \nonumber
+ \Delta \mu_{Praez} &= \sqrt{\left(\frac{\partial \mu}{\partial J_{K}}\Delta J_{K} \right)^2 + \left(\frac{\partial \mu}{\partial e}\Delta e \right)^2} = \mu \sqrt{\left( \frac{\Delta J_{K}}{J_{K}}\right)^2 + \left( \frac{\Delta e}{e}\right)^2}\\
+ &= 5,79 \cdot 10^{-4}\, \text{Am}^2
+\end{align}
 
 \section{Diskussion}
+Übersichtlich zusammengestellt nochmal das magnetische Moment, errechnet aus drei verschiedenen Ansätzen.
+
+\begin{align*}
+ \mu_{Grav} &= 0,445 \pm 5,0 \cdot 10^{-4} \text{Am}^2\\
+ \mu_{Schw} &= 0,446 \pm 1,2 \cdot 10^{-2} \text{Am}^2\\
+ \mu_{Praez} &= 0,420 \pm 5,8 \cdot 10^{-4} \text{Am}^2\\
+\end{align*}
+
+Da bei keiner Methode der ermittelte Wert stark von den anderen beiden abweicht, ist davon auszugehen, dass der Wert des magnetischen 
+Moments des Magneten inmitten der Billiardkugel sich in der Nähe von 0,44 Am$^2$ bewegt. Schwierig beim Ansatz mit Ausnutzung der
+Gravitation ist die nötige Genauigkeit der Apparatur zur Einstellung der Stromstärke. So ist es schwer möglich, die kleine Masse m$_{kl}$
+zur Ruhe zu bringen. Des Weiteren gestaltet sich die Methode der Präzession als fehleranfällig, da die Synchonisation von Stroboskopfrequenz
+und Drehfrequenz der Kugel nach einigen Messungen aufgrund von Schwierigkeiten beim konzentrierten Einblicken kaum noch zu verifizieren 
+ist. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. Die Betrachtung des Magneten als
+harmonischen Oszillator verhilft sicherlich zum besten Ergebnis. Durch die Messung über 10 Schwingungsperioden und die leicht feststellbare Dauer
+einer Periode, sowie schließlich die Tatsache, dass die Abweichungen der einzelnen Messungen untereinander sehr gering sind, ist diese Aussage
+berechtigt.
+
 
 % ========================================
 %	Literaturverzeichnis

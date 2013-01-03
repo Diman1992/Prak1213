@@ -96,7 +96,7 @@ unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten 
 \end{wrapfigure}
 
 Beim Kugelfall-Viskosimeters nach Höppler handelt es sich um zwei ineinander eingelassene Hohlzylinder aus Glas, welche mit Flüssigkeiten befüllt und hermetisch abgeschlossen werden können. Auf Abbildung \ref{aufbau} \footnote{Viskosimeter nach Höppler - Das Bild ist aus der Versuchsanleitung entnommen} ist das Viskosimeter zu erkennen.\\
-Der innere Zylinder weißt Markierunge auf, durch die eine Strecke von 10cm abgemessen wird. Er wird während des Versuchs mit der Flüssigkeit befüllt, deren Viskosität bestimmt werden soll. Dazu legt man eine Kugel hinein, deren Durchmesser nur geringfügig kleiner ist, als der des Zylinders. An einem Schanier kann man das Viskosimeter vertikal drehen, so dass die Kugel abzusinken beginnt. Durch das Messen der Zeit, die die Kugel benötigt um die Markierungen zu passieren kann man errechnen, welche Geschwindigkeit die Kugel erreicht.\\
+Der innere Zylinder weißt Markierunge auf, durch die eine Strecke von $x$ = 10 cm abgemessen wird. Er wird während des Versuchs mit der Flüssigkeit befüllt, deren Viskosität bestimmt werden soll. Dazu legt man eine Kugel hinein, deren Durchmesser nur geringfügig kleiner ist, als der des Zylinders. An einem Schanier kann man das Viskosimeter vertikal drehen, so dass die Kugel abzusinken beginnt. Durch das Messen der Zeit, die die Kugel benötigt um die Markierungen zu passieren kann man errechnen, welche Geschwindigkeit die Kugel erreicht.\\
 Beim Fallen wirken folgende Kräfte auf die Kugel: die Gewichtskraft $F_g$, die die Kugel nach unten beschleunigt, die Auftriebskraft $F_A$, die die Kugel nach oben treibt und die Reibungskraft \eqref{stokes}, die proportional zur Fallgeschwindigkeit ist und ihr entgegen wirkt. Nach dem Fallenlassen nimmt die Geschwindigkeit der Kugel zunächst immer weiter zu, bis sich schließlich durch Zunahme der Reibungskraft ein Kräftegleichgewicht einstellt und die Kugel mit konstanter Geschwindigkeit absinkt.\\
 Über ein Thermometer wird dabei abgelesen, welche Temperatur die Probe zur Zeit hat und mit einer Libelle wird sichergestellt, dass das Viskosimeter im richtigen Winkel steht.\\
 Der äußere Zylinder hat zwei Anschlüsse, durch die temperiertes Wasser fließen kann und somit die Temperatur der Probe veränderbar wird. Dies ist wichtig, da die Viskosität stark Temperaturabhängig ist und so eine Temperaturabhängigkeit dargestellt werden kann. 
@@ -133,10 +133,10 @@ die Gaußsche Fehlerfortpflanzung
 \caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
 \end{formel}
 
-und die Varianz
+und die Standardabweichung des Mittelwerts
 
 \begin{equation}
- s = \sqrt{\frac{1}{N-1} \sum_{i}^{N} (x_i - \bar{x})^2}.
+ \bar s = \sqrt{\frac{1}{N(N-1)} \sum_{i}^{N} (x_i - \bar{x})^2}.
 \end{equation}
 
 \subsection{Viskosität des Wassers}
@@ -158,7 +158,7 @@ und die Varianz
 11,88&	12,09&	71,05&	71,36\\
 \hline
 $\bar t_{kl}$[s] &12,072 &$\bar t_{gr}[s] $&71,223\\
-$s_{kl}$[s] & 0,173 & $s_{gr}$[s] & 0,253
+$\bar s_{kl}$[s] & 0,039 & $\bar s_{gr}$[s] & 0,057
  \end{tabular}
 \caption{Messzeiten für beide Kugeln durch das Fallrohr}
 \end{table}
@@ -169,46 +169,74 @@ für eine die Apparaturkonstante $K_{kl}$ bekannt ist. Mit der ebenfalls gegeben
 lässt sich die Dichte $\rho_{kl}$ ermitteln. Die Dichte von Wasser wird aus Literaturangaben entnommen. Um die Apparaturkonstante 
 $K_{gr}$ sind neben der errechneten Viskosität die Dichte $\rho_{gr}$ aus gemessenem Durchmesser und gemessener Masse nötig.
 
-\begin{savenotes}
+
+Der Fehler der Durchmesser d$_{kl/gr}$ wird durch den auf der Schieblehre angegebene Fehler verwandt. Jener Fehler der Massen m$_{kl/gr}$
+entspricht der kleinsten Größenordnung der zur Messung benutzten Waage. Die Dichte von Wasser als benötigter Wert wurde aus
+({wissenschaft-technik-ethik.de von Dr.-Ing H. Grimm, Wasser und Dichte/Dichtetabelle - URL: \href{http://www.wissenschaft-technik-ethik.de/wasser_dichte.html#kap02}{www.wissenschaft-technik-ethik.de/wasser\_dichte.html}})
+entnommen. Die Fehler der Dichten $\rho_{kl/gr}$ ergeben sich aus \eqref{gauss} zu
+
+\begin{align}
+  \nonumber
+  \Delta \rho_{kl} &= \sqrt{\left(\frac{\partial \rho_{kl}}{\partial d_{kl}} \Delta d_{kl}\right)^2  + \left(\frac{\partial \rho_{kl} }{\partial m_{kl} } \Delta m_{kl}\right)^2 } = \rho_{kl} \sqrt{\left(-3\frac{\Delta d_{kl}}{cm}\right)^2+\left(\frac{\Delta m_{kl}}{g}\right)^2} \\
+  &= 0,020 \frac{g}{cm^3}\\
+  \nonumber
+  \Delta \rho_{gr} &= \sqrt{\left(\frac{\partial \rho_{gr}}{\partial d_{gr}} \Delta d_{gr}\right)^2  + \left(\frac{\partial \rho_{gr} }{\partial m_{gr} } \Delta m_{gr}\right)^2 } = \rho_{gr} \sqrt{\left(-3\frac{\Delta d_{gr}}{cm}\right)^2+\left(\frac{\Delta m_{gr}}{g}\right)^2} \\
+  &= 0,364 \frac{g}{cm^3} \quad \text{mit} \quad\rho = \frac{m}{\frac16 \pi d^3}
+\end{align}
+
 \begin{table}[h]
  \begin{tabular}{l|l|l}
  Größe & Wert & Fehler\\
  \hline
-  $d_{kl}$ & 1,37 mm & 0,02 mm\footnote[2]{von Schieblehre angegebener Fehler}\\
-  $d_{gr}$ & 1,38 mm & 0,02 mm\\
+  $d_{kl}$ & 13,7 mm & 0,02 mm\\
+  $d_{gr}$ & 13,8 mm & 0,02 mm\\
 \hline
   $m_{kl}$ & 4,4531 g & - \\
-  $m_{gr}$ & 5,0 g & 0,1 g\footnote[3]{kleinste Größenordnung der Messung durch Waage}\\
+  $m_{gr}$ & 5,0 g & 0,1 g\\
 \hline
-  $\rho_{kl}$ & 13,556 $\frac{\text{g}}{\text{cm$^3$}}$& 0,048 $\frac{\text{g}}{\text{cm$^3$}}$ \\
-  $\rho_{gr}$ & 15,220 $\frac{\text{g}}{\text{cm$^3$}}$& 0,111 $\frac{\text{g}}{\text{cm$^3$}}$ \\
-  $\rho_{Fl}$ & 0,998 $\frac{\text{g}}{\text{cm$^3$}}$\footnote[4]{Wasser.de (2010), Dichtetabelle von Wasser bei verschiedenen Temperaturen URL: \href{http://www.wasser.de/aktuell/forum/index.pl?job=thema&tnr=100000000001135}{www.wasser.de/aktuell/forum} } & -\\
-\hline  
+  $\rho_{kl}$ & 3,308 $\frac{\text{g}}{\text{cm$^3$}}$& 0,020 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{gr}$ & 3,634 $\frac{\text{g}}{\text{cm$^3$}}$& 0,364 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{Fl}$ & 0,998 $\frac{\text{g}}{\text{cm$^3$}}$& - \\
+  \hline
 $K_{kl}$ & 0,07640 $\frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}$ & -
  \end{tabular}
 \caption{relevante Kenngrößen}
 \end{table}
-\end{savenotes}
 
 Aus den nun bekannten Größen ermittelt sich $\eta$ mit dem Fehler aus \eqref{gauss} zu
 
-\begin{equation}
- \eta(\rho,t) = (11,583 \pm 0,180) \, \text{mPa}\cdot\text{s}.
-\end{equation}
+\begin{align}
+ \nonumber
+ \eta = K_{kl}(\rho_{kl}-\rho_{Fl}) \bar t_{kl} &= 0,07640 \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}} \cdot \left(3,308\frac{\text{g}}{\text{cm$^3$}} - 0,998 \frac{\text{g}}{\text{cm$^3$}}\right)\cdot 12,072 \text{s}\\
+ &= 2,131 \text{mPas}
+\end{align}
+\begin{align}
+\nonumber
+ \Delta \eta = \sqrt{\left(\frac{\partial \eta}{\partial \rho_{kl}}\Delta \rho_{kl}\right)^2 + \left(\frac{\partial \eta}{\partial t} \bar s_{kl}\right)^2} &= \eta \sqrt{\left(\frac{\Delta \rho_{kl}}{(\rho_{kl}-\rho_{Fl})}\right)^2 + \left(\frac{\bar s_{kl}}{t}\right)^2} \\
+ &= 0,085 \text{mPas}
+\end{align}
 
 Die gesuchte Apparaturkonstante $K_{gr}$ lässt sich nun errechnen durch Gleichsetzen:
 
 \begin{align}
  \nonumber
- K_{gr}(\rho_{gr} - \rho_{Fl})\cdot &t_{gr} = K_{kl}(\rho_{kl} - \rho_{Fl})\cdot t_{kl} \Leftrightarrow K_{gr} = K_{kl}\frac{(\rho_{kl} - \rho_{Fl})}{(\rho_{gr} - \rho_{Fl})}\cdot\frac{t_{kl}}{t_{gr}}\\
- &K_{gr} = (0,01143 \pm 3,547\cdot10^{-3})\, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
+ K_{gr}(\rho_{gr} - \rho_{Fl})\cdot t_{gr} &= K_{kl}(\rho_{kl} - \rho_{Fl})\cdot t_{kl} \Leftrightarrow K_{gr} = K_{kl}\frac{(\rho_{kl} - \rho_{Fl})}{(\rho_{gr} - \rho_{Fl})}\cdot\frac{t_{kl}}{t_{gr}}\\
+ &K_{gr} = 0,01135\, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
 \end{align}
+\begin{align}
+ \nonumber
+\Delta K_{gr} &= \sqrt{\left(\frac{\partial K_{gr}}{\partial \rho_{kl}}\Delta \rho_{kl} \right)^2 + \left(\frac{\partial K_{gr}}{\partial \rho_{gr}}\Delta \rho_{gr} \right)^2 + \left(\frac{\partial K_{gr}}{\partial t_{kl}} \bar s_{kl} \right)^2 + \left(\frac{\partial K_{gr}}{\partial t_{gr}} \bar s_{gr} \right)^2}\\
+ \nonumber
+ &= K_{gr} \sqrt{\left(\frac{\Delta \rho_{kl}}{(\rho_{kl}-\rho_{Fl})} \right)^2 + \left(-\frac{\Delta \rho_{gl}}{(\rho_{gl}-\rho_{Fl}} \right)^2 + \left(\frac{\bar s_{kl}}{t} \right)^2 + \left(\frac{\bar s_{gr}}{t} \right)^2}\\
+ &= 0,00176 \, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
+\end{align}
+
 
 Um die Verwendung genannter Formeln zur Ermittlung der Viskosität zu rechtfertigen, muss die Reynoldszahl für diesen Versuch ermittelt und mit 
 der kritischen Reynoldszahl verglichen werden. Nach \eqref{rey} ergibt sich
 
 \begin{equation}
- Re = \frac{1000\frac{\text{kg}}{\text{m}^3} \cdot 0,00833\frac{\text{m}}{\text{s}} \cdot 0,014 \text{m}}{0,0115 \text{Pa}\cdot\text{s}} \approx 10 \ll 2000,
+ Re = \frac{d_{kl}\cdot \rho_{Fl}}{\eta} \cdot \frac{x}{t_{kl}}=\frac{998\frac{\text{kg}}{\text{m}^3} \cdot 0,00828\frac{\text{m}}{\text{s}} \cdot 0,0137 \text{m}}{0,002313 \text{Pa}\cdot\text{s}} \approx 49 \ll 2000,
 \end{equation}
 
 weshalb man von einer laminaren Flüssigkeit sprechen darf und die benutzten Formeln legitim sind.
@@ -217,23 +245,21 @@ weshalb man von einer laminaren Flüssigkeit sprechen darf und die benutzten For
 Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird die Fallzeit zu verschiedenen Temperaturen gemessen.
 
 \renewcommand{\arraystretch}{1.2}
-\begin{table}
+\begin{table}[H]
  \begin{tabular}{c|c|c|c|c|c|c}
-   T [$^\circ$C] & $\frac{1}{\text{T}}$& $t_1$[s] & $t_2$[s] & $\bar t$[s] & $\Delta t$ & ln(t)\\	
+   T [K] & $\frac{1}{\text{T}}[\frac{1}{\text{K}}]$& $t_1$[s] & $t_2$[s] & $\bar t$[s] & $\Delta t$ & ln($\frac{\bar t}{t}$)\\	
    \hline
-21&	0,0476&	81,16&	81,04&	81,10&	0,06&	4,396\\
-26&	0,0385&	72,87&	72,92&	72,90&	0,02&	4,289\\
-29&	0,0345&	68,27&	68,41&	68,34&	0,07&	4,224\\
-32&	0,0313&	64,44&	64,15&	64,30&	0,14&	4,163\\
-35&	0,0286&	60,41&	60,69&	60,55&	0,14&	4,103\\
-38&	0,0263&	57,61&	57,55&	57,58&	0,03&	4,053\\
-41&	0,0244&	54,61&	54,04&	54,33&	0,29&	3,995\\
-44&	0,0227&	51,32&	51,83&	51,58&	0,25&	3,943\\
-47&	0,0213&	49,00&	49,24&	49,12&	0,12&	3,894\\
-50&	0,0200&	46,58&	46,24&	46,41&	0,17&	3,838\\
-53&	0,0189&	44,47&	44,80&	44,64&	0,17&	3,799\\
-
-
+-252&	-0,00397&	81,16&	81,04&	81,10&	0,06&	4,396 \\
+-247&	-0,00405&	72,87&	72,92&	72,90&	0,02&	4,289\\
+-244&	-0,00410&	68,27&	68,41&	68,34&	0,07&	4,224\\
+-241&	-0,00415&	64,44&	64,15&	64,30&	0,14&	4,163\\
+-238&	-0,00420&	60,41&	60,69&	60,55&	0,14&	4,103\\
+-235&	-0,00425&	57,61&	57,55&	57,58&	0,03&	4,053\\
+-232&	-0,00431&	54,61&	54,04&	54,33&	0,29&	3,995\\
+-229&	-0,00436&	51,32&	51,83&	51,58&	0,25&	3,943\\
+-226&	-0,00442&	49,00&	49,24&	49,12&	0,12&	3,894\\
+-223&	-0,00448&	46,58&	46,24&	46,41&	0,17&	3,838\\
+-220&	-0,00454&	44,47&	44,80&	44,64&	0,17&	3,799\\
  \end{tabular}
 \caption{Durch Temperaturerhöhung verringerte Fallzeit}
 \end{table}
@@ -244,21 +270,20 @@ die Koeffizienten zu bestimmen,
 werden folgende Umformungsschritte unternommen:
 
 \begin{align*}
-\eta(T) &= A \exp \left(\frac{B}{T}\right) \\
-\ln \left( \frac{\eta}{A}\right) &= \frac{B}{T}\\ 
-\ln [\underbrace{K_{gr}(\rho_{gr}-\rho_{Fl})}_{=c}] + \underbrace{\ln(t)}_{=y} &= \underbrace{\frac{B}{T}}_{=a\cdot x} + \ln(A)\\
-y & = a\cdot x + \underbrace{\ln \left(\frac{A}{c}\right)}_{=b}\\
-y & = a\cdot x + b 
+ \eta(T) &= A \exp \left(\frac{B}{T}\right) \\
+ \ln \left[ \underbrace{\frac{K_{gr}(\rho_{gr}-\rho_{Fl})}{A}}_{=\exp \left(\frac1b\right)} \cdot \underbrace{t}_{=\exp(y)}  \right] &= \underbrace{\frac{B}{T}}_{=a\cdot x}\\
+ y &= a\cdot x + b
 \end{align*}
+
 \begin{equation}
-\text{mit } a = 21,048\pm 1,72 \quad \text{und} \quad b = 3,464\pm0,05.\\
+\text{mit } a = 1043,42\pm 33,61 \quad \text{und} \quad b = 8,51 \pm 0,14.\\
 \end{equation}
 
 Zurücktransferiert erhält man wieder A und B zu
 
 \begin{align}
- A = c \cdot \e^b = 5,193 \pm 0,05\\
- B = a = 21,048 \pm 1,72
+ A = K_{gr}(\rho_{gr}-\rho_{Fl}) \cdot \e^b = 149,03 \pm 1,46\\
+ B = a = 1043,42 \pm 33,61
 \end{align}
 
 \begin{figure}[H]

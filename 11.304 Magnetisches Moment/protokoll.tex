@@ -65,11 +65,41 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
+%\section{Einleitung}				% Bei Bedarf
 
 \section{Theorie}
-
+Aus der Maxwell-Gleichung
+\begin{equation}
+\vec{\nabla} \cdot \vec{B} = 0
+\end{equation}
+ folgt direkt, dass es keine magnetischen Monopole gibt. Von der Komplexität her kommt  ein magnetischer Dipol einem Monopol am nächsten, dessen magnetisches Moment in diesem Versuch bestimmt werden soll.
+ Der Dipol wird dazu in ein homogenes Magnetfeld eingeführt, welches mit einem Drehmoment auf den Dipol einwirkt, bis der Dipol und die Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
+ Ein homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen im Abstand $R$ voneinander aufgestellt. Dabei bezeichnet R den Radius der beiden Spulen. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in ihrem Inneren durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
+  
+\section{Aufbau}
+Der im Versuch verwendete Dipol ist in eine kleine Vollkugel eingelassen. Die Kugel liegt in einer passenden Vertiefung, in der die Kugel nicht herumrollen kann. Von unten wird Luft eingeblasen, so dass die Kugel nahezu reibungsfrei auf dem Luftkissen schwebt.
+Der gesamte Aufbau befindet sich im Inneren eines Helmholzspulenpaares, deren Durchmesser jedoch nicht ganz dem Spulenabstand entspricht.
+Ihr Magnetfeld errechnet sich über das Biot-Savartsche Gesetzt
+\begin{equation}
+d \vec{B} = \frac{\mu_0 I}{4\pi} \frac{d \vec{s} \times \vec{r}}{r^3}
+\end{equation} 
+zu
+\begin{equation}
+B(0)=\frac{\mu_0 IR^2}{(R^2+x^2)^{3/2}}
+\end{equation}
+Der Feldgradient $\frac{dB}{dx}$ entlang der Symmetrieachse errechnet sich entsprechend zu
+\begin{equation}
+\frac{dB}{dx} = -3\mu_0 IR^2 \frac{x}{(R^2+x^2)^{5/2}}
+\end{equation}
 \section{Durchführung}
+Das magnetische Moment des Dipols wird nun auf drei verschiedene Weisen berechnet.
+
+
+\subsection{Gravitation}
+\subsection{Harmonischer Oszillator}
+\subsection{Präzession}
+
+
 
 \section{Auswertung}
 \subsection{Fehlerrechnung}
@@ -102,7 +132,7 @@ und die Standardabweichung des Mittelwerts
 \subsection{Ermittlung der Apparaturkonstanten}
 Für die Auswertung des Experiments sind einige, für die Apparatur individuellen Werte nötig. So die Daten des genutzten Helmholtz-Spulenpaars,
 sowie der Billiardkugel. Sie wurden zu Versuchsbeginn aufgenommen. Der Fehler das Masse ergibt sich aus der kleinsten angezeigten Größenordnung
-der zur Messung benutzten Waage. Jener für den Durchmesser ist von der Schieblehre angegeben.
+der zur Messung benutzten Waage. Der Fehler des Durchmessers wird von der Schieblehre abgelesen.
 
 \begin{align*}
  d_H &= 0,138 \text{m} \\
@@ -225,10 +255,9 @@ Das magnetische Moment $\mu_{Schw}$ wird nun mitsamt Fehler angeben:
 \end{align}
 
 \subsection[Ermittlung durch Präzission]{Bestimmung des magnetischen Momentes über die Präzession eines Magneten}
-Bei einer Stroboskopfrequenz $\nu_{Strob}$ von 4,5 Hz erschien der weiße Punkt am Stiehl der Billiardkugel bei jedem Lichtimpuls
-am gleichen Ort. Die vier markierten Werte in Tabelle \ref{tabpräz} entstehen durch Messen über zwei Präzessionsperioden, sodass nur
-ihr halbierter Wert in den Mittelwert $\bar T_{p}$ einfließt.
-
+Bei einer Stroboskopfrequenz $\nu_{Strob}$ von 4,5 Hz erschien der weiße Punkt am Stiel der Billiardkugel bei jedem Lichtimpuls
+am gleichen Ort. Die vier markierten Werte in Tabelle \ref{tabpräz} entstehen durch Messen über zwei Präzessionsperioden, sodass hier nur
+der halbierter Wert in den Mittelwert $\bar T_{p}$ einfließt.
 
  \begin{table}[H]
   \begin{tabular}{c|c|c|c|c|c|c|c}
@@ -291,11 +320,10 @@ Da bei keiner Methode der ermittelte Wert stark von den anderen beiden abweicht,
 Moments des Magneten inmitten der Billiardkugel sich in der Nähe von 0,44 Am$^2$ bewegt. Schwierig beim Ansatz mit Ausnutzung der
 Gravitation ist die nötige Genauigkeit der Apparatur zur Einstellung der Stromstärke. So ist es schwer möglich, die kleine Masse m$_{kl}$
 zur Ruhe zu bringen. Des Weiteren gestaltet sich die Methode der Präzession als fehleranfällig, da die Synchonisation von Stroboskopfrequenz
-und Drehfrequenz der Kugel nach einigen Messungen aufgrund von Schwierigkeiten beim konzentrierten Einblicken kaum noch zu verifizieren 
-ist. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. Die Betrachtung des Magneten als
+und Drehfrequenz der Kugel nicht Restlos gelingt. Über eine Präzessionsrotation hinweg nimmt die Eigenrotation der Kugel sehr stark ab und bleibt nicht fest bei den 4,5Hz. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. Die Betrachtung des Magneten als
 harmonischen Oszillator verhilft sicherlich zum besten Ergebnis. Durch die Messung über 10 Schwingungsperioden und die leicht feststellbare Dauer
-einer Periode, sowie schließlich die Tatsache, dass die Abweichungen der einzelnen Messungen untereinander sehr gering sind, ist diese Aussage
-berechtigt.
+einer Periode, wodurch die Abweichungen der einzelnen Messungen untereinander sehr gering sind und dass die Kugel durch das Luftkissen fast garnicht abgebremst wird,
+ ist diese Aussage berechtigt.
 
 
 % ========================================

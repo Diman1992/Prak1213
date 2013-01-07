@@ -75,7 +75,46 @@ Aus der Maxwell-Gleichung
  folgt direkt, dass es keine magnetischen Monopole gibt. Von der Komplexität her kommt  ein magnetischer Dipol einem Monopol am nächsten, dessen magnetisches Moment in diesem Versuch bestimmt werden soll.
  Der Dipol wird dazu in ein homogenes Magnetfeld eingeführt, wodurch ein Drehmoment auf ihn einwirkt, bis Dipol und Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
  Ein homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen im Abstand $R$ voneinander aufgestellt. Dabei bezeichnet R den Radius der beiden Spulen. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in ihrem Inneren durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
+ 
+ \subsection{Gravitation}
+ Wird in die Kugel mit dem Dipol ein etwa 20cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist und dieser Stab nun senkrecht zum Magnetfeld ausgerichtet, so wirkt auf ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld. Beide Momente greifen die Kugel antiparallel an. Erhöht man nun so lange der Spulenstrom und dadurch auch die Stärke des Magnetfeldes, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht,
+so gilt:
+\begin{equation}
+\vec{\mu}_{Dipol} \times \vec{B} = m\cdot (\vec{r} \times \vec{g} ).
+\end{equation}
+Auf Grund der Winkelgleichheit lassen sich die Kreuzprodukte vereinfachen zu:
+\begin{equation}
+\mu_{Dipol} \cdot B = m\cdot r \cdot g.
+\label{grav}
+\end{equation}
   
+  \subsection{Harmonischer Oszillator}
+  Das durch das homogene B-Feld erzeugte Drehmoment ist eine rücktreibende Kraft. Lenkt man die Kugel aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
+Die Bewegung kann durch folgende Differentialgleichung beschrieben werden:
+\begin{equation}
+-|\vec{\mu}Dipol \times \vec{B}| = J_K \cdot \frac{d^2 \Theta}{dt^2}.
+\end{equation}
+Deren Lösung ist:
+\begin{equation}
+T^2=\frac{4\pi^2J_K}{\mu_{Dipol}} \frac{1}{B}
+\label{oszi}
+\end{equation}
+  \subsection{Präzession}
+ Wirkt eine äußere Kraft auf die Drehachse eines Körpers, so beginnt diese, um den Richtungsvektor der Kraft zu rotieren. Dies wird als Präzession bezeichnet.
+Die Präzessionsbewegung lässt sich durch folgende Differentialgleichung beschreiben:
+\begin{equation}
+\vec{\mu}_{Dipol} \times \vec{B} = \frac{d \vec{L}_K}{dt}
+\end{equation}
+Hierbei ist $\Omega_p$ die Präzessionsfrequenz und eine Lösung dieser Differentialgleichung.
+\begin{equation}
+\Omega_p = \frac{\mu B}{|L_K|}
+\end{equation}
+lässt sich dabei in
+\begin{equation}
+\frac{1}{T} = \frac{\mu_{Dipol}}{2 \pi L_K} B
+\label{prae}
+\end{equation}
+umstellen.
 \section{Aufbau}
 Der im Versuch verwandte Dipol ist in eine kleine Vollkugel eingelassen. Die Kugel liegt in einer passenden Vertiefung, in der die Kugel nicht herumrollen kann. Von unten wird Luft eingeblasen, so dass die Kugel nahezu reibungsfrei auf dem Luftkissen schwebt.
 Der gesamte Aufbau befindet sich im Inneren eines Helmholzspulenpaares, deren Radius jedoch nicht ganz dem Spulenabstand entspricht. Das Magnetfeld ist somit leicht inhomogen, da sich der Dipol jedoch sehr zentral auf der Symmetrieachse befindet kann dies vernachlässigt werden.
@@ -96,32 +135,12 @@ Das magnetische Moment des Dipols wird nun auf drei verschiedene Weisen berechne
 
 
 \subsection{Gravitation}
-In die Kugel mit dem Dipol wird ein etwa 20cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist. Der Stab wird nun senkrecht zum Magnetfeld ausgerichtet, damit ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld wirkt. Beide Momente greifen die Kugel antiparallel an. Es wird nun so lange der Spulenstrom und dadurch auch das Magnetfeld erhöht, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht.
-Im Gleichgewicht gilt:
-\begin{equation}
-\vec{\mu}_{Dipol} \times \vec{B} = m\cdot (\vec{r} \times \vec{g} ).
-\end{equation}
-Auf Grund der Winkelgleichheit lassen sich die Kreuzprodukte vereinfachen zu:
-\begin{equation}
-\mu_{Dipol} \cdot B = m\cdot r \cdot g.
-\label{grav}
-\end{equation}
-Indem der Abstand der Masse zur Kugel variiert wird, kann die benötigte B-Feldstärke für verschiedene Drehmomente bestimmt werden. Eine lineare Ausgleichsrechnung mittels Gleichung \eqref{grav} bestimmt das magnetische Moment des Dipols.
+In die Kugel wird ein Stab mit einer beweglichen Masse am Ende gesteckt. Und das Magnetfeld so lange erhöht, bis der Stab in der Luft ruht. Indem der Abstand der Masse zur Kugel variiert wird, kann die benötigte B-Feldstärke für verschiedene Drehmomente bestimmt werden. Eine lineare Ausgleichsrechnung mittels Gleichung \eqref{grav} bestimmt das magnetische Moment des Dipols.
 \subsection{Harmonischer Oszillator}
-Das durch das homogene B-Feld erzeugte Drehmoment ist eine rücktreibende Kraft. Entfernt man den zuvor angebrachten Stab und die Masse und lenkt die Kugel dann aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
-Die Bewegung kann durch folgende Differentialgleichung beschrieben werden:
-\begin{equation}
--|\vec{\mu}Dipol \times \vec{B}| = J_K \cdot \frac{d^2 \Theta}{dt^2}.
-\end{equation}
-Deren Lösung ist:
-\begin{equation}
-T^2=\frac{4\pi^2J_K}{\mu_{Dipol}} \frac{1}{B}
-\label{oszi}
-\end{equation}
+Die Kugel wird im harmonischen B-Feld um einen kleinen Winkel ausgelenkt und dadurch in Schwingung versetzt.
 Gemessen wird die Schwingungsdauer für verschiedene Magnetfeldstärken und durch lineare Ausgleichsrechnung wird mittels Gleichung \eqref{oszi} das magnetische Moment errechnet.
 \subsection{Präzession}
-
-
+Die Kugel wird in Präzession versetzt, indem die Drehachse nach dem Andrehen leicht gekippt wird und erst dann das magnetische Feld eingeschaltet wird. Die Kugel beginnt dann um die Feldlinien zu Präzessieren. Wichtig ist, dass die Kugel bei jeder Messung mit der gleichen Geschwindigkeit rotiert. Um dies zu realisieren wird mit einem Stroboskop sichergestellt, dass die auf der Kugel angebrachte Markierung unter dem Stroboskoplicht stationär erscheint. Ist dies der Fall, so rotiert die Kugel bei jeder Messung mit der gleichen Frequenz.  
 
 \section{Auswertung}
 \subsection{Fehlerrechnung}
@@ -164,7 +183,7 @@ der zur Messung benutzten Waage. Der Fehler des Durchmessers wird von der Schieb
  2r_K &= 53,65 \text{mm} \pm 0,05 \text{mm}
 \end{align*}
 
-Das Trägheitsmoment der Billiardkugel $J_K$ wird ermittelt und der Fehler nach \eqref{gauss} berechnet.
+Das Trägheitsmoment der Billiardkugel $J_K$ wird ermittelt und der Fehler nach Gleichung \eqref{gauss} berechnet.
 
 \begin{align}
 \nonumber

@@ -126,13 +126,9 @@ zu
 \begin{equation}
 B(0)=\frac{\mu_0 IR^2}{(R^2+x^2)^{3/2}}.
 \end{equation}
-Der Feldgradient $\frac{dB}{dx}$ entlang der Symmetrieachse errechnet sich entsprechend zu
-\begin{equation}
-\frac{dB}{dx} = -3\mu_0 IR^2 \frac{x}{(R^2+x^2)^{5/2}}.
-\end{equation}
+
 \section{Durchführung}
 Das magnetische Moment des Dipols wird nun auf drei verschiedene Weisen berechnet.
-
 
 \subsection{Gravitation}
 In die Kugel wird ein Stab mit einer beweglichen Masse am Ende gesteckt. Und das Magnetfeld so lange erhöht, bis der Stab in der Luft ruht. Indem der Abstand der Masse zur Kugel variiert wird, kann die benötigte B-Feldstärke für verschiedene Drehmomente bestimmt werden. Eine lineare Ausgleichsrechnung mittels Gleichung \eqref{grav} bestimmt das magnetische Moment des Dipols.
@@ -217,7 +213,7 @@ des vom Gravitationsfeld erzeugte Drehmoment.
 \label{tabgrav}
 \end{table}
 
-Eine lineare Regression nach Gleichung \eqref{} durch GNUplot führt zu folgenden Parametern.
+Eine lineare Regression nach Gleichung \eqref{grav} durch GNUplot führt zu folgenden Parametern.
 
 \begin{align}
 \nonumber
@@ -267,7 +263,7 @@ i & $I$ in A & $^1T_{10}$ in s & $^2T_{10}$ in s & $^3T_{10}$ in s & $\bar T_{10
   \label{tabschwing}
  \end{table}
 
-Gleichung \eqref{} liefert die Abhängigkeit, die durch GNUplot mittels linearer Regression gefittet und mit folgenden Parametern 
+Gleichung \eqref{oszi} liefert die Abhängigkeit, die durch GNUplot mittels linearer Regression gefittet und mit folgenden Parametern 
 beschrieben wird.
 
 \begin{align}
@@ -320,7 +316,7 @@ i & $I$ in A & $^1T_{p}$ in s & $^2T_{p}$ in s & $^3T_{p}$ in s & $\bar T_{p}$ i
   \label{tabpräz}
  \end{table}
 
-Aus Gleichung \eqref{} lassen sich durch GNUplot mittels linearer Ausgleichsrechnung die zur Bestimmung des magnetischen Moments $\mu$ 
+Aus Gleichung \eqref{prae} lassen sich durch GNUplot mittels linearer Ausgleichsrechnung die zur Bestimmung des magnetischen Moments $\mu$ 
 nötigen Parameter bestimmen.
 
 \begin{align}

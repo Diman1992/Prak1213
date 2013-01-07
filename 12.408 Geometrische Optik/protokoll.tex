@@ -1,0 +1,143 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Versuch 408 - Geometrische Optik\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Jan Adam\\			% Name Praktikumspartner A
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+Dimitrios Skodras\\					% Name Praktikumspartner B
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{08.Januar 2013}				% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+\section{Einleitung}
+Die geometrische Optik ist als Grenzfall der Wellenoptik ein Bereich der Physik, welcher sich des Strahlenmodells des Lichts bedient und
+den Weg des Lichts auf ausschließlich geometrische Art und Weise formuliert. Neben der Verifizierung des Abbildungsgesetzes und der 
+Linsengleichung, werden im Zuge des Experimentsdie Methoden von Bessel bzw. Abbe verwandt, um die Brennweite einer Sammellinse oder 
+eines Linsensystems zu bestimmen.
+
+\section{Theorie}
+\subsection{Linsen - Arten und Eigenschaften}
+Kernstück der geometrischen Optik sind die Linsen, welche grundsätzlich aus optisch dichterem Material als Luft bestehen. Nach dem 
+Snelliusschem Brechungsgesetz wird Licht an der Grenzfläche solcher Materialien verschiedener optischer Dichte gebrochen. Wie das Licht
+gebrochen wird, hängt vom Winkel des einfallenden Strahls ab. So unterscheidet man zwischen Sammellinsen und Streulinsen. 
+
+\begin{figure}[H]
+ \includegraphics[width=\textwidth]{pics/408a.png}
+ \centering
+ \caption{a, dünne Sammellinse - b, dünne Streulinse - c, dicke Sammellinse}
+ \label{linsen}
+\end{figure}
+
+Charakterisiert sind Linsen durch ihre Brennweite $f$. sie ist die Distanz von der Mittelachse der Linse, in der paralleles Licht von
+einer Sammellinse in einem Punkt, dem Brennpunkt, gebündelt wird. Wenn die Brennweite, sowie die Bildweite $b$ positiv sind, entsteht
+ein reelles Bild (a,). Sind sie negativ, entsteht ein virtuelles Bild (b,). Die beiden Bildkonstruktionen in \ref{linsen} für dünne
+Linsen sind durch die Reduktion der Brechung an der Mittelebene realisierbar. Hingegen bei dicken Linsen ist dies nicht durchführbar.
+Daher werden die Hauptebenen H und H' hergenommen, an denen die Brechung geschieht. Zur Konstruktion werden der Parallelstrahl $P$, der
+Mittelpunktstrahl $M$, sowie der Brennstrahl $B$ zu Hilfe genommen. Aus diesen Konstruktionen leitet sich das Abbildungsgesetz ab
+
+\begin{formel}
+ \begin{equation}
+  V = \frac{B}{G} = \frac{b}{g}.
+  \label{Abbildung}
+ \end{equation}
+ \caption*{\small{V = Abbildungsmaßstab, B = Bildhöhe, G = Gegenstandshöhe, g = Gegenstandsweite}}
+\end{formel}
+
+Hieraus ergibt sich für dünne Linsen die Linsengleichung zu
+
+\begin{equation}
+ \frac1f = \frac1b + \frac1g.
+ \label{Linsengleichung}
+\end{equation}
+
+Bei dicken Linsen werden zur Erhaltung der Gültigkeit der Linsengleichung die Brennweite, die Gegenstandsweite, sowie die Bildweite 
+zur jeweiligen Hauptebene bestimmt. 
+
+\subsection{Abbildungsfehler - sphärisch und chromatisch}
+
+\begin{wrapfigure}[25]{r}{0.5 \textwidth}
+\includegraphics[width = 0.5 \textwidth]{pics/408b.png}  
+\caption{sphärische (oben) und chromatische (unten) Aberration}
+\end{wrapfigure}
+
+
+Die Annäherung der Reduktion auf die Mittelebene bzw. die Hauptebenen ist für sich nur für achsennahe Strahlen zulässig. So kommt
+es bei achsenfernen Strahlen zu Abbildungsfehlern, oder Aberrationen, was zur Folge hat, dass das Objekt nicht scharf abgebildet
+werden kann. Bei sphärischen Aberrationen kommt es dazu, dass der Brennpunkt achsenferner Strahlen näher an der Linsenachse liegt,
+als jener der achsennahen. Somit laufen sie nicht alle im selben Punkt zusammen. 
+
+Chromatische Aberration ist ebenfalls ein Nichtzusammentreffen verschiedener Strahlen. Hierbei werden die verschiedenen Wellenlängen
+$\lambda$ verschieden stark am Linsenmaterial gebrochen, was auf einen wellenlängeabhängigen Brechungsindex zurückzuführen ist. Diese
+Erscheinung wird Dispersion genannt.
+
+\section{Durchführung}
+\subsection{Versuchsaufbau}
+
+\subsection[Methode von Bessel]{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
+
+\subsection[Methode von Abbe]{Bestimmung der Brennweite eines Linsensystems nach der Methode von Abbe}
+
+
+\section{Auswertung}
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

@@ -73,13 +73,13 @@ Aus der Maxwell-Gleichung
 \vec{\nabla} \cdot \vec{B} = 0
 \end{equation}
  folgt direkt, dass es keine magnetischen Monopole gibt. Von der Komplexität her kommt  ein magnetischer Dipol einem Monopol am nächsten, dessen magnetisches Moment in diesem Versuch bestimmt werden soll.
- Der Dipol wird dazu in ein homogenes Magnetfeld eingeführt, welches mit einem Drehmoment auf den Dipol einwirkt, bis der Dipol und die Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
+ Der Dipol wird dazu in ein homogenes Magnetfeld eingeführt, wodurch ein Drehmoment auf ihn einwirkt, bis Dipol und Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
  Ein homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen im Abstand $R$ voneinander aufgestellt. Dabei bezeichnet R den Radius der beiden Spulen. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in ihrem Inneren durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
   
 \section{Aufbau}
 Der im Versuch verwendete Dipol ist in eine kleine Vollkugel eingelassen. Die Kugel liegt in einer passenden Vertiefung, in der die Kugel nicht herumrollen kann. Von unten wird Luft eingeblasen, so dass die Kugel nahezu reibungsfrei auf dem Luftkissen schwebt.
-Der gesamte Aufbau befindet sich im Inneren eines Helmholzspulenpaares, deren Durchmesser jedoch nicht ganz dem Spulenabstand entspricht.
-Ihr Magnetfeld errechnet sich über das Biot-Savartsche Gesetzt
+Der gesamte Aufbau befindet sich im Inneren eines Helmholzspulenpaares, deren Radius jedoch nicht ganz dem Spulenabstand entspricht. Das Magnetfeld ist somit leicht inhomogen, da sich der Dipol jedoch sehr zentral auf der Symmetrieachse befindet kann dies vernachlässigt werden.
+Das Magnetfeld der Spulen errechnet sich über das Biot-Savartsche Gesetzt
 \begin{equation}
 d \vec{B} = \frac{\mu_0 I}{4\pi} \frac{d \vec{s} \times \vec{r}}{r^3}
 \end{equation} 
@@ -89,14 +89,36 @@ B(0)=\frac{\mu_0 IR^2}{(R^2+x^2)^{3/2}}
 \end{equation}
 Der Feldgradient $\frac{dB}{dx}$ entlang der Symmetrieachse errechnet sich entsprechend zu
 \begin{equation}
-\frac{dB}{dx} = -3\mu_0 IR^2 \frac{x}{(R^2+x^2)^{5/2}}
+\frac{dB}{dx} = -3\mu_0 IR^2 \frac{x}{(R^2+x^2)^{5/2}}.
 \end{equation}
 \section{Durchführung}
 Das magnetische Moment des Dipols wird nun auf drei verschiedene Weisen berechnet.
 
 
 \subsection{Gravitation}
+In die Kugel mit dem Dipol wird ein etwa 20cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist. Der Stab wird nun senkrecht zum Magnetfeld ausgerichtet, damit ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld wirkt. Beide Momente greifen die Kugel antiparallel an. Es wird nun so lange der Spulenstrom und dadurch auch das Magnetfeld erhöht, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht.
+Im Gleichgewicht gilt:
+\begin{equation}
+\vec{\mu}_{Dipol} \times \vec{B} = m\cdot (\vec{r} \times \vec{g} ).
+\end{equation}
+Auf Grund der Winkelgleichheit lassen sich die Kreuzprodukte vereinfachen zu:
+\begin{equation}
+\mu_{Dipol} \cdot B = m\cdot r \cdot g.
+\label{grav}
+\end{equation}
+Indem der Abstand der Masse zur Kugel variiert wird, kann die benötigte B-Feldstärke für verschiedene Drehmomente bestimmt werden. Eine lineare Ausgleichsrechnung mittels Gleichung \eqref{grav} bestimmt das magnetische Moment des Dipols.
 \subsection{Harmonischer Oszillator}
+Das durch das homogene B-Feld erzeugte Drehmoment ist eine rücktreibende Kraft. Entfernt man den zuvor angebrachten Stab und die Masse und lenkt die Kugel dann aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
+Die Bewegung kann durch folgende Differentialgleichung beschrieben werden:
+\begin{equation}
+-|\vec{\mu}Dipol \times \vec{B}| = J_K \cdot \frac{d^2 \Theta}{dt^2}.
+\end{equation}
+Deren Lösung ist:
+\begin{equation}
+T^2=\frac{4\pi^2J_K}{\mu_{Dipol}} \frac{1}{B}
+\label{oszi}
+\end{equation}
+Gemessen wird die Schwingungsdauer für verschiedene Magnetfeldstärken und durch lineare Ausgleichsrechnung wird mittels Gleichung \eqref{oszi} das magnetische Moment errechnet.
 \subsection{Präzession}
 
 
@@ -317,11 +339,12 @@ Das magnetische Moment $\mu_{Praez}$ wird nun mitsamt Fehler angeben:
 \end{align*}
 
 Da bei keiner Methode der ermittelte Wert stark von den anderen beiden abweicht, ist davon auszugehen, dass der Wert des magnetischen 
-Moments des Magneten inmitten der Billiardkugel sich in der Nähe von 0,44 Am$^2$ bewegt. Schwierig beim Ansatz mit Ausnutzung der
+Moments des Magneten inmitten der Billiardkugel sich in der Nähe von 0,44 Am$^2$ befindet. Schwierig beim Ansatz mit Ausnutzung der
 Gravitation ist die nötige Genauigkeit der Apparatur zur Einstellung der Stromstärke. So ist es schwer möglich, die kleine Masse m$_{kl}$
 zur Ruhe zu bringen. Des Weiteren gestaltet sich die Methode der Präzession als fehleranfällig, da die Synchonisation von Stroboskopfrequenz
-und Drehfrequenz der Kugel nicht Restlos gelingt. Über eine Präzessionsrotation hinweg nimmt die Eigenrotation der Kugel sehr stark ab und bleibt nicht fest bei den 4,5Hz. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. Die Betrachtung des Magneten als
-harmonischen Oszillator verhilft sicherlich zum besten Ergebnis. Durch die Messung über 10 Schwingungsperioden und die leicht feststellbare Dauer
+und Drehfrequenz der Kugel nicht Restlos gelingt. Über eine Präzessionsrotation hinweg nimmt die Eigenrotation der Kugel sehr stark ab und bleibt nicht fest bei den 4,5Hz. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. 
+Vermutlich wurde die Kugel um einen zu großen Winkel ausgelenkt, so dass eine Nutation begünstigt wurde. Die Betrachtung des Magneten als
+harmonischen Oszillator verhilft vermutlich zum besten Ergebnis. Durch die Messung über 10 Schwingungsperioden und die leicht feststellbare Dauer
 einer Periode, wodurch die Abweichungen der einzelnen Messungen untereinander sehr gering sind und dass die Kugel durch das Luftkissen fast garnicht abgebremst wird,
  ist diese Aussage berechtigt.
 

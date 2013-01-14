@@ -21,13 +21,16 @@ set grid
 
 
 #Fitfunktion
-f(x)=a*5.67*10**(-8)*(x)+b
+#f(x)=a*5.67*10**(-8)*(x)+b
 #f(x)=b*exp(a*x)
 #f(x)=atan(-2*pi*x*a)
 #f(x)=1/(sqrt(1+4*pi**2*x**2*a**2))
+f(x)=a*(1/((x-c)**2))+b
+#g(x)=a*(1/((x-c)**2))+b
 
 #fitting
-#fit f(x) "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:($1)-0.168 index 1 via a,b
+#fit f(x) "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:($2*0.001)-0.168 index 1 via a,b
+fit f(x) "daten" using ($1):($2 -0.14) index 3 via a,b,c
 #fit f(x) "353_c" using 1:(($2*2*pi)/$3) index 0 via a
 #fit f(x) "solar.txt" using 4:2 index 8 via a,b
 
@@ -44,8 +47,8 @@ f(x)=a*5.67*10**(-8)*(x)+b
 
 #plot
 
-#plot "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:(($1)-0.168) index 1 title "Thermospannung",f(x) title "Ausgleichsgerade"
-plot "daten" using ($1):($2 -0.14) every 2 index 3 title "Thermospannung 1", "daten" using ($1):($2 -0.14) every 2::1 index 3 title "Thermospannung 2"
+#plot "daten" using (($9 +273.2)**4)-(21.2+273.2)**4:(($2*0.001)-0.168) index 1 title "Thermospannung",f(x) title "Ausgleichsgerade"
+plot "daten" using ($1):($2 -0.14) every 2 index 3 title "Thermospannung 1", "daten" using ($1):($2 -0.14) every 2::1 index 3 title "Thermospannung 2", f(x)
 
 #plot "solar.txt" using ($1):($2) index 8 title "Kurzschlussstrom" with lines
 #plot "solar.txt" using ($4):($2) index 8 title "Kurzschlussstrom-Messwerte", f(x) title "Ausgleichsgerade"

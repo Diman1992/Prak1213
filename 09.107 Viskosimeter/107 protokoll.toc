@@ -6,3 +6,4 @@
 \contentsline {subsection}{\numberline {4.1}Fehlerrechnung}{4}{subsection.12}
 \contentsline {subsection}{\numberline {4.2}Viskosit\IeC {\"a}t des Wassers}{5}{subsection.16}
 \contentsline {subsection}{\numberline {4.3}Anwendung der Andrade-Gleichung}{7}{subsection.26}
+\contentsline {section}{\numberline {5}Diskussion}{9}{section.33}

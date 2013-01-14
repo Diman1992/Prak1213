@@ -89,10 +89,10 @@ Auf Grund der Winkelgleichheit lassen sich die Kreuzprodukte vereinfachen zu:
 \end{equation}
   
   \subsection{Harmonischer Oszillator}
-  Das durch das homogene B-Feld erzeugte Drehmoment ist eine rücktreibende Kraft. Lenkt man die Kugel aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
+  Das durch das homogene B-Feld erzeugte Drehmoment beinhaltetx eine rücktreibende Kraft. Lenkt man die Kugel aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
 Die Bewegung kann durch folgende Differentialgleichung beschrieben werden:
 \begin{equation}
--|\vec{\mu}Dipol \times \vec{B}| = J_K \cdot \frac{d^2 \Theta}{dt^2}.
+-|\vec{\mu}_{Dipol} \times \vec{B}| = J_K \cdot \frac{\dx^2 \Theta}{\dx t^2}.
 \end{equation}
 Deren Lösung ist:
 \begin{equation}
@@ -103,7 +103,7 @@ T^2=\frac{4\pi^2J_K}{\mu_{Dipol}} \frac{1}{B}
  Wirkt eine äußere Kraft auf die Drehachse eines Körpers, so beginnt diese, um den Richtungsvektor der Kraft zu rotieren. Dies wird als Präzession bezeichnet.
 Die Präzessionsbewegung lässt sich durch folgende Differentialgleichung beschreiben:
 \begin{equation}
-\vec{\mu}_{Dipol} \times \vec{B} = \frac{d \vec{L}_K}{dt}
+\vec{\mu}_{Dipol} \times \vec{B} = \frac{\dx \vec{L}_K}{\dx t}
 \end{equation}
 Hierbei ist $\Omega_p$ die Präzessionsfrequenz und eine Lösung dieser Differentialgleichung.
 \begin{equation}
@@ -120,7 +120,7 @@ Der im Versuch verwandte Dipol ist in eine kleine Vollkugel eingelassen. Die Kug
 Der gesamte Aufbau befindet sich im Inneren eines Helmholzspulenpaares, deren Radius jedoch nicht ganz dem Spulenabstand entspricht. Das Magnetfeld ist somit leicht inhomogen, da sich der Dipol jedoch sehr zentral auf der Symmetrieachse befindet kann dies vernachlässigt werden.
 Das Magnetfeld der Spulen errechnet sich über das Biot-Savartsche Gesetzt
 \begin{equation}
-d \vec{B} = \frac{\mu_0 I}{4\pi} \frac{d \vec{s} \times \vec{r}}{r^3}
+\dx \vec{B} = \frac{\mu_0 I}{4\pi} \frac{\dx \vec{s} \times \vec{r}}{r^3}
 \end{equation} 
 zu
 \begin{equation}
@@ -152,7 +152,7 @@ Größen herauszufinden. Neben den von den Messapparaturen verursachten Fehlern 
 
 die Gaußsche Fehlerfortpflanzung
 
-\begin{formel}
+\begin{formel}[H]
 \begin{equation}
 \Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
 \label{gauss}
@@ -192,7 +192,7 @@ Das Trägheitsmoment der Billiardkugel $J_K$ wird ermittelt und der Fehler nach 
 
 \subsection[Ermittlung durch Ausnutzen der Gravitation]{Bestimmung des magnetischen Momentes eines Magnetens unter Ausnutzung der Gravitation}
 Das von der Stromstärke $I$ erzeugte Magnetfeld $B(I)$ wirkt ein Drehmoment auf die kleine Masse $m_{kl}$ = 1,36 g zur Ausgleichung 
-des vom Gravitationsfeld erzeugte Drehmoment.
+des vom Gravitationsfeld erzeugten Drehmoments.
 \begin{table}[H]
  \begin{tabular}{c|c|c|c}
   i & $r$ in mm & $I$ in A & $B$ in mT\\
@@ -236,7 +236,7 @@ Nun lässt sich das magnetische Moment $\mu_{Grav}$ mitsamt Fehler angeben:
  \mu_{Grav} &= \frac{m_{kl}\,g}{a} \\
  &= 0,445\, \text{Am}^2\\
  \nonumber
- \Delta \mu_{Grav} &= \sqrt{\left(\frac{\partial \mu}{\partial m_{kl}}\Delta m_{kl} \right)^2 + \left(\frac{\partial \mu}{\partial a}\Delta a \right)^2} = \mu \sqrt{\left( \frac{\Delta m_{kl}}{m_{kl}}\right)^2 + \left( \frac{-\Delta a}{a}\right)^2}\\
+ \Delta \mu_{Grav} &= \sqrt{\left(\frac{\partial \mu}{\partial m_{kl}}\Delta m_{kl} \right)^2 + \left(\frac{\partial \mu}{\partial a}\Delta a \right)^2} = \mu_{Grav} \sqrt{\left( \frac{\Delta m_{kl}}{m_{kl}}\right)^2 + \left( \frac{-\Delta a}{a}\right)^2}\\
  &= 5,0 \cdot 10^{-4}\, \text{Am}^2
 \end{align}
 
@@ -287,7 +287,7 @@ Das magnetische Moment $\mu_{Schw}$ wird nun mitsamt Fehler angeben:
  \mu_{Schw} &= \frac{4 \pi^2 J_{K}\,g}{c} \\
  &= 0,446\, \text{Am}^2\\
  \nonumber
- \Delta \mu_{Schw} &= \sqrt{\left(\frac{\partial \mu}{\partial J_{K}}\Delta J_{K} \right)^2 + \left(\frac{\partial \mu}{\partial c}\Delta c \right)^2} = \mu \sqrt{\left( \frac{\Delta J_{K}}{J_{K}}\right)^2 + \left( \frac{-\Delta c}{c}\right)^2}\\
+ \Delta \mu_{Schw} &= \sqrt{\left(\frac{\partial \mu}{\partial J_{K}}\Delta J_{K} \right)^2 + \left(\frac{\partial \mu}{\partial c}\Delta c \right)^2} = \mu_{Schw} \sqrt{\left( \frac{\Delta J_{K}}{J_{K}}\right)^2 + \left( \frac{-\Delta c}{c}\right)^2}\\
  &= 0,012 \, \text{Am}^2
 \end{align}
 
@@ -340,7 +340,7 @@ Das magnetische Moment $\mu_{Praez}$ wird nun mitsamt Fehler angeben:
  \mu_{Praez} &= 4\pi^2 J_K \nu_{Strob} \cdot e \\
  &= 0,420\, \text{Am}^2\\
  \nonumber
- \Delta \mu_{Praez} &= \sqrt{\left(\frac{\partial \mu}{\partial J_{K}}\Delta J_{K} \right)^2 + \left(\frac{\partial \mu}{\partial e}\Delta e \right)^2} = \mu \sqrt{\left( \frac{\Delta J_{K}}{J_{K}}\right)^2 + \left( \frac{\Delta e}{e}\right)^2}\\
+ \Delta \mu_{Praez} &= \sqrt{\left(\frac{\partial \mu}{\partial J_{K}}\Delta J_{K} \right)^2 + \left(\frac{\partial \mu}{\partial e}\Delta e \right)^2} = \mu_{Prae} \sqrt{\left( \frac{\Delta J_{K}}{J_{K}}\right)^2 + \left( \frac{\Delta e}{e}\right)^2}\\
  &= 5,79 \cdot 10^{-4}\, \text{Am}^2
 \end{align}
 
@@ -357,10 +357,10 @@ Da bei keiner Methode der ermittelte Wert stark von den anderen beiden abweicht,
 Moments des Magneten inmitten der Billiardkugel sich in der Nähe von 0,44 Am$^2$ befindet. Schwierig beim Ansatz mit Ausnutzung der
 Gravitation ist die nötige Genauigkeit der Apparatur zur Einstellung der Stromstärke. So ist es schwer möglich, die kleine Masse m$_{kl}$
 zur Ruhe zu bringen. Des Weiteren gestaltet sich die Methode der Präzession als fehleranfällig, da die Synchonisation von Stroboskopfrequenz
-und Drehfrequenz der Kugel nicht Restlos gelingt. Über eine Präzessionsrotation hinweg nimmt die Eigenrotation der Kugel sehr stark ab und bleibt nicht fest bei den 4,5Hz. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. 
+und Drehfrequenz der Kugel nicht Restlos gelingt. Über eine Präzessionsrotation hinweg nimmt die Eigenrotation der Kugel sehr stark ab und bleibt nicht fest bei den 4,5 Hz. Zudem war eine Nutation nicht restlos vermeidbar, was ebenfalls Einfluss auf das Ergebnis hat. 
 Vermutlich wurde die Kugel um einen zu großen Winkel ausgelenkt, so dass eine Nutation begünstigt wurde. Die Betrachtung des Magneten als
-harmonischen Oszillator verhilft vermutlich zum besten Ergebnis. Durch die Messung über 10 Schwingungsperioden und die leicht feststellbare Dauer
-einer Periode, wodurch die Abweichungen der einzelnen Messungen untereinander sehr gering sind und dass die Kugel durch das Luftkissen fast garnicht abgebremst wird,
+harmonischen Oszillator verhilft hier zum besten Ergebnis. Durch die Messung über 10 Schwingungsperioden und die leicht feststellbare Dauer
+einer Periode, wodurch die Abweichungen der einzelnen Messungen untereinander sehr gering sind und da die Kugel durch das Luftkissen fast garnicht abgebremst wird,
  ist diese Aussage berechtigt.
 
 

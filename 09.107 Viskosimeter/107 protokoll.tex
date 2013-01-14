@@ -161,6 +161,7 @@ $\bar t_{kl}$[s] &12,072 &$\bar t_{gr}[s] $&71,223\\
 $\bar s_{kl}$[s] & 0,039 & $\bar s_{gr}$[s] & 0,057
  \end{tabular}
 \caption{Messzeiten für beide Kugeln durch das Fallrohr}
+\label{tabviskos}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
@@ -182,6 +183,7 @@ entnommen. Die Fehler der Dichten $\rho_{kl/gr}$ ergeben sich aus \eqref{gauss} 
   \nonumber
   \Delta \rho_{gr} &= \sqrt{\left(\frac{\partial \rho_{gr}}{\partial d_{gr}} \Delta d_{gr}\right)^2  + \left(\frac{\partial \rho_{gr} }{\partial m_{gr} } \Delta m_{gr}\right)^2 } = \rho_{gr} \sqrt{\left(-3\frac{\Delta d_{gr}}{cm}\right)^2+\left(\frac{\Delta m_{gr}}{g}\right)^2} \\
   &= 0,364 \frac{g}{cm^3} \quad \text{mit} \quad\rho = \frac{m}{\frac16 \pi d^3}
+  \label{dichte}
 \end{align}
 
 \begin{table}[h]
@@ -212,7 +214,7 @@ Aus den nun bekannten Größen ermittelt sich $\eta$ mit dem Fehler aus \eqref{g
 \end{align}
 \begin{align}
 \nonumber
- \Delta \eta = \sqrt{\left(\frac{\partial \eta}{\partial \rho_{kl}}\Delta \rho_{kl}\right)^2 + \left(\frac{\partial \eta}{\partial t} \bar s_{kl}\right)^2} &= \eta \sqrt{\left(\frac{\Delta \rho_{kl}}{(\rho_{kl}-\rho_{Fl})}\right)^2 + \left(\frac{\bar s_{kl}}{t}\right)^2} \\
+ \Delta \eta &= \sqrt{\left(\frac{\partial \eta}{\partial \rho_{kl}}\Delta \rho_{kl}\right)^2 + \left(\frac{\partial \eta}{\partial t} \bar s_{kl}\right)^2} = \eta \sqrt{\left(\frac{\Delta \rho_{kl}}{(\rho_{kl}-\rho_{Fl})}\right)^2 + \left(\frac{\bar s_{kl}}{t}\right)^2} \\
  &= 0,085 \text{mPas}
 \end{align}
 
@@ -249,19 +251,20 @@ Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird di
  \begin{tabular}{c|c|c|c|c|c|c}
    T [K] & $\frac{1}{\text{T}}[\frac{1}{\text{K}}]$& $t_1$[s] & $t_2$[s] & $\bar t$[s] & $\Delta t$ & ln($\frac{\bar t}{t}$)\\	
    \hline
--252&	-0,00397&	81,16&	81,04&	81,10&	0,06&	4,396 \\
--247&	-0,00405&	72,87&	72,92&	72,90&	0,02&	4,289\\
--244&	-0,00410&	68,27&	68,41&	68,34&	0,07&	4,224\\
--241&	-0,00415&	64,44&	64,15&	64,30&	0,14&	4,163\\
--238&	-0,00420&	60,41&	60,69&	60,55&	0,14&	4,103\\
--235&	-0,00425&	57,61&	57,55&	57,58&	0,03&	4,053\\
--232&	-0,00431&	54,61&	54,04&	54,33&	0,29&	3,995\\
--229&	-0,00436&	51,32&	51,83&	51,58&	0,25&	3,943\\
--226&	-0,00442&	49,00&	49,24&	49,12&	0,12&	3,894\\
--223&	-0,00448&	46,58&	46,24&	46,41&	0,17&	3,838\\
--220&	-0,00454&	44,47&	44,80&	44,64&	0,17&	3,799\\
+294&	0,00340&	81,16&	81,04&	81,10&	0,06&	4,396 \\
+299&	0,00334&	72,87&	72,92&	72,90&	0,02&	4,289\\
+302&	0,00331&	68,27&	68,41&	68,34&	0,07&	4,224\\
+305&	0,00328&	64,44&	64,15&	64,30&	0,14&	4,163\\
+308&	0,00325&	60,41&	60,69&	60,55&	0,14&	4,103\\
+311&	0,00321&	57,61&	57,55&	57,58&	0,03&	4,053\\
+314&	0,00318&	54,61&	54,04&	54,33&	0,29&	3,995\\
+317&	0,00315&	51,32&	51,83&	51,58&	0,25&	3,943\\
+320&	0,00312&	49,00&	49,24&	49,12&	0,12&	3,894\\
+323&	0,00309&	46,58&	46,24&	46,41&	0,17&	3,838\\
+326&	0,00307&	44,47&	44,80&	44,64&	0,17&	3,799
  \end{tabular}
 \caption{Durch Temperaturerhöhung verringerte Fallzeit}
+\label{tabandrade}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
@@ -276,20 +279,20 @@ werden folgende Umformungsschritte unternommen:
 \end{align*}
 
 \begin{equation}
-\text{mit } a = 1043,42\pm 33,61 \quad \text{und} \quad b = 8,51 \pm 0,14.\\
+\text{mit } a = 1783,29\pm 24,4 \quad \text{und} \quad b = -5,18 \pm 0,08.\\
 \end{equation}
 
 Zurücktransferiert erhält man wieder A und B zu
 
 \begin{align}
- A = K_{gr}(\rho_{gr}-\rho_{Fl}) \cdot \e^b = 149,03 \pm 1,46\\
- B = a = 1043,42 \pm 33,61
+ A = \e^b &= 5,63 \cdot 10^{-3} \pm 1,6 \cdot 10^{-5}\\
+ B = a &= 1783,29 \pm 24,4
 \end{align}
 
 \begin{figure}[H]
 \includegraphics[width=0.7\textwidth] {pics/Andrade.png}
 \centering
-\caption{lineare Abhängigkeit von $\frac1T$ und ln(t)}
+\caption{lineare Abhängigkeit von $\frac1T$ und ln($\frac{\eta}{\text{mPas}}$)}
 \end{figure}
 
 \begin{figure}[H]
@@ -298,6 +301,31 @@ Zurücktransferiert erhält man wieder A und B zu
 \caption{endgültige Andrade-Gleichung}
 \end{figure}
 
+\section{Diskussion}
+Im Vergleich zu Referenzwerten ({wissenschaft-technik-ethik.de von Dr.-Ing H. Grimm, Eigenschaften von Wasser - URL: \href{http://www.wissenschaft-technik-ethik.de/wasser_eigenschaften.html#kap06}{www.wissenschaft-technik-ethik.de/wasser\_eigenschaften.html}})
+stellt sich heraus, dass die ermittelte Viskosität von 
+
+\begin{align*}
+ \eta = 2,131 \text{mPas} \pm 0,085 \text{mPas}
+\end{align*}
+
+um mehr als das doppelte abweicht. Da sie durch Gleichung \eqref{viskos} ermittelt wird, sind nur zwei Fehlerquellen möglich. Zum einen
+die Dichte der kleinen Kugel $\rho_{kl}$, sowie die Zeit $t_{kl}$. Da die benötigte Zeit 20 Mal gemessen wurde, fällt sie als Ursache
+wahrscheinlich aus. Somit bleibt die Dichte, die aus der gegebenen Masse $m_{kl}$ und dem gemessenen Durchmesser $d_{kl}$ nach \eqref{dichte}
+zusammengesetzt ist. Nach dem Durchmesser aufgelöst ergibt sich
+
+\begin{align}
+  \nonumber
+  d &= \sqrt[3]{\frac{6\, m_{kl} \, K_{kl} \, t_{kl} }{\pi \left(\eta + \rho_{Fl} \, K_{kl} \, t_{kl}\right)}} = \sqrt[3]{\frac{6\cdot 4,4531 \text{g} \cdot 0,0764 \,\frac{\text{mPas}\cdot \text{cm}^3}{\text{g}} \cdot 12,072 \,\text{s} }{\pi \left(1\,\text{mPas} + 0,998  \frac{\text{g}}{\text{cm}^3} \cdot 0,0764 \,\frac{\text{mPas}\cdot \text{cm}^3}{\text{g}} \cdot 12,072 \,\text{s}\right)}}\\
+  &= 16,0 \text{mm} \neq 13,7 \text{mm},
+\end{align}
+
+was eine Messungenauigkeit von 2,3 mm (12,5 \%) bedeutet.
+
+Desweiteren ist es auffällig, dass die zur Ermittlung der Apparaturkonstante gemessene Zeit $t_{gr}$ in Tabelle \ref{tabviskos} um etwa zehn 
+Sekunden von der Messung von $t$ aus Tabelle \ref{tabandrade} bei gleicher Temperatur von 21 $^\circ$C abweicht. 
+Es handelt sich hierbei um einen systematischen Fehler. Möglicherweise ist die Versuchskugel beim Wechsel der Kugel im Viskosimeter 
+versehentlich verwechselt worden.
 
 
 % ========================================

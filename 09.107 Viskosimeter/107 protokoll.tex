@@ -114,7 +114,7 @@ welche die Viskosität in Abhängigkeit von der Temperatur beschreibt.
 \section{Auswertung}
 \subsection{Fehlerrechnung}
 Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
-Größen herauszufinden. Neben den von den Messapparaturen verursachten Fehlern dienen der Mittelwert
+Größen herauszufinden. Neben den, von den Messapparaturen verursachten Fehlern, dienen der Mittelwert
 \newpage
 \begin{formel}
 \begin{equation}
@@ -168,7 +168,7 @@ $\bar s_{kl}$[s] & 0,039 & $\bar s_{gr}$[s] & 0,057
 Zur Ermittlung der Viskosität wird Formel \eqref{viskos} verwandt. Der Versuch wird mit zwei verschiedenen Kugeln durchgeführt, wobei
 für eine die Apparaturkonstante $K_{kl}$ bekannt ist. Mit der ebenfalls gegebenen Masse der kleinen Kugel, sowie ihrem gemessenen Durchmesser
 lässt sich die Dichte $\rho_{kl}$ ermitteln. Die Dichte von Wasser wird aus Literaturangaben entnommen. Um die Apparaturkonstante 
-$K_{gr}$ sind neben der errechneten Viskosität die Dichte $\rho_{gr}$ aus gemessenem Durchmesser und gemessener Masse nötig.
+$K_{gr}$ zu bestimmen, sind neben der errechneten Viskosität die Dichte $\rho_{gr}$ aus gemessenem Durchmesser und gemessener Masse nötig.
 
 
 Der Fehler der Durchmesser d$_{kl/gr}$ wird durch den auf der Schieblehre angegebene Fehler verwandt. Jener Fehler der Massen m$_{kl/gr}$
@@ -241,7 +241,7 @@ der kritischen Reynoldszahl verglichen werden. Nach \eqref{rey} ergibt sich
  Re = \frac{d_{kl}\cdot \rho_{Fl}}{\eta} \cdot \frac{x}{t_{kl}}=\frac{998\frac{\text{kg}}{\text{m}^3} \cdot 0,00828\frac{\text{m}}{\text{s}} \cdot 0,0137 \text{m}}{0,002313 \text{Pa}\cdot\text{s}} \approx 49 \ll 2000,
 \end{equation}
 
-weshalb man von einer laminaren Flüssigkeit sprechen darf und die benutzten Formeln legitim sind.
+weshalb man von einer laminaren Flüssigkeit sprechen darf und das Verwenden der Formeln legitim ist.
 
 \subsection{Anwendung der Andrade-Gleichung}
 Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird die Fallzeit zu verschiedenen Temperaturen gemessen.
@@ -268,9 +268,8 @@ Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird di
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Um aus dem Exponentialzusammenhang eine lineare Beziehung herzustellen, um durch lineare Regression mittels GNUplot
-die Koeffizienten zu bestimmen,
-werden folgende Umformungsschritte unternommen:
+Um aus dem Exponentialzusammenhang eine lineare Beziehung herzustellen, werden folgende Umformungsschritte unternommen, damit dann durch lineare Regression mittels GNUplot
+die Koeffizienten bestimmt werden können:
 
 \begin{align*}
  \eta(T) &= A \exp \left(\frac{B}{T}\right) \\

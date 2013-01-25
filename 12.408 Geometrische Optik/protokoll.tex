@@ -4,6 +4,8 @@
 
 \input{longheader.tex}
 
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
 % ========================================
 %	Angaben für das Titelblatt
 % ========================================
@@ -57,6 +59,7 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 % ========================================
 
 \section{Einleitung}
+\setcounter{page}{1}
 Die geometrische Optik ist als Grenzfall der Wellenoptik ein Bereich der Physik, welcher sich des Strahlenmodells des Lichts bedient und
 den Weg des Lichts auf ausschließlich geometrische Art und Weise formuliert. Neben der Verifizierung des Abbildungsgesetzes und der 
 Linsengleichung, werden im Zuge des Experimentsdie Methoden von Bessel bzw. Abbe verwandt, um die Brennweite einer Sammellinse oder 
@@ -71,7 +74,7 @@ gebrochen wird, hängt vom Winkel des einfallenden Strahls ab. So unterscheidet 
 \begin{figure}[H]
  \includegraphics[width=\textwidth]{pics/408a.png}
  \centering
- \caption{a, dünne Sammellinse - b, dünne Streulinse - c, dicke Sammellinse}
+ \caption{Bildkonstruktionen: a, dünne Sammellinse - b, dünne Streulinse - c, dicke Sammellinse}
  \label{linsen}
 \end{figure}
 
@@ -119,6 +122,11 @@ Erscheinung wird Dispersion genannt.
 
 \section{Durchführung}
 \subsection{Versuchsaufbau}
+\input{408c.tex}
+
+
+\subsection[Messung von Gegenstandsweite und Bildweite]{Bestimmung der Brennweite durch Messung der Gegenstandsweite und Bildweite}
+
 
 \subsection[Methode von Bessel]{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
 

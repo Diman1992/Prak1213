@@ -1,0 +1,45 @@
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.47cm,y=0.35cm]
+\clip(-5.93,-9.97) rectangle (30.64,10.86);
+\draw [line width=2pt,color=qqqqff] (-2,0)-- (-2,2);
+\draw [shift={(-8,0)},fill=black,fill opacity=0.25]  plot[domain=-0.54:0.54,variable=\t]({1*11.66*cos(\t r)+0*11.66*sin(\t r)},{0*11.66*cos(\t r)+1*11.66*sin(\t r)});
+\draw [shift={(12,0)},fill=black,fill opacity=0.25]  plot[domain=-0.54:0.54,variable=\t]({-1*11.66*cos(\t r)+0*11.66*sin(\t r)},{0*11.66*cos(\t r)+-1*11.66*sin(\t r)});
+\draw [shift={(24,0)},dash pattern=on 8pt off 8pt,fill=black,fill opacity=0.1]  plot[domain=2.6:3.68,variable=\t]({1*11.66*cos(\t r)+0*11.66*sin(\t r)},{0*11.66*cos(\t r)+1*11.66*sin(\t r)});
+\draw [shift={(4,0)},dash pattern=on 8pt off 8pt,fill=black,fill opacity=0.1]  plot[domain=2.6:3.68,variable=\t]({-1*11.66*cos(\t r)+0*11.66*sin(\t r)},{0*11.66*cos(\t r)+-1*11.66*sin(\t r)});
+\draw [line width=1.2pt] (-2,2)-- (2,2);
+\draw [dash pattern=on 8pt off 8pt] (-2,2)-- (14,2);
+\draw [dash pattern=on 8pt off 8pt] (14,2)-- (18,-0.5);
+\draw [dash pattern=on 8pt off 8pt] (-2,2)-- (18,-0.5);
+\draw [line width=1.2pt] (-2,2)-- (18,-8);
+\draw [line width=1.2pt] (2,2)-- (18,-8);
+\draw [dash pattern=on 8pt off 8pt] (14,8)-- (14,-8);
+\draw [dash pattern=on 8pt off 8pt] (2,-8)-- (2,8);
+\draw [line width=1.6pt] (24,0)-- (-4,0);
+\draw [line width=2.4pt,color=ffqqqq] (18,0)-- (18,-0.5);
+\draw [color=qqffqq] (18,0)-- (18,-8);
+\draw [->] (0,-8) -- (2,-8);
+\draw [->] (0,-8) -- (-2,-8);
+\draw [->] (12,-8) -- (2,-8);
+\draw [->] (12,-8) -- (18,-8);
+\draw [->] (6,8) -- (-2,8);
+\draw [->] (6,8) -- (14,8);
+\draw [->] (16,8) -- (14,8);
+\draw [->] (16,8) -- (18,8);
+\draw [->] (8,6) -- (2,6);
+\draw [->] (8,6) -- (14,6);
+\draw [->] (8,10) -- (-2,10);
+\draw [->] (8,10) -- (18,10);
+\draw (-3.14,1.85) node[anchor=north west] {$G$};
+\draw (18.65,-0.8) node[anchor=north west] {$B_1$};
+\draw (18.65,-3.85) node[anchor=north west] {$B_2$};
+\draw (-0.4,5.53) node[anchor=north west] {$L_1$};
+\draw (15.2,5.49) node[anchor=north west] {$L_2$};
+\draw (8.08,6.0) node[anchor=north west] {$d$};
+\draw (8.08,10.8) node[anchor=north west] {$e$};
+\draw (5.76,8.08) node[anchor=north west] {$g_2$};
+\draw (16,7.65) node[anchor=north west] {$b_2$};
+\draw (-0.83,-8.05) node[anchor=north west] {$g_1 = b_2$};
+\draw (15.2,-8.02) node[anchor=north west] {$b_1 = g_2$};
+\end{tikzpicture}

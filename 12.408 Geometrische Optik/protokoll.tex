@@ -122,15 +122,68 @@ Erscheinung wird Dispersion genannt.
 
 \section{Durchführung}
 \subsection{Versuchsaufbau}
-\input{408c.tex}
+Das vorliegende Experiment benutzt die Gesetze der geometrischen Optik. Maßgeblich für Untersuchungen in diesem Bereich ist eine Lichtquelle,
+ein abzubildendes Objekt (Perl L), sowie ein optisches Element, welches den Strahlengang beeinflusst und schließlich ein Schirm zur
+Visualisierung. Die genannten Bauteile sind in Abbildung \ref{aufbau} dargestellt. Das optische Element und der Schirm sind auf der optischen
+Bank mittels Reitern verschiebbar.
 
+\begin{figure}[H]
+\input{408c.tex}
+\caption{Versuchsaufbau mit verschiebbarem optischem Element und Schirm}
+\label{aufbau}
+\end{figure}
 
 \subsection[Messung von Gegenstandsweite und Bildweite]{Bestimmung der Brennweite durch Messung der Gegenstandsweite und Bildweite}
+Im ersten Versuchsteil ist das optische Element eine Sammellinse bekannter Brennweite $f$. Nachdem die Gegenstandsweite $g$ eingestellt ist,
+wird der Schirm entsprechend verschoben, sodass das entstehende Bild scharf ist. Die Distanz vom Schirm zur Linse ist die Bildweite $b$.
+Die Linsengleichung \eqref{Linsengleichung} soll verifiziert werden. Die Messungen werden anschließend für eine Linse unbekannter Brennweite
+wiederholt.
 
+\begin{figure}
+ \input{408d.tex}
+ \caption{Die Präzision der Geraden durch A ist ein Maß für die Messgenauigkeit.}
+\end{figure}
 
 \subsection[Methode von Bessel]{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
+Bei der Methode von Bessel handelt es sich um ein Verfahren der Brennweitenermittlung mittels Fixierung des Gegenstand-Schirm-Abstandes.
+Innerhalb dieser Strecke werden zwei Linsenpositionen gesucht, bei denen das Bild scharf abgebildet wird. Es handelt sich bei den beiden
+Positionen um eine symmetrische Anordnung, sodass folgende Relation gilt
+
+\begin{equation}
+ b_1 = g_2, \qquad \text{sowie} \qquad b_2 = g_1.
+\end{equation}
+
+\begin{figure}[H]
+ \input{408e.tex}
+ \caption{Zwei verschiedene Linsenstellungen mit je einem scharfen vergrößerten bzw. verkleinertem Abbild}
+\end{figure}
+
+Wie zuvor gesagt, werden die beiden Konfigurationen bei festem Gegenstand-Schirm-Abstand gesucht und für mehrere Distanzen wiederholt.
+Zur Ermittlung der Brennweite werden die Hilfsgrößen $e = g_1 + b_1$ und $d = g_1 - b_1$ eingeführt und wie folgt benutzt
+
+\begin{equation}
+ f = \frac{e^2-d^2}{4 \, e}.
+\end{equation}
+
+Zusätzlich wird in diesem Versuchsteil die chromatische Abberation untersucht, indem ein Rot- bzw. Blaufilter zwischen Lampe und Objekt
+gehalten wird und nur die entsprechende Farbe zur Bildkonstruktion beiträgt. 
 
 \subsection[Methode von Abbe]{Bestimmung der Brennweite eines Linsensystems nach der Methode von Abbe}
+Die Bestimmung der Brennweite eines Linsensystems wird nach der Methode von Abbe die Lage der Hauptebenen durch den Abbildungsmaßstab V
+ermittelt. $g$ und $b$ werden zu den jeweiligen Hauptebenen gemessen. Die Lage der Hauptebenen H und H' ist nicht bekannt. Ein freiwählbarer,
+im Linsensystem fixierter Punkt A wird verwandt, um die Gegenstandsweite $g'$ und die Bildweite $b'$ leicht abzulesen. Es gelten folgende
+in Abbildung \ref{abbe} nachvollziebare Relationen:
+
+\begin{align}
+ g' &= g + h = f \cdot \left( 1+ \frac1V \right) + h\\
+ b' &= b + h' = f \cdot \left(1 + V \right) + h'
+\end{align}
+
+
+\begin{figure}[H]
+\input{408f.tex}
+\caption{Das Linsensystem mit einer Streulinse und einer Sammellinse}
+\end{figure}
 
 
 \section{Auswertung}

@@ -59,26 +59,33 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 % ========================================
 
 \section{Einleitung}
-Bei Metallen sind die äußeren Hüllenelektronen nur schwach an ihren Kern gebunden. Im kristallförmigen Gitter können sich die Elektronen daher nahezu frei bewegen, wodurch die gute elektrische Leitfähigkeit von Metallen erklärt wereden kann.
+Bei Metallen sind die äußeren Hüllenelektronen nur schwach an ihren Kern gebunden. Im kristallförmigen Gitter können sich die Elektronen daher nahezu frei bewegen, wodurch die gute elektrische Leitfähigkeit von Metallen erklärt werden kann.
 Erhält ein Elektron genügend Energie, um das nur noch schwache Potential der positiv geladenen Kerne zu überwinden, so kann es aus dem Metall austreten.
-Erreichen kann man dies, indem man dem Elektron durch Stößen mit Photonen (Photoelektrischer Effekt) oder wie in diesem Versuch, durch Erhöhung der Temperatur und somit ihrer thermischen Energie (Glühelektrischer Effekt), die benötigte Energie zuführt.
-Die Arbeit, die das Elektron leisten muss, um das Bindungspotential der Kerne zu verlassen wir auch als Austrittsarbeit bezeichnet.
+Erreichen kann man dies, indem man die Kinetische Energie der Elektronen durch Stöße mit Photonen (Photoelektrischer Effekt) oder wie in diesem Versuch, durch Erhöhung ihrer thermischen Energie (Glühelektrischer Effekt), die benötigte Energie zuführt.
+Die Arbeit, die das Elektron leisten muss, um das Bindungspotential der Kerne zu verlassen, wird auch als Austrittsarbeit bezeichnet.
 Im Verlaufe des Versuchs soll die Temperaturabhängigkeit dieser Größe für das Metall Wolfram bestimmt werden.\\
-Aus dem Pauli-Verbot, welches besagt, dass es immer nur ein Elektron mit einer bestimmten Energie geben darf folgt, dass Elektronen mit einer bestimmten Energie E zu einer Wahrscheinlichkeit f(E) auftreten:
+Aus dem Pauli-Verbot, welches besagt, dass es immer nur ein Elektron mit einer bestimmten Energie geben darf folgt, dass Elektronen auch beim Absoluten Temperaturnullpunkt nicht alle energielos sein dürfen, sondern eine bestimmte diskrete Energie E mit einer Wahrscheinlichkeit f(E) haben.\\
+Die Verteilung wird durch die Fermi-Diracsche Verteilungs-Funktion beschrieben:
 \begin{align}
 f(E)= {\left(e^{\frac{E-\zeta}{kT}}-1\right)}^{-1} \intertext{mit der Näherung:} f(E)= {\left(e^{\frac{E-\zeta}{kT}}\right)}
 \label{fE}
 \end{align}
-Die Anzahl der Elektronen mit einer bestimmten Energie errechnet sich durch
+Die Anzahl der Elektronen, die eine bestimmte Energie haben, errechnet sich durch:
 \begin{equation}
 n(E)= \frac{2}{h^3} f(E)
 \end{equation}
 und die Energie, die ein Elektron wenigstens braucht um 
 
+Richardson-Gleichung
+\begin{equation}
+j_s(T) = 4 \pi \frac{e_0m_0k^2}{h^3} T ^2 exp\left(-\frac{e_0 \phi}{kT}\right)
+\end{equation}
 \section{Theorie}
 
-\section{Durchführung}
+
 \subsection{Versuchsaufbau}
+Damit die Elektronen nicht sofort mit den umgebenen Luftmolekülen wechselwirken, muss der Versuch im Vakuum durchgeführt werden. Die im Versuch benutzte Apparatur ist eine sog. Hochvakuum-Diode. Sie besteht aus einem evakuierten Glaskolben, in den auf zwei gegenüberliegende Seiten je ein Draht hineinragen. Zwischen den Drähten wird später eine Spannung angelegt, so dass die aus der Kathode austretenden Elektronen zur Anode hin beschleunigt werden können. Um die Anzahl an ausgetretenen Elektronen zu erhöhen, wird die Kathode zudem von einem Strom durchflossen, der sie auf 1000 K bis 3000 K erhitzen kann. 
+\section{Durchführung}
 
 \section{Auswertung}
 \subsection{Fehlerrechnung}
@@ -330,11 +337,11 @@ die in den Abschnitten \ref{a} und \ref{kath} ermittelt wurden, werden enspreche
  \begin{tabular}{c|c|c|c}
 $I_f$ in A & $I_S$ in $\mu$A & $T_K$ in K &$\Phi$ in eV \\
 \hline
-2,2&	19&	1813&	4,62\\
-2,4&	88&	1940&	4,72\\
-2,5&	170&	2004&	4,77\\
-2,6&	336&	2066&	4,81\\
-2,8&	1190&	2183&	4,86 \\
+2,2&	19		&	1813&	4,62\\
+2,4&	88		&	1940&	4,72\\
+2,5&	170		&	2004&	4,77\\
+2,6&	336		&	2066&	4,81\\
+2,8&	1190	&	2183&	4,86 \\
 
  \end{tabular}
 \caption{Austrittsarbeiten $\Phi$ zu den verschiedenen Kathodentemperaturen und den Sättigungsströmen}
@@ -366,7 +373,7 @@ wie die im selben Abschnitt errechnete Kathodentemperatur bei 2,8 A
 Und schließlich die Austrittsarbeit von Wolfram, errechnet in Abschnitt \ref{wolf}, mit einem Wert von 
 
 \begin{equation*}
- \Phi = 4,755 \pm 0,006) \, \text{eV}
+ \Phi = (4,755 \pm 0,006) \, \text{eV}
 \end{equation*}
 
 hat eine Abweichung von 4,5 \% zum Referenzwert

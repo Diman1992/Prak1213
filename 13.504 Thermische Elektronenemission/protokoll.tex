@@ -4,6 +4,8 @@
 
 \input{longheader.tex}
 
+
+
 % ========================================
 %	Angaben für das Titelblatt
 % ========================================
@@ -77,8 +79,299 @@ und die Energie, die ein Elektron wenigstens braucht um
 \subsection{Versuchsaufbau}
 
 \section{Auswertung}
+\subsection{Fehlerrechnung}
+Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
+Größen herauszufinden. Neben den, von den Messapparaturen verursachten Fehlern, dienen der Mittelwert
+\begin{formel}
+\begin{equation}
+ \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
+\end{equation}
+\caption*{\small{$\bar{x}$ = Mittelwert, N = Anzahl der Messungen}}
+\end{formel}
+
+die Gaußsche Fehlerfortpflanzung
+
+\begin{formel}
+\begin{equation}
+\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
+\label{gauss}
+\end{equation}
+\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
+\end{formel}
+
+und die Standardabweichung des Mittelwerts
+
+\begin{equation}
+ \bar s = \sqrt{\frac{1}{N(N-1)} \sum_{i}^{N} (x_i - \bar{x})^2}.
+\end{equation}
+
+\subsection{Kennlinienschar der Hochvakuumdiode}
+\label{a}
+Unter Anlegung von fünf verschiedenen Heizströmen $I_f$ wird die Beschleunigungsspannung $U_A$ erhöht und der fließende Strom $I_A$ 
+gemessen. Ab einem gewissen Strom $I_S$ hat die Beschleunigungsspannung keinen Einfluss mehr auf die weitere Steigung. Man spricht vom
+Sättigungsstrom.
+
+In Abbildung \ref{picheiz} sind die Wertepaare visualisiert. Bei den ersten vier Heizströmen ist der Sättigungsstrom gut abschätzbar.
+Beim fünften wurde das Steigungsverhalten betrachtet und der zugehörige Schwellenwert abgeschätzt. Das Verhalten der Kurvenschar 
+entspricht deutlich dem Erwarteten, vergleichbar mit Abbildung \ref{refheiz}.
+
+\renewcommand{\arraystretch}{0.9}
+\begin{table}[H]
+\begin{tabular}{|c||c|c|c|c|c|}
+$U_A$ in V & $I_f$ = 2,2 A  & $I_f$ = 2,4 A  & $I_f$ = 2,5 A  & $I_f$ = 2,6 A  & $I_f$ = 2,8 A\\
+ \hline
+& $I_A$ in $\mu$A &$I_A$ in $\mu$A &$I_A$ in $\mu$A &$I_A$ in $\mu$A &$I_A$ in $\mu$A \\ 
+\hline
+1&	&	3&	5&	5&	6\\
+2&	3&	7&	8&	9&	13\\
+3&	4&	10&	12&	15&	18\\
+4&	6&	13&	16&	18&	24\\
+5&	7&	16&	20&	24&	29\\
+6&	&	19&	24&	28&	35\\
+7&	8&	22&	28&	33&	40\\
+8&	9&	24&	32&	38&	46\\
+9&	&	27&	35&	42&	52\\
+10&	10&	30&	40&	48&	57\\
+11&	&	&	44&	&	\\
+12&	11&	35&	48&	60&	72\\
+13&	11&	&	53&	&	\\
+14&	&	&	57&	70&	86\\
+15&	12&	43&	61&	&	\\
+16&	&	&	&	83&	103\\
+18&	&	&	&	97&	212\\
+20&	14&	54&	84&	110&	139\\
+22&	&	&	92&	124&	155\\
+24&	&	&	&	138&	172\\
+25&	14&	62&	104&	144&	184\\
+26&	&	&	&	151&	193\\
+27&	&	&	109&	&	\\
+28&	&	&		&165&	213\\
+30&	15	&68&	120&	177&	233\\
+32&	&	&	&	&	255\\
+34&	&	&	&	&	276\\
+35&	16&	72&	133&	206&	\\
+36&	&	&	&	&	297\\
+38&	&	&	&	&	320\\
+40&	16&	75&	140&	233&	343\\
+45&	&	&	146&	252&	405\\
+50&	17&	76&	147&	265&	462\\
+55&	&	&	&	278&	522\\
+60&	&	&	150&	289&	572\\
+70&	&	79&	156&	305&	680\\
+80&	&	&	160&	316&	785\\
+90&	&	83&	167&	325&	872\\
+100&	19&	85&	166&	332&	937\\
+110&	&	&	&	&	980\\
+120&	&	&	&	&	1010\\
+125&	19&	&	&	&	\\
+130	&	&	&	&	&1040\\
+140&	&	&	&		&1060\\
+150&	&	87&	170&	336&	1080\\
+200&	&	&	&	&	1130\\
+\hline
+\textbf{$I_S$} & \textbf{20} & \textbf{89} & \textbf{172} & \textbf{338} & \textbf{1190} \\
+\hline
+\end{tabular}
+\caption{Beschleunigungsspannung $U_A$ und Strom $I_A$ zu fünf Heizströmen $I_f$, sowie die Sättigungsströme $I_S$}
+\label{tabheiz}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/504a.png}
+\caption{Wertepaare aus Tabelle \ref{tabheiz}}
+\label{picheiz}
+\end{figure}
+
+\subsection{Langmuir-Schottky Exponent}
+\label{expo}
+Nach Gleichung \eqref{eqlang} wird eine $\sqrt{V^3}$-Abhängigkeit zwischen Stromdichte $j$ und der Anodenspannung $U_A$ erwartet. Unter
+Betrachtung des höchsten Heizstroms $I_f$ = 3,0 A wird das Verhalten beobachtet. In Tabelle \ref{tablang} werden die ensprechenden Wertepaare
+aufgeführt und in Abbildung \ref{piclang} dargestellt. Der Fehler $\Delta U$ ergibt sich aus der Angabe des Messgeräts durch 1,5\% seines
+Vollausschlags mit 60 V bzw. 100 V. 
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|}
+$U_A$ in V & $I_A$ in $\mu$A & $\ln(U/V)$ & $\ln(I/\mu A)$ & $\Delta U$ in V\\
+\hline
+5&	38&	1,61&	3,64&0,9 \\
+10&	70&	2,30&	4,25&0,9\\
+15&	113&	2,71&	4,73&0,9\\
+20&	160&	3,00&	5,08&0,9\\
+25&	210&	3,22&	5,35&0,9\\
+30&	270&	3,40&	5,60&0,9\\
+35&	336&	3,56&	5,82&0,9\\
+40&	396&	3,69&	5,98&0,9\\
+45&	468&	3,81&	6,15&0,9\\
+50&	543&	3,91&	6,30&0,9\\
+55&	623&	4,01&	6,43&0,9\\
+60&	695&	4,09&	6,54&3,75\\
+70&	893&	4,25&	6,79&3,75\\
+80&	1070&	4,38&	6,98&3,75\\
+90&	1240&	4,50&	7,12&3,75\\
+\hline
+\end{tabular}
+\caption{Beschleunigungsspannung $U_A$ und Strom $I_A$ bei einem Heizstrom $I_f$ = 3,0 A}
+\label{tablang}
+\end{table}
+
+Mittels linearer Regression von GNUplot durchgeführt, ergibt sich nach reduzierter Gleichung \eqref{eqlang} 
+
+\begin{align}
+ \ln(j) \propto a \cdot \ln(V) \intertext{ein Exponent von}
+ a = 1,247 \pm 0,03.
+\end{align}
+
+Durch einen Fit ensprechend der normalen Form von Gleichung \eqref{eqlang} war ein besserer Wert für den Exponenten feststellbar
+
+\begin{align}
+ a = 1,39 \pm 0,05.
+\end{align}
+
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/504b2.png} 
+\caption{doppellogarithmische Auftragung von $I_A$ und $U_A$ bei einem Heizstrom von $I_f$ = 3,0 A. Die Steigung entspricht dem Exponenten}
+\label{piclang}
+\end{figure}
+\begin{figure}[H]
+ \includegraphics[width=0.8\textwidth]{pics/504b1.png} 
+ \caption{Darstellung der $\sqrt{V^3}$-Abhängigkeit zwischen Stromdichte $j$ und Anodenspannung $U_A$}
+\end{figure}
+
+\subsection{Kathodentemperatur}
+\label{kath}
+Die Stromdichte $j(V)$ hängt im Bereich des Anlaufstromgebiets zudem von der Temperatur der Kathode nach Gleichung \eqref{eqtemp} ab.
+Durch die gemessene Anodenspannung, sowie den Anodenstrom lässt sich somit die Kathodentemperatur $T$ ermitteln. Da die Anodenspannung
+für ein Gegenfeld benötigt wird, ist $V_A$ negativ. Die Korrektur der Spannung muss aufgrund des Spannungsabfalls am Nanoamperemeter
+durchgeführt werden, welcher einen Innenwiderstand von $R_i$ = 1M$\Omega$ aufweist.
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|}
+$U_{mess}$ in V & $U_{korr}$ in V & $I_{mess}$ in nA & $\ln(I_{mess}/nA)$ & $\Delta U$ in V & $\Delta I$ in nA \\
+\hline
+0&	0,255&	255&	5,541&	0,02&	0,06 \\
+-0,1&	0,295&	195&	5,273&	0,02&	0,06\\
+-0,2&	0,350&	150&	5,011&	0,02&	0,06\\
+-0,3&	0,410&	110&	4,700&	0,02&	0,06\\
+-0,4&	0,478&	78&	4,357&	0,02&	0,06\\
+-0,5&	0,553&	53&	3,970&	0,02&	0,06\\
+-0,6&	0,631&	31&	3,434&	0,02&	0,06\\
+-0,7&	0,721&	21&	3,045&	0,02&	0,06\\
+-0,8&	0,813&	13&	2,565&	0,02&	0,06\\
+-0,9&	0,908&	7,5&	2,015&	0,02&	0,06\\
+-0,93&	0,936&	5,5&	1,705&	0,02&	0,06\\
+\hline
+\end{tabular}
+\caption{$U_A$ gegen $I_A$ zur Ermittlung der Kathodentemperatur}
+\label{tabtemp}
+\end{table}
+
+Von GNUplot wird die reduzierte Gleichung \eqref{eqtemp}
+
+\begin{align}
+ T = \frac{e_0}{k_B \, b}
+\end{align}
+
+mit den Messwerten aus Tabelle \ref{tabtemp} gefittet, was zum Koeffizienten $b$ mit
+
+\begin{align}
+ b = (-5,463 \pm 0,079) \, \frac{1}{V}
+\end{align}
+
+führt und damit zu einer Kathodentemperatur von
+
+\begin{align}
+ T = (2125 \pm 1,1)\, K.
+\end{align}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/504c.png}
+\caption{Abhängigkeit von $U$ und $\ln(I)$ im Anlaufstromgebiet zur Ermittlung des Koeffizienten $b$}
+\end{figure}
+
+Die Kathodentemperatur lässt sich im Bereich des Raumladungsgebiets aus einer Leistungsbilanz herausrechnen. Hierzu werden die Heizleistungen,
+die in Abschnitt \ref{a} aufgeführt sind verwenden und nach folgender Gleichung die Kathodentemperatur ermittelt.
+
+\begin{formel}
+ \begin{align}
+  T = \sqrt[4]{\frac{I_f\,U_f - N_{WL}}{f \, \eta \, \sigma}}
+ \end{align}
+\caption*{\small{$N_{WL}$ = Wärmeleitung, $f$ = Kathodenoberfläche, $\eta$ = Emissionsgrad, $\sigma$ = Stefan-Boltzmann Konstante}}
+\end{formel}
+
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c}
+  $I_f$ & $U_f$ & $T_K$ \\
+  \hline
+2,2&	3,20&	1813 \\
+2,4&	3,72&	1940\\
+2,5&	4,01&	2004\\
+2,6&	4,30&	2066\\
+2,8&	4,89&	2183\\
+ \end{tabular}
+\caption{Kathodentemperatur $T_K$ errechnet aus der Heizleistungsbilanz}
+\end{table}
+
+\subsection{Austrittsarbeit des Kathodenmaterials Wolfram}
+\label{wolf}
+Um nun die Austrittsarbeit zu errechnen, wird die Richardson-Gleichung \eqref{eqrich} nach  $\Phi$ umgestellt. Die $I_S$-$T_K$-Wertepaare,
+die in den Abschnitten \ref{a} und \ref{kath} ermittelt wurden, werden ensprechend eingesetzt.
+
+\begin{align}
+ \Phi = \frac{k_B \, T}{e_0} \cdot \ln\left(\frac{I_S}{T_K^2}A \right) \quad \text{mit} \quad A = \frac{h^3}{4 \pi \, f \, e_0 \, m_0 \, k^2}
+\end{align}
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c}
+$I_f$ in A & $I_S$ in $\mu$A & $T_K$ in K &$\Phi$ in eV \\
+\hline
+2,2&	19&	1813&	4,62\\
+2,4&	88&	1940&	4,72\\
+2,5&	170&	2004&	4,77\\
+2,6&	336&	2066&	4,81\\
+2,8&	1190&	2183&	4,86 \\
+
+ \end{tabular}
+\caption{Austrittsarbeiten $\Phi$ zu den verschiedenen Kathodentemperaturen und den Sättigungsströmen}
+\label{tabrich}
+\end{table}
+
+Aus den in Tabelle \ref{tabrich} angegebenen Austrittsarbeiten ergibt sich der Mittelwert zu
+
+\begin{equation}
+ \bar \Phi = (4,755 \pm 0,006)\, \text{eV}
+\end{equation}
 
 \section{Diskussion}
+Der in Abschnitt \ref{expo} ermittelte Wert für den Langmuir-Schottky Exponenten mit einem Wert von 
+
+\begin{equation*}
+ a = 1,241 \pm 0,03 \quad \text{bzw.} \quad 1,39 \pm 0,05
+\end{equation*}
+
+liegt nahe bei dem erwarteten Wert von 1,5 mit einem Fehler von 17,3 \% bzw. 7,4 \%. 
+
+Die in \ref{kath} ermittelte Kathodentemperatur, welche zu einem Heizstrom von 3,0 A gehört, bewegt sich in derselben Größenordnung,
+wie die im selben Abschnitt errechnete Kathodentemperatur bei 2,8 A
+
+\begin{equation*}
+ T = (2125 \pm 1,1)\, K \quad \text{und} \quad T_{K,2,8} = 2183 \, K
+\end{equation*}
+
+Und schließlich die Austrittsarbeit von Wolfram, errechnet in Abschnitt \ref{wolf}, mit einem Wert von 
+
+\begin{equation*}
+ \Phi = 4,755 \pm 0,006) \, \text{eV}
+\end{equation*}
+
+hat eine Abweichung von 4,5 \% zum Referenzwert
+\footnote[1]{Adeos Media GmbH (2004), URL: \href{http://www.formel-sammlung.de/formel-Austrittsarbeit-von-Elektronen-aus-Metallen-3-25-134.html}{www.formel-sammlung.de}}
+
+
+
 
 % ========================================
 %	Literaturverzeichnis

@@ -163,6 +163,7 @@ Zur Ermittlung der Brennweite werden die Hilfsgrößen $e = g_1 + b_1$ und $d = 
 
 \begin{equation}
  f = \frac{e^2-d^2}{4 \, e}.
+ \label{Bessel}
 \end{equation}
 
 Zusätzlich wird in diesem Versuchsteil die chromatische Abberation untersucht, indem ein Rot- bzw. Blaufilter zwischen Lampe und Objekt
@@ -187,6 +188,113 @@ in Abbildung \ref{abbe} nachvollziebare Relationen:
 
 
 \section{Auswertung}
+Zunächst soll die Gültigkeit von Gleichung\eqref{Abbildung} und Gleichung\eqref{Linsengleichung} verifiziert werden. Dazu werden die Messwerte für die Gegenstandshöhe G, die Bildhöhe B, die Gegenstandsweite g und die Bildweite b aus der folgenden Tabelle entnommen und in die ensprechende Formel eingesetzt.\\
+V1 und V2 sind die nach Gleichung \eqref{Abbildung} errechneten Längenverhältnisse von B zu G bzw. b zu g. Die Werte in f sind wiederum die errechneten Brennweiten in mm nach Gleichung \eqref{Linsengleichung}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|c !{\vrule width 1.5pt} c|c|c|}
+G & g & b & B & V1 & V2 & f\\
+\hline
+3.0 & 11.7 & 65.1 & 16.3 & 5.43 & 5.59 & 98.82 \\ \hline
+3.0 & 13.0 & 40.9 & 9.0 & 3.00 & 3.14 & 98.63 \\ \hline
+3.0 & 14.0 & 33.8 & 7.0 & 2.33 & 2.41 & 99.00 \\ \hline
+3.0 & 15.0 & 28.9 & 5.5 & 1.83 & 1.92 & 98.69 \\ \hline
+3.0 & 16.0 & 25.3 & 4.6 & 1.53 & 1.58 & 98.01 \\ \hline
+3.0 & 17.0 & 23.3 & 3.9 & 1.30 & 1.37 & 98.29 \\ \hline
+3.0 & 18.0 & 21.6 & 3.3 & 1.10 & 1.20 & 98.08 \\ \hline
+3.0 & 19.0 & 20.1 & 3.1 & 1.02 & 1.06 & 97.67 \\ \hline
+3.0 & 20.0 & 19.0 & 2.9 & 0.97 & 0.95 & 97.44 \\ \hline
+3.0 & 21.0 & 18.2 & 2.6 & 0.87 & 0.86 & 97.36 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Messwerte für Linse mit Brennweite f=100 mm}
+\label{}
+\end{table}
+
+Anschließende Ausgleichs- und Fehlerrechnung ergeben schließlich als Brennweite der Linse:
+\begin{align*}
+97.7 mm	\pm 0.45 mm
+\end{align*} Dies entspricht einer Abweichung von 2,34\% von den Herstellerangaben.
+
+Die beiden Abbildungsverhältnisse V1 und V2 haben im Mittel eine Abweichung von 3,8\% zueinander.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+g & b & f \\
+\hline
+10.0 & 41.0 & 267.71 \\ \hline
+10.5 & 34.6 & 263.11 \\ \hline
+11.0 & 29.8 & 259.64 \\ \hline
+11.5 & 26.7 & 258.00 \\ \hline
+12.0 & 25.2 & 258.46 \\ \hline
+12.5 & 22.7 & 257.29 \\ \hline
+13.0 & 21.7 & 258.24 \\ \hline
+13.5 & 20.1 & 258.32 \\ \hline
+14.0 & 19.0 & 259.07 \\ \hline
+15.0 & 18.2 & 262.76 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Messwerte für Linse unbekannter Brennweite}
+\label{}
+\end{table}
+
+Für die unbekannte Linse ergibt sich nach Auswertung der Messwerte eine Brennweite von
+\begin{align*}
+259.0 mm	\pm2.09 mm
+\end{align*}
+
+Nach Bessel lässt sich die Brennweite einer Linse ebenfalls nach Gleichung \eqref{Bessel}. Untersucht wird zudem, inwieweit Licht verschiedener Wellenlängen unterschiedlich stark gebrochen wird.\\
+In folgender Tabelle stehen die gemessenen Werte für den Abstand d zwischen den beiden Linsenpositionen und für den Abstand e zwischen Gegenstand und Schirm, sowie die jeweiligen errechneten Brennweiten:
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|r|r|r|}
+\hline
+45.0 & 16.5 & 97.47 \\ \hline
+50.0 & 23.4 & 97.62 \\ \hline
+55.0 & 29.7 & 97.41 \\ \hline
+60.0 & 35.3 & 98.23 \\ \hline
+65.0 & 41.1 & 97.69 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Werte für blaues Licht (100 mm)}
+\label{}
+\end{table}
+
+Für blaues Licht zeigt die Linse ein Brechungsverhalten wie bei einer Linse mit einer Brennweite von:
+\begin{align*}
+97.7 mm	\pm 0.323 mm
+\end{align*}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|r|r|r|}
+\hline
+45.0 & 15.8 & 98.63 \\ \hline
+50.0 & 23.2 & 98.20 \\ \hline
+55.0 & 29.5 & 98.08 \\ \hline
+60.0 & 35.3 & 98.23 \\ \hline
+65.0 & 40.8 & 98.48 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Werte für rotes Licht (100 mm)}
+\label{}
+\end{table}
+
+Für rotes Licht zeigt die Linse ein Brechungsverhalten wie bei einer Linse mit einer Brennweite von:
+
+\begin{align*}
+98.3 mm	\pm 0.22 mm
+\end{align*}
+
+
+Nach Abbe:
+\begin{align*}
+b': f&=20,2 mm         \pm 0,54 mm\\
+g': f&=18,4 mm          \pm 0,87 mm
+\end{align*}
 
 \section{Diskussion}
 

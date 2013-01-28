@@ -175,26 +175,31 @@ ermittelt. $g$ und $b$ werden zu den jeweiligen Hauptebenen gemessen. Die Lage d
 im Linsensystem fixierter Punkt A wird verwandt, um die Gegenstandsweite $g'$ und die Bildweite $b'$ leicht abzulesen. Es gelten folgende
 in Abbildung \ref{abbe} nachvollziebare Relationen:
 
-\begin{align}
- g' &= g + h = f \cdot \left( 1+ \frac1V \right) + h\\
- b' &= b + h' = f \cdot \left(1 + V \right) + h'
-\end{align}
-
+\begin{equation}
+ g' = g + h = f \cdot \left( 1+ \frac1V \right) + h
+ \label{eqabbe1}
+\end{equation}
+\begin{equation}
+ b' = b + h' = f \cdot \left(1 + V \right) + h'
+ \label{eqabbe2}
+\end{equation}
 
 \begin{figure}[H]
 \input{408f.tex}
 \caption{Das Linsensystem mit einer Streulinse und einer Sammellinse}
+\label{abbe}
 \end{figure}
 
 
 \section{Auswertung}
+\subsection{Gültigkeit von Linsengleichung und Abbildungsmaßstab}
 Zunächst soll die Gültigkeit von Gleichung\eqref{Abbildung} und Gleichung\eqref{Linsengleichung} verifiziert werden. Dazu werden die Messwerte für die Gegenstandshöhe G, die Bildhöhe B, die Gegenstandsweite g und die Bildweite b aus der folgenden Tabelle entnommen und in die ensprechende Formel eingesetzt.\\
-V1 und V2 sind die nach Gleichung \eqref{Abbildung} errechneten Längenverhältnisse von B zu G bzw. b zu g. Die Werte in f sind wiederum die errechneten Brennweiten in mm nach Gleichung \eqref{Linsengleichung}
+$V_1$ und $V_2$ sind die nach Gleichung \eqref{Abbildung} errechneten Längenverhältnisse von B zu G bzw. b zu g. Die Werte für f sind wiederum die errechneten Brennweiten in mm nach Gleichung \eqref{Linsengleichung}
 
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{|c|c|c|c !{\vrule width 1.5pt} c|c|c|}
-G & g & b & B & V1 & V2 & f\\
+G & g & b & B & $V_1$ & $V_2$ & f\\
 \hline
 3.0 & 11.7 & 65.1 & 16.3 & 5.43 & 5.59 & 98.82 \\ \hline
 3.0 & 13.0 & 40.9 & 9.0 & 3.00 & 3.14 & 98.63 \\ \hline
@@ -214,10 +219,10 @@ G & g & b & B & V1 & V2 & f\\
 
 Anschließende Ausgleichs- und Fehlerrechnung ergeben schließlich als Brennweite der Linse:
 \begin{align*}
-97.7 mm	\pm 0.45 mm
+97.7 \text{ mm}	\pm 0.45 \text{ mm}
 \end{align*} Dies entspricht einer Abweichung von 2,34\% von den Herstellerangaben.
 
-Die beiden Abbildungsverhältnisse V1 und V2 haben im Mittel eine Abweichung von 3,8\% zueinander.
+Die beiden Abbildungsverhältnisse $V_1$ und $V_2$ haben im Mittel eine Abweichung von 3,8\% zueinander.
 
 \begin{table}[htbp]
 \begin{center}
@@ -242,15 +247,44 @@ g & b & f \\
 
 Für die unbekannte Linse ergibt sich nach Auswertung der Messwerte eine Brennweite von
 \begin{align*}
-259.0 mm	\pm2.09 mm
+259.0 \text{ mm}	\pm2.09 \text{ mm}
 \end{align*}
 
-Nach Bessel lässt sich die Brennweite einer Linse ebenfalls nach Gleichung \eqref{Bessel}. Untersucht wird zudem, inwieweit Licht verschiedener Wellenlängen unterschiedlich stark gebrochen wird.\\
-In folgender Tabelle stehen die gemessenen Werte für den Abstand d zwischen den beiden Linsenpositionen und für den Abstand e zwischen Gegenstand und Schirm, sowie die jeweiligen errechneten Brennweiten:
+\subsection{Brechnungsindex nach Bessel und chromatische Abberation}
+Nach Bessel lässt sich die Brennweite einer Linse ebenfalls nach Gleichung \eqref{Bessel} berechnen. Untersucht wird zudem, in wie weit Licht verschiedener Wellenlängen unterschiedlich stark gebrochen wird.\\
+In Tabelle 2 stehen die gemessenen Werte für den Abstand d zwischen den beiden Linsenpositionen, für den Abstand e zwischen Gegenstand und Schirm, sowie die jeweiligen errechneten Brennweiten bei der Bestrahlung mit blauem (Tabelle 3) bzw. rotem (Tabelle 4) Licht:
 
 \begin{table}[htbp]
 \begin{center}
-\begin{tabular}{|r|r|r|}
+\begin{tabular}{|c|c|c|}
+e & d & f \\
+\hline
+40.0 & 6.5 & 97.36 \\ \hline
+45.0 & 16.1 & 98.19 \\ \hline
+50.0 & 23.1 & 98.43 \\ \hline
+55.0 & 29.6 & 97.67 \\ \hline
+60.0 & 35.4 & 97.93 \\ \hline
+65.0 & 41.2 & 97.37 \\ \hline
+70.0 & 46.6 & 97.44 \\ \hline
+75.0 & 51.8 & 98.23 \\ \hline
+80.0 & 57.4 & 97.22 \\ \hline
+85.0 & 62.6 & 97.24 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Messwerte aufgenommen nach der Methode von Bessel}
+\label{tabbessel}
+\end{table}
+
+Die Werte für die Brennweite f errechnen sich nach Bessel mittels Gleichung \eqref{Bessel} 
+Mittels Ausgleichs- und Fehlerrechnung folgt dann für die Brennweite:
+\begin{align*}
+ f= 97.7 \text{ mm}	\pm 0.45 \text{ mm}
+\end{align*}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+e & d & f\\
 \hline
 45.0 & 16.5 & 97.47 \\ \hline
 50.0 & 23.4 & 97.62 \\ \hline
@@ -259,18 +293,19 @@ In folgender Tabelle stehen die gemessenen Werte für den Abstand d zwischen den
 65.0 & 41.1 & 97.69 \\ \hline
 \end{tabular}
 \end{center}
-\caption{Werte für blaues Licht (100 mm)}
-\label{}
+\caption{Werte für blaues Licht (100 mm Brennweite)}
+\label{tabblau}
 \end{table}
 
 Für blaues Licht zeigt die Linse ein Brechungsverhalten wie bei einer Linse mit einer Brennweite von:
 \begin{align*}
-97.7 mm	\pm 0.323 mm
+97.7 \text{ mm}	\pm 0.323 \text{ mm}
 \end{align*}
 
 \begin{table}[htbp]
 \begin{center}
-\begin{tabular}{|r|r|r|}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+e & d & f\\
 \hline
 45.0 & 15.8 & 98.63 \\ \hline
 50.0 & 23.2 & 98.20 \\ \hline
@@ -279,24 +314,63 @@ Für blaues Licht zeigt die Linse ein Brechungsverhalten wie bei einer Linse mit
 65.0 & 40.8 & 98.48 \\ \hline
 \end{tabular}
 \end{center}
-\caption{Werte für rotes Licht (100 mm)}
-\label{}
+\caption{Werte für rotes Licht (100 mm Brennweite)}
+\label{tabrot}
 \end{table}
 
 Für rotes Licht zeigt die Linse ein Brechungsverhalten wie bei einer Linse mit einer Brennweite von:
 
 \begin{align*}
-98.3 mm	\pm 0.22 mm
+98.3 \text{ mm}	\pm 0.22 \text{ mm}
 \end{align*}
 
 
-Nach Abbe:
+\subsection{Brechungsindex nach Abbe}
+
+Nach Abbe lässt sich die Brennweite eines Linsensystems mittels Gleichungen \eqref{eqabbe1} bzw. \eqref{eqabbe2}. Hierfür wird b' bzw g' linear gegen $(1+V)$ bzw. $\left(1+\frac{1}{V}\right)$ aufgetragen und die Brennweite f als Steigung der Geraden abgelesen.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+G & g' & b' & B\\
+\hline
+3.0 & 10.0 & 70.3 & 5.0 \\ \hline
+3.0 & 25.0 & 50.8 & 3.3 \\ \hline
+3.0 & 30.0 & 44.8 & 2.5 \\ \hline
+3.0 & 35.0 & 43.2 & 2.1 \\ \hline
+3.0 & 40.0 & 39.5 & 1.7 \\ \hline
+3.0 & 45.0 & 39.0 & 1.6 \\ \hline
+3.0 & 50.0 & 37.1 & 1.3 \\ \hline
+3.0 & 55.0 & 36.3 & 1.1 \\ \hline
+3.0 & 60.0 & 35.9 & 1.1 \\ \hline
+3.0 & 65.0 & 35.0 & 1.0 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Gemessene Abstände nach der Methode von Abbe - der erste Wert fließt wegen zu starker Abweichung nicht in die weitere Auswertung mit ein}
+\label{}
+\end{table}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/abbe1.jpg}
+\caption{b' aufgetragen - errechnete Regressionsgrade}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/abbe2.jpg}
+\caption{g' aufgetragen - errechnete Regressionsgrade}
+\end{figure}
+
+
 \begin{align*}
-b': f&=20,2 mm         \pm 0,54 mm\\
-g': f&=18,4 mm          \pm 0,87 mm
+b': f&=20,2 \text{ mm}         \pm 0,54 \text{ mm}\\
+g': f&=18,4 \text{ mm}          \pm 0,87 \text{ mm}
 \end{align*}
 
 \section{Diskussion}
+Insgesamt stimmen alle Werte sehr gut mit den Erwartungen überein. Eine Abweichung der berechneten Brennweite von etwa 2\% zu den Herstellerangaben lässt auf einen systematischen Fehler beim Messen schließen. Da es nicht ganz eindeutig ist, wann die Abbildung wirklich scharf abgebildet wird, wurde vermutlich eine falsche Einstellung als "scharf" empfunden. Dass alle Werte gleichermaßen zu klein sind, bekräftigt diese Vermutung.\\
+Gleiches gilt für den Abbildungsmaßstab V. Dass $V_1 = \frac{B}{G}$ und $V_2 = \frac{b}{g}$ eine Abweichung von etwa 3\% zueinander haben lässt sich vermutlich ebenfalls darauf zurückführen, dass das Bild bei der Messung nicht völlig scharf eingestellt war.\\
+Für die chromatische Abberation ergibt sich, dass blaues Licht offenbar stärker im Glas gebrochen wird als rotes. Entsprechend liegt der Brennpunkt der Linse für blaues Licht dichter am Glas als für rotes Licht. Die Abweichung beträgt hier wieder nur etwa 2\%, für optische Geräte wie hochauflösende Kameras, kann dies aber durchaus problematisch sein.\\
+Bei der Auswertung mit der Methode nach Abbe ergibt sich wie auch schon bei den vorherigen Rechnungen eine Abweichung zwischen beiden Messreihen. Wie schon zuvor liegt dies vermutlich daran, dass das Bild nicht vollständig scharf gestellt wurde, als die Werte aufgenommen worden sind. Dennoch sind die Zahlen durchaus plausibel und weichen auch nicht zu stark voneinander ab, so dass man von einer korrekten Auswertung ausgehen kann.
 
 % ========================================
 %	Literaturverzeichnis

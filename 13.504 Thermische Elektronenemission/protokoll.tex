@@ -58,7 +58,7 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}
+\section{Theorie}
 Bei Metallen sind die äußeren Hüllenelektronen nur schwach an ihren Kern gebunden, wodurch sich die Elektronen im kristallförmigen Gitter nahezu frei bewegen bewegen können. Dadurch wird unter anderem die gute elektrische Leitfähigkeit von Metallen erklärt.
 Erhält ein Elektron genügend Energie, um das nur noch schwache Potential der positiv geladenen Kerne zu überwinden, so kann es aus dem Metall austreten.
 Erreichen kann man dies, indem man die Kinetische Energie der Elektronen durch Stöße mit Photonen (Photoelektrischer Effekt) oder wie in diesem Versuch, durch Erhöhung ihrer thermischen Energie (Glühelektrischer Effekt), die benötigte Energie zuführt.
@@ -70,25 +70,18 @@ Die Verteilung wird durch die Fermi-Diracsche Verteilungs-Funktion beschrieben:
 f(E)= {\left(e^{\frac{E-\zeta}{kT}}-1\right)}^{-1} \intertext{mit der Näherung:} f(E)= {\left(e^{\frac{E-\zeta}{kT}}\right)}
 \label{fE}
 \end{align}
-Die Anzahl der Elektronen, die eine bestimmte Energie haben, errechnet sich durch:
-\begin{equation}
-n(E)= \frac{2}{h^3} f(E)
-\end{equation}
-und die Energie, die ein Elektron wenigstens braucht um 
 
-Richardson-Gleichung
+Die Sättigungsstromdichte der Glüh-Kathode lässt sich über die sog. Richardson-Gleichung berechnen:
+\begin{formel}
 \begin{equation}
 j_s(T) = 4 \pi \frac{e_0m_0k^2}{h^3} T ^2 exp\left(-\frac{e_0 \phi}{kT}\right)
 \label{eqrich}
 \end{equation}
-\section{Theorie}
+\caption*{\small{$e_0$ = Elementarladung, $m_0$ =  Elektronenmasse, $\phi$ = Potential des E-Feldes, k = Boltzmann-Konstante}}
+\end{formel}
 
-
-\subsection{Versuchsaufbau}
-Damit die Elektronen nicht sofort mit den umgebenen Luftmolekülen wechselwirken, muss der Versuch im Vakuum durchgeführt werden. Die im Versuch benutzte Apparatur ist eine sog. Hochvakuum-Diode. Sie besteht aus einem evakuierten Glaskolben, in den auf zwei gegenüberliegende Seiten je ein Draht hineinragen. Zwischen den Drähten wird später eine Spannung angelegt, so dass die aus der Kathode austretenden Elektronen zur Anode hin beschleunigt werden können. Um die Anzahl an ausgetretenen Elektronen zu erhöhen, wird die Kathode zudem von einem Strom durchflossen, der sie auf 1000 K bis 3000 K erhitzen kann. 
-
-\subsection{ Die Langmuir-Schottkysche Raumladungsgleichung}
-Da die Elektronen, die aus der Kathode ausgetreten sind, aber die Anode noch nicht erreicht haben, ebenfalls ein elektrisches Feld aufbauen, werden kathodennahe Elektronen weniger stark durch das äußere Feld beeinflusst. Solange das äußere Feld noch nicht stark genug ist, kann es sogar sein, dass einige Elektronen garnicht bis zur Anode gelangen. Ensprechend ist auch die Konzentration von Elektronen nahe der Kathode größer als an der Anode.\\
+\subsection{Die Langmuir-Schottkysche Raumladungsgleichung}
+Da die Elektronen, die aus der Kathode ausgetreten sind, aber die Anode noch nicht erreicht haben, ebenfalls ein elektrisches Feld aufbauen, werden kathodennahe Elektronen weniger stark durch das äußere Feld beeinflusst. Solange das äußere Feld noch nicht stark genug ist, kann es sogar sein, dass einige Elektronen garnicht bis zur Anode gelangen. Ensprechend ist die Konzentration von Elektronen nahe der Kathode größer als an der Anode und entsprechend verhalten sich auch damit verbundene Größen.\\
 Für die Größen Potential V, Feldstärke E und Raumladungsdichte $\rho$ lassen sich folgenden Verläufe herleiten:
 \begin{align*}
 V  &\sim x^\frac{4}{3}\\
@@ -96,12 +89,10 @@ E  &\sim x^\frac{1}{3}\\
 \rho  &\sim x^{-\frac{2}{3}}.
 \end{align*}
 
-
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{pics/raumladungsgebiet.jpg}
 \label{raumladungsgebiet}
 \end{figure}
-
 
 Den genauen Zusammenhang stellt das Langmuir-Schottkysche Raumladungsgesetz dar:
 \begin{equation}
@@ -110,25 +101,45 @@ j=\frac{4}{9}\epsilon_0 \sqrt{2e_0/m_0} \frac{V^\frac{3}{2}}{a^2}.
 \end{equation}
 Eigentlich müsste nach Gleichung \eqref{eqlang} für V=0 auch j=0 gelten, aber dennoch kann man auch ohne angelegtes Potential einen Strom messen. Dieser rührt daher, dass  die Elektronen bereits über einen gewissen Betrag an kinetischer Energie verfügen, wenn sie die Kathode verlassen. Dieser ist sogar groß genug, um gegen ein schwaches Gegenfeld anzulaufen. Entsprechend wird dieser Strom auch Anlaufstrom genannt.\\
 In diesem Zusammenhang ist für diesen Versuch insbesondere die sog. Kennlinie der Hochvakuums-Diode interessant. Sie beschreibt den Verlauf des Anodenstroms in Abhängigkeit vom angelegten Potential und lässt sich in drei Bereiche gliedern:  Anlaufstrom-, Raumladungs- und Sättigungsstromgebiet.
-
 \begin{figure}[H]
-\includegraphics[width=0.8\textwidth]{pics/kennlinie.jpg}
+\includegraphics[width=0.479\textwidth]{pics/kennlinie.jpg}
+\caption{Glüh-Kathoden-Kennlinie - der Versuchsanleitung entnommen}
 \label{pic_kennlinie}
 \end{figure}
-
 Im Anlaufstromgebiet zeigt sich, wie viel Kinetische Energie die Elektronen bereits im Metall haben, indem man den Strom misst, der trotz eines Gegenfeldes fließt. Direkt im Anschluss daran findet sich das Raumladungsgebiet. Während die Stärke des angelegten elektrischen Feldes langsam zu Gunsten der Elektronen erhöht wird, gelingt es mehr und mehr von ihnen das Gegenfeld, dass durch die übrigen Elektronen im Raum zwischen Kathode und Anode erzeugt wird, zu überwinden. In Folge dessen steigt der fließende Strom weiter an, bis schließlich im Sättigungsgebiet eine Asymptotische Annährung an einen Maximalwert stattfindet. Dieser Maximalwert entspricht dem Zustand, dass alle Elektronen, die aus der Kathode austreten, zur Anode gelangen. Da die Anzahl der austretenden Elektronen zwar von der Temperatur der Kathode aber nicht von der Stärke des angelegten Feldes abhängt, wird dieser Wert bei einer endlichen Spannung erreicht. 
+
+\subsection{Temperatur}
+Den Zusammenhang zwischen angelegter Heizleistung $I_f U_f$ und der resultierenden Kathodentemperatur kann man folgender Gleichung entnehmen.
+
+\begin{formel}
+\begin{equation}
+I_f U_f = f \eta \sigma T^4 + N_{WL}
+\label{eq_temperatur}
+\end{equation}
+\caption*{\small{$\eta$ = Emissionsgrad der Oberfläche, $\sigma$ =  Stefan-Boltzmann-Konstante, $N_{WL}$ = Wärmeleitung}}
+\end{formel}
+
+\subsection{Versuchsaufbau}
+Damit die Elektronen nicht sofort mit den umgebenen Luftmolekülen wechselwirken, muss der Versuch im Vakuum durchgeführt werden. Die im Versuch benutzte Apparatur ist eine sog. Hochvakuum-Diode. Sie besteht aus einem evakuierten Glaskolben, in den auf zwei gegenüberliegende Seiten je ein Draht hineinragen.
+\begin{figure}[H]
+\includegraphics[width=0.5\textwidth]{pics/aufbau1.jpg}
+\caption{Für den Versuch verwandter Aufbau - der Versuchsanleitung entnommen}
+\end{figure}
+Zwischen den Drähten wird später eine Spannung angelegt, so dass die aus der Kathode austretenden Elektronen zur Anode hin beschleunigt werden können. Um die Anzahl an ausgetretenen Elektronen zu erhöhen, wird die Kathode zudem von einem Strom durchflossen, der sie auf 1000 K bis 3000 K erhitzen kann. Die Elektronen treffen schließlich auf die Anode auf und fließen über ein Amperemeter wieder zur Kathode ab.
+
 \section{Durchführung}
 \subsection{Kennlinie aufnehmen}
 Zunächst sollen für fünf Heizströme die Kennlinien aufgezeichnet werden. Hierzu wird  bei einer gewählten Heizstromstärke die Beschleunigungsspannung des elektrischen Feldes langsam erhöht und die gemessene Stromstärke gegen die angelegte Spannung in einem Diagramm aufgetragen. Es sollten sich dann ein Kurvenverlauf nach Abbildung \ref{pic_kennlinie} ergeben. Anschließend wird nach Möglichkeit der Sättigungsstrom $I_s$ abgelesen.
-\subsection{Maximale Heizleisungt}
-In einem Durchgang wird die maximal erreichbare Heizleistung eingestellt, um das Anlaufstromgebiet zu untersuchen. Es wird hierzu in kleinen Schritten ein Gegenfeld aufgebaut und der gemessene Strom gegen die negative Spannung aufgetragen.
+\subsection{Maximale Heizleistung}
+In einem Durchgang wird die maximal erreichbare Heizleistung eingestellt, um das Anlaufstromgebiet zu untersuchen. Es wird hierzu entsprechend des zweiten Schaltbildes ein Gegenfeld aufgebaut und der gemessene Strom gegen die negative Spannung aufgetragen.
+\begin{figure}[H]
+\includegraphics[width=0.5\textwidth]{pics/aufbau2.jpg}
+\caption{Schaltbild für Anlaufstromgebiet - der Versuchsanleitung entnommen}
+\end{figure}
 
-
-
-
-
-
-
+Außerdem soll der Gültigkeitsbereich für das Langmuir-Schottkysche Raumladungsgesetz gefunden und der Exponent der Strom-Spannungs-Beziehung berechnet werden.
+\subsection{Sonstiges}
+Zum Schluss sollen noch aus der Leistungsbilanz des Heizstromkreises mittels Gleichung \eqref{eq_temperatur} die Temperatur der Kathode bestimmt werden und mittels der abgelesenen Werte für den Sättigungsstrom $I_s$ soll versucht werden, die Austrittsarbeit des Kathodenmaterials (Wolfram) zu bestimmen.
 
 \section{Auswertung}
 \subsection{Fehlerrechnung}

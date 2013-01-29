@@ -87,10 +87,10 @@ Die restlichen Größen hängen lediglich von der Körpergeometrie ab, sodass ma
  Re= \frac{\rho v d}{\eta} = \frac{v d}{\nu}
  \label{rey}
  \end{align}
-unter dem kritischen Wert von 2000 bleibt. Ab diesem Wert werden Flüssigkeiten nicht mehr als laminar bezeichnet, jedoch können sich Verwirbelungen schon viel früher bilden, so dass  $Re \ll 2000$ sein sollte. 
+unter dem kritischen Wert von 2040 \footnote{Quelle: \href{http://homepages.warwick.ac.uk/~masax/Research/critical_point_pipe_flow/critical_point_pipe_flow.html}{http://homepages.warwick.ac.uk} } bleibt. Ab diesem Wert werden Flüssigkeiten nicht mehr als laminar bezeichnet, jedoch können sich Verwirbelungen schon viel früher bilden, so dass  $Re \ll 2040$ sein sollte. 
 	\section{Aufbau}
-\begin{wrapfigure}[13]{r}{3.5cm}
-	\includegraphics[width=0.25\textwidth]{pics/aufbau.jpg}
+\begin{wrapfigure}[11]{r}{3.5cm}
+	\includegraphics[width=0.23\textwidth]{pics/aufbau.jpg}
 	\caption{Viskosimeter}
 	\label{aufbau}
 \end{wrapfigure}
@@ -233,6 +233,19 @@ Die gesuchte Apparaturkonstante $K_{gr}$ lässt sich nun errechnen durch Gleichs
  &= 0,00033 \, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
 \end{align}
 
+<<<<<<< HEAD
+=======
+
+Um die Verwendung genannter Formeln zur Ermittlung der Viskosität zu rechtfertigen, muss die Reynoldszahl für diesen Versuch ermittelt und mit 
+der kritischen Reynoldszahl verglichen werden. Nach \eqref{rey} ergibt sich
+
+\begin{equation}
+ Re = \frac{d_{kl}\cdot \rho_{Fl}}{\eta} \cdot \frac{x}{t_{kl}}=\frac{998\frac{\text{kg}}{\text{m}^3} \cdot 0,00828\frac{\text{m}}{\text{s}} \cdot 0,0137 \text{m}}{0,002313 \text{Pa}\cdot\text{s}} \approx 49 \ll 2040,
+\end{equation}
+
+weshalb man von einer laminaren Flüssigkeit sprechen darf und das Verwenden der Formeln legitim ist.
+
+>>>>>>> 3a1143facea85f731a95290d96da519a3fa42f86
 \subsection{Anwendung der Andrade-Gleichung}
 Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird die Fallzeit zu verschiedenen Temperaturen gemessen.
 
@@ -284,7 +297,7 @@ Zurücktransferiert erhält man wieder A und B zu
   \hline
   $Re$ & 7,0 &	8,6	&9,7	&10,9	&12,3	&13,6	&15,3	&17,0	&18,8	&20,9	&22,9
  \end{tabular}
-\caption{Legitimierung der verwandten Formeln mit Reynoldszahlen weit unter 2000}
+\caption{Legitimierung der verwandten Formeln mit Reynoldszahlen weit unter 2040}
 \end{table}
 
 

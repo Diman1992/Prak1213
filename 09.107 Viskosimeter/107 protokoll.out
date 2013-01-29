@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.2}{1 Theorie}{}
 \BOOKMARK [1][-]{section.6}{2 Aufbau}{}
 \BOOKMARK [1][-]{section.9}{3 Durchf\374hrung}{}
@@ -6,3 +7,13 @@
 \BOOKMARK [2][-]{subsection.16}{4.2 Viskosit\344t des Wassers}{section.11}
 \BOOKMARK [2][-]{subsection.25}{4.3 Anwendung der Andrade-Gleichung}{section.11}
 \BOOKMARK [1][-]{section.33}{5 Diskussion}{}
+=======
+\BOOKMARK [1][-]{section.2}{1 Theorie}{}% 1
+\BOOKMARK [1][-]{section.7}{2 Aufbau}{}% 2
+\BOOKMARK [1][-]{section.10}{3 Durchf\374hrung}{}% 3
+\BOOKMARK [1][-]{section.12}{4 Auswertung}{}% 4
+\BOOKMARK [2][-]{subsection.13}{4.1 Fehlerrechnung}{section.12}% 5
+\BOOKMARK [2][-]{subsection.17}{4.2 Viskosit\344t des Wassers}{section.12}% 6
+\BOOKMARK [2][-]{subsection.27}{4.3 Anwendung der Andrade-Gleichung}{section.12}% 7
+\BOOKMARK [1][-]{section.35}{5 Diskussion}{}% 8
+>>>>>>> 3a1143facea85f731a95290d96da519a3fa42f86

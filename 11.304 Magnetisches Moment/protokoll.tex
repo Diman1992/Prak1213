@@ -72,12 +72,15 @@ Aus der Maxwell-Gleichung
 \begin{equation}
 \vec{\nabla} \cdot \vec{B} = 0
 \end{equation}
- folgt direkt, dass es keine magnetischen Monopole gibt. Von der Komplexität her kommt  ein magnetischer Dipol einem Monopol am nächsten, dessen magnetisches Moment in diesem Versuch bestimmt werden soll.
- Der Dipol wird dazu in ein homogenes Magnetfeld eingeführt, wodurch ein Drehmoment auf ihn einwirkt, bis Dipol und Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
- Ein homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen im Abstand $R$ voneinander aufgestellt. Dabei bezeichnet R den Radius der beiden Spulen. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in ihrem Inneren durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
+ folgt direkt, dass es keine magnetischen Monopole gibt. In diesem Versuch wird daher das magnetisches Moment eines Dipols bestimmt.werden
+ Der Dipol befindet sich während des Versuchs in einem homogenen Magnetfeld, wodurch er eine Kraft erfährt. Aus dem Verhalten des Dipols im magnetischen Feld, kann man auf Eigenschaften seines Dipolfeldes schließen.
+ 
+ 
+ ein Drehmoment auf ihn einwirkt, bis Dipol und Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
+ Ein homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen in einem Abstand voneinander aufgestellt, der gleich dem Spulenradius ist. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in der Mitte ihrer Symmetrieachse durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
  
  \subsection{Gravitation}
- Wird in die Kugel mit dem Dipol ein etwa 20cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist und dieser Stab nun senkrecht zum Magnetfeld ausgerichtet, so wirkt auf ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld. Beide Momente greifen die Kugel antiparallel an. Erhöht man nun so lange der Spulenstrom und dadurch auch die Stärke des Magnetfeldes, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht,
+ Wird in die Kugel mit dem Dipol ein etwa 20 cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist und dieser Stab nun senkrecht zum Magnetfeld ausgerichtet, so wirkt auf ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld. Beide Momente greifen die Kugel antiparallel an. Erhöht man nun so lange der Spulenstrom und dadurch auch die Stärke des Magnetfeldes, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht,
 so gilt:
 \begin{equation}
 \vec{\mu}_{Dipol} \times \vec{B} = m\cdot (\vec{r} \times \vec{g} ).
@@ -89,16 +92,19 @@ Auf Grund der Winkelgleichheit lassen sich die Kreuzprodukte vereinfachen zu:
 \end{equation}
   
   \subsection{Harmonischer Oszillator}
-  Das durch das homogene B-Feld erzeugte Drehmoment beinhaltetx eine rücktreibende Kraft. Lenkt man die Kugel aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
+  Das durch das homogene B-Feld erzeugte Drehmoment beinhaltet eine rücktreibende Kraft. Lenkt man die Kugel aus ihrer Ruhelage aus, so verhält sie sich wie ein harmonischer Oszillator und schwingt mit einer festen Frequenz hin und her.
 Die Bewegung kann durch folgende Differentialgleichung beschrieben werden:
 \begin{equation}
 -|\vec{\mu}_{Dipol} \times \vec{B}| = J_K \cdot \frac{\dx^2 \Theta}{\dx t^2}.
 \end{equation}
 Deren Lösung ist:
+\begin{formel}
 \begin{equation}
 T^2=\frac{4\pi^2J_K}{\mu_{Dipol}} \frac{1}{B}
 \label{oszi}
 \end{equation}
+\caption*{$J_K$ = Trägheitsmoment der Kugel}
+\end{formel}
   \subsection{Präzession}
  Wirkt eine äußere Kraft auf die Drehachse eines Körpers, so beginnt diese, um den Richtungsvektor der Kraft zu rotieren. Dies wird als Präzession bezeichnet.
 Die Präzessionsbewegung lässt sich durch folgende Differentialgleichung beschreiben:
@@ -110,10 +116,13 @@ Hierbei ist $\Omega_p$ die Präzessionsfrequenz und eine Lösung dieser Differen
 \Omega_p = \frac{\mu B}{|L_K|}
 \end{equation}
 lässt sich dabei in
+\begin{formel}
 \begin{equation}
 \frac{1}{T} = \frac{\mu_{Dipol}}{2 \pi L_K} B
+\caption*{$L_K$ = $J_K \omega$ = Drehimpuls}
 \label{prae}
 \end{equation}
+\end{formel}
 umstellen.
 \section{Aufbau}
 Der im Versuch verwandte Dipol ist in eine kleine Vollkugel eingelassen. Die Kugel liegt in einer passenden Vertiefung, in der die Kugel nicht herumrollen kann. Von unten wird Luft eingeblasen, so dass die Kugel nahezu reibungsfrei auf dem Luftkissen schwebt.
@@ -124,7 +133,7 @@ Das Magnetfeld der Spulen errechnet sich über das Biot-Savartsche Gesetzt
 \end{equation} 
 zu
 \begin{equation}
-B(0)=\frac{\mu_0 IR^2}{(R^2+x^2)^{3/2}}.
+B(0)=\frac{\mu_0 IR^2N}{(R^2+x^2)^{3/2}}.
 \label{eqhelm}
 \end{equation}
 
@@ -132,12 +141,12 @@ B(0)=\frac{\mu_0 IR^2}{(R^2+x^2)^{3/2}}.
 Das magnetische Moment des Dipols wird nun auf drei verschiedene Weisen berechnet.
 
 \subsection{Gravitation}
-In die Kugel wird ein Stab mit einer beweglichen Masse am Ende gesteckt. Und das Magnetfeld so lange erhöht, bis der Stab in der Luft ruht. Indem der Abstand der Masse zur Kugel variiert wird, kann die benötigte B-Feldstärke für verschiedene Drehmomente bestimmt werden. Eine lineare Ausgleichsrechnung mittels Gleichung \eqref{grav} bestimmt das magnetische Moment des Dipols.
+In die Kugel wird ein Stab mit einer beweglichen Masse am Ende gesteckt. Und das Magnetfeld so lange erhöht, bis ein Kräftegleichgewicht herrscht. Indem der Abstand der Masse zur Kugel variiert wird, kann die benötigte B-Feldstärke für verschiedene Drehmomente bestimmt werden. Eine lineare Ausgleichsrechnung mittels Gleichung \eqref{grav} bestimmt das magnetische Moment des Dipols.
 \subsection{Harmonischer Oszillator}
 Die Kugel wird im harmonischen B-Feld um einen kleinen Winkel ausgelenkt und dadurch in Schwingung versetzt.
 Gemessen wird die Schwingungsdauer für verschiedene Magnetfeldstärken und durch lineare Ausgleichsrechnung wird mittels Gleichung \eqref{oszi} das magnetische Moment errechnet.
 \subsection{Präzession}
-Die Kugel wird in Präzession versetzt, indem die Drehachse nach dem Andrehen leicht gekippt wird und erst dann das magnetische Feld eingeschaltet wird. Die Kugel beginnt dann um die Feldlinien zu Präzessieren. Wichtig ist, dass die Kugel bei jeder Messung mit der gleichen Geschwindigkeit rotiert. Um dies zu realisieren wird mit einem Stroboskop sichergestellt, dass die auf der Kugel angebrachte Markierung unter dem Stroboskoplicht stationär erscheint. Ist dies der Fall, so rotiert die Kugel bei jeder Messung mit der gleichen Frequenz.  
+Die Kugel wird in Präzession versetzt, indem die Drehachse nach dem Andrehen leicht gekippt wird und erst dann das magnetische Feld eingeschaltet wird. Die Kugel beginnt dann um die Feldlinien zu Präzessieren. Wichtig ist, dass die Kugel bei jeder Messung mit der gleichen Geschwindigkeit rotiert. Um dies zu realisieren wird mit einem Stroboskop sichergestellt, dass die auf der Kugel angebrachte Markierung unter dem Stroboskoplicht stationär erscheint. Ist dies der Fall, so rotiert die Kugel bei jeder Messung mit der gleichen Frequenz. Als Rotationsfrequenz wird für die Kugel ein Wert zwischen 4 Hz und 6 Hz gewählt, da die Rotationsfrequenz mit der Zeit exponentiell abnimmt und dieser Betrag nur bei langsamen Frequenzen hinreichend klein ist.  
 
 \section{Auswertung}
 \subsection{Fehlerrechnung}

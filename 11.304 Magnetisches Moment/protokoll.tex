@@ -72,15 +72,20 @@ Aus der Maxwell-Gleichung
 \begin{equation}
 \vec{\nabla} \cdot \vec{B} = 0
 \end{equation}
- folgt direkt, dass es keine magnetischen Monopole gibt. In diesem Versuch wird daher das magnetisches Moment eines Dipols bestimmt.werden
- Der Dipol befindet sich während des Versuchs in einem homogenen Magnetfeld, wodurch er eine Kraft erfährt. Aus dem Verhalten des Dipols im magnetischen Feld, kann man auf Eigenschaften seines Dipolfeldes schließen.
+folgt direkt, dass es keine magnetischen Monopole gibt. In diesem Versuch wird daher das magnetisches Moment $\mu$ eines Dipols bestimmt. Der Dipol befindet sich während des Versuchs in einem homogenen Magnetfeld, wodurch er eine Kraft erfährt. Aus dem Verhalten des Dipols im magnetischen Feld, kann man dann auf Eigenschaften seines Dipolfeldes schließen. Ein entsprechendes homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen in einem Abstand voneinander aufgestellt, der gleich dem Spulenradius ist. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in der Mitte ihrer Symmetrieachse durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
+Das magnetische Moment ist ein Maß für die Stärke eines magnetischen Dipols und ist wie folgt definiert:\\
+In einem homogenen Magnetfeld wirkt auf einen Dipol das Drehmoment
+\begin{formel}[H]
+\begin{equation}
+\vec D = \vec{\mu} \times \vec{B},
+\end{equation}
+\caption*{\small{$\vec{\mu}$ = Dipolmoment}}
+\end{formel}
+welches solange ihn in eine Lage dreht, in der der Dipol und die Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
  
- 
- ein Drehmoment auf ihn einwirkt, bis Dipol und Feldlinien des homogenen Magnetfeldes wieder gleichgerichtet sind.
- Ein homogenes Magnetfeld kann man durch ein sogenanntes Helmholz-Spulenpaares erzeugen. Es werden dazu zwei Spulen in einem Abstand voneinander aufgestellt, der gleich dem Spulenradius ist. Werden nun beide Spulen gleichgerichtet von einem Gleichstrom durchflossen, so entsteht in der Mitte ihrer Symmetrieachse durch Superposition der einzelnen Felder ein nahezu homogenes Magnetfeld.
  
  \subsection{Gravitation}
- Wird in die Kugel mit dem Dipol ein etwa 20 cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist und dieser Stab nun senkrecht zum Magnetfeld ausgerichtet, so wirkt auf ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld. Beide Momente greifen die Kugel antiparallel an. Erhöht man nun so lange der Spulenstrom und dadurch auch die Stärke des Magnetfeldes, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht,
+Wird in die Kugel mit dem Dipol ein etwa 20 cm langer Stab gesteckt, an dem ein bewegliches Gewicht befestigt ist und dieser Stab nun senkrecht zum Magnetfeld ausgerichtet, so wirkt auf ihn einerseits ein Drehmoment durch die Gewichtskraft und andererseits ein Drehmoment durch das Magnetfeld. Beide Momente greifen die Kugel antiparallel an. Erhöht man nun so lange der Spulenstrom und dadurch auch die Stärke des Magnetfeldes, bis beide Drehmomente im Gleichgewicht liegen und der Stab ruht,
 so gilt:
 \begin{equation}
 \vec{\mu}_{Dipol} \times \vec{B} = m\cdot (\vec{r} \times \vec{g} ).
@@ -103,7 +108,7 @@ Deren Lösung ist:
 T^2=\frac{4\pi^2J_K}{\mu_{Dipol}} \frac{1}{B}
 \label{oszi}
 \end{equation}
-\caption*{$J_K$ = Trägheitsmoment der Kugel}
+\caption*{\small{T = Schwingungsperiode, $\mu_{Dipol}$ = Magnetisches Moment des Dipols, B = magnetische Flussdichte, $J_K$ = Trägheitsmoment der Kugel}}
 \end{formel}
   \subsection{Präzession}
  Wirkt eine äußere Kraft auf die Drehachse eines Körpers, so beginnt diese, um den Richtungsvektor der Kraft zu rotieren. Dies wird als Präzession bezeichnet.
@@ -116,16 +121,16 @@ Hierbei ist $\Omega_p$ die Präzessionsfrequenz und eine Lösung dieser Differen
 \Omega_p = \frac{\mu B}{|L_K|}
 \end{equation}
 lässt sich dabei in
-\begin{formel}
+\begin{formel}[H]
 \begin{equation}
 \frac{1}{T} = \frac{\mu_{Dipol}}{2 \pi L_K} B
-\caption*{$L_K$ = $J_K \omega$ = Drehimpuls}
-\label{prae}
 \end{equation}
+\caption*{\small{$L_K$ = $J_K \omega$ = Drehimpuls}}
+\label{prae}
 \end{formel}
 umstellen.
 \section{Aufbau}
-Der im Versuch verwandte Dipol ist in eine kleine Vollkugel eingelassen. Die Kugel liegt in einer passenden Vertiefung, in der die Kugel nicht herumrollen kann. Von unten wird Luft eingeblasen, so dass die Kugel nahezu reibungsfrei auf dem Luftkissen schwebt.
+Der im Versuch verwandte Dipol ist in eine kleine Vollkugel eingelassen. Die Kugel liegt in einer passenden Vertiefung, in die von unten wird Luft eingeblasen wird. Die Kugel schwebt dann nahezu reibungsfrei auf dem Luftkissen.
 Der gesamte Aufbau befindet sich im Inneren eines Helmholzspulenpaares, deren Radius jedoch nicht ganz dem Spulenabstand entspricht. Das Magnetfeld ist somit leicht inhomogen, da sich der Dipol jedoch sehr zentral auf der Symmetrieachse befindet kann dies vernachlässigt werden.
 Das Magnetfeld der Spulen errechnet sich über das Biot-Savartsche Gesetzt
 \begin{equation}
@@ -167,7 +172,7 @@ die Gaußsche Fehlerfortpflanzung
 \Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
 \label{gauss}
 \end{equation}
-\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
+\caption*{\small{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}}
 \end{formel}
 
 und die Standardabweichung des Mittelwerts

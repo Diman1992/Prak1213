@@ -178,11 +178,11 @@ entnommen. Die Fehler der Dichten $\rho_{kl/gr}$ ergeben sich aus \eqref{gauss} 
 
 \begin{align}
   \nonumber
-  \Delta \rho_{kl} &= \sqrt{\left(\frac{\partial \rho_{kl}}{\partial d_{kl}} \Delta d_{kl}\right)^2  + \left(\frac{\partial \rho_{kl} }{\partial m_{kl} } \Delta m_{kl}\right)^2 } = \rho_{kl} \sqrt{\left(-3\frac{\Delta d_{kl}}{cm}\right)^2+\left(\frac{\Delta m_{kl}}{g}\right)^2} \\
-  &= 0,020 \frac{g}{cm^3}\\
+  \Delta \rho_{kl} &= \sqrt{\left(\frac{\partial \rho_{kl}}{\partial d_{kl}} \Delta d_{kl}\right)^2  + \left(\frac{\partial \rho_{kl} }{\partial m_{kl} } \Delta m_{kl}\right)^2 } = \rho_{kl} \sqrt{\left(-3\frac{\Delta d_{kl}}{d}\right)^2+\left(\frac{\Delta m_{kl}}{m}\right)^2} \\
+  &= 0,014 \frac{g}{cm^3}\\
   \nonumber
-  \Delta \rho_{gr} &= \sqrt{\left(\frac{\partial \rho_{gr}}{\partial d_{gr}} \Delta d_{gr}\right)^2  + \left(\frac{\partial \rho_{gr} }{\partial m_{gr} } \Delta m_{gr}\right)^2 } = \rho_{gr} \sqrt{\left(-3\frac{\Delta d_{gr}}{cm}\right)^2+\left(\frac{\Delta m_{gr}}{g}\right)^2} \\
-  &= 0,364 \frac{g}{cm^3} \quad \text{mit} \quad\rho = \frac{m}{\frac16 \pi d^3}
+  \Delta \rho_{gr} &= \sqrt{\left(\frac{\partial \rho_{gr}}{\partial d_{gr}} \Delta d_{gr}\right)^2  + \left(\frac{\partial \rho_{gr} }{\partial m_{gr} } \Delta m_{gr}\right)^2 } = \rho_{gr} \sqrt{\left(-3\frac{\Delta d_{gr}}{d}\right)^2+\left(\frac{\Delta m_{gr}}{m}\right)^2} \\
+  &= 0,074 \frac{g}{cm^3} \quad \text{mit} \quad\rho = \frac{m}{\frac16 \pi d^3}
   \label{dichte}
 \end{align}
 
@@ -196,8 +196,8 @@ entnommen. Die Fehler der Dichten $\rho_{kl/gr}$ ergeben sich aus \eqref{gauss} 
   $m_{kl}$ & 4,4531 g & - \\
   $m_{gr}$ & 5,0 g & 0,1 g\\
 \hline
-  $\rho_{kl}$ & 3,308 $\frac{\text{g}}{\text{cm$^3$}}$& 0,020 $\frac{\text{g}}{\text{cm$^3$}}$ \\
-  $\rho_{gr}$ & 3,634 $\frac{\text{g}}{\text{cm$^3$}}$& 0,364 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{kl}$ & 3,308 $\frac{\text{g}}{\text{cm$^3$}}$& 0,014 $\frac{\text{g}}{\text{cm$^3$}}$ \\
+  $\rho_{gr}$ & 3,634 $\frac{\text{g}}{\text{cm$^3$}}$& 0,074 $\frac{\text{g}}{\text{cm$^3$}}$ \\
   $\rho_{Fl}$ & 0,998 $\frac{\text{g}}{\text{cm$^3$}}$& - \\
   \hline
 $K_{kl}$ & 0,07640 $\frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}$ & -
@@ -215,7 +215,7 @@ Aus den nun bekannten Größen ermittelt sich $\eta$ mit dem Fehler aus \eqref{g
 \begin{align}
 \nonumber
  \Delta \eta &= \sqrt{\left(\frac{\partial \eta}{\partial \rho_{kl}}\Delta \rho_{kl}\right)^2 + \left(\frac{\partial \eta}{\partial t} \bar s_{kl}\right)^2} = \eta \sqrt{\left(\frac{\Delta \rho_{kl}}{(\rho_{kl}-\rho_{Fl})}\right)^2 + \left(\frac{\bar s_{kl}}{t}\right)^2} \\
- &= 0,085 \text{mPas}
+ &= 0,015 \text{mPas}
 \end{align}
 
 Die gesuchte Apparaturkonstante $K_{gr}$ lässt sich nun errechnen durch Gleichsetzen:
@@ -230,38 +230,29 @@ Die gesuchte Apparaturkonstante $K_{gr}$ lässt sich nun errechnen durch Gleichs
 \Delta K_{gr} &= \sqrt{\left(\frac{\partial K_{gr}}{\partial \rho_{kl}}\Delta \rho_{kl} \right)^2 + \left(\frac{\partial K_{gr}}{\partial \rho_{gr}}\Delta \rho_{gr} \right)^2 + \left(\frac{\partial K_{gr}}{\partial t_{kl}} \bar s_{kl} \right)^2 + \left(\frac{\partial K_{gr}}{\partial t_{gr}} \bar s_{gr} \right)^2}\\
  \nonumber
  &= K_{gr} \sqrt{\left(\frac{\Delta \rho_{kl}}{(\rho_{kl}-\rho_{Fl})} \right)^2 + \left(-\frac{\Delta \rho_{gl}}{(\rho_{gl}-\rho_{Fl}} \right)^2 + \left(\frac{\bar s_{kl}}{t} \right)^2 + \left(\frac{\bar s_{gr}}{t} \right)^2}\\
- &= 0,00176 \, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
+ &= 0,00033 \, \frac{\text{mPa}\cdot\text{cm}^3}{\text{g}}
 \end{align}
-
-
-Um die Verwendung genannter Formeln zur Ermittlung der Viskosität zu rechtfertigen, muss die Reynoldszahl für diesen Versuch ermittelt und mit 
-der kritischen Reynoldszahl verglichen werden. Nach \eqref{rey} ergibt sich
-
-\begin{equation}
- Re = \frac{d_{kl}\cdot \rho_{Fl}}{\eta} \cdot \frac{x}{t_{kl}}=\frac{998\frac{\text{kg}}{\text{m}^3} \cdot 0,00828\frac{\text{m}}{\text{s}} \cdot 0,0137 \text{m}}{0,002313 \text{Pa}\cdot\text{s}} \approx 49 \ll 2000,
-\end{equation}
-
-weshalb man von einer laminaren Flüssigkeit sprechen darf und das Verwenden der Formeln legitim ist.
 
 \subsection{Anwendung der Andrade-Gleichung}
 Um die Koeffizienten A und B aus Gleichung \eqref{andrade} zu ermitteln, wird die Fallzeit zu verschiedenen Temperaturen gemessen.
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[H]
- \begin{tabular}{c|c|c|c|c|c|c}
-   T [K] & $\frac{1}{\text{T}}[\frac{1}{\text{K}}]$& $t_1$[s] & $t_2$[s] & $\bar t$[s] & $\Delta t$ & ln($\frac{\bar t}{t}$)\\	
+ \begin{tabular}{c|c|c|c|c}
+   T [K] & $\frac{1}{\text{T}}[\frac{1}{\text{K}}]$& $t_1$ [s] & $t_2$[s] & ln($\frac{\eta}{\text{mPas}}$)\\	
    \hline
-294&	0,00340&	81,16&	81,04&	81,10&	0,06&	4,396 \\
-299&	0,00334&	72,87&	72,92&	72,90&	0,02&	4,289\\
-302&	0,00331&	68,27&	68,41&	68,34&	0,07&	4,224\\
-305&	0,00328&	64,44&	64,15&	64,30&	0,14&	4,163\\
-308&	0,00325&	60,41&	60,69&	60,55&	0,14&	4,103\\
-311&	0,00321&	57,61&	57,55&	57,58&	0,03&	4,053\\
-314&	0,00318&	54,61&	54,04&	54,33&	0,29&	3,995\\
-317&	0,00315&	51,32&	51,83&	51,58&	0,25&	3,943\\
-320&	0,00312&	49,00&	49,24&	49,12&	0,12&	3,894\\
-323&	0,00309&	46,58&	46,24&	46,41&	0,17&	3,838\\
-326&	0,00307&	44,47&	44,80&	44,64&	0,17&	3,799
+294	&0,00340&	81,16&	81,04&	0,88 \\
+299&	0,00334&	72,87&	72,92&	0,78\\
+302&	0,00331&	68,27&	68,41&	0,71\\
+305&	0,00328	&64,44&	64,15&	0,65\\
+308&	0,00325	&60,41&	60,69&	0,59\\
+311&	0,00321&	57,61&	57,55&	0,54\\
+314&	0,00318&	54,61&	54,04&	0,48\\
+317&	0,00315&	51,32&	51,83&	0,43\\
+320&	0,00312&	49,00&	49,24&	0,38\\
+323&	0,00309&	46,58&	46,24&	0,32\\
+326&	0,00307&	44,47&	44,80&	0,29\\
+
  \end{tabular}
 \caption{Durch Temperaturerhöhung verringerte Fallzeit}
 \label{tabandrade}
@@ -273,19 +264,18 @@ die Koeffizienten bestimmt werden können:
 
 \begin{align*}
  \eta(T) &= A \exp \left(\frac{B}{T}\right) \\
- \ln \left[ \underbrace{\frac{K_{gr}(\rho_{gr}-\rho_{Fl})}{A}}_{=\exp \left(\frac1b\right)} \cdot \underbrace{t}_{=\exp(y)}  \right] &= \underbrace{\frac{B}{T}}_{=a\cdot x}\\
- y &= a\cdot x + b
+ \underbrace{\ln \left( \frac{\eta}{\text{mPas}} \right)}_{=y} &= \underbrace{\frac{B}{T}}_{=a\cdot x} +  \underbrace{\ln(A) }_{=b}
 \end{align*}
 
 \begin{equation}
-\text{mit } a = 1783,29\pm 24,4 \quad \text{und} \quad b = -5,18 \pm 0,08.\\
+\text{mit } a = 1783,92\pm 25,4 \quad \text{und} \quad b = -5,19 \pm 0,08.\\
 \end{equation}
 
 Zurücktransferiert erhält man wieder A und B zu
 
 \begin{align}
- A = \e^b &= 5,63 \cdot 10^{-3} \pm 1,6 \cdot 10^{-5}\\
- B = a &= 1783,29 \pm 24,4
+ A = \e^b &= 5,57 \cdot 10^{-3} \pm 4,46 \cdot 10^{-4}\\
+ B = a &= 1783,92 \pm 25,4
 \end{align}
 
 \begin{table}[H]
@@ -299,13 +289,13 @@ Zurücktransferiert erhält man wieder A und B zu
 
 
 \begin{figure}[H]
-\includegraphics[width=0.7\textwidth] {pics/Andrade.png}
+\includegraphics[width=0.7\textwidth] {pics/Andrade.pdf}
 \centering
 \caption{lineare Abhängigkeit von $\frac1T$ und ln($\frac{\eta}{\text{mPas}}$)}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\textwidth] {pics/Viskos.png}
+\includegraphics[width=0.7\textwidth] {pics/Viskos.pdf}
 \centering
 \caption{endgültige Andrade-Gleichung}
 \end{figure}
@@ -315,7 +305,7 @@ Im Vergleich zu Referenzwerten ({wissenschaft-technik-ethik.de von Dr.-Ing H. Gr
 stellt sich heraus, dass die ermittelte Viskosität von 
 
 \begin{align*}
- \eta = 2,131 \text{mPas} \pm 0,085 \text{mPas}
+ \eta = 2,131 \text{mPas} \pm 0,015 \text{mPas}
 \end{align*}
 
 um mehr als das doppelte abweicht. Da sie durch Gleichung \eqref{viskos} ermittelt wird, sind nur zwei Fehlerquellen möglich. Zum einen

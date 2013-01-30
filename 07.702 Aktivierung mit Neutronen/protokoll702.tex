@@ -13,7 +13,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Aktivierung durch langsame Neutronen\\				% Titel des Versuchs 
+\title{Versuch 702 - Aktivierung mit Neutronen\\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -62,7 +62,7 @@ Dimitrios Skodras\\			% Name Praktikumspartner B
 % ========================================
 
 	\section{Einleitung}				% Bei Bedarf
-Abgesehen vom Wasserstoffatom, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
+Abgesehen vom Wasserstoffatom $^1_1$H, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
 	\section{Theorie}
 	\subsection{Aktivierung}
 Dieses Verhalten kann für die Untersuchung des Zerfallsgesetztes genutzt werden.
@@ -135,7 +135,7 @@ Die Neutronen erreichen schließlich eine mittlere Geschwindigkeit von 2,2 $\fra
 	N(t)=N_0e^{-\lambda t}
 	\label{zerfall}
 \end{align}
-beschreibt die Anzahl der noch nicht zerfallenen Kerne eines radioaktiven Stoffes. Dabei ist $N_o$ die Anfangsstoffmenge und $\lambda$ die sog. Zerfallskonstante, die stoffspezifisch ist und angibt, wie schnell ein Stoff zerfällt. Da radioaktiver Zerfall zufällig stattfindet, kann man nur Aussagen über größere Stoffmengen machen und führt daher die Halbwertszeit ein, nach der von einem Stoff nur noch die Hälfte des ursprünglichen Materials vorhanden ist. Sie errechnet sich nach dem Ansatz
+beschreibt die Anzahl der noch nicht zerfallenen Kerne eines radioaktiven Stoffes. Dabei ist $N_0$ die Anfangsstoffmenge und $\lambda$ die sog. Zerfallskonstante, die stoffspezifisch ist und angibt, wie schnell ein Stoff zerfällt. Da radioaktiver Zerfall zufällig stattfindet, kann man nur Aussagen über größere Stoffmengen machen und führt daher die Halbwertszeit ein, nach der von einem Stoff nur noch die Hälfte des ursprünglichen Materials vorhanden ist. Sie errechnet sich nach dem Ansatz
 \begin{align}
 	\frac{1}{2}N_0=N_0e^{\lambda t_{\frac{1}{2}}}
 \end{align}
@@ -144,13 +144,13 @@ Umstellen nach $t_{\frac{1}{2}}$ ergibt dann die Halbwertszeit zu
 	t_{\frac{1}{2}}=\frac{\ln 2}{\lambda}
 	\label{halbwertszeit}
 \end{align}
-Da es unmöglich ist, die genaue Stoffmenge $N(t)$ zu messen, bildet man stattdessen die Differenz von \ref{zerfall} zu zwei beliebigen Zeitpunkten und erhält eine Gleichung, die von der Anzahl der zerfallenen Kerne $\Delta N(t)$ im Zeitraum $\Delta t$ abhängt
+Da es unmöglich ist, die genaue Stoffmenge $N(t)$ zu messen, bildet man stattdessen die Differenz von Gleichung \eqref{zerfall} zu zwei beliebigen Zeitpunkten und erhält eine Gleichung, die von der Anzahl der zerfallenen Kerne $\Delta N(t)$ im Zeitraum $\Delta t$ abhängt
 \begin{align}
 	\Delta N(t) &= N_0 e^{-\lambda t_1}-N_0 e^{-\lambda t_1+\Delta t} = N_0 (1-e^{-\lambda \Delta t}) e^{-\lambda t}\\
 	\ln (\Delta N(t)) &= \ln (N_0 (1-e^{-\lambda \Delta t})) -\lambda t.
 	\label{delta N}
 \end{align}
-Da $\ln (N_0 (1-e^{-\lambda \Delta t}))$ konstant ist, ist \ref{delta N} eine lineare Funktion, aus der die Zerfallskonstante $\lambda$ gut abgelesen werden kann.\\
+Da $\ln (N_0 (1-e^{-\lambda \Delta t}))$ konstant ist, ist \eqref{delta N} eine lineare Funktion, aus der die Zerfallskonstante $\lambda$ gut abgelesen werden kann.\\
 Einige Stoffe kommen in der Natur als Mischung zweier Isotope vor. Da beide parallel zerfallen, kann man auch nur die kombinierte Aktivität beider Isotope messen.
 Es ist aber dennoch möglich die Zerfallskonstanten von beiden bestimmen, wenn der eine Stoff im Vergleich zum anderen eine sehr kurze Halbwertszeit hat. In diesem Fall ist der erste Stoff nach einer gewissen Dauer praktisch nicht mehr in der Probe vorhanden und es wird nur noch die Aktivität des zweiten gemessen.
 Anschließend zieht man diesen Wert von der gemessenen Anfangsaktivität ab und erhält somit den Anteil, der vom ersten Stoff ausging.
@@ -161,7 +161,7 @@ Anschließend zieht man diesen Wert von der gemessenen Anfangsaktivität ab und 
 \end{figure}
 
 	\section{Durchführung}
-	\subsection{Apparatur}
+	\subsection{Aparatur}
 Für die Messungen wird ein Geigermüller-Zählrohr mit zwei separaten Zählern genutzt. Zusätzlich steckt es in einer Abschirmung aus Blei um die Nullrate zu minimieren.
 
 \begin{figure}[h]
@@ -173,7 +173,7 @@ Nach einer frei wählbaren Messzeit wechselt der Zählkanal, so dass der eben ge
 
 	\subsection{Versuch}
 Bei der Durchführung wurde zunächst die sog. Nullrate bestimmt. Dies ist die Grundradioaktivität, die ständig um uns herum herrscht. Da sie die Ergebnisse verfälschen würde, wird sie im Voraus über einen sehr langen Zeitraum gemessen und danach bei jeder Messung von dem Ergebnis abgezogen.
-Anschließend wurden eine Probe aus Indium und eine aus Rhodium aktiviert und über eine Dauer von 60 bzw 12 min ihre Aktivität gemessen.
+Anschließend wurden eine Probe aus Indium und eine aus Rhodium aktiviert und über eine Dauer von 60 bzw 8 min ihre Aktivität gemessen.
 
 \section{Auswertung}
 \subsection{Nulleffekt}
@@ -193,135 +193,147 @@ Der absolute Fehler $S_N$ für eine gemessene Rate $N$ ermittelt sich dadurch, d
 
 \subsection{Halbwertszeit für $^{116}_{49}$Indium}
 Um die Halbwertszeit zu bestimmen, werden die Impulse über 15 Perioden von je 240 Sekunden Dauer gemessen. Die vom
-Nulleffekt bereinigten Werte werden logarithmiert und gegen die Zeit $t$ aufgetragen. Hierdurch werden die Exponential-Abhängigkeiten linearisiert und man kann über die Steigung der Geraden die Zerfallskonstante $\lambda$ bestimmen. Mit ihr lässt sich
+Nulleffekt bereinigten Werte werden logarithmiert und gegen die Zeit $t$ aufgetragen. Hierdurch werden die Exponential-
+abhängigkeiten linearisiert und über die Steigung der Geraden die Zerfallskonstante $\lambda$ bestimmt. Mit ihr lässt sich
 über die Gleichung \eqref{halbwertszeit} die Halbwertszeit angeben. Der logarithmierte Fehler drückt sich dann so aus:
 
 \begin{equation}
- s_{\ln(N)^{\pm}} = \pm \left|\ln(N)-\ln(N\pm s_N)\right|
+ s_{\ln(N)^{\pm}} = \ln(N\pm s_N)-\ln(N)
 \end{equation}
 
 Hieraus ergibt sich folgende Tabelle
 
 \renewcommand{\arraystretch}{1.25}
 \begin{table}[h]
- \begin{tabular}{c|c|c|c|c|c|c}
- $i$ & $t$ & $N$ & $s_N$ & ln($N$) & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
+ \begin{tabular}{c|c|c|c|c|c|c|c}
+ $i$ & $t$ & $N$ & $N-N_0$ & ln(N) & $s_{N-N_0}$ & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
  \hline
- 1&	240&	2680&	47,35&	7,89&	0,0175&	-0,0178\\
-2&	480&	2476&	45,35&	7,81&	0,0181&	-0,0185\\
-3&	720&	2399&	44,57&	7,78&	0,0184&	-0,0188\\
-4&	960&	2284&	43,38&	7,73&	0,0188&	-0,0192\\
-5&	1200&	2179&	42,27&	7,69&	0,0192&	-0,0196\\
-6&	1440&	2095&	41,36&	7,65&	0,0195&	-0,0199\\
-7&	1680&	2027&	40,61&	7,61&	0,0198&	-0,0202\\
-8&	1920&	1826&	38,32&	7,51&	0,0208&	-0,0212\\
-9&	2160&	1858&	38,69&	7,53&	0,0206&	-0,0210\\
-10&	2400&	1743&	37,34&	7,46&	0,0212&	-0,0217\\
-11&	2640&	1670&	36,45&	7,42&	0,0216&	-0,0221\\
-12&	2880&	1579&	35,32&	7,36&	0,0221&	-0,0226\\
-13&	3120&	1570&	35,21&	7,36&	0,0222&	-0,0227\\
-14&	3360&	1395&	32,94&	7,24&	0,0233&	-0,0239\\
-15&	3600&	1400&	33,00&	7,24&	0,0233&	-0,0239\\
+1&	240&	2753&	2680&	7,89&	51,73&	0,0191&	-0,0195\\
+2&	480&	2549&	2476&	7,81&	49,72&	0,0199&	-0,0203\\
+3&	720&	2472&	2399&	7,78&	48,93&	0,0202&	-0,0206\\
+4&	960&	2357&	2284&	7,73&	47,75&	0,0207&	-0,0211\\
+5&	1200&	2252&	2179&	7,69&	46,63&	0,0212&	-0,0216\\
+6&	1440&	2168&	2095&	7,65&	45,72&	0,0216&	-0,0221\\
+7&	1680&	2100&	2027&	7,61&	44,97&	0,0219&	-0,0224\\
+8&	1920&	1899&	1826&	7,51&	42,68&	0,0231&	-0,0237\\
+9&	2160&	1931&	1858&	7,53&	43,05&	0,0229&	-0,0234\\
+10&	2400&	1816&	1743&	7,46&	41,70&	0,0236&	-0,0242\\
+11&	2640&	1743&	1670&	7,42&	40,81&	0,0241&	-0,0247\\
+12&	2880&	1652&	1579&	7,36&	39,68&	0,0248&	-0,0255\\
+13&	3120&	1643&	1570&	7,36&	39,57&	0,0249&	-0,0255\\
+14&	3360&	1468&	1395&	7,24&	37,29&	0,0264&	-0,0271\\
+15&	3600&	1473&	1400&	7,24&	37,36&	0,0263&	-0,0270\\
 \end{tabular}
-\caption{Wertetabelle für $\ce{^{116}_{49}In}$}
+\caption{Wertetabelle für $^{116}_{49}$In}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
 Aus linearer Ausgleichsrechnung mit Gnuplot ergibt sich ein Wert für die Zerfallskonstante 
 
 \begin{align}
-\lambda_{\text{In}} = 1,905 \cdot 10^{-4} \pm 5,218 \cdot 10^{-6} \frac{1}{\text{s}}.
+\lambda_{\text{In}} = (1,908 \cdot 10^{-4} \pm 5,379 \cdot 10^{-6}) \frac{1}{\text{s}}.
 \end{align}
 
 Somit ist die Halbwertszeit für $^{116}_{49}$Indium
 
 \begin{align}
- t_{\frac12} = 3638,57 \pm 99,74 \text{s}.
+ t_{\frac12} = (3632,85 \pm 105,38) \text{s}.
  \label{in}
 \end{align}
 
 \begin{figure}[h]
-	\includegraphics[width=1\textwidth]{pics/indium.png}
-	\caption{Zerfall von Indium auf halblogarithmischer Skala}
+	\includegraphics{pics/Indium.pdf}
+	\caption{Zerfall von Indium - Zeit gegen ln(N-N$_0$)}
 \end{figure}
 
-\subsection{Halbwertszeit für $\ce{^{104}_{45}Rhodium}$}
-Im Gegensatz zu Indium, zerfällt das betrachtete Rhodiumisotop wie in \eqref{Rhodium} formuliert in zwei Zerfallsreihen.
+\subsection{Halbwertszeit für $^{104}_{45}$Rhodium}
+Im Gegensatz zu Indium zerfällt das betrachtete Rhodiumisotop wie in \eqref{Rhodium} formuliert in zwei Zerfallsreihen.
 Am Ende von Abschnitt \ref{zerfallsgesetz} wird die Methode geschildert, welche zur Ermittlung der Halbwertszeiten der beiden
-Rhodiumisotope $\ce{^{104(i)}_{45}Rh}$ und$\ce{^{104}_{45}Rh}$ angewandt wird.
+Rhodiumisotope $^{104\text{i}}_{45}$Rh und$^{104}_{45}$Rh angewandt wird.
 
-\renewcommand{\arraystretch}{1.0}
+\renewcommand{\arraystretch}{1}
 \begin{table}[H]
- \begin{tabular}{c|c|c|c|c|c|c}
- $i$ & $t$ & $N$ & $s_N$ & ln($N$) & $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
+ \begin{tabular}{c|c|c|c|c|c|c|c}
+ $i$ & $t$ & $N$ & $N-N_0$ & ln($N$) & $s_{N-N_0}$& $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
  \hline
-1&	12&	494&	20,28&	6,20&	0,0402&	-0,0419\\
-2&	24&	450&	19,27&	6,11&	0,0419&	-0,0437\\
-3&	36&	364&	17,14&	5,90&	0,0460&	-0,0482\\
-4&	48&	341&	16,53&	5,83&	0,0473&	-0,0496\\
-5&	60&	249&	13,84&	5,52&	0,0540&	-0,0571\\
-6&	72&	218&	12,83&	5,39&	0,0571&	-0,0605\\
-7&	84&	180&	11,48&	5,19&	0,0617&	-0,0658\\
-8&	96&	125&	9,25&	4,83&	0,0712&	-0,0766\\
-9&	108&	127&	9,33&	4,85&	0,0707&	-0,0761\\
-10&	120&	107&	8,41&	4,68&	0,0754&	-0,0816\\
+1. Teil\\
+ \hline
+1&	12&	498&	494&	6,20&	22,23&	0,0440&	-0,0460\\
+2&	24&	454&	450&	6,11&	21,22&	0,0460&	-0,0483\\
+3&	36&	368&	364&	5,90&	19,09&	0,0511&	-0,0538\\
+4&	48&	345&	341&	5,83&	18,48&	0,0527&	-0,0556\\
+5&	60&	253&	249&	5,52&	15,79&	0,0614&	-0,0654\\
+6&	72&	222&	218&	5,39&	14,78&	0,0655&	-0,0701\\
+7&	84&	184&	180&	5,19&	13,43&	0,0718&	-0,0774\\
+8&	96&	129&	125&	4,83&	11,20&	0,0856&	-0,0936\\
+9&	108&	131&	127&	4,85&	11,29&	0,0849&	-0,0928\\
+10&	120&	111&	107&	4,68&	10,36&	0,0921&	-0,1015\\
 \hline
-11&	132&	92&	7,66&	4,53&	0,0797&	-0,0866\\
-12&	144&	87&	7,40&	4,47&	0,0813&	-0,0885\\
-13&	156&	81&	7,07&	4,40&	0,0833&	-0,0909\\
-14&	168&	74&	6,67&	4,31&	0,0859&	-0,0940\\
-15&	180&	58&	5,69&	4,07&	0,0930&	-0,1026\\
-16&	192&	48&	5,00&	3,88&	0,0985&	-0,1092\\
-17&	204&	62&	5,95&	4,13&	0,0911&	-0,1002\\
-18&	216&	59&	5,75&	4,08&	0,0925&	-0,1020\\
-19&	228&	37&	4,16&	3,62&	0,1056&	-0,1181\\
-20&	240&	44&	4,71&	3,79&	0,1009&	-0,1123\\
-21&	252&	40&	4,40&	3,70&	0,1036&	-0,1155\\
-22&	264&	29&	3,47&	3,38&	0,1117&	-0,1257\\
-23&	276&	36&	4,08&	3,59&	0,1064&	-0,1190\\
-24&	288&	23&	2,88&	3,15&	0,1164&	-0,1317\\
-25&	300&	19&	2,45&	2,96&	0,1192&	-0,1353\\
-26&	312&	23&	2,88&	3,15&	0,1164&	-0,1317\\
+2. Teil\\
 \hline
-27&	324&	13&	1,70&	2,59&	0,1201&	-0,1365\\
-28&	336&	19&	2,45&	2,96&	0,1192&	-0,1353\\
-29&	348&	20&	2,56&	3,01&	0,1185&	-0,1345\\
-30&	360&	27&	3,28&	3,31&	0,1133&	-0,1277\\
-31&	372&	20&	2,56&	3,01&	0,1185&	-0,1345\\
-32&	384&	20&	2,56&	3,01&	0,1185&	-0,1345\\
-33&	396&	25&	3,08&	3,23&	0,1148&	-0,1298\\
-34&	408&	18&	2,33&	2,91&	0,1197&	-0,1360\\
-35&	420&	21&	2,67&	3,06&	0,1179&	-0,1336\\
-36&	432&	16&	2,09&	2,79&	0,1205&	-0,1370\\
-37&	444&	21&	2,67&	3,06&	0,1179&	-0,1336\\
-38&	456&	14&	1,84&	2,66&	0,1205&	-0,1371\\
-39&	468&	14&	1,84&	2,66&	0,1205&	-0,1371\\
-40&	480&	5&	0,36&	1,68&	0,0656&	-0,0702\\
+11&	132&	96&	92&	4,53&	9,61&	0,0990&	-0,1099\\
+12&	144&	91&	87&	4,47&	9,35&	0,1016&	-0,1132\\
+13&	156&	85&	81&	4,40&	9,02&	0,1051&	-0,1175\\
+14&	168&	78&	74&	4,31&	8,62&	0,1097&	-0,1233\\
+15&	180&	62&	58&	4,07&	7,64&	0,1230&	-0,1403\\
+16&	192&	52&	48&	3,88&	6,95&	0,1344&	-0,1553\\
+17&	204&	66&	62&	4,13&	7,90&	0,1192&	-0,1354\\
+18&	216&	63&	59&	4,08&	7,70&	0,1220&	-0,1390\\
+19&	228&	41&	37&	3,62&	6,11&	0,1515&	-0,1787\\
+20&	240&	48&	44&	3,79&	6,66&	0,1399&	-0,1627\\
+\hline
+3. Teil\\
+\hline
+21&	252&	44&	40&	3,70&	6,35&	0,1462&	-0,1713\\
+22&	264&	33&	29&	3,38&	5,42&	0,1694&	-0,2041\\
+23&	276&	40&	36&	3,59&	6,03&	0,1535&	-0,1814\\
+24&	288&	27&	23&	3,15&	4,83&	0,1881&	-0,2319\\
+25&	300&	23&	19&	2,96&	4,40&	0,2048&	-0,2579\\
+26&	312&	27&	23&	3,15&	4,83&	0,1881&	-0,2319\\
+27&	324&	17&	13&	2,59&	3,65&	0,2419&	-0,3198\\
+28&	336&	23&	19&	2,96&	4,40&	0,2048&	-0,2579\\
+29&	348&	24&	20&	3,01&	4,51&	0,2002&	-0,2506\\
+30&	360&	31&	27&	3,31&	5,23&	0,1750&	-0,2122\\
+31&	372&	24&	20&	3,01&	4,51&	0,2002&	-0,2506\\
+32&	384&	24&	20&	3,01&	4,51&	0,2002&	-0,2506\\
+33&	396&	29&	25&	3,23&	5,04&	0,1812&	-0,2214\\
+34&	408&	22&	18&	2,91&	4,28&	0,2098&	-0,2658\\
+35&	420&	25&	21&	3,06&	4,62&	0,1959&	-0,2439\\
+36&	432&	20&	16&	2,79&	4,04&	0,2210&	-0,2841\\
+\hline
+4. Teil \\
+\hline
+37&	444&	25&	21&	3,06&	4,62&	0,1959&	-0,2439\\
+38&	456&	18&	14&	2,66&	3,79&	0,2343&	-0,3065\\
+39&	468&	18&	14&	2,66&	3,79&	0,2343&	-0,3065\\
+40&	480&	9&	5&	1,68&	2,31&	0,3593&	-0,5661\\
+
 \end{tabular}
-\caption{Wertetabelle für $\ce{^{104(i)}_{45}Rh}$ - Die dicken Trennlinien zeigen an, ab wann die Messwerte für die Berechnung von Isotop 1 bzw 2 herangezogen wurden.}
+\caption{Wertetabelle für $^{104(\text{i})}_{45}$Rh}
+\label{tabrhod}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
 Somit ergeben sich für die Rhodiumisotope die Zerfallskonstanten zu
 
 \begin{align}
-\lambda_{^{104\text{i}}\text{Rh}} = 2,665\cdot 10^{-3} \pm 1,342 \cdot 10^{-5} \frac{1}{\text{s}}\\
-\lambda_{^{104}\text{Rh}} = 1,449 \cdot 10^{-2} \pm  6,72 \cdot 10^{-4} \frac{1}{\text{s}}.
+\lambda_{^{104\text{i}}\text{Rh}} = 2,395\cdot 10^{-3} \pm 9,9 \cdot 10^{-4} \frac{1}{\text{s}}\\
+\lambda_{^{104}\text{Rh}} = 1,889 \cdot 10^{-2} \pm  9,5 \cdot 10^{-4} \frac{1}{\text{s}}.
 \end{align}
 
 Die jeweiligen Halbwertszeiten sind nun
 
 \begin{equation}
-   t_{\frac12,\text{104i}} = 260,10 \pm 1,31 \text{s}\\
+   t_{\frac12,\text{104i}} = 289,41 \pm 1,98 \text{s}\\
 \label{rh1}
 \end{equation}
 \begin{equation}
- t_{\frac12,\text{104}} = 47,94 \pm 2,22 \text{s}.
+ t_{\frac12,\text{104}} = 36,69 \pm 1,85 \text{s}.
  \label{rh2}
 \end{equation}
 
 \begin{figure}[h]
-	\includegraphics[width=1\textwidth]{pics/rhodium.png}
+	\includegraphics{pics/Rhodium.pdf}
 	\caption{Zerfall beider Rhodiumisotope auf halblogarithmischer Skala}
 \end{figure}
 
@@ -330,23 +342,21 @@ Die jeweiligen Halbwertszeiten sind nun
 \subsection{Indium}
 Die aus dem Experiment ermittelte Halbwertszeit von $t_{\frac12,\text{In}} = 3638,57 \pm 99,74 \text{s}$ aus \eqref{in} liegt mit 11,7 \% über dem
 Literaturwert von 54,29 min (= 3257,40 s)\footnote[1]{Firestone, R.B. (2000), Isotopes of Indium URL: \href{http://ie.lbl.gov/education/parent/In\_iso.htm}{http://ie.lbl.gov/education/parent/In\_iso.htm}}.
-Der gemessene Wert liegt in der richtigen Größenordnung und die Abweichung ist nicht zu groß. Wichtig zu erwähnen ist, dass es
+Der gemessene Wert liegt in der richtigen Größenordnung und die Abweichung ist nicht überaus groß. Wichtig zu erwähnen ist, dass es
 sich bei dem referenzierten Wert um eine anders aufgeführte, spezielle Zerfallsreihe des $^{116}$Indium-Isotops handelt. So wäre hier
-das $\ce{^{116m^1}In}$-Isotop herzunehmen, was aber dadurch gerechtfertigt werden kann, dass das Isotop ausschließlich im Zuge des $\beta^-$-Zerfall
-zerfällt, so wie im Experiment. Grundsätzlich problematisch bei der Messung ist, dass der radioaktive Zerfall starken statistischen Schwankungen unterworfen ist. In diesem Experiment
-ist die Nullrate ungewöhnlich hoch, was auf mögliche Rückstände von Proben vorangehender Versuche oder auf eine zu hoch
-eingestellte Spannung am Geiger-Müller-Zählrohr zurückzuführen ist. Das hat speziell Impulsmessungen gegen Ende der Messreihe
-stark beeinflusst und somit zum Fehler beigetragen. So sind einige Werte höher als ihre Vorangehenden, was nicht durch den
-Zerfall der Indiumkerne allein erklärbar wäre.
+das $^{116m1}$In-Isotop herzunehmen, was aber dadurch gerechtfertigt werden kann, dass das Isotop ausschließlich im Zuge des $\beta^-$-Zerfall
+zerfällt, so wie im Experiment. Grundsätzlich problematisch bei der Messung ist, dass der radioaktive Zerfall starken statistischen Schwankungen unterworfen ist.
+Das hat speziell Impulsmessungen gegen Ende der Messreihestark beeinflusst und somit zum Fehler beigetragen. So sind einige Werte höher 
+als ihre Vorangehenden, was nicht durch den Zerfall der Indiumkerne allein erklärbar wäre.
 
 \subsection{Rhodium}
-Zusätzlich zu den Einflüssen im Falle der Indiumprobe kommt bei Rhodium erschwerend hinzu, dass das kurzlebige Isotop ab einer gewissen
+Zusätzlich zu den Einflüssen im Falle der Indiumprobe kommt bei Rhodium beschwerend hinzu, dass das kurzlebige Isotop ab einer gewissen
 Zeit zwar als nicht mehr vorhanden angesehen wird, es aber möglicherweise immernoch vorhanden ist, sowie die Tatsache, dass jener Zeitpunkten
-willkürlich durch die Versuchsdurchführenden festgelegt werden muss. So werden in der Auswertung zwei Messbereiche aus der Berechnung
-herausgelassen, um die Abweichungen zu den Referenzwerten\footnote[2]{Firestone, R.B. (2000), Isotopes of Rhodium URL: \href{http://ie.lbl.gov/education/parent/Rh\_iso.htm}{http://ie.lbl.gov/education/parent/Rh\_iso.htm}}. gering zu halten. Mit der gemessenen Halbwertszeit $t_{\frac12,\text{104i}} = 260,10 \pm 1,31 \text{s}$ aus \eqref{rh1}
-liegt der Fehler bei 0,12 \%, sowie bei $t_{\frac12,\text{104}} = 47,94 \pm 2,22 \text{s}.$ aus \eqref{rh2} bei 13,3 \%. Der geringe Fehler
-bei Rh$_{104\text{i}}$ kommt durch den entsprechend gut gewählten Wertebereich (der 3. Abschnitt in Tabelle (2), der 
-in die Berechnung aufgenommen wurde.
+willkürlich durch die Versuchsdurchführenden festgelegt werden muss. So werden in der Auswertung zwei Messbereiche (2.Teil und 4.Teil aus Tabelle \ref{tabrhod}) aus der Berechnung
+herausgelassen, da im mittleren Teil, wo sich die Graphen annähern, eine Zuordnung der Aktivität zu den Isotopen nicht möglich ist, was
+aber eine Voraussetzung nach Abschnitt \ref{zerfallsgesetz} zur Halbwertszeitbestimmung ist und im letzten Teil der Nulleffekt die Messung
+dominiert. Mit der gemessenen Halbwertszeit $t_{\frac12,\text{104i}} = 289,41 \pm 1,98 \text{s}$ aus \eqref{rh1}
+liegt der Fehler bei 10,0 \%, sowie bei $t_{\frac12,\text{104}} = 36,69 \pm 1,85 \text{s}.$ aus \eqref{rh2} bei 13,3 \% \footnote[2]{Firestone, R.B. (2000), Isotopes of Rhodium URL: \href{http://ie.lbl.gov/education/parent/Rh\_iso.htm}{http://ie.lbl.gov/education/parent/Rh\_iso.htm}} . 
 
 % ========================================
 %	Literaturverzeichnis

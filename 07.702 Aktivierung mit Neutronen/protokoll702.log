@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.23)  26 JAN 2013 21:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.23)  30 JAN 2013 15:55
 entering extended mode
  %&-line parsing enabled.
 **protokoll702.tex
@@ -973,101 +973,51 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 194.
 
-[8] <pics/indium.png, id=165, 1005.7575pt x 700.6175pt>
-File: pics/indium.png Graphic file (type png)
- <use pics/indium.png>
+[8]
+
+pdfTeX warning: /usr/bin/pdflatex (file ./pics/Indium.pdf): PDF inclusion: foun
+d PDF version <1.5>, but at most version <1.4> allowed
+<pics/Indium.pdf, id=165, 361.35pt x 216.81pt>
+File: pics/Indium.pdf Graphic file (type pdf)
+ <use pics/Indium.pdf>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mhchem@protect' on input line 248.
+(hyperref)                removing `math shift' on input line 249.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 248.
+(hyperref)                removing `superscript' on input line 249.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mhchem@tmp' on input line 248.
+(hyperref)                removing `subscript' on input line 249.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 248.
+(hyperref)                removing `math shift' on input line 249.
+
+[9 <./pics/Indium.pdf>]
+Overfull \vbox (45.51036pt too high) has occurred while \output is active []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mhchem@option@alwaystextmode' on input lin
-e 248.
+[10]
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tok@mhchem@ce@iii' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mhchem@tmp' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mhchem@ce@iii@tmp@i' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mhchem@ce@iii@tmp@ii' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 248.
-
-[9 <./pics/indium.png>]
-Overfull \vbox (2.71043pt too high) has occurred while \output is active []
-
-
-[10] <pics/rhodium.png, id=181, 1047.915pt x 721.69624pt>
-File: pics/rhodium.png Graphic file (type png)
-
-<use pics/rhodium.png>
+pdfTeX warning: /usr/bin/pdflatex (file ./pics/Rhodium.pdf): PDF inclusion: fou
+nd PDF version <1.5>, but at most version <1.4> allowed
+<pics/Rhodium.pdf, id=189, 361.35pt x 216.81pt>
+File: pics/Rhodium.pdf Graphic file (type pdf)
+ <use pics/Rhodium.pdf>
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 332.
- [11 <./pics/rhodium.png>] [12] (./protokoll702.aux) ) 
+(Font)              <5> on input line 344.
+ [11 <./pics/Rhodium.pdf>] [12] (./protokoll702.aux) ) 
 Here is how much of TeX's memory you used:
- 9518 strings out of 493848
- 137827 string characters out of 1152823
- 262100 words of memory out of 3000000
- 12461 multiletter control sequences out of 15000+50000
- 44956 words of font info for 107 fonts, out of 3000000 for 9000
+ 9517 strings out of 493848
+ 137808 string characters out of 1152823
+ 265100 words of memory out of 3000000
+ 12460 multiletter control sequences out of 15000+50000
+ 42238 words of font info for 105 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 52i,30n,72p,678b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,30n,58p,678b,383s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive
 /fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/am
@@ -1080,9 +1030,9 @@ c/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.
 pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on protokoll702.pdf (12 pages, 315224 bytes).
+Output written on protokoll702.pdf (12 pages, 304476 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
+ 281 PDF objects out of 1000 (max. 8388607)
  63 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

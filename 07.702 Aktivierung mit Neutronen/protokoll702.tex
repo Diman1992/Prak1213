@@ -62,7 +62,7 @@ Dimitrios Skodras\\			% Name Praktikumspartner B
 % ========================================
 
 	\section{Einleitung}				% Bei Bedarf
-Abgesehen vom Wasserstoffatom $^1_1$H, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
+Abgesehen vom häufigsten Wasserstoffisotop \ce{^1_1H}, bestehen Atomkerne aus Protonen und Neutronen. Damit der Kern jedoch trotz der Coulombkräfte stabil bleibt, muss ein gewisses Verhältnis zwischen den Anzahlen der jeweiligen Teilchen gewahrt werden. Ändert es sich über einen bestimmten Wert hinaus, so wird der Kern instabil und zerfällt nach einer gewissen Zeit in einem oder mehreren Schritten, bis er wieder einen stabilen Zustand erreicht.
 	\section{Theorie}
 	\subsection{Aktivierung}
 Dieses Verhalten kann für die Untersuchung des Zerfallsgesetztes genutzt werden.
@@ -109,7 +109,7 @@ eingeführt. Dieser beschreibt die Querschnittsfläche, die das Atom haben müss
 	\lambda=\frac{\hbar}{m_n v}.
 	\label{broglie}
 \end{align}
-Wegen des Welle-Teilchen-Dualismus kann jedes Teilchen auch als Welle mit einer Wellenlänge nach \ref{broglie} betrachtet werden. Solange $v_n$ so groß ist, dass $\lambda \ll R$ ({\small R= Kerndurchmesser}) ist, überwiegt der Teilchencharakter der Neutronen und die Trefferwahrscheinlichkeit kann geometrisch errechnet werden. Wird jedoch $\lambda \geq R$, so tritt der Wellencharakter in den Vordergrund und am Atomkern treten Interferenzeffekte auf. Nach Breit und Wigner verhält sich der Wirkungsquerschnitt in Abhängigkeit von der Energie des Neutrons wie folgt:
+Wegen des Welle-Teilchen-Dualismus kann jedes Teilchen auch als Welle mit einer Wellenlänge nach Gleichung \eqref{broglie} betrachtet werden. Solange $v_n$ so groß ist, dass $\lambda \ll R$ ({\small R= Kerndurchmesser}) ist, überwiegt der Teilchencharakter der Neutronen und die Trefferwahrscheinlichkeit kann geometrisch errechnet werden. Wird jedoch $\lambda \geq R$, so tritt der Wellencharakter in den Vordergrund und am Atomkern treten Interferenzeffekte auf. Nach Breit und Wigner verhält sich der Wirkungsquerschnitt in Abhängigkeit von der Energie des Neutrons wie folgt:
 \begin{align}
 	\sigma (E) = \sigma_0 \sqrt{\frac{{R_r}_i}{E}} \frac{\tilde c}{(E-{E_r}_i)^2 	+ \tilde c}
 \end{align}
@@ -150,7 +150,7 @@ Da es unmöglich ist, die genaue Stoffmenge $N(t)$ zu messen, bildet man stattde
 	\ln (\Delta N(t)) &= \ln (N_0 (1-e^{-\lambda \Delta t})) -\lambda t.
 	\label{delta N}
 \end{align}
-Da $\ln (N_0 (1-e^{-\lambda \Delta t}))$ konstant ist, ist \eqref{delta N} eine lineare Funktion, aus der die Zerfallskonstante $\lambda$ gut abgelesen werden kann.\\
+Da $\ln (N_0 (1-e^{-\lambda \Delta t}))$ konstant ist, ist Gleichung \eqref{delta N} eine lineare Funktion, aus der die Zerfallskonstante $\lambda$ gut abgelesen werden kann.\\
 Einige Stoffe kommen in der Natur als Mischung zweier Isotope vor. Da beide parallel zerfallen, kann man auch nur die kombinierte Aktivität beider Isotope messen.
 Es ist aber dennoch möglich die Zerfallskonstanten von beiden bestimmen, wenn der eine Stoff im Vergleich zum anderen eine sehr kurze Halbwertszeit hat. In diesem Fall ist der erste Stoff nach einer gewissen Dauer praktisch nicht mehr in der Probe vorhanden und es wird nur noch die Aktivität des zweiten gemessen.
 Anschließend zieht man diesen Wert von der gemessenen Anfangsaktivität ab und erhält somit den Anteil, der vom ersten Stoff ausging.
@@ -242,7 +242,7 @@ Somit ist die Halbwertszeit für $^{116}_{49}$Indium
 \end{align}
 
 \begin{figure}[h]
-	\includegraphics{pics/Indium.pdf}
+	\includegraphics[width=0.8\textwidth]{pics/indium.png}
 	\caption{Zerfall von Indium - Zeit gegen ln(N-N$_0$)}
 \end{figure}
 
@@ -251,7 +251,7 @@ Im Gegensatz zu Indium zerfällt das betrachtete Rhodiumisotop wie in \eqref{Rho
 Am Ende von Abschnitt \ref{zerfallsgesetz} wird die Methode geschildert, welche zur Ermittlung der Halbwertszeiten der beiden
 Rhodiumisotope $^{104\text{i}}_{45}$Rh und$^{104}_{45}$Rh angewandt wird.
 
-\renewcommand{\arraystretch}{1}
+\renewcommand{\arraystretch}{0.97}
 \begin{table}[H]
  \begin{tabular}{c|c|c|c|c|c|c|c}
  $i$ & $t$ & $N$ & $N-N_0$ & ln($N$) & $s_{N-N_0}$& $s_{\ln(N)^+}$ & $s_{\ln(N)^-}$ \\
@@ -333,7 +333,7 @@ Die jeweiligen Halbwertszeiten sind nun
 \end{equation}
 
 \begin{figure}[h]
-	\includegraphics{pics/Rhodium.pdf}
+	\includegraphics[width=0.8\textwidth]{pics/rhodium.png}
 	\caption{Zerfall beider Rhodiumisotope auf halblogarithmischer Skala}
 \end{figure}
 

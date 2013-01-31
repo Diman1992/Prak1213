@@ -5,5 +5,6 @@
 *.log
 *.fot
 *.gz
-*~
+*~*
 *.pdf
+!Anleitungen/*.pdf

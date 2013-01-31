@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.20)  31 JAN 2013 10:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.20)  31 JAN 2013 13:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,11 +1253,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 194.
 
-[8] <pics/indium.png, id=167, 1005.7575pt x 700.6175pt>
-File: pics/indium.png Graphic file (type png)
- <use pics/indium.png>
-Package pdftex.def Info: pics/indium.png used on input line 245.
-(pdftex.def)             Requested size: 334.60571pt x 233.08601pt.
+[8] <pics/Indium.pdf, id=167, 361.35pt x 216.81pt>
+File: pics/Indium.pdf Graphic file (type pdf)
+ <use pics/Indium.pdf>
+Package pdftex.def Info: pics/Indium.pdf used on input line 245.
+(pdftex.def)             Requested size: 334.60571pt x 200.76445pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1275,19 +1275,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 249.
 
-[9 <./pics/indium.png>]
+[9 <./pics/Indium.pdf>]
 Overfull \vbox (27.27255pt too high) has occurred while \output is active []
 
 
-[10] <pics/rhodium.png, id=183, 1047.915pt x 721.69624pt>
-File: pics/rhodium.png Graphic file (type png)
-
-<use pics/rhodium.png>
-Package pdftex.def Info: pics/rhodium.png used on input line 336.
-(pdftex.def)             Requested size: 334.60571pt x 230.44095pt.
+[10] <pics/Rhodium.pdf, id=191, 361.35pt x 216.81pt>
+File: pics/Rhodium.pdf Graphic file (type pdf)
+ <use pics/Rhodium.pdf>
+Package pdftex.def Info: pics/Rhodium.pdf used on input line 336.
+(pdftex.def)             Requested size: 334.60571pt x 200.76445pt.
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <5> on input line 344.
- [11 <./pics/rhodium.png>]
+
+[11 <./pics/Rhodium.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
  [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
@@ -1318,10 +1318,10 @@ nts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on protokoll702.pdf (12 pages, 289096 bytes).
+Output written on protokoll702.pdf (12 pages, 276611 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
+ 285 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
  63 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

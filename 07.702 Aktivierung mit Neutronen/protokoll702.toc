@@ -12,6 +12,6 @@
 \contentsline {subsection}{\numberline {4.1}Nulleffekt}{7}{subsection.30}
 \contentsline {subsection}{\numberline {4.2}Halbwertszeit f\IeC {\"u}r $^{116}_{49}$Indium}{8}{subsection.33}
 \contentsline {subsection}{\numberline {4.3}Halbwertszeit f\IeC {\"u}r $^{104}_{45}$Rhodium}{9}{subsection.39}
-\contentsline {section}{\numberline {5}Diskussion}{11}{section.46}
-\contentsline {subsection}{\numberline {5.1}Indium}{11}{subsection.47}
-\contentsline {subsection}{\numberline {5.2}Rhodium}{12}{subsection.49}
+\contentsline {section}{\numberline {5}Diskussion}{12}{section.49}
+\contentsline {subsection}{\numberline {5.1}Indium}{12}{subsection.50}
+\contentsline {subsection}{\numberline {5.2}Rhodium}{12}{subsection.52}

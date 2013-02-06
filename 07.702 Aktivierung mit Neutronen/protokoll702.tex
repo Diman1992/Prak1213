@@ -281,10 +281,10 @@ Rhodiumisotope $^{104\text{i}}_{45}$Rh und$^{104}_{45}$Rh angewandt wird.
 18&	216&	63&	59&	4,08&	7,70&	0,1220&	-0,1390\\
 19&	228&	41&	37&	3,62&	6,11&	0,1515&	-0,1787\\
 20&	240&	48&	44&	3,79&	6,66&	0,1399&	-0,1627\\
+21&	252&	44&	40&	3,70&	6,35&	0,1462&	-0,1713\\
 \hline
 3. Teil\\
 \hline
-21&	252&	44&	40&	3,70&	6,35&	0,1462&	-0,1713\\
 22&	264&	33&	29&	3,38&	5,42&	0,1694&	-0,2041\\
 23&	276&	40&	36&	3,59&	6,03&	0,1535&	-0,1814\\
 24&	288&	27&	23&	3,15&	4,83&	0,1881&	-0,2319\\
@@ -298,11 +298,11 @@ Rhodiumisotope $^{104\text{i}}_{45}$Rh und$^{104}_{45}$Rh angewandt wird.
 32&	384&	24&	20&	3,01&	4,51&	0,2002&	-0,2506\\
 33&	396&	29&	25&	3,23&	5,04&	0,1812&	-0,2214\\
 34&	408&	22&	18&	2,91&	4,28&	0,2098&	-0,2658\\
-35&	420&	25&	21&	3,06&	4,62&	0,1959&	-0,2439\\
-36&	432&	20&	16&	2,79&	4,04&	0,2210&	-0,2841\\
 \hline
 4. Teil \\
 \hline
+35&	420&	25&	21&	3,06&	4,62&	0,1959&	-0,2439\\
+36&	432&	20&	16&	2,79&	4,04&	0,2210&	-0,2841\\
 37&	444&	25&	21&	3,06&	4,62&	0,1959&	-0,2439\\
 38&	456&	18&	14&	2,66&	3,79&	0,2343&	-0,3065\\
 39&	468&	18&	14&	2,66&	3,79&	0,2343&	-0,3065\\
@@ -314,23 +314,63 @@ Rhodiumisotope $^{104\text{i}}_{45}$Rh und$^{104}_{45}$Rh angewandt wird.
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Somit ergeben sich für die Rhodiumisotope die Zerfallskonstanten zu
+Der Zeitpunkt $t^* = 252$ s bedeutet, dass der Einfluss des kurzlebigen Rhodiumisotops vernachlässigbar ist. Die Daten aus Teil 3 der 
+Tabelle \ref{tabrhod} werden ensprechend der Geradengleichung $y = a\cdot x + b)$ zur Errechnung der Zerfallskontante $\lambda_{^{104\text{i}}\text{Rh}}$ des langlebigen Isotops
+via GNUplot gefittet. 
 
 \begin{align}
-\lambda_{^{104\text{i}}\text{Rh}} = 2,395\cdot 10^{-3} \pm 9,9 \cdot 10^{-4} \frac{1}{\text{s}}\\
-\lambda_{^{104}\text{Rh}} = 1,889 \cdot 10^{-2} \pm  9,5 \cdot 10^{-4} \frac{1}{\text{s}}.
+a = \lambda_{^{104\text{i}}\text{Rh}} = (1,977\cdot 10^{-3} \pm 1,49 \cdot 10^{-3}) \frac{1}{\text{s}}\\
+b = \ln\left[N_{0_l}\left(1-\e^{-\lambda_{^{104\text{i}}\text{Rh}}\,t}\right)\right] = 3,76 \pm 0,5
 \end{align}
 
-Die jeweiligen Halbwertszeiten sind nun
+Das führt zu einer Halbwertszeit nach \eqref{halbwertszeit} von
 
 \begin{equation}
-   t_{\frac12,\text{104i}} = 289,41 \pm 1,98 \text{s}\\
+   t_{\frac12,\text{104i}} = (355,60 \pm 264,24) \text{s}
 \label{rh1}
 \end{equation}
+
+Zur Ermittlung der Zerfallskonstante des $^{104}$Rh-Isotops werden die Messergebnisse in Teil 1, Tabelle \ref{tabrhod} von den durch das langlebige
+Rhodiumisotop verursachten Zerfällen nach Formel
+
 \begin{equation}
- t_{\frac12,\text{104}} = 36,69 \pm 1,85 \text{s}.
- \label{rh2}
+ N_{iso} = (N-N_0) - \exp(b-\lambda_{^{104\text{i}}\text{Rh}}\,t)
 \end{equation}
+
+isoliert und in Tabelle \ref{tabrhod2} aufgeführt.
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c|c|c}
+ $i$ & $t$ & $N_{iso}$ & $\ln(N_{iso})$ & $s_{N_{iso}}$ & $s_{\ln(N_{iso})^+}$ & $s_{\ln(N_{iso})^-}$ \\
+ \hline
+1&	12&	452&	6,11&	21,27&	0,0459&	-0,0482 \\
+2&	24&	409&	6,01&	20,23&	0,0482&	-0,0507\\
+3&	36&	324&	5,78&	18,01&	0,0540&	-0,0571\\
+4&	48&	302&	5,71&	17,38&	0,0559&	-0,0592\\
+5&	60&	211&	5,35&	14,53&	0,0666&	-0,0713\\
+6&	72&	181&	5,20&	13,45&	0,0717&	-0,0772\\
+7&	84&	144&	4,97&	11,99&	0,0801&	-0,0871\\
+8&	96&	90&	4,50&	9,47&	0,1004&	-0,1116\\
+9&	108&	93&	4,53&	9,62&	0,0989&	-0,1098\\
+10&	120&	73&	4,30&	8,57&	0,1104&	-0,1241\\
+ \end{tabular}
+ \caption{von $^{104\text{i}}$Rh isolierte Messwerte}
+ \label{tabrhod2}
+\end{table}
+
+Ein Fit der isolierten Messwerte der Geradengleichung $y = c\cdot x + d$ ensprechend, von GNUplot durchgeführt, ergibt 
+
+\begin{equation}
+ c = \lambda_{^{104}\text{Rh}} = (1,797\cdot 10^{-2} \pm 0,093 \cdot 10^{-2}) \frac{1}{\text{s}}.
+\end{equation}
+
+Die Haltwertszeit wird identifiziert zu
+
+\begin{equation}
+   t_{\frac12,\text{104}} = 38,57 \pm 2,00 \text{s}.
+\label{rh2} 
+\end{equation}
+
 
 \begin{figure}[h]
 	\includegraphics[width=0.8\textwidth]{pics/Rhodium.pdf}
@@ -352,11 +392,12 @@ als ihre Vorangehenden, was nicht durch den Zerfall der Indiumkerne allein erkl�
 \subsection{Rhodium}
 Zusätzlich zu den Einflüssen im Falle der Indiumprobe kommt bei Rhodium beschwerend hinzu, dass das kurzlebige Isotop ab einer gewissen
 Zeit zwar als nicht mehr vorhanden angesehen wird, es aber möglicherweise immernoch vorhanden ist, sowie die Tatsache, dass jener Zeitpunkten
-willkürlich durch die Versuchsdurchführenden festgelegt werden muss. So werden in der Auswertung zwei Messbereiche (2.Teil und 4.Teil aus Tabelle \ref{tabrhod}) aus der Berechnung
-herausgelassen, da im mittleren Teil, wo sich die Graphen annähern, eine Zuordnung der Aktivität zu den Isotopen nicht möglich ist, was
-aber eine Voraussetzung nach Abschnitt \ref{zerfallsgesetz} zur Halbwertszeitbestimmung ist und im letzten Teil der Nulleffekt die Messung
-dominiert. Mit der gemessenen Halbwertszeit $t_{\frac12,\text{104i}} = 289,41 \pm 1,98 \text{s}$ aus \eqref{rh1}
-liegt der Fehler bei 10,0 \%, sowie bei $t_{\frac12,\text{104}} = 36,69 \pm 1,85 \text{s}.$ aus \eqref{rh2} bei 13,3 \% \footnote[2]{Firestone, R.B. (2000), Isotopes of Rhodium URL: \href{http://ie.lbl.gov/education/parent/Rh\_iso.htm}{http://ie.lbl.gov/education/parent/Rh\_iso.htm}} . 
+willkürlich durch die Versuchsdurchführenden festgelegt werden muss. So werden in der Auswertung zwei Messbereiche 
+(2.Teil und 4.Teil aus Tabelle \ref{tabrhod}) aus der Berechnung herausgelassen, da im mittleren Teil, wo sich die Graphen annähern, eine Zuordnung 
+der Aktivität zu den Isotopen nicht möglich ist, was aber eine Voraussetzung nach Abschnitt \ref{zerfallsgesetz} zur Halbwertszeitbestimmung 
+ist und im letzten Teil der Nulleffekt die Messung dominiert. Mit der gemessenen Halbwertszeit 
+$t_{\frac12,\text{104i}} = (355,60 \pm 264,24) \text{s}$ aus \eqref{rh1}
+liegt der Fehler bei 28,9 \%, sowie bei $t_{\frac12,\text{104}} = (38,57 \pm 2,00) \text{s}.$ aus \eqref{rh2} bei 8,8 \% \footnote[2]{Firestone, R.B. (2000), Isotopes of Rhodium URL: \href{http://ie.lbl.gov/education/parent/Rh\_iso.htm}{http://ie.lbl.gov/education/parent/Rh\_iso.htm}} . 
 
 % ========================================
 %	Literaturverzeichnis

@@ -3,8 +3,8 @@ set term wxt
 #set term jpeg
 #set term postscript enhanced eps
 set title ""
-set xlabel "1+V (Abbildungsmaßstab)"
-set ylabel "Bildweite b' [cm]"
+set xlabel "1 + 1/V (Abbildungsmaßstab)"
+set ylabel "Gegenstandsweite g' [cm]"
   #ändert Position von title
 set key bottom right
 
@@ -12,9 +12,10 @@ set key bottom right
 set grid
 #set logscale y
 #set logscale x
-#set yrange [:]
+set yrange [5:70]
+#set yrange [30:75]
 #set xrange [0:500]
-#set xrange [0:30]
+set xrange [1.5:4.2]
 #set yrange [-28:0]
 
 #Konstanten definieren

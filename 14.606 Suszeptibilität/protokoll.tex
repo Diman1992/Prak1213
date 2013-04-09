@@ -56,11 +56,78 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
-
 \section{Theorie}
+\subsection{Die magnetische Suszeptibilität}
+Die magnetische Suszeptibilität $\chi$ ist eine physikalische Größe, die den Einfluss eines externen Magnetfelds $\vec B$ auf
+die Magnetisierbarkeit eines Substanz beschreibt. Sie ist kompliziert von der magnetischen Feldstärke $\vec H$ und der Temperatur $T$
+abhängig. In der Relation von magnetischer Flussdichte und magnetischer Feldstärke tritt sie auf
+
+\begin{align}
+ \vec B = \mu_0 \vec H + \vec M,
+\end{align}
+
+wobei $\vec M$ die Magnetisierung ist und durch atomare magnetische Momente einer Probe entsteht und mit $\chi$ verknüpft ist
+
+\begin{align}
+ \vec M = N \mu_0 \,  \bar{\vec{\mu}} =\mu_0 \chi \vec H.
+\end{align}
+
+Im Gegensatz zum Diamagnetismus, der die Induktion eines Magnetfelds entgegengesetzt zum Außenfeld beschreibt, handelt es sich beim
+Phänomen des Paramagnetismus um die Induktion eines Magnetfeld, das sich parallel ausrichtet. Diese Eigenschaft ist nur bei Stoffen
+zu finden, die einen von Null verschiedenen Drehimpuls haben. Dieser Drehimpuls hängt mit den zum Außenfeld relativen, magnetischen 
+Momenten zusammen.
+
+\subsection{Berechnung der magnetischen Suszeptibilität}
+Der Drehimpuls $\vec J$ setzt sich durch Vektrosummationaus dem Bahndrehimpuls der Elektronenhülle $\vec L$ und dem Eigendrehimpuls der Elektronen 
+$\vec S$ zusammen. Die Beträge der zugehörigen magnetischen Momente ergeben sich aus der Quantenmechanik zu
+
+\begin{align}
+ | \mu_L | = \mu_B \sqrt{L(L+1)} \qquad \text{und} \qquad |\mu_S| = \mu_B \, g_S \sqrt{S(S+1)}.
+\end{align}
+
+$\mu_B$ ist hierbei das Bohrsche Magneton und $g_S$ das gyromagnetische Verhältnis des freien Elektrons. Das magnetische Moment zum
+Gesamtdrehimpuls $\mu_J$ ergibt sich über Winkelbeziehungen der Zwischenwinkel der beiden Vektoren $\mu_L$ und $\mu_S$ zu dem Ausdruck
+
+\begin{align}
+ |\mu_J| \approx \mu_B \, g_J \sqrt{J(J+1)}, \intertext{mit $g_J$ als Landé-Faktor} \nonumber g_J = \frac{3J(J+1)\, + \, \{S(S+1) + L(L+1)\}}{2J(J+1)}.
+\end{align}
+
+Besagte Winkel sind allerdings nicht beliebig. Das Phänomen der Richtungsquantelung lässt $2J+1$ Orientierungen zu. Um die Magnetisierung
+nun zu berechnen, indem die Häufigkeit jeder Orientierung ermittelt mit dem zugehörigen Betrag des magnetischen Moments $\mu_J$ multipliziert
+und aufsummiert. Die Häufigkeitsverteilung $Z(E,T)$ ist hierbei Boltzmann-verteilt
+
+\begin{equation}
+ Z(E,T) = \exp \left(-\frac{E}{kT}\right) = \exp\left(-\frac{\mu_B\,g_J\,m\,B}{kT}\right).
+\end{equation}
+
+Im weiteren wird die Exponentialfunktion um Null mit der Taylor-Entwicklung genähert, da das Argument viel kleiner als Eins ist. 
+
+
+grundlegendes:
+definition
+paramagnetismus
+
+berechnung:
+gesamtdrehimpuls magnetisches moment (lande-faktor)
+boltzmannverteilung (taylor)
+endformel (curie)
+hundsche regeln
+
+apparatur:
+allgemein spulen (reduzierung von Q)
+brückenschaltung
+chi = Ubr (31)
+chi = deltaR
 
 \section{Durchführung}
+filterkurve
+selektivverstärker
+spannung - frequenz
+
+suszeptibilitäten
+frequenz bei maximalwert
+herunterregeln auf 0V ohne probe
+probe hinein -> Ubr
 
 \section{Auswertung}
 

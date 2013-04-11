@@ -57,6 +57,7 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 % ========================================
 
 \section{Theorie}
+\setcounter{page}{1}
 \subsection{Die magnetische Suszeptibilität}
 Die magnetische Suszeptibilität $\chi$ ist eine physikalische Größe, die den Einfluss eines externen Magnetfelds $\vec B$ auf
 die Magnetisierbarkeit eines Substanz beschreibt. Sie ist kompliziert von der magnetischen Feldstärke $\vec H$ und der Temperatur $T$
@@ -91,7 +92,7 @@ Gesamtdrehimpuls $\mu_J$ ergibt sich über Winkelbeziehungen der Zwischenwinkel 
 \end{align}
 
 Besagte Winkel sind allerdings nicht beliebig. Das Phänomen der Richtungsquantelung lässt $2J+1$ Orientierungen zu. Um die Magnetisierung
-nun zu berechnen, indem die Häufigkeit jeder Orientierung ermittelt mit dem zugehörigen Betrag des magnetischen Moments $\mu_J$ multipliziert
+nun zu berechnen, wird die Häufigkeit jeder Orientierung ermittelt, mit dem zugehörigen Betrag des magnetischen Moments $\mu_J$ multipliziert
 und aufsummiert. Die Häufigkeitsverteilung $Z(E,T)$ ist hierbei Boltzmann-verteilt
 
 \begin{equation}
@@ -99,7 +100,7 @@ und aufsummiert. Die Häufigkeitsverteilung $Z(E,T)$ ist hierbei Boltzmann-verte
 \end{equation}
 
 Das in Gleichung \eqref{eqMagnetisierung} aufgeführte mittlere magnetische Moment $\bar{\vec{\mu}}$ ergibt sich aus der Brillouin-Funktion 
-vonder Boltzmann-Verteilung. Dieser komplizierte Ausdruck wird um Null mit der Taylor-Entwicklung genähert, da das Argument deutlich 
+von der Boltzmann-Verteilung. Dieser komplizierte Ausdruck wird um Null mit der Taylor-Entwicklung genähert, da das Argument deutlich 
 kleiner als Eins ist. Somit ergibt sich der endgültige Ausdruck, welcher dem Curie-Gesetz für große Temperaturen genügt, für die 
 magnetische Suszeptibilität zu
 
@@ -107,7 +108,7 @@ magnetische Suszeptibilität zu
 \chi = \frac{\mu_0\,\mu_B^2\,g_J^2\,N\,J(J+1)}{3\,kT}. 
 \end{align}
 
-Allerdings ist der Gesamtdrehimpuls J hierbei entsprechend den Hundschen Regeln zu ermitteln. Sie basieren auf der elektrostatischen
+Allerdings ist der Gesamtdrehimpuls J hierbei widerspruchsfrei zu den Hundschen Regeln zu ermitteln. Sie basieren auf der elektrostatischen
 Abstoßung der Hüllenelektronen und lauten im einzelnen:
 
 \begin{enumerate}
@@ -140,7 +141,7 @@ Auflösung für die Induktivitätsmessung nötig. Durch zwei identische Spulen i
 beide über eine Brückenschaltung nach Abbildung \ref{picBruecke} verbunden sind.
 
 \begin{figure}[H]
- \includegraphics[width=0.55\textwidth]{pics/bruecke.png}
+ \includegraphics[width=0.7\textwidth]{pics/bruecke.png}
  \caption{Aufbau zur Brückenschaltung (aus Versuchsanleitung)}
  \label{picBruecke}
 \end{figure}
@@ -160,18 +161,32 @@ was mit \eqref{eqIndu} und für hohe Frequenzen zur Formel für die Suszeptibili
 Die Abgleichbedingung für die Brücke mit eingesetzter Probe errechnet sich zu 
 
 \begin{align}
- \chi = 2 \frac{\Delta R}{R_3} \frac{F}{Q}.
+ \chi = 2 \frac{\Delta R}{r_3} \frac{F}{Q}.
 \end{align}
 
 \section{Durchführung}
-filterkurve
-selektivverstärker
-spannung - frequenz
+\subsection{Ermittlung der Filterkurve des Selektiv-Verstärkers}
+Die Messung der für die Berechnung der Suszeptibilität nötigen Brückenspannung wird durch die immer vorhandene Störspannung durch
+die Außenklemmen der Brückenspannung erschwert. Abhilfe für dieses Problem bietet der Selektiv-Verstärker, dessen gesuchte Filterkurve
+wie in Abbildung \ref{picfilter} die Gestalt einer Glockenkurve hat. 
 
-suszeptibilitäten
-frequenz bei maximalwert
-herunterregeln auf 0V ohne probe
-probe hinein -> Ubr
+\begin{figure}[H]
+ \includegraphics[width=0.8\textwidth]{pics/filterkurve.png}
+ \caption{Filterkurve eines Selektiv-Verstärkers}
+ \label{picfilter}
+\end{figure}
+
+Den Quotienten aus Durchlassfrequenz und der Differenz von $\nu_-$ und $\nu_+$, bei der ein Verhältnis von $1/\sqrt{2}$ bezüglich der 
+Spannungen $U_A$ und $U_E$ auftritt, nennt man die Güte $Q$.
+
+Um die Filterkurve nun zu ermitteln, wird ein Sinusgenerator mit einer Effektivspannung von $U_{eff}$ = 1 V in einem Frequenzbereich 
+zwischen 20 und 40 kHz betrieben. Die Brückenschaltung wird damit gespeist und nach Vorverstärkungen der geringen Ausgangsspannung,
+wird ihr Wert auf einem Millivoltmeter in Abhängigkeit der verwandten Frequenz angezeigt.
+
+\subsection{Messung der Suszeptibilität}
+Zu Beginn wird die Durchlassfrequenz des Selektiv-Verstärkers auf die Signalfrequenz eingestellt, die man zuvor als Frequenz zur maximalen
+Ausgangsspannung gefunden hat, und gleicht die noch leere Brückenschaltung auf nahe 0 mV ab. Nun wird eine Probe eingeführt und die
+neue Brückenspannung gemessen. Zuletzt wird die Brücke erneut abgeglichen und der Wert von $\Delta R$ notiert. 
 
 \section{Auswertung}
 

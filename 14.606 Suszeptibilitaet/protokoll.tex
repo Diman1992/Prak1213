@@ -88,7 +88,8 @@ $\mu_B$ ist hierbei das Bohrsche Magneton und $g_S$ das gyromagnetische Verhält
 Gesamtdrehimpuls $\mu_J$ ergibt sich über Winkelbeziehungen der Zwischenwinkel der beiden Vektoren $\mu_L$ und $\mu_S$ zu dem Ausdruck
 
 \begin{align}
- |\mu_J| \approx \mu_B \, g_J \sqrt{J(J+1)}, \intertext{mit $g_J$ als Landé-Faktor} \nonumber g_J = \frac{3J(J+1)\, + \, \{S(S+1) + L(L+1)\}}{2J(J+1)}.
+ |\mu_J| \approx \mu_B \, g_J \sqrt{J(J+1)}, \intertext{mit $g_J$ als Landé-Faktor}  g_J = \frac{3J(J+1)\, + \, \{S(S+1) + L(L+1)\}}{2J(J+1)}.
+ \label{eq_lande}
 \end{align}
 
 Besagte Winkel sind allerdings nicht beliebig. Das Phänomen der Richtungsquantelung lässt $2J+1$ Orientierungen zu. Um die Magnetisierung
@@ -189,7 +190,33 @@ Ausgangsspannung gefunden hat, und gleicht die noch leere Brückenschaltung auf 
 neue Brückenspannung gemessen. Zuletzt wird die Brücke erneut abgeglichen und der Wert von $\Delta R$ notiert. 
 
 \section{Auswertung}
+Die Suszeptibilität kann zunächst theoretisch nach Modellen der Quantenmechanik bestimmt werden
+Für Neodym \ce{Nd_2O_3}\\
+Neodym hat 4 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 3. Der Gesamtspin S beträgt in diesem Fall $\frac{1}{2}+ \frac{1}{2}+ \frac{1}{2} = 1 \frac{1}{2}$\\
+Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls $3+2+1=6$.\\
+Da die Schale zu weniger als die Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu $J=|L-S|=4,5$\\
+Nach Formel \eqref{eq_lande} ergibt sich:
+\begin{align}
+g_J=\frac{3\cdot4,5\cdot5,5+[1,5\cdot2,5-6\cdot7]}{2\cdot 3,5\cdot4,5}=0,73
+\end{align}
 
+Für Gadolinium \ce{Gd_2O_3}\\
+Gadolinium hat 7 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben immer noch 7. Der Gesamtspin S beträgt in diesem Fall $7\cdot\frac{1}{2} = 3,5$\\
+Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls $3+2+1+0-1-2-3=0$.\\
+Da die Schale genau zur Hälfte befüllt ist, errechnet sich der Gesamtimpuls beliebig zu $J=|L-S|=L+S=3,5$\\
+Nach Formel \eqref{eq_lande} ergibt sich:
+\begin{align}
+g_J=\frac{3\cdot3,5\cdot4,5+3,5\cdot4,5}{2\cdot 3,5\cdot4,5}=2
+\end{align}
+
+Für Dysprosium \ce{Dy_2O_3}\\
+Dysprosium hat 10 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 9. Der Gesamtspin S beträgt in diesem Fall $7\cdot \frac{1}{2}-2\cdot\frac{1}{2}= 2 \frac{1}{2}$\\
+Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls $3+2+1+0-1-2-3+3+2=5$.\\
+Da die Schale zu mehr als die Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu $J=L+S=7,5$\\
+Nach Formel \eqref{eq_lande} ergibt sich:
+\begin{align}
+g_J=\frac{3\cdot7,5\cdot8,5+[2,5\cdot3,5-7,5\cdot8,5]}{2\cdot 7,5\cdot8,5}=1,07
+\end{align}
 \section{Diskussion}
 
 % ========================================

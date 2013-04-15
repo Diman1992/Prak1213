@@ -107,6 +107,7 @@ magnetische Suszeptibilität zu
 
 \begin{align}
 \chi = \frac{\mu_0\,\mu_B^2\,g_J^2\,N\,J(J+1)}{3\,kT}. 
+\label{eq_chi_theo}
 \end{align}
 
 Allerdings ist der Gesamtdrehimpuls J hierbei widerspruchsfrei zu den Hundschen Regeln zu ermitteln. Sie basieren auf der elektrostatischen
@@ -163,6 +164,7 @@ Die Abgleichbedingung für die Brücke mit eingesetzter Probe errechnet sich zu
 
 \begin{align}
  \chi = 2 \frac{\Delta R}{r_3} \frac{F}{Q}.
+ \label{eq_chi_rechnung}
 \end{align}
 
 \section{Durchführung}
@@ -189,35 +191,120 @@ Zu Beginn wird die Durchlassfrequenz des Selektiv-Verstärkers auf die Signalfre
 Ausgangsspannung gefunden hat, und gleicht die noch leere Brückenschaltung auf nahe 0 mV ab. Nun wird eine Probe eingeführt und die
 neue Brückenspannung gemessen. Zuletzt wird die Brücke erneut abgeglichen und der Wert von $\Delta R$ notiert. 
 
-\section{Auswertung}
-Die Suszeptibilität kann zunächst theoretisch nach Modellen der Quantenmechanik bestimmt werden
-Für Neodym \ce{Nd_2O_3}\\
-Neodym hat 4 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 3. Der Gesamtspin S beträgt in diesem Fall $\frac{1}{2}+ \frac{1}{2}+ \frac{1}{2} = 1 \frac{1}{2}$\\
-Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls $3+2+1=6$.\\
-Da die Schale zu weniger als die Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu $J=|L-S|=4,5$\\
+\section{Auswertung Theoretisch}
+\subsection{Neodym \ce{Nd_2O_3}}
+Neodym hat 4 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 3 Elektronen in der Schale. Der Gesamtspin S beträgt in diesem Fall 
+\begin{align*}
+S=\frac{1}{2}+ \frac{1}{2}+ \frac{1}{2} = 1 \frac{1}{2}
+\end{align*}
+Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls \begin{align*}
+L=3+2+1=6
+\end{align*}
+Da die Schale zu weniger als die Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu 
+\begin{align*}
+J=|L-S|=4,5
+\end{align*}
 Nach Formel \eqref{eq_lande} ergibt sich:
 \begin{align}
 g_J=\frac{3\cdot4,5\cdot5,5+[1,5\cdot2,5-6\cdot7]}{2\cdot 3,5\cdot4,5}=0,73
+\end{align}\\
+N errechnet sich, indem man das Volumen der Stoffmenge mal den Kehrwert des molaren Volumens rechnet und dies wiederum mit der Avogadrokonstante Multipliziert.
+\begin{align}
+N=\frac{\text{Gewicht}}{\text{Stoffdichte}}\cdot\frac{1}{\text{molares Volumen}}\cdot6,02\cdot10^{23}
+\label{eq_N}\\
+\intertext{für Neodym ergibt sich:}\\
+N=\frac{0,009}{7,24\cdot10^{-9}}\cdot\frac{1}{20,59\cdot10^{-6}}\cdot6,02\cdot10^{23}= 3,63\cdot10^{34}
+\end{align}
+Einsetzten in Formel \eqref{eq_chi_theo} ergibt somit:
+\begin{align}
+\chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2 \cdot 0,73^2 \cdot N\cdot 4,5\cdot 5,5}{8\cdot m_e^2 k_B \cdot320}=1464,72
 \end{align}
 
-Für Gadolinium \ce{Gd_2O_3}\\
-Gadolinium hat 7 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben immer noch 7. Der Gesamtspin S beträgt in diesem Fall $7\cdot\frac{1}{2} = 3,5$\\
-Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls $3+2+1+0-1-2-3=0$.\\
-Da die Schale genau zur Hälfte befüllt ist, errechnet sich der Gesamtimpuls beliebig zu $J=|L-S|=L+S=3,5$\\
-Nach Formel \eqref{eq_lande} ergibt sich:
+\subsection{Gadolinium \ce{Gd_2O_3}}
+Gadolinium hat 7 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben immer noch 7. Der Gesamtspin S beträgt in diesem Fall \begin{align*}
+S=7\cdot\frac{1}{2} = 3,5
+\end{align*}
+Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls
+\begin{align*}
+L=3+2+1+0-1-2-3=0
+\end{align*}
+Da die Schale genau zur Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu 
+\begin{align*}
+J=|L-S|=L+S=3,5
+\end{align*}
+Nach Gleichung \eqref{eq_N} folgt
+\begin{align}
+	N=\frac{0,01408}{7,40\cdot10^{-9}}\cdot\frac{1}	{19,9\cdot10^{-6}}\cdot6,02\cdot10^{23}=5,76\cdot10^{34}
+\end{align}
+Nach Formel \eqref{eq_lande} ergibt sich somit:
 \begin{align}
 g_J=\frac{3\cdot3,5\cdot4,5+3,5\cdot4,5}{2\cdot 3,5\cdot4,5}=2
+\end{align}\\
+Einsetzten in Formel \eqref{eq_chi_theo} ergibt:
+\begin{align}
+\chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2\cdot 2^2 \cdot N\cdot 3,5\cdot 4,5}{8\cdot m_e^2 k_B \cdot320}=12967,3
 \end{align}
 
-Für Dysprosium \ce{Dy_2O_3}\\
-Dysprosium hat 10 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 9. Der Gesamtspin S beträgt in diesem Fall $7\cdot \frac{1}{2}-2\cdot\frac{1}{2}= 2 \frac{1}{2}$\\
-Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls $3+2+1+0-1-2-3+3+2=5$.\\
-Da die Schale zu mehr als die Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu $J=L+S=7,5$\\
+\subsection{Dysprosium \ce{Dy_2O_3}}
+Dysprosium hat 10 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 9. Der Gesamtspin S beträgt in diesem Fall 
+\begin{align*}
+S= 7\cdot \frac{1}{2}-2\cdot\frac{1}{2}= 2 \frac{1}{2}
+\end{align*}
+
+Die Hauptquantenzahl ist maximal 3. Folglich ergibt sich für den Gesamtdrehimpuls
+\begin{align*}
+L= 3+2+1+0-1-2-3+3+2=5
+\end{align*} 
+Da die Schale zu mehr als die Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu 
+\begin{align*}
+J=L+S=7,5
+\end{align*}
 Nach Formel \eqref{eq_lande} ergibt sich:
 \begin{align}
 g_J=\frac{3\cdot7,5\cdot8,5+[2,5\cdot3,5-7,5\cdot8,5]}{2\cdot 7,5\cdot8,5}=1,07
+\end{align}\\
+Nach Gleichung \eqref{eq_N} folgt
+\begin{align}
+	N=\frac{0,0166}{7,80\cdot10^{-9}}\cdot\frac{1}	{19,01\cdot10^{-6}}\cdot6,02\cdot10^{23}=6,74\cdot10^{34}
 \end{align}
+Einsetzten in Formel \eqref{eq_chi_theo} ergibt:
+\begin{align}
+\chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2\cdot 1,07^2 \cdot N\cdot 7,5\cdot 8,5}{8\cdot m_e^2 k_B\cdot320}=15049,90
+\end{align}
+
+\section{Auswertung aus Messwerten}
+Die Werte für $\chi$ lassen sich auch mit dem im Versuch benutzen Aufbau errechnen. Die folgende Tabelle enthält die Messwerte zu allen drei Elementen. Jede Messung wurde fünf mal durchgeführt $R3$ bezeichnet den Widerstand, bei dem die Spannung ohne eingeführten Probestab minimal (dh. V) ist. Beim Widerstand $R3 + \Delta R$ ist die Spannung beim eingeführten Probestab minimal (ebenfalls bei V abzulesen).
+
+\begin{table}[htbp]
+\begin{tabular}{l!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c|}
+& \ce{Nd_2O_3} & & \ce{Gd_2O_3} & & \ce{Dy_2O_3} & \\
+ & $m\Omega$ & mV & $m\Omega$ & mV & $m\Omega$ & mV \\
+\hline
+$R_3$&2830 & 1.20 & 2833 & 1.15 & 2835 & 1.70 \\ \hline
+$R_3 + \Delta R$&2735 & 2.21 & 2064 & 1.32 & 1173 & 1.50 \\ \hline
+$R_3$&2830 & 1.90 & 2750 & 1.75 & 2770 & 1.80 \\ \hline
+$R_3 + \Delta R$&2705 & 1.90 & 1985 & 1.40 & 1125 & 1.60 \\ \hline
+$R_3$&2775 & 1.85 & 2780 & 1.87 & 2835 & 1.90 \\ \hline
+$R_3 + \Delta R$&2650 & 1.80 & 2060 & 1.41 & 1160 & 1.59 \\ \hline
+$R_3$&2805 & 1.85 & 2805 & 1.89 & 2785 & 1.81 \\ \hline
+$R_3 + \Delta R$&2675 & 1.76 & 1965 & 1.40 & 1165 & 1.70 \\ \hline
+$R_3$&2825 & 1.75 & 2835 & 1.80 & 2805 & 1.69 \\ \hline
+$R_3 + \Delta R$&2680 & 1.70 & 2060 & 1.40 & 1160 & 1.76 \\ \hline
+\end{tabular}
+\caption{Aufgenommene Werte}
+\label{t_werte}
+\end{table}
+
+Mittels Formel \eqref{eq_chi_rechnung} kann nun das $\chi$ für die verschiedenen Elemente bestimmt werden. Nach Mittelung der Werte aus Tabelle \ref{t_werte} und einsetzten ergibt sich für das $\chi$:
+\begin{align*}
+\chi_{Nd}&=11,35\pm 0,00005\\
+\chi_{Gd}&=46,47\pm 0,0002\\
+\chi_{Dy}&=88,38\pm 0,00006
+\end{align*}
 \section{Diskussion}
+Die gemessenen Werte wurden sehr genau aufgenommen, wie die kleine Streuung der Zahlen zeigt. Sie stehen zudem in einem sinnigen Verhältnis zueinander, welches sehr gut die Differenz in der Anzahl der F-Schalen Elektronen widerspiegelt. Leider wurden bei der Messung der Werte nicht der Spannungsausschlag aufgezeichnet, der entsteht, wenn die Probe in die Messröhre hineingeschoben wird. Mit ihm hätte man die Werte nochmals korrigieren können.\\
+Die Messwerte weichen jedoch sehr stark von den errechneten Theoriewerten ab. Dies ist jedoch eher auf einen Fehler in den Theoriewerten zurückzuführen, da die Werte schlicht zu hoch sind.
+
 
 % ========================================
 %	Literaturverzeichnis

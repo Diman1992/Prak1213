@@ -56,14 +56,72 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
-\setcounter{page}{1}
 \section{Theorie}
-photoeffekt
-was geschieht beim photoeffekt
+\setcounter{page}{1}
+\subsection{Grundlagen zum Photoeffekt}
+Der Photoeffekt, oder auch lichtelektrischer Effekt, ist ein Phänomen, bei welchem Photonen Elektronen aus Metalloberflächen herauslösen.
+Das Wellenmodell hat lange Zeit das Wesen des Lichts gut beschreiben können, doch hieran scheitert es. Albert Einstein konnte 1905 die
+Problematik durch die Zuweisung korpuskularer Eigenschaften an die Lichtquanten lösen. In Abbildung \ref{pic_photo} ist dies stilistisch gezeigt. Völlig korrekt wird sie durch Berechnungen aus
+der Quantenelektrodynamik beschrieben, jedoch reicht die Betrachtung des Teilchenmodells für die Zwecke dieses Versuchs völlig aus.
 
+\begin{figure}[H]
+ \input{500a.tex}
+ \caption{Anordnung zum Photoeffekt}
+ \label{pic_photo}
+\end{figure}
+
+Hierbei trifft ein Photon der Energie $\hbar\omega$ auf das Metall und löst ein Elektron $e^-$ mit einer Bindungsenergie $A_k$ heraus
+und überträgt den Überschuss in Form von kinetischer Energie
+
+\begin{align}
+ \hbar\omega = h\nu = E_{kin} + A_k.
+ \label{eq_photo}
+\end{align}
+
+Aus den Experimenten zum Photoeffekt haben sich folgende Gesetzmäßigkeiten herauskristallisiert:
+
+\begin{enumerate}
+ \item Es existiert eine Minimalfrequenz $\nu_{min}$, ab der der Photoeffekt überhaupt auftritt.
+ \item Die Energie der Photoelektronen ist proportional zur Frequenz der Photonen.
+ \item Die Zahl der herausgelösten Elektronen ist proportional zur Lichtintensität.
+\end{enumerate}
+
+\subsection{Die Gegenfeldmethode}
+Da das Picoamperemeter lediglich feststellen kann, ob ein Elektron eintrifft, aber nichts über die Energie aussagen kann, wird ein
+Gegenfeld erzeugt, um eben diese zu ermitteln. Lediglich die Elektronen, die genug kinetische Energie inne haben, sind in der Lage
+das Gegenfeld bei einer Grenzspannung $U_g$ zu durchlaufen und zur Anode zu gelangen. Mit Gleichung \eqref{eq_photoerweitert} lassen sich grundsätzlich $A_k$ und 
+$h/e_0$ errechnen.
+
+\begin{align}
+ h\nu = e_0 U_g + A_k
+ \label{eq_photoerweitert}
+\end{align}
+
+Jedoch ist die Energie der Elektronen im Metal nicht einheitlich sondern unterliegt der Fermi-Dirac-Verteilung. Sie führt auf, dass
+Elektronen eine Energie im Bereich von 0 und der Fermie-Energie $\zeta$ und bei endlicher Temperatur gar darüber haben. Das führt dazu,
+dass Elektronen auch mehr Energie haben, als die Differenz von Photonenenergie und Austrittsarbeit zulässt. Unter bestimmten 
+Voraussetzungen kann man annehmen, dass der Photostrom $I_{Ph}$ parabolisch mit der Bremsspannung $U$ zusammenhängt. 
+
+\begin{align}
+ I_{Ph} \propto U^2
+ \label{eq_stromspannung}
+\end{align}
 
 \section{Durchführung}
+\begin{figure}[H]
+ \includegraphics[width=\textwidth]{pics/Aufbau.png}
+ \caption{Schematischer Aufbau der benutzten Apparatur}
+ \label{pic_aufbau}
+\end{figure}
+
+In Abbildung \ref{pic_aufbau} ist der Versuchsaufbau dargestellt. Das Licht der Quecksilberlampe wird durch eine Kondensorlinse gebündelt,
+trifft auf eine Spaltblende und wird von der Abbildungslinse auf das Geradsichtprisma fokussiert. Das Prisma sorgt für eine räumliche
+Aufteilung der einzelnen Spektrallinien, welche eine Photokathode bestrahlen, die auf einem schwenkbaren Arm befestigt ist. Somit wird
+Die Photokathode immer mit monochromatischem Licht beleuchtet. 
+
+Für vier Spektrallinien wird der Photostrom in Abhängigkeit der Bremsspannung gemessen, welche in einem Bereich von -2V $\leq \,U \, \leq 2$V
+liegt. Für die Wellenlänge $\lambda$ = 438,8 nm wird zusätzlich der Bereich von -20V $\leq \,U \, \leq$ 20V gegen den Photostrom gemessen.
+
 
 \section{Auswertung}
 

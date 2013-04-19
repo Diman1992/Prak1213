@@ -1,0 +1,42 @@
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+\clip(-2.96,-6.75) rectangle (15.68,6.42);
+\draw [line width=1.2pt] (2,5)-- (9,5);
+\draw [line width=1.2pt] (9,-1)-- (2,-1);
+\draw [shift={(4,2)},line width=1.2pt]  plot[domain=2.16:4.12,variable=\t]({1*3.61*cos(\t r)+0*3.61*sin(\t r)},{0*3.61*cos(\t r)+1*3.61*sin(\t r)});
+\draw [shift={(7,2)},line width=1.2pt]  plot[domain=-0.98:0.98,variable=\t]({1*3.61*cos(\t r)+0*3.61*sin(\t r)},{0*3.61*cos(\t r)+1*3.61*sin(\t r)});
+\draw [line width=2.4pt] (2,4)-- (2,0);
+\draw [line width=2.4pt] (9,4)-- (9,0);
+\draw [line width=1.2pt] (2,2)-- (-2,2);
+\draw [->,line width=1.2pt] (2,2) -- (8,1);
+\draw [shift={(2.26,2.26)}] plot[domain=0.79:3.93,variable=\t]({1*0.37*cos(\t r)+0*0.37*sin(\t r)},{0*0.37*cos(\t r)+1*0.37*sin(\t r)});
+\draw [shift={(2.76,2.76)}] plot[domain=-2.36:0.79,variable=\t]({1*0.34*cos(\t r)+0*0.34*sin(\t r)},{0*0.34*cos(\t r)+1*0.34*sin(\t r)});
+\draw [shift={(3.26,3.26)}] plot[domain=0.79:3.93,variable=\t]({1*0.36*cos(\t r)+0*0.36*sin(\t r)},{0*0.36*cos(\t r)+1*0.36*sin(\t r)});
+\draw [shift={(3.76,3.76)}] plot[domain=-2.36:0.79,variable=\t]({1*0.35*cos(\t r)+0*0.35*sin(\t r)},{0*0.35*cos(\t r)+1*0.35*sin(\t r)});
+\draw [shift={(4.26,4.26)}] plot[domain=0.79:3.93,variable=\t]({1*0.36*cos(\t r)+0*0.36*sin(\t r)},{0*0.36*cos(\t r)+1*0.36*sin(\t r)});
+\draw [shift={(4.76,4.76)}] plot[domain=-2.36:0.79,variable=\t]({1*0.35*cos(\t r)+0*0.35*sin(\t r)},{0*0.35*cos(\t r)+1*0.35*sin(\t r)});
+\draw [shift={(5.24,5.24)}] plot[domain=0.79:3.93,variable=\t]({1*0.34*cos(\t r)+0*0.34*sin(\t r)},{0*0.34*cos(\t r)+1*0.34*sin(\t r)});
+\draw [shift={(5.74,5.74)}] plot[domain=-2.36:0.79,variable=\t]({1*0.37*cos(\t r)+0*0.37*sin(\t r)},{0*0.37*cos(\t r)+1*0.37*sin(\t r)});
+\draw [->,line width=1.2pt] (1.91,2.15) -- (2,2);
+\draw [line width=1.2pt] (9,2)-- (13,2);
+\draw [line width=1.2pt] (13,2)-- (13,-5);
+\draw [line width=1.2pt] (-2,2)-- (-2,-5);
+\draw [line width=1.2pt] (8,-5) circle (1cm);
+\draw [line width=1.2pt] (3,-5) circle (1cm);
+\draw [line width=1.2pt] (4.5,-5)-- (6.5,-5);
+\draw [line width=1.2pt] (9.5,-5)-- (13,-5);
+\draw [line width=1.2pt] (-2,-5)-- (1.5,-5);
+\draw [->,line width=1.2pt] (6.5,-6.5) -- (9.5,-3.5);
+\draw [->,line width=1.2pt] (6,-2) -- (13,-2);
+\draw [->,line width=1.2pt] (4,-2) -- (-2,-2);
+\draw [line width=1.2pt] (2.5,-4.66)-- (3.5,-4.66);
+\draw [line width=1.2pt] (2.5,-5.33)-- (3.5,-5.33);
+\draw (4.71,-1.63) node[anchor=north west] {$U$};
+\draw (4.28,-5.74) node[anchor=north west] {$+$};
+\draw (1.15,-5.74) node[anchor=north west] {$-$};
+\draw (9.42,-5.64) node[anchor=north west] {$I$};
+\draw (6.33,6.2) node[anchor=north west] {$\hbar\,\omega$};
+\draw (-2.96,4.78) node[anchor=north west] {$Photokathode$};
+\draw (10.21,4.7) node[anchor=north west] {$Auffangelektrode$};
+\draw (7.44,1.99) node[anchor=north west] {$e^-$};
+\end{tikzpicture}

@@ -60,23 +60,32 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 
 \section{Theorie}
 \subsection{Aufbau und Funktionsweise}
-Das Geiger-Müller-Zählrohr ist ein Messgerät, mit dem ionisierende Strahlung nachgewiesen und deren Intensität bestimmt werden kann. Das Geiger-Müller-Zählrohr besteht aus einem Kathodenzylinder (Radius $r_k$) und einem
-darin axial verlaufenden Anodendraht (Radius $r_a$). Im Zylinder herrscht ein Unterdruck und er ist mit einem Argon-Alkohol-Gasgemisch gefüllt. Legt man nur eine Spannung zwischen Draht und Gehäuse an, so entsteht ein Radialsymmetrisches elektrisches Feld mit der Feldstärke
+Das Geiger-Müller-Zählrohr ist ein Messgerät, mit dem ionisierende Strahlung nachgewiesen und deren Intensität bestimmt werden kann. Das Geiger-Müller-Zählrohr besteht aus einem Kathodenzylinder (Radius $r_k$) und einem darin axial verlaufenden Anodendraht (Radius $r_a$). 
+\begin{figure}[htbp]
+	\includegraphics[width=0.8\textwidth]{pics/zaehlrohr.jpg}
+	\caption{Geiger-Müller-Zählrohr im Querschnitt}
+\end{figure}
+Im Zylinder selbst herrscht ein Unterdruck und er ist mit einem dünnen Argon-Alkohol-Gasgemisch gefüllt. Legt man nur eine Spannung zwischen Draht und Gehäuse an, so entsteht ein Radialsymmetrisches elektrisches Feld mit der Feldstärke
 \begin{align}
 	E(r)= \frac{U}{r\cdot ln (r_k / r_a)}
 \end{align}
 durch welches geladene Teilchen, die durch Ionisationsvorgänge im Zählrohr entstehen, zu den leitenden Flächen beschleunigt werden. Die ionisierten Atomrümpfe rekombinieren dort mit überschüssigen Elektronen aus der Kathode, während die Elektronen in der Anode abgeleitet und über einen Verstärker als Stromimpuls registriert werden.\\
 
-\trianglerightDie Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha, \beta \text{ oder } \gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
+Die Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha-, \beta- \text{ oder } \gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
 
 \subsection{Die Spannungsbereiche}
 Je nachdem, wie hoch die an das Zählrohr angelegte Spannung ist, verhält sich das Zählrohr anders.
 
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{pics/charak.jpg}
+	\caption{Charakteristik eines Zählrohrs für $\alpha- \text{ und } \beta$-Strahlung}
+\end{figure}
+
 Ist die Spannung nur sehr gering, so rekombinieren die erzeugten Ionen mit den Elektronen, bevor sie Anode bzw. Kathode erreichen konnten. Es werden folglich nicht alle Ionisationsvorgänge registriert.
 
-Erhöht man die Spannung weiter, werden schließlich quasi alle ionisierten Teilchen eingefangen. Der Anodendraht gelangen. Der kontinuierlich zwischen Anode und Kathode fließende Ionisationsstrom ist dann proportional zur Energie und zur Intensität der einfallenden Strahlung. Unter diesen Bedingungen, stellt das Gerät eine Vorstufe zum Zählrohr dar und wird als Ionisationskammer bezeichnet. Sie eignet sich zwar nur bei hohen Strahlungsintensitäten, ermöglicht dort jedoch eine Messung der Strahlungsintensität, da der fließende Strom proportional mit ihr wächst.
+Erhöht man die Spannung weiter, werden schließlich quasi alle ionisierten Teilchen eingefangen. Der kontinuierlich zwischen Anode und Kathode fließende Ionisationsstrom ist dann proportional zur Energie und zur Intensität der einfallenden Strahlung. Unter diesen Bedingungen, stellt das Gerät eine Vorstufe zum Zählrohr dar und wird als Ionisationskammer bezeichnet. Sie eignet sich zwar nur bei hohen Strahlungsintensitäten, ermöglicht dort jedoch eine Messung der Strahlungsintensität, da der fließende Strom proportional mit ihr wächst.
 
-Anschließend folgt ein Bereich, indem ionisierte Teilchen durch die Spannung so stark  beschleunigt werden, dass sie ihrerseits andere Teilchen ionisieren können. Es entstehen sog. Townsend-Lawinen, deren Gesamtladung proportional zur Teilchenenergie ist, die die Strahlung abgegeben hat, ist in diesem Bereich neben der Intensitätsmessung auch noch eine Energiemessung möglich. Man bezeichnet den Detektor in diesem Bereich daher auch als Proportionalitätszählrohr.
+Anschließend folgt ein Bereich, indem ionisierte Teilchen durch die Spannung so stark  beschleunigt werden, dass sie ihrerseits andere Teilchen ionisieren können. Es entstehen sog. Townsend-Lawinen, deren Gesamtladung proportional zur Teilchenenergie ist, die die Strahlung abgegeben hat. Dadurch ist in diesem Bereich neben der Intensitätsmessung auch noch eine Energiemessung möglich. Man bezeichnet den Detektor in diesem Bereich daher auch als Proportionalitätszählrohr.
 
 Das eigentliche Geiger-Müller-Zählrohr arbeitet im sog. Auslösebereich. Dort entstehen in der primären Elektronenlawine UV-Photonen infolge der Anregung von Argon-Atomen durch Elektronenstöße. Da die Photonen ladungsneutral sind, breiten sie sich auch senkrecht zum elektrischen Feld aus und erzeugen weitere Elektronenlawinen im gesamten Zählrohr. Die dann detektierte Ladung hängt nicht mehr von der Primärionisation, sondern nur noch von der Betriebsspannung und des Zählrohrvolumens ab. Die freigewordene Ladung ist nun so groß, dass sie leicht nachgewiesen werden kann, es ist nun jedoch nur noch eine Intensitätsmessung möglich.
 
@@ -87,11 +96,16 @@ Bei der Ionistation werden nicht nur Elektronen, sondern auch erheblich schwerer
 Die Totzeit kann errechnet werden, indem man mit zwei Strahlungsquellen arbeitet. Zunächst plaziert man Quelle 1 vor dem Zählrohr und misst über eine bestimmte Dauer die entstehenden Impulse ($N_1$). Anschließend wird Quelle 2 zur Messung hinzugenommen und die durch beide Quellen entstehenden Impulse ($N_{1,2}$) simultan gemessen. Zu guter letzt entfernt man Quelle 1 und misst die Impulse von Quelle 2 alleine ($N_2$).\\
 Setzt man die gemessenen Werte nun in folgende Formel ein:
 \begin{align}
-T\approx \frac{N_1+ N_2 - N_{1,2}}{2\cdot N_1 N_2},
-\label{eq_totzeit}
+	T\approx \frac{N_1+ N_2 - N_{1,2}}{2\cdot N_1 N_2},
+	\label{eq_totzeit}
 \end{align}
 so lässt sich die Totzeit den Zählrohrs errechnen.
+
 Während die Ionenwolke zum Mantel hin abwandert, steigt die Feldstärke wieder an und das Zählrohr kann weitere Teilchen registrieren. Solange das Feld jedoch noch nicht vollständig wiederhergestellt ist, haben folgende Primärimpulse eine geringere Intensität. Dieser Zeitraum $T_E$ wird daher Erholungszeit genannt.
+\begin{figure}[htbp]
+	\includegraphics[width=0.8\textwidth]{pics/erholungszeit.jpg}
+	\caption{Tot- und Erholungszeit eines Geiger-Müller-Zählrohrs in einem Oszilloskop}
+\end{figure}
 
 \subsection{Nachentladungen}
 Auch die auf die Mantelfläche treffenden Ionen können ihrerseits Hüllenelektronen ausschlagen, die weitere echoartige Kaskaden anregen. Diese sind höchst unerwünscht, da sie die Messung verfälschen und werden als Nachentladungen bezeichnet. Um sie zu minimieren wird dem Gas ein Alkoholanteil hinzugefügt, da die Ionisierten Argonatome mit ihrer Energie wiederum die Alkoholatome ionisieren, welche keine Nachentladungen auslösen, sondern mit der Energie zu Schwingungen angeregt werden.
@@ -99,6 +113,10 @@ Auch die auf die Mantelfläche treffenden Ionen können ihrerseits Hüllenelektr
 \subsection{Charakteristik}
 Trägt man für ein Geiger-Müller-Zählrohr die registrierte Teilchenzahl N bei konstanter Strahlungsintensität gegen die angelegte Spannung U auf, so erhält man seine sogenannte Charakteristik.
 Interessant ist insbesondere der Auslösebereich, der ein Plateau ausbildet. Bei einem Idealen Zählrohr ist die Plateausteigung Null, jedoch wird immer eine geringe Steigung messbar sein, da Nachentladungen nie völlig ausgeschlossen werden können.
+\begin{figure}[htbp]
+	\includegraphics[width=0.8\textwidth]{pics/plateau.jpg}
+	\caption{Plateau des Auslösebereichs}
+\end{figure}
 
 
 \section{Durchführung}
@@ -108,6 +126,7 @@ Zu verschiedenen Betriebsspannungen werden die Ionisationsvorgänge gemessen und
 Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben werden können.
 
 Die Totzeit kann ebenfalls mit Hilfe eines Oszilloskopes abgeschätzt werden. Man lässt dazu eine relativ hohe Strahlungsintensität in das Zählrohr fallen und betrachtet, wann der nächste Impuls frühestens gemessen werden kann. 
+
 \section{Auswertung}
 
 \section{Diskussion}

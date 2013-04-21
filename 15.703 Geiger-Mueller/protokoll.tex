@@ -56,9 +56,37 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
+%\section{Einleitung}				% Bei Bedarf
 
 \section{Theorie}
+\subsection{Aufbau und Funktionsweise}
+Das Geiger-Müller-Zählrohr ist ein Messgerät, mit dem ionisierende Strahlung nachgewiesen und deren Intensität bestimmt werden kann. Das Geiger-Müller-Zählrohr besteht aus einem Kathodenzylinder (Radius $r_k$) und einem
+darin axial verlaufenden Anodendraht (Radius $r_a$). Im Zylinder herrscht ein Unterdruck und er ist mit einem Argon-Alkohol-Gasgemisch gefüllt. Legt man nur eine Spannung zwischen Draht und Gehäuse an, so entsteht ein Radialsymmetrisches elektrisches Feld mit der Feldstärke
+\begin{align}
+	E(r)= \frac{U}{r\cdot ln (r_k / r_a)}
+\end{align}
+durch welches geladene Teilchen, die durch Ionisationsvorgänge im Zählrohr entstehen, zu den leitenden Flächen beschleunigt werden. Die ionisierten Atomrümpfe rekombinieren dort mit überschüssigen Elektronen aus der Kathode, während die Elektronen in der Anode abgeleitet und über einen Verstärker als Stromimpuls registriert werden.
+Die Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha, \beta \text{ oder } \gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
+
+\subsection{Die Spannungsbereiche}
+Je nachdem, wie hoch die an das Zählrohr angelegte Spannung ist, verhält sich das Zählrohr anders.
+
+Ist die Spannung nur sehr gering, so rekombinieren die erzeugten Ionen mit den Elektronen, bevor sie Anode bzw. Kathode erreichen konnten. Es werden folglich nicht alle Ionisationsvorgänge registriert.
+
+Erhöht man die Spannung weiter, werden schließlich quasi alle ionisierten Teilchen eingefangen. Der Anodendraht gelangen. Der kontinuierlich zwischen Anode und Kathode fließende Ionisationsstrom ist dann proportional zur Energie und zur Intensität der einfallenden Strahlung. Unter diesen Bedingungen, stellt das Gerät eine Vorstufe zum Zählrohr dar und wird als Ionisationskammer bezeichnet. Sie eignet sich zwar nur bei hohen Strahlungsintensitäten, ermöglicht dort jedoch eine Messung der Strahlungsintensität, da der fließende Strom proportional mit ihr wächst.
+
+Anschließend folgt ein Bereich, indem ionisierte Teilchen durch die Spannung so stark  beschleunigt werden, dass sie ihrerseits andere Teilchen ionisieren können. Es entstehen sog. Townsend-Lawinen, deren Gesamtladung proportional zur Teilchenenergie ist, die die Strahlung abgegeben hat, ist in diesem Bereich neben der Intensitätsmessung auch noch eine Energiemessung möglich. Man bezeichnet den Detektor in diesem Bereich daher auch als Proportionalitätszählrohr.
+
+Das eigentliche Geiger-Müller-Zählrohr arbeitet im sog. Auslösebereich. Dort entstehen in der primären Elektronenlawine UV-Photonen infolge der Anregung von Argon-Atomen durch Elektronenstöße. Da die Photonen ladungsneutral sind, breiten sie sich auch senkrecht zum elektrischen Feld aus und erzeugen weitere Elektronenlawinen im gesamten Zählrohr. Die dann detektierte Ladung hängt nicht mehr von der Primärionisation, sondern nur noch von der Betriebsspannung und des Zählrohrvolumens ab. Die freigewordene Ladung ist nun so groß, dass sie leicht nachgewiesen werden kann, es ist nun jedoch nur noch eine Intensitätsmessung möglich.
+
+Erhöht man die Spannung weiter, so erzeugt jede Ionistation Kaskaden von Entladungen, durch die das Zählrohr nach kurzer Zeit zerstört wird.
+
+\subsection{Tot- und Erholungszeit}
+Bei der Ionistation werden nicht nur Elektronen, sondern auch erheblich schwerere positiv geladene Ionen erzeugt. Diese werden wegen ihrer hohen Masse nur langsam zur Kathode beschleunigt und verbleiben solange im Zählrohr, dass ihre positive Ladung die Feldstärke im Zählrohr soweit herabsetzt, dass für eine kurze Zeit keine eintreffenden Teilchen registiert werden können. Dies nennt man die Totzeit T des Zählrohrs.
+Während die Ionenwolke zum Mantel hin abwandert, steigt die Feldstärke wieder an und das Zählrohr kann weitere Teilchen registrieren. Solange das Feld jedoch noch nicht vollständig wiederhergestellt ist, haben folgende Primärimpulse eine geringere Intensität. Dieser Zeitraum $T_E$ wird daher Erholungszeit genannt.
+
+\subsection{Nachentladungen}
+Auch die auf die Mantelfläche treffenden Ionen können ihrerseits Hüllenelektronen ausschlagen, die weitere echoartige Kaskaden anregen. Diese sind höchst unerwünscht, da sie die Messung verfälschen und werden als Nachentladungen bezeichnet. Um sie zu minimieren wird dem Gas ein Alkoholanteil hinzugefügt, da die Ionisierten Argonatome mit ihrer Energie wiederum die Alkoholatome ionisieren, welche keine Nachentladungen auslösen, sondern mit der Energie zu Schwingungen angeregt werden.
 
 \section{Durchführung}
 

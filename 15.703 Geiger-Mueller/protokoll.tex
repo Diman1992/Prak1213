@@ -65,8 +65,9 @@ darin axial verlaufenden Anodendraht (Radius $r_a$). Im Zylinder herrscht ein Un
 \begin{align}
 	E(r)= \frac{U}{r\cdot ln (r_k / r_a)}
 \end{align}
-durch welches geladene Teilchen, die durch Ionisationsvorgänge im Zählrohr entstehen, zu den leitenden Flächen beschleunigt werden. Die ionisierten Atomrümpfe rekombinieren dort mit überschüssigen Elektronen aus der Kathode, während die Elektronen in der Anode abgeleitet und über einen Verstärker als Stromimpuls registriert werden.
-Die Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha, \beta \text{ oder } \gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
+durch welches geladene Teilchen, die durch Ionisationsvorgänge im Zählrohr entstehen, zu den leitenden Flächen beschleunigt werden. Die ionisierten Atomrümpfe rekombinieren dort mit überschüssigen Elektronen aus der Kathode, während die Elektronen in der Anode abgeleitet und über einen Verstärker als Stromimpuls registriert werden.\\
+
+\trianglerightDie Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha, \beta \text{ oder } \gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
 
 \subsection{Die Spannungsbereiche}
 Je nachdem, wie hoch die an das Zählrohr angelegte Spannung ist, verhält sich das Zählrohr anders.
@@ -82,14 +83,31 @@ Das eigentliche Geiger-Müller-Zählrohr arbeitet im sog. Auslösebereich. Dort 
 Erhöht man die Spannung weiter, so erzeugt jede Ionistation Kaskaden von Entladungen, durch die das Zählrohr nach kurzer Zeit zerstört wird.
 
 \subsection{Tot- und Erholungszeit}
-Bei der Ionistation werden nicht nur Elektronen, sondern auch erheblich schwerere positiv geladene Ionen erzeugt. Diese werden wegen ihrer hohen Masse nur langsam zur Kathode beschleunigt und verbleiben solange im Zählrohr, dass ihre positive Ladung die Feldstärke im Zählrohr soweit herabsetzt, dass für eine kurze Zeit keine eintreffenden Teilchen registiert werden können. Dies nennt man die Totzeit T des Zählrohrs.
+Bei der Ionistation werden nicht nur Elektronen, sondern auch erheblich schwerere positiv geladene Ionen erzeugt. Diese werden wegen ihrer hohen Masse nur langsam zur Kathode beschleunigt und verbleiben solange im Zählrohr, dass ihre positive Ladung die Feldstärke im Zählrohr soweit herabsetzt, dass für eine kurze Zeit keine eintreffenden Teilchen registiert werden können. Dies nennt man die Totzeit T des Zählrohrs.\\
+Die Totzeit kann errechnet werden, indem man mit zwei Strahlungsquellen arbeitet. Zunächst plaziert man Quelle 1 vor dem Zählrohr und misst über eine bestimmte Dauer die entstehenden Impulse ($N_1$). Anschließend wird Quelle 2 zur Messung hinzugenommen und die durch beide Quellen entstehenden Impulse ($N_{1,2}$) simultan gemessen. Zu guter letzt entfernt man Quelle 1 und misst die Impulse von Quelle 2 alleine ($N_2$).\\
+Setzt man die gemessenen Werte nun in folgende Formel ein:
+\begin{align}
+T\approx \frac{N_1+ N_2 - N_{1,2}}{2\cdot N_1 N_2},
+\label{eq_totzeit}
+\end{align}
+so lässt sich die Totzeit den Zählrohrs errechnen.
 Während die Ionenwolke zum Mantel hin abwandert, steigt die Feldstärke wieder an und das Zählrohr kann weitere Teilchen registrieren. Solange das Feld jedoch noch nicht vollständig wiederhergestellt ist, haben folgende Primärimpulse eine geringere Intensität. Dieser Zeitraum $T_E$ wird daher Erholungszeit genannt.
 
 \subsection{Nachentladungen}
 Auch die auf die Mantelfläche treffenden Ionen können ihrerseits Hüllenelektronen ausschlagen, die weitere echoartige Kaskaden anregen. Diese sind höchst unerwünscht, da sie die Messung verfälschen und werden als Nachentladungen bezeichnet. Um sie zu minimieren wird dem Gas ein Alkoholanteil hinzugefügt, da die Ionisierten Argonatome mit ihrer Energie wiederum die Alkoholatome ionisieren, welche keine Nachentladungen auslösen, sondern mit der Energie zu Schwingungen angeregt werden.
 
-\section{Durchführung}
+\subsection{Charakteristik}
+Trägt man für ein Geiger-Müller-Zählrohr die registrierte Teilchenzahl N bei konstanter Strahlungsintensität gegen die angelegte Spannung U auf, so erhält man seine sogenannte Charakteristik.
+Interessant ist insbesondere der Auslösebereich, der ein Plateau ausbildet. Bei einem Idealen Zählrohr ist die Plateausteigung Null, jedoch wird immer eine geringe Steigung messbar sein, da Nachentladungen nie völlig ausgeschlossen werden können.
 
+
+\section{Durchführung}
+Zunächst soll eine Charakteristik des Zählrohres erstellt werden. Betrachtet wird hierzu eine $\beta$-Strahlungsquelle, die in einem Abstand aufgebaut wird, so dass nicht mehr als 100 Impulse pro Sekunde gemessen werden. Auf diese Weise verliert die Totzeit an bedeutung.
+Zu verschiedenen Betriebsspannungen werden die Ionisationsvorgänge gemessen und ihre Anzahl gegen die Spannung in einem Diagramm aufgetragen.
+
+Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben werden können.
+
+Die Totzeit kann ebenfalls mit Hilfe eines Oszilloskopes abgeschätzt werden. Man lässt dazu eine relativ hohe Strahlungsintensität in das Zählrohr fallen und betrachtet, wann der nächste Impuls frühestens gemessen werden kann. 
 \section{Auswertung}
 
 \section{Diskussion}

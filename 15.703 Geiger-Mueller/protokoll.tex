@@ -8,7 +8,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Versuch\\				% Titel des Versuchs 
+\title{Versuch 703 - Geiger-Müller-Zählrohr \\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+\date{16.April 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -67,18 +67,20 @@ Das Geiger-Müller-Zählrohr ist ein Messgerät, mit dem ionisierende Strahlung 
 \end{figure}
 Im Zylinder selbst herrscht ein Unterdruck und er ist mit einem dünnen Argon-Alkohol-Gasgemisch gefüllt. Legt man nur eine Spannung zwischen Draht und Gehäuse an, so entsteht ein Radialsymmetrisches elektrisches Feld mit der Feldstärke
 \begin{align}
-	E(r)= \frac{U}{r\cdot ln (r_k / r_a)}
+	E(r)= \frac{U}{r\cdot \ln (r_k / r_a)}
+	\label{eq_efeld}
 \end{align}
 durch welches geladene Teilchen, die durch Ionisationsvorgänge im Zählrohr entstehen, zu den leitenden Flächen beschleunigt werden. Die ionisierten Atomrümpfe rekombinieren dort mit überschüssigen Elektronen aus der Kathode, während die Elektronen in der Anode abgeleitet und über einen Verstärker als Stromimpuls registriert werden.\\
 
-Die Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha-, \beta- \text{ oder } \gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
+Die Alkohol- und Edelgasatome werden durch die einfallende Strahlung ionisiert, die wahlweise $\alpha$-, $\beta$-, oder $\gamma$-Strahlung sein kann. Auf Grund ihrer kurzen Reichweite bzw. geringer Wechselwirkung eignen sich $\alpha \text{ und } \gamma$-Strahlen nicht so gut.
 
 \subsection{Die Spannungsbereiche}
+\label{sec_spannungsbereiche}
 Je nachdem, wie hoch die an das Zählrohr angelegte Spannung ist, verhält sich das Zählrohr anders.
 
 \begin{figure}[h]
 	\includegraphics[width=0.6\textwidth]{pics/charak.jpg}
-	\caption{Charakteristik eines Zählrohrs für $\alpha- \text{ und } \beta$-Strahlung}
+	\caption{Charakteristik eines Zählrohrs für $\alpha$- und $\beta$-Strahlung}
 \end{figure}
 
 Ist die Spannung nur sehr gering, so rekombinieren die erzeugten Ionen mit den Elektronen, bevor sie Anode bzw. Kathode erreichen konnten. Es werden folglich nicht alle Ionisationsvorgänge registriert.
@@ -92,6 +94,7 @@ Das eigentliche Geiger-Müller-Zählrohr arbeitet im sog. Auslösebereich. Dort 
 Erhöht man die Spannung weiter, so erzeugt jede Ionistation Kaskaden von Entladungen, durch die das Zählrohr nach kurzer Zeit zerstört wird.
 
 \subsection{Tot- und Erholungszeit}
+\label{sec_totzeit}
 Bei der Ionistation werden nicht nur Elektronen, sondern auch erheblich schwerere positiv geladene Ionen erzeugt. Diese werden wegen ihrer hohen Masse nur langsam zur Kathode beschleunigt und verbleiben solange im Zählrohr, dass ihre positive Ladung die Feldstärke im Zählrohr soweit herabsetzt, dass für eine kurze Zeit keine eintreffenden Teilchen registiert werden können. Dies nennt man die Totzeit T des Zählrohrs.\\
 Die Totzeit kann errechnet werden, indem man mit zwei Strahlungsquellen arbeitet. Zunächst plaziert man Quelle 1 vor dem Zählrohr und misst über eine bestimmte Dauer die entstehenden Impulse ($N_1$). Anschließend wird Quelle 2 zur Messung hinzugenommen und die durch beide Quellen entstehenden Impulse ($N_{1,2}$) simultan gemessen. Zu guter letzt entfernt man Quelle 1 und misst die Impulse von Quelle 2 alleine ($N_2$).\\
 Setzt man die gemessenen Werte nun in folgende Formel ein:
@@ -105,6 +108,7 @@ Während die Ionenwolke zum Mantel hin abwandert, steigt die Feldstärke wieder 
 \begin{figure}[htbp]
 	\includegraphics[width=0.8\textwidth]{pics/erholungszeit.jpg}
 	\caption{Tot- und Erholungszeit eines Geiger-Müller-Zählrohrs in einem Oszilloskop}
+	\label{pic_totzeit}
 \end{figure}
 
 \subsection{Nachentladungen}
@@ -120,17 +124,127 @@ Interessant ist insbesondere der Auslösebereich, der ein Plateau ausbildet. Bei
 
 
 \section{Durchführung}
-Zunächst soll eine Charakteristik des Zählrohres erstellt werden. Betrachtet wird hierzu eine $\beta$-Strahlungsquelle, die in einem Abstand aufgebaut wird, so dass nicht mehr als 100 Impulse pro Sekunde gemessen werden. Auf diese Weise verliert die Totzeit an bedeutung.
-Zu verschiedenen Betriebsspannungen werden die Ionisationsvorgänge gemessen und ihre Anzahl gegen die Spannung in einem Diagramm aufgetragen.
+Zunächst soll eine Charakteristik des Zählrohrs erstellt werden. Betrachtet wird hierzu eine $\beta$-Strahlungsquelle, die in einem 
+Abstand aufgebaut wird, so dass nicht mehr als 100 Impulse pro Sekunde gemessen werden. Auf diese Weise verliert die Totzeit an Bedeutung.
+Zu verschiedenen Betriebsspannungen werden die Ionisationsvorgänge gemessen und ihre Anzahl gegen die Spannung in einem Diagramm 
+aufgetragen.
 
-Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben werden können.
-
-Die Totzeit kann ebenfalls mit Hilfe eines Oszilloskopes abgeschätzt werden. Man lässt dazu eine relativ hohe Strahlungsintensität in das Zählrohr fallen und betrachtet, wann der nächste Impuls frühestens gemessen werden kann. 
+Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die 
+Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben 
+werden können. Hieraus lässt sich grob die Totzeit ermitteln
 
 \section{Auswertung}
+\subsection{Fehlerrechnung}
+Da über ein großes Zeitintervall die Messungen gemacht werden, ist es hilfreich eine auf eine Sekunde genormte Zählung $Z$ einzuführen
+
+\begin{equation}
+ Z = \frac{N}{t}.
+\end{equation}
+Da gemessene Raten $N$ poissonverteilt sind, ergibt sich der absolute Fehler $\Delta Z$ zu
+
+\begin{equation}
+ \Delta Z = \frac{\sqrt{N}}{t}.
+\end{equation}
+Fehler von Größen, die von mehreren fehlerbehafteten Größen abhängig sind errechnen sich aus der Gaußschen Fehlerfortpflanzung
+
+\begin{formel}[H]
+\begin{equation}
+\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2}.
+\label{eq_gauss}
+\end{equation}
+\caption*{\small{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}}
+\end{formel}
+
+\subsection{Charakteristik des Geiger-Müller-Zählrohrs}
+Die benutzte Strahlungsquelle ist das Thallium-Isotop $^{204}$Th und wird für das Erstellen der Zählrohrstatisktik verwandt. Bei 
+verschiedenen Spannungen $U$ ergeben sich $N$ gemessene Impulse, sowie ein Strom $I$. In Tabelle \ref{tab_charakteristik} sind diese
+Größen aufgeführt.
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c}
+ $U$ in V & $N$ in 1/s & $Z$ in 1/s & $\Delta Z$ in 1/s & $I$ in $\mu$A \\
+ \hline 
+  332&	114	&0,57&	0,053&	0,000 \\
+334&	5803	&29,02&	0,381&	0,080\\
+335&	14425&	72,13&	0,601&	0,080\\
+340&	14691&	73,46&	0,606&	0,080\\
+350&	14543&	72,72&	0,603&	0,090\\
+400&	14667&	73,34&	0,606&	0,100\\
+450&	14834&	74,17&	0,609&	0,130\\
+500&	15030&	75,15&	0,613&	0,205\\
+550&	14973&	74,87&	0,612&	0,250\\
+600&	15126&	75,63&	0,615&	0,290\\
+650&	15459&	77,30&	0,622&	0,320\\
+670&	15790&	78,95&	0,628&	0,325\\
+700&	16429&	82,15&	0,641&	0,400\\
+710&	17049&	85,25&	0,653 &	0,400\\
+ \end{tabular}
+\caption{Impulse und Strom zu Spannungen bei $t$ = 200s}
+\label{tab_charakteristik}
+ \end{table}
+
+Bei Betrachtung der Werte, kann man ein gesättigtes Verhalten der Impulse bei dem Spannungsbereich von 335 V und 670 V feststellen. In
+Abbildung \ref{pic_plateau} wird eine Gerade mittels GNUplot gefittet, sodass die nicht verhinderbare Steigung des Plateaus ermittelt
+werden kann. 
+
+\begin{figure}[H]
+ \includegraphics[width=0.8\textwidth]{pics/charakteristik.png}
+ \caption{Charakteristik des Geiger-Müller-Zählrohrs}
+ \label{pic_plateau}
+\end{figure}
+Besagte Plateausteigung beträgt somit $a$ = (1,546 $\pm$ 0,192)\%/100V.  
+
+\subsection{Bestimmung der Totzeit mittels Oszilloskop}
+Auf einem Oszilloskop werden die gemessenen Impulse als Wellenberge entsprechend Abbildung \ref{pic_totzeit} dargestellt. Ab einer
+Spannung von etwa 350 V erscheinen die Nachentladungen auf dem Schirm. Bei einer Spannung von $U$ = 700 V und einer bekannten
+Ablenkspannung von etwa 50 $\mu$s/cm wird der Abstand der Peaks vom einfallenden Teilchen, sowie der schnellsten Nachentladung zu 
+$b$ = 2,5 cm abgeschätzt, was zu einer groben Näherung der Totzeit mit $T$ = 125 $\mu$s führt.
+
+\subsection{Bestimmung der Totzeit mittels Zwei-Quellen-Methode}
+Wie in Abschnitt \ref{sec_totzeit} beschrieben, wird die 2-Quellen-Methode durchgeführt. 
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c}
+Probe & $N$ in 1/s & $Z$ in 1/s & $\Delta Z$ in 1/s \\
+\hline
+$N_1$		& 12709 	& 63,55 	& 0,564\\
+$N_2$ 		& 54976 	& 274,88 	& 1,172\\
+$N_{1,2}$ 	& 65606 	& 328,03	& 1,281
+  
+ \end{tabular}
+\caption{Messungen zur Zwei-Quellen-Methode bei $t$ = 200s}
+\label{tab_2quellen}
+\end{table}
+
+Mit den Werten aus Tabelle \ref{tab_2quellen} lässt sich mittels Gleichung \eqref{eq_totzeit} die Totzeit errechnen. Der Fehler ergibt
+sich aus Gleichung \eqref{eq_gauss}.
+
+\begin{align}
+ T = (297,7 \pm 50,7) \mu s
+\end{align}
+
+\subsection{Messung freigesetzter Ladungsmenge}
+Ein ins Geiger-Müller-Zählrohr eintretende Teilchen sorgt bei hohen Spannunge wie in \ref{sec_spannungsbereiche} beschrieben, für sehr
+viele Ladungen, die auf den Anodendraht treffen. Das hat einen Stromfluss zufolge, welcher in Tabelle \ref{tab_charakteristik} 
+aufgeführt ist. Die Anzahl an Ladungsträgern errechnet sich aus Gleichung \eqref{eq_ladung} und ist in Abbildung \ref{pic_ladung} zu
+sehen.
+
+\begin{figure}[H]
+ \includegraphics[width=0.8\textwidth]{pics/ladungen.png}
+ \caption{durch einfallende Teilchen freigesetzte Ladung bei verschiedenen Spannungen}
+ \label{pic_ladung}
+\end{figure}
 
 \section{Diskussion}
+Das Plateau in der Charakteristik des Geiger-Müller-Zählrohrs ist mit einer Steigung von etwa 1,5\%/100V durchaus gut feststellbar
+und entspricht den Erwartungen. Zur besseren Abstimmung der Grenzen sind an den Randwerten mehrere Messungen durchgeführt worden. 
 
+Die Messungen zur Totzeit beider Methoden sind gut miteinander vergleichbar. Der Wert des Oszilloskops beläuft sich auf
+$1,25 \cdot 10^{-4}$s. Die Ermittlung über die Zwei-Quellen-Methode ergibt einen vergleichbaren mit $2,98 \cdot 10^{-4}$s. Also ist
+davon auszugehen, dass das Ergebnis dem realen Wert nahe kommt.
+
+Im Plateaubereich scheint für die freigesetzten Ladungen ein linearer Zusammenhang zur Spannung zu bestehen. Da nach Gleichung \eqref{eq_efeld}
+das elektrische Feld proportional zur Spannung ist, kann auch dieses Phänomen erklärt werden.
 % ========================================
 %	Literaturverzeichnis
 % ========================================

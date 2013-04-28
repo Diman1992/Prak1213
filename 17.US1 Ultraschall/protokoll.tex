@@ -1,0 +1,214 @@
+% ========================================
+%	Header einbinden
+% ========================================
+
+\input{longheader.tex}
+
+% ========================================
+%	Angaben für das Titelblatt
+% ========================================
+
+\title{Versuch US1 - Grundlagen der Ultraschalltechnik\\				% Titel des Versuchs 
+\large TU Dortmund, Fakultät Physik\\ 
+\normalsize Anfänger-Praktikum}
+
+\author{Jan Adam\\			% Name Praktikumspartner A
+{\small \href{jan.adam@tu-dortmund.de}{jan.adam@tu-dortmund.de}}	% Erzeugt interaktiven einen Link
+\and						% um einen weiteren Author hinzuzfügen
+Dimitrios Skodras\\					% Name Praktikumspartner B
+{\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
+}
+\date{23.Apirl 2013}				% Das Datum der Versuchsdurchführung
+
+% ========================================
+%	Das Dokument beginnt
+% ========================================
+
+\begin{document}
+
+% ========================================
+%	Titelblatt erzeugen
+% ========================================
+
+\maketitle					% Jetzt wird die Titelseite erzeugt
+\thispagestyle{empty} 				% Weder Kopfzeile noch Fußzeile
+
+% ========================================
+%	Der Vorspann
+% ========================================
+
+%\newpage					% Wenn Verzeichnisse auf einer neuen Seite beginnen sollen
+%\pagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+
+\tableofcontents
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoffigures					% Abbildungsverzeichnis
+
+%\newpage					% eine neue Seite
+%\thispagestyle{empty}				% Weder Kopf- noch Fußzeile für Verzeichnisse
+%\listoftables					% Tabellenverzeichnis
+\newpage					% eine neue Seite
+
+
+% ========================================
+%	Kapitel
+% ========================================
+
+\section{Einleitung}				% Bei Bedarf
+
+\section{Theorie}
+
+\section{Durchführung}
+
+\section{Auswertung}
+\subsection{Fehlerrechnung}
+Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
+Größen herauszufinden. Neben den, von den Messapparaturen verursachten Fehlern, dienen der Mittelwert
+\begin{formel}
+\begin{equation}
+ \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
+ \label{eq_mittel}
+\end{equation}
+\caption*{\small{$\bar{x}$ = Mittelwert, N = Anzahl der Messungen}}
+\end{formel}
+
+die Gaußsche Fehlerfortpflanzung
+
+\begin{formel}
+\begin{equation}
+\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
+\label{gauss}
+\end{equation}
+\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
+\end{formel}
+und die Standardabweichung des Mittelwerts
+
+\begin{equation}
+ \bar s = \sqrt{\frac{1}{N(N-1)} \sum_{i}^{N} (x_i - \bar{x})^2}.
+ \label{eq_standard}
+\end{equation}
+
+\subsection{Schallgeschwidigkeit in Acryl}
+Um in Abschnitt \ref{sec_bohrung} die Abmessungen der Bohrungen in einem Acrylblock ermitteln zu können, ist die Bestimmung der Schallgeschwidigkeit 
+in Acryl vonnöten. Hierzu werden das Impuls-Echo-Verfahren und das Durchschallungs-Verfahren genutzt. Zuvor werden die Höhen der verwandten
+Acrylzylinder, sowie des -blocks mit einer Schieblehre ausgemessen, nach \eqref{eq_mittel} gemittelt und ihr Fehler entsprechend 
+\eqref{eq_standard} bestimmt. Die Ergebnisse sind in Tabelle \ref{tab_masse} aufgeführt.
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c}
+  & Klein & Mittel & Groß & Block\\
+  \hline
+	&39,6&	80,5&	120,7&	77,3\\
+Höhe 	&39,7&	80,4&	120,7&	77,6\\
+in 	&39,7&	80,5&	120,6&	77,5\\
+mm 	&39,7&	80,5&	120,5&	77,6\\
+	&39,7&	80,5&	120,5&	77,7\\
+	\hline
+Mittelwert	&39,68$\pm$0,0004&	80,48$\pm$0,0004 &	120,6$\pm$0,002&	77,54$\pm$0,0046
+ \end{tabular}
+ \caption{Ausmaße verwandter Acrylkörper}
+\label{tab_masse}
+\end{table}
+
+\subsubsection{Bestimmung mittels Impuls-Echo-Verfahren}
+In Tabelle \ref{tab_impulsecho} ist für die drei Zylinder die durch drei verschiedene Ultrschallsonden gemessene Laufzeit aufgeführt. Der
+entstehende Fehler von $\Delta t$ = 0,1 $\mu$s wird vom Computerprogramm angegeben.
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c}
+ Ultraschallsonde & Klein & Mittel & Groß\\
+ \hline
+1 MHz (blau)&	30,6&	60,4&	89,7\\
+2 MHz (rot)&	29,9&	59,7&	88,8\\
+4 MHz (grün)&	29,4&	59,1&	88,5\\  
+ \end{tabular}
+\caption{Laufzeiten in $\mu$s bei den Acrylkörpern mit drei Sonden}
+\label{tab_impulsecho}
+\end{table}
+
+Aufgrund der Anpassungsschicht der Ultrschallsonden, muss die Gleichung \eqref{eq_fehlstelle} um den Laufzeitfehler $t_f$ modifiziert werden.
+Aus der Differenz der Laufzeitstrecken $\delta s$ in \eqref{eq_laufzeitstrecke} lässt sich die Schallgeschwidigkeit in Acryl ohne 
+Laufzeitfehler bestimmen. Die Gleichungen
+
+\begin{align}
+\label{eq_laufzeitfehler}
+ s_i &= \frac12 c (t_i - t_f)\\
+ \nonumber
+ s_j &= \frac12 c (t_j - t_f)\\
+ \delta s &= s_i - s_j = \frac12 c \cdot  \delta t = \frac12 c (t_i - t_j)
+ \label{eq_laufzeitstrecke}
+\end{align}
+führen zur Schallgeschwidigkeit
+
+\begin{align}
+ c = 2\, \frac{\delta s}{\delta t}.
+\end{align}
+Ihr Fehler errechnet sich aus \eqref{gauss} zu
+
+\begin{align}
+ \Delta c = \sqrt{\left(\frac{\partial c}{\partial \delta s} \Delta s \right)^2 + \left(\frac{\partial c}{\partial \delta t} \Delta t \right)^2} = c\, \sqrt{\frac{\Delta s}{\delta s}^2 + \frac{\Delta t}{\delta t}^2}.
+\end{align}
+In Tabelle \ref{tab_schall} sind die Ergebnisse zur Schallgeschwidigkeit aufgeführt. 
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c}
+Sonde & Größe & Klein-Groß & Klein-Mittel & Mittel-Groß\\
+\hline
+&$\delta s$ in mm	&	80,92$\pm$0,002&	40,80$\pm$0,0005&	40,12$\pm$0,002\\
+\hline
+\hline
+1 MHz &$\delta t$ in $\mu$s &59,1$\pm$0,1&	29,8$\pm$0,1&	29,3$\pm$0,1\\
+&$c$ in km/s		&2,74$\pm$0,0046&	2,74$\pm$0,0092	&	2,74$\pm$,0093\\
+\hline
+2 MHz &$\delta t$ in $\mu$s &	58,9$\pm$0,1&	29,8$\pm$0,1&	29,1$\pm$0,1\\
+&$c$ in km/s		&2,75$\pm$0,0047&	2,74$\pm$0,0092	&	2,76$\pm$,0095\\
+\hline
+4 MHz &$\delta t$ in $\mu$s &	59,1$\pm$0,1&	29,7$\pm$0,1&	29,4$\pm$0,1\\
+&$c$ in km/s		&2,74$\pm$0,0046&	2,75$\pm$0,0093&	2,73$\pm$,0093\\
+ \end{tabular}
+\caption{Schallgeschwidigkeit $c$ in Acryl}
+\label{tab_schall}
+\end{table}
+\renewcommand{\arraystretch}{1.0}
+Aus den Werten ergibt sich für die Schallgeschwidigkeit in Acryl ein gemittelter Wert von
+
+\begin{align}
+ c = 2,742\pm0,003 \text{km/s}.
+\end{align}
+
+Der in Abschnitt \ref{sec_bohrung} benutzte Acrylblock wird mit der blauen Ultraschallsonde untersucht. Der dort ebenfalls auftretende
+Laufzeitfehler $t_f$ kann mit der ermittelten Schallgeschwidigkeit nach \eqref{eq_laufzeitfehler} errechnet werden. Das Ergebnis
+ist in Tabelle \ref{tab_laufzeitfehler} zu finden.
+
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c}
+Blaue Sonde & Klein & Mittel & Groß & Mittelwert\\
+ \hline
+  $t_f$ in $\mu$s &1,65$\pm$	&1,69$\pm$	&1,72$\pm$ & 1,69$\pm$ \\
+ \end{tabular}
+
+\end{table}
+
+
+
+\subsubsection{Bestimmung mittels Durchschallungs-Verfahren}
+\subsection{Untersuchung von Bohrungen in einem Acrylblock}
+\label{sec_bohrung}
+\subsection{Biometrische Untersuchung eines Augenmodells}
+
+\section{Diskussion}
+
+% ========================================
+%	Literaturverzeichnis
+% ========================================
+
+%\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
+%\bibliography{BIBDATEI}			% Literaturverzeichnis
+
+% ========================================
+%	Das Dokument endent
+% ========================================
+
+\end{document}

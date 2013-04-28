@@ -129,10 +129,12 @@ Abstand aufgebaut wird, so dass nicht mehr als 100 Impulse pro Sekunde gemessen 
 Zu verschiedenen Betriebsspannungen werden die Ionisationsvorgänge gemessen und ihre Anzahl gegen die Spannung in einem Diagramm 
 aufgetragen.
 
+<<<<<<< HEAD
+Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben werden können.
+
 Die Totzeit kann ebenfalls mit Hilfe eines Oszilloskopes abgeschätzt werden. Man lässt dazu eine relativ hohe Strahlungsintensität in das Zählrohr fallen und betrachtet, wann der nächste Impuls frühestens gemessen werden kann.
-Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die 
-Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben 
-werden können. Hieraus lässt sich grob die Totzeit ermitteln
+
+Mit Hilfe eines empfindlichen Strommessgerätes kann der mittlere Zählrohrstrom
 \begin{align}
 	\bar{I}:= \frac{1}{\tau} \int_0^\tau \frac{U(t)}{R}dt \hspace{1cm} (\tau >> T)
 \end{align}
@@ -143,6 +145,11 @@ gemessen werden, der bei hohen Zählraten auftritt. Aus I lässt sich bei bekann
 wenn Z Teilchen in der Zeit $\Delta t$ registriert wurden.
 $\Delta Q$ hängt von der Zählrohrspannung U ab. Es daher zweckmäßig, $\Delta Q$ in Abhängigkeit von U zu untersuchen.
 
+=======
+Nachentladungen können sichtbar gemacht werden, indem man die Probe soweit entfernt, dass nur wenig Strahlung einfällt und dann die 
+Spannung des Zählrohrs auf ca 700V gestellt wird. Es werden nun Nachentladungen im Oszilloskop sichtbar, die qualitativ beschrieben 
+werden können. Hieraus lässt sich grob die Totzeit ermitteln
+>>>>>>> d72bb332bd0b83410f688c8366c8af4c4a286d3f
 
 \section{Auswertung}
 \subsection{Fehlerrechnung}

@@ -81,7 +81,12 @@ Befindet sich eine Fehlstelle in der durchstrahlten Probe, so wird eine abgeschw
 Aussage darüber, wo sich die Fehlstelle in der Probe befindet, ist jedoch nicht möglich.\\
 
 \subsection{Impuls-Echo-Verfahren}
-Beim Impuls-Echo-Verfahren wird der Ultraschallsender auch als Empfänger verwendet. Der ausgesendete Ultraschallpuls wird hierbei an einer Grenzfläche reflektiert und nach seiner Rückkehr von dem Empfänger aufgenommen. Bei bekannter Schallgeschwindigkeit kann aus der Laufzeit die Lage der Fehlstelle bestimmt werden, indem der durch die Fehlstelle auftretende Peak ausgewertet wird.
+Beim Impuls-Echo-Verfahren wird der Ultraschallsender auch als Empfänger verwendet. Der ausgesendete Ultraschallpuls wird hierbei an einer Grenzfläche reflektiert und nach seiner Rückkehr von dem Empfänger aufgenommen. Bei bekannter Schallgeschwindigkeit kann aus der Laufzeit die Lage der Fehlstelle bestimmt werden, indem der durch die Fehlstelle auftretende Peak ausgewertet wird.\\
+Die Schallwelle hat dabei in der Zeit $\Delta t$ folgende Strecke zurückgelegt
+\begin{align}
+	\Delta s = \frac{1}{2} c \cdot \Delta t
+	\label{eq_strecke}
+\end{align}
 
 \subsection{A- und B-Scan}
 Die Messwerte aus den Sonden können auf verschiedene Arten dargestellt werden:\\
@@ -92,7 +97,17 @@ Der Brightness Scan erzeugt durch bewegen der Sonde ein zweidimensionals Bild da
 
 
 \section{Durchführung}
-Im Versuch sollen die Schallgeschwindigkeit in einem Acryllblock sowie die Lage und Größe verschiedener Fehlstellen in selbigem bestimmt werden. Anschließend soll mittels A-Scan die Abmessung eines Augemodells berechnet werden.\\
+Im Versuch sollen die Schallgeschwindigkeit in einem Acryllblock sowie die Lage und Größe verschiedener Fehlstellen in selbigem bestimmt werden. 
+\begin{wrapfigure}[6]{r}{3.5cm}
+\includegraphics[width=0.2\textwidth]{pics/block.jpg}
+\caption{\mbox{Acryllblock}}
+\end{wrapfigure}
+Anschließend soll mittels A-Scan die Abmessung eines Augemodells berechnet werden.
+
+\begin{wrapfigure}[6]{r}{3.5cm}
+\includegraphics[width=0.2\textwidth]{pics/auge.jpg}
+\caption{\mbox{Augenmodell}}
+\end{wrapfigure}
 
 Zunächst werden verschieden lange Acryllzylinder mittels Durchlaufverfahren beschallt. Aus der Laufzeit der Welle und der bekannten Abmessung des Zylinders wird so die Schallgeschwindigkeit im Acryll bestimmt.
 
@@ -105,7 +120,7 @@ Das Augenmodell wird ebenfalls mit dem Echo-Impulsverfahren untersucht. Gemessen
 \subsection{Fehlerrechnung}
 Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
 Größen herauszufinden. Neben den, von den Messapparaturen verursachten Fehlern, dienen der Mittelwert
-\begin{formel}
+\begin{formel}[H]
 \begin{equation}
  \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
  \label{eq_mittel}
@@ -115,7 +130,7 @@ Größen herauszufinden. Neben den, von den Messapparaturen verursachten Fehlern
 
 die Gaußsche Fehlerfortpflanzung
 
-\begin{formel}
+\begin{formel}[H]
 \begin{equation}
 \Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
 \label{gauss}

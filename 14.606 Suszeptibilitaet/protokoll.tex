@@ -209,13 +209,19 @@ Nach Formel \eqref{eq_lande} ergibt sich:
 \begin{align}
 g_J=\frac{3\cdot4,5\cdot5,5+[1,5\cdot2,5-6\cdot7]}{2\cdot 3,5\cdot4,5}=0,73
 \end{align}\\
-N errechnet sich, indem man das Volumen der Stoffmenge mal den Kehrwert des molaren Volumens rechnet und dies wiederum mit der Avogadrokonstante Multipliziert.
+N errechnet sich, aus der Stoffdichte und der Probenmasse zu:
 \begin{align}
-N=\frac{\text{Stoffdichte}}{\text{Gewicht}}\cdot\frac{1}{\text{molares Volumen}}\cdot6,02\cdot10^{23}
-\label{eq_N}\\
-\intertext{für Neodym ergibt sich:}\\
-N=\frac{0,009}{7,24\cdot10^{-9}}\cdot\frac{1}{20,59\cdot10^{-6}}\cdot6,02\cdot10^{23}= 3,63\cdot10^{34}
+N=\frac{2\rho}{m}
 \end{align}
+Für die drei Stoffe ergibt sich damit:\\
+
+\begin{table}[H]
+\begin{tabular}{c|c|c|c}
+  & Neodym & Gadolinium & Dysprosium\\ \hline
+N & $0,0935\cdot10^{23}$ & $0,0881 \cdot10^{23}$ & $0,0901\cdot10^{23}$\\
+\end{tabular}
+\end{table}
+
 Einsetzten in Formel \eqref{eq_chi_theo} ergibt somit:
 \begin{align}
 \chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2 \cdot 0,73^2 \cdot N\cdot 4,5\cdot 5,5}{8\cdot m_e^2 k_B \cdot320}=1464,72
@@ -279,7 +285,7 @@ Die Werte für $\chi$ lassen sich auch mit dem im Versuch benutzen Aufbau errech
 \begin{table}[htbp]
 \begin{tabular}{l!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c|}
 & \ce{Nd_2O_3} & & \ce{Gd_2O_3} & & \ce{Dy_2O_3} & \\
- & $m\Omega$ & mV & $m\Omega$ & mV & $m\Omega$ & mV \\
+ & m$\Omega$ & mV & m$\Omega$ & mV & m$\Omega$ & mV \\
 \hline
 $R_3$&2830 & 1.20 & 2833 & 1.15 & 2835 & 1.70 \\ \hline
 $R_3 + \Delta R$&2735 & 2.21 & 2064 & 1.32 & 1173 & 1.50 \\ \hline

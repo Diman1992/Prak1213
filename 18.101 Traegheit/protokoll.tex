@@ -8,7 +8,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Versuch\\				% Titel des Versuchs 
+\title{Versuch 101 - Das Trägheitsmoment\\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+\date{30.April 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -56,11 +56,77 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
+\section{Einleitung}
+Im Zuge dieses Experiments wird das Trägheitsmoment von Körpern, sowie einer Holzpuppe in zwei verschiedenen Positionen bestimmt. 
+Weiterhin soll der Satz von Steiner geprüft werden.
 
 \section{Theorie}
+Charakteristisch für die Dynamik von Rotationsbewegungen sind die Größen Drehmoment $M$, Trägheitsmoment $I$ und Winkelbeschleunigung
+$\dot \omega$. Das Trägheitsmoment einer punktförmigen masse ist durch $I = m\,r^2$ gegeben. Entsprechend bei ausgedehnten Körpern, bei
+denen sich die Massenelemente um eine feste Achse drehen, werden die einzelnen Trägheitsmomente aufsummiert
+\begin{align}
+ I = \sum_i r^2_i\,m_i.
+\end{align}
+Bei einer kontinuierlichen Massenverteilung gilt allgemein
+\begin{align}
+ I = \int r^2 \dx m.
+\end{align}
+$r$ beschreibt hierbei den Abstand des Massepunkts zur Drehachse. Daher ist das Trägheitsmoment einfacher, symmetrischer Körper leicht
+bestimmbar, das komplexerer Körper durch Summation einzelner Trägheitsmomente. Sofern die Drehachse aber nicht mit einem betrachteten
+Körper übereinstimmt, sondern um eine Strecke $a$ parallel zu ihr verschoben ist, so kann der Satz von Steiner Abhilfe schaffen
+\begin{align}
+ I = I_s + m \cdot a^2,
+\end{align}
+wobei $I_s$ das Trägheitsmoment bezüglich der Drehachse durch den Schwerpunkt ist. 
+
+Bei Rotationsbewegungen von Körpern ist das Drehmoment durch $M = \vec{F} \times \vec{r}$ gegeben. Wenn nun ein schwingbarer Körper
+durch eine Auslenkung um den Winkel $\varphi$ aus seiner Ruhelage gebracht wird, wirkt eine Feder ein rücktreibendes Drehmoment auf ihn.
+Die Schwingungdauer des Körpers $T$ ist durch sein Trägheitsmoment $I$ und die zu bestimmende Winkelrichtgröße $D$ gegeben
+\begin{align}
+ T = 2\pi \sqrt{\frac{I}{D}}.
+ \label{eq_periode}
+\end{align}
+Das Drehmoment ist mit der Winkelrichtgröße über den Auslenkwinkel verknüpft
+\begin{align}
+ D = \frac{M}{\varphi}.
+ \label{eq_winkel}
+\end{align}
 
 \section{Durchführung}
+In Abbildung \eqref{pic_aufbau} ist der Aufbau skizziert. Der zu untersuchende Körper ist mit einer Feder gekoppelt, deren Winkelrichtgröße
+es zu bestimmen gilt. Wenn man eine Federwaage senkrecht zum Radius der vom Körper beschriebenen Kreisbahn mit einem Haken an der Stange
+in einem bestimmten Abstand $r$ ansetzt, misst man für eine Auslenkung $varphi$ eine Kraft $F$. Mit der vorausgesetzten Orthogonalität
+des Kraft- und Ortsvektors, kann man die Winkelrichtgröße nach \eqref{eq_winkel} berechnen
+\begin{align}
+ D = \frac{F\cdot r}{\varphi}.
+\end{align}
+
+\begin{figure}[H]
+ \includegraphics[width=0.3\textwidth]{pics/aufbau.png}
+ \caption{Experimenteller Versuchsaufbau (aus Versuchsanleitung)}
+ \label{pic_aufbau}
+\end{figure}
+
+Selbst ohne Körper hat die Drillachse ein Eigenträgheitsmoment $I_D$, welches über eine massearme Stange mit zwei Gewichten in Abstand $a$
+, welche senkrecht zur Achse angebracht, ermittelt werden kann. Das System, in Schwingung gebracht, oszilliert harmonisch mit einer 
+zu messenden Periodendauer $T$. Nach \eqref{eq_periode} kann $I_D$ bestimmt werden.
+
+Das Trägheitsmoment zweier verschiedener Zylinder wird ebenfalls durch Messung von Periodendauer, sowie Ausdehnungen und Masse bestimmt.
+\eqref{eq_periode} liefert ebenfalls die Lösung.
+
+Für eine Holzpuppe soll das Trägheitsmoment in zwei Stellungen (vergleiche Abbildung \ref{pic_puppe}) berechnet werden. Hierbei werden
+die einzelnen Bestandteile als Zylinder angenähert und ihre einzelnen Trägheitsmomente aufsummiert.
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/puppe.png}
+\caption{Verwandte Stellungen der Holzpuppe (101 - Trägheitsmomente starrer Körper)}
+\label{pic_puppe}
+\end{figure}
+
+
+
+
+
 
 \section{Auswertung}
 

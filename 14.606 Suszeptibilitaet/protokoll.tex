@@ -192,9 +192,21 @@ Zu Beginn wird die Durchlassfrequenz des Selektiv-Verstärkers auf die Signalfre
 Ausgangsspannung gefunden hat, und gleicht die noch leere Brückenschaltung auf nahe 0 mV ab. Nun wird eine Probe eingeführt und die
 neue Brückenspannung gemessen. Zuletzt wird die Brücke erneut abgeglichen und der Wert von $\Delta R$ notiert. 
 
-\section{Auswertung Theoretisch}
+\section{Filterkurve}
+Zunächst soll die Güte des Selektivverstärkers untersucht werden. Hierzu stellt man eine beliebige Filterfrequenz ein und lässt Signale mit der selben Amplitute aber verschiedenen Frequenzen den Filter passieren. In folgendem Diagram ist die Signalamplitude gegen die Signalfrequenz aufgetragen. Die Filterfrequenz beträgt 35KHz und die Amplitude wurde auf 1 normiert.
+\begin{figure}[htbp]
+\includegraphics[width=0.8\textwidth]{pics/guete.jpg}
+\caption{Gaußfunktion: $e^{-a\cdot (x-c)^2}$ mit a = $10.6\pm 1.5$ und c = $35,08 \pm 0,01$}
+\end{figure}
+
+Die Güte errechnet sich entspechend Abbildung \ref{picfilter} zu:
+\begin{align*}
+Q=\frac{v_0}{v_+ - v_-}=\frac{35080}{35250-34900}=100,23
+\end{align*}
+
+\section{Theoretische Berechnung von $\chi$}
 \subsection{Neodym \ce{Nd_2O_3}}
-Neodym hat 4 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 3 Elektronen in der Schale. Der Gesamtspin S beträgt in diesem Fall 
+Neodym hat 4 Elektronen auf der 4f Schale. Nach Abzug der 3 Elektronen für die Oxidbindung verbleiben noch 3 Elektronen in der Schale. Der Gesamtspin S beträgt in diesem Fall 
 \begin{align*}
 S=\frac{1}{2}+ \frac{1}{2}+ \frac{1}{2} = 1 \frac{1}{2}
 \end{align*}
@@ -209,23 +221,6 @@ Nach Formel \eqref{eq_lande} ergibt sich:
 \begin{align}
 g_J=\frac{3\cdot4,5\cdot5,5+[1,5\cdot2,5-6\cdot7]}{2\cdot 3,5\cdot4,5}=0,73
 \end{align}\\
-N errechnet sich, aus der Stoffdichte und der Probenmasse zu:
-\begin{align}
-N=\frac{2\rho}{m}
-\end{align}
-Für die drei Stoffe ergibt sich damit:\\
-
-\begin{table}[H]
-\begin{tabular}{c|c|c|c}
-  & Neodym & Gadolinium & Dysprosium\\ \hline
-N & $0,0935\cdot10^{23}$ & $0,0881 \cdot10^{23}$ & $0,0901\cdot10^{23}$\\
-\end{tabular}
-\end{table}
-
-Einsetzten in Formel \eqref{eq_chi_theo} ergibt somit:
-\begin{align}
-\chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2 \cdot 0,73^2 \cdot N\cdot 4,5\cdot 5,5}{8\cdot m_e^2 k_B \cdot320}=1464,72
-\end{align}
 
 \subsection{Gadolinium \ce{Gd_2O_3}}
 Gadolinium hat 7 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben immer noch 7. Der Gesamtspin S beträgt in diesem Fall \begin{align*}
@@ -239,18 +234,11 @@ Da die Schale genau zur Hälfte befüllt ist, errechnet sich der Gesamtimpuls zu
 \begin{align*}
 J=|L-S|=L+S=3,5
 \end{align*}
-Nach Gleichung \eqref{eq_N} folgt
-\begin{align}
-	N=\frac{0,01408}{7,40\cdot10^{-9}}\cdot\frac{1}	{19,9\cdot10^{-6}}\cdot6,02\cdot10^{23}=5,76\cdot10^{34}
-\end{align}
+
 Nach Formel \eqref{eq_lande} ergibt sich somit:
-\begin{align}
-g_J=\frac{3\cdot3,5\cdot4,5+3,5\cdot4,5}{2\cdot 3,5\cdot4,5}=2
-\end{align}\\
-Einsetzten in Formel \eqref{eq_chi_theo} ergibt:
-\begin{align}
-\chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2\cdot 2^2 \cdot N\cdot 3,5\cdot 4,5}{8\cdot m_e^2 k_B \cdot320}=12967,3
-\end{align}
+	\begin{align}
+	g_J=\frac{3\cdot3,5\cdot4,5+3,5\cdot4,5}{2\cdot 3,5\cdot4,5}=2
+	\end{align}\\
 
 \subsection{Dysprosium \ce{Dy_2O_3}}
 Dysprosium hat 10 Elektronen auf der 4f Schale. Nach abzug der 3 Elektronen für die Oxidbindung verbleiben noch 9. Der Gesamtspin S beträgt in diesem Fall 
@@ -268,50 +256,125 @@ J=L+S=7,5
 \end{align*}
 Nach Formel \eqref{eq_lande} ergibt sich:
 \begin{align}
-g_J=\frac{3\cdot7,5\cdot8,5+[2,5\cdot3,5-5\cdot6]}{2\cdot 7,5\cdot8,5}=1 \frac{1}{3}
+g_J=\frac{3\cdot7,5\cdot8,5+[2,5\cdot3,5-5\cdot6]}{2\cdot 7,5\cdot8,5}=1,33
 \end{align}\\
-Nach Gleichung \eqref{eq_N} folgt
+
+\subsection{Ergebnisse}
+Für die Bestimmung von $\chi$ muss des weiteren N bekannt sein, dieses errechnet sich, zu:
 \begin{align}
-	N=\frac{0,0166}{7,80\cdot10^{-9}}\cdot\frac{1}	{19,01\cdot10^{-6}}\cdot6,02\cdot10^{23}=6,74\cdot10^{34}
+N=\frac{2\rho}{m}\cdot N_A
 \end{align}
-Einsetzten in Formel \eqref{eq_chi_theo} ergibt:
-\begin{align}
-\chi= \frac{1,26\cdot 10^{-6}\cdot e_0^2\hbar^2\cdot 1,07^2 \cdot N\cdot 7,5\cdot 8,5}{8\cdot m_e^2 k_B\cdot320}=15049,90
-\end{align}
+Dabei ist $\rho$ die Dichte der Probe, m die Molare Masse des Stoffes und $N_A$ die Avogadrokonstante.
+
+Für die drei Stoffe ergibt sich damit:
+
+\begin{table}[H]
+\begin{tabular}{c|c|c|c|}
+   & Neodym & Gadolinium & Dysprosium\\ \hline
+  S& 1,5 & 3,5 & 2,5 \\ \hline
+  L& 6   & 0   & 5   \\ \hline
+  J& 4,5 & 3,5 & 7,5 \\ \hline
+  $g_J$& 0,73 & 2,00 & 1,33 \\ \hline
+N & $2,59\cdot10^{28}$ & $2,46 \cdot10^{28}$ & $2,52\cdot10^{28}$\\ \hline
+\end{tabular}
+\end{table}
+
+Setzt man die Zwischenwerte in Gleichung $ $ ein, so erhält man für die magnetischen Suszeptibilitäten:
+\begin{align*}
+\chi_{Nd}&=3,04\cdot10^{-3}\\
+\chi_{Gd}&=13,80\cdot10^{-3}\\
+\chi_{Dy}&=25,3\cdot10^{-3}
+\end{align*}
 
 \section{Auswertung aus Messwerten}
-Die Werte für $\chi$ lassen sich auch mit dem im Versuch benutzen Aufbau errechnen. Die folgende Tabelle enthält die Messwerte zu allen drei Elementen. Jede Messung wurde fünf mal durchgeführt $R3$ bezeichnet den Widerstand, bei dem die Spannung ohne eingeführten Probestab minimal (dh. V) ist. Beim Widerstand $R3 + \Delta R$ ist die Spannung beim eingeführten Probestab minimal (ebenfalls bei V abzulesen).
+Die Werte für $\chi$ lassen sich auch mit dem im Versuch benutzen Aufbau errechnen. Die folgende Tabelle enthält dazu alle Messwerte. Jede Messung wurde fünf mal durchgeführt. Zunächst wurde die Brückenspannung durch einstellen des Widerstandes $R$ auf die Spannung $U$ minimiert. Wenn der Stab mit der Probe in die Spule eingeführt wird, beginnt die Brückenspannung zu steigen. Der Widerstand wird nun so angepasst ($R + \Delta R$), dass die neue Spannung ($U + \Delta U$) wieder minimal wird.
 
 \begin{table}[htbp]
-\begin{tabular}{l!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c|}
-& \ce{Nd_2O_3} & & \ce{Gd_2O_3} & & \ce{Dy_2O_3} & \\
- & m$\Omega$ & mV & m$\Omega$ & mV & m$\Omega$ & mV \\
-\hline
-$R_3$&2830 & 1.20 & 2833 & 1.15 & 2835 & 1.70 \\ \hline
-$R_3 + \Delta R$&2735 & 2.21 & 2064 & 1.32 & 1173 & 1.50 \\ \hline
-$R_3$&2830 & 1.90 & 2750 & 1.75 & 2770 & 1.80 \\ \hline
-$R_3 + \Delta R$&2705 & 1.90 & 1985 & 1.40 & 1125 & 1.60 \\ \hline
-$R_3$&2775 & 1.85 & 2780 & 1.87 & 2835 & 1.90 \\ \hline
-$R_3 + \Delta R$&2650 & 1.80 & 2060 & 1.41 & 1160 & 1.59 \\ \hline
-$R_3$&2805 & 1.85 & 2805 & 1.89 & 2785 & 1.81 \\ \hline
-$R_3 + \Delta R$&2675 & 1.76 & 1965 & 1.40 & 1165 & 1.70 \\ \hline
-$R_3$&2825 & 1.75 & 2835 & 1.80 & 2805 & 1.69 \\ \hline
-$R_3 + \Delta R$&2680 & 1.70 & 2060 & 1.40 & 1160 & 1.76 \\ \hline
+\begin{tabular}{|c|c|c|}
+Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
+1&	2830&	1.20\\ \hline
+2&	2830&	1.90\\ \hline
+3&	2775&	1.85\\ \hline
+4&	2805&	1.85\\ \hline
+5&	2825&	1.75\\ \hline
 \end{tabular}
-\caption{Aufgenommene Werte}
+\begin{tabular}{|c|c|c|}
+Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
+1&	2735&	2.21\\ \hline
+2&	2705&	1.90\\ \hline
+3&	2650&	1.80\\ \hline
+4&	2675&	1.76\\ \hline
+5&	2680&	1.70\\ \hline
+\end{tabular}
+\caption{Aufgenommene Werte für Neodym (\ce{Nd_2O_3})}
 \label{t_werte}
 \end{table}
 
-Mittels Formel \eqref{eq_chi_rechnung} kann nun das $\chi$ für die verschiedenen Elemente bestimmt werden. Nach Mittelung der Werte aus Tabelle \ref{t_werte} und einsetzten ergibt sich für das $\chi$:
-\begin{align*}
-\chi_{Nd}&=11,35\pm 0,00005\\
-\chi_{Gd}&=46,47\pm 0,0002\\
-\chi_{Dy}&=88,38\pm 0,00006
-\end{align*}
-\section{Diskussion}
-Die gemessenen Werte wurden sehr genau aufgenommen, wie die kleine Streuung der Zahlen zeigt. Sie stehen zudem in einem sinnigen Verhältnis zueinander, welches sehr gut die Differenz in der Anzahl der F-Schalen Elektronen widerspiegelt. Leider wurden bei der Messung der Werte nicht der Spannungsausschlag aufgezeichnet, der entsteht, wenn die Probe in die Messröhre hineingeschoben wird. Mit ihm hätte man die Werte nochmals korrigieren können.\\
-Die Messwerte weichen jedoch sehr stark von den errechneten Theoriewerten ab. Dies ist jedoch eher auf einen Fehler in den Theoriewerten zurückzuführen, da die Werte schlicht zu hoch sind.
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|}
+Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
+1&	2833&	1.15\\ \hline
+2&	2750&	1.75\\ \hline
+3&	2780&	1.87\\ \hline
+4&	2805&	1.89\\ \hline
+5&	2835&	1.80\\ \hline
+\end{tabular}
+\begin{tabular}{|c|c|c|}
+Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
+1&	2064&	1.32\\ \hline
+2&	1985&	1.40\\ \hline
+3&	2060&	1.41\\ \hline
+4&	1965&	1.40\\ \hline
+5&	2060&	1.40\\ \hline
+\end{tabular}
+\caption{Aufgenommene Werte für Gadolinium (\ce{Gd_2O_3})}
+\label{t_werte}
+\end{table}
 
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|}
+Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
+1&	2835&	1.70\\ \hline
+2&	2770&	1.80\\ \hline
+3&	2835&	1.90\\ \hline
+4&	2785&	1.81\\ \hline
+5&	2805&	1.69\\ \hline
+
+\end{tabular}
+\begin{tabular}{|c|c|c|}
+Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
+1&	1173&	1.50\\ \hline
+2&	1125&	1.60\\ \hline
+3&	1160&	1.59\\ \hline
+4&	1165&	1.70\\ \hline
+5&	1160&	1.76\\ \hline
+
+\end{tabular}
+\caption{Aufgenommene Werte für Dysprosium (\ce{Dy_2O_3})}
+\label{t_werte}
+\end{table}
+
+
+Mittels Formel \eqref{eq_chi_rechnung} kann nun das $\chi$ für die verschiedenen Elemente bestimmt werden. Nach Mittelung der Werte aus Tabelle \ref{t_werte} und einsetzten ergibt sich für das $\chi$:\\
+
+Widerstand:
+\begin{align*}
+\chi_{Nd}&=(2,8\pm 0,6)\cdot10^{-3}\\
+\chi_{Gd}&=(11\pm 2)\cdot10^{-3}\\
+\chi_{Dy}&=(22\pm 0,7)\cdot10^{-3}
+\end{align*}
+
+Spannung:
+\begin{align*}
+\chi_{Nd}&=(1,8\pm 0,01)\cdot10^{-3}\\
+\chi_{Gd}&=(2,2\pm 0,02)\cdot10^{-3}\\
+\chi_{Dy}&=(0,9\pm 0,17)\cdot10^{-3}
+\end{align*}
+
+\section{Diskussion}
+Die Güte der Messkurve konnte sehr genau berechnet werden. Auch wenn die gefittete Gaußkurve nicht sehr gut an alle Werte anliegt und das Maximum nicht fein genug aufgelöst wurde, so heben sich diese Ungenauigkeiten offenbar gerade auf.\\
+Die theoretischen Suszeptibilitäten stimmten sehr gut mit den Literaturwerten und den, durch die Widerstandsmessung berechneten Werten überein. Einzig der Wert von Dysprosium weicht etwas stark nach unten ab, aber dies kann daran liegen, dass die Brückenspannung bei großen Differenzen ungenauer arbeitet.\\
+Die Werte für die Spannungsmessung dagegen liegen deutlich daneben. Dies liegt jedoch daran, dass die Messung nicht korrekt war. Anstelle beide Male die minimale Spannung abzulesen, hätte der Peak, der beim einführen der Probe entsteht, notiert werden müssen. Folglich sind diese Werte nicht repräsentativ.
 
 % ========================================
 %	Literaturverzeichnis

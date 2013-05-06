@@ -95,7 +95,7 @@ Das Drehmoment ist mit der Winkelrichtgröße über den Auslenkwinkel verknüpft
 \section{Durchführung}
 In Abbildung \eqref{pic_aufbau} ist der Aufbau skizziert. Der zu untersuchende Körper ist mit einer Feder gekoppelt, deren Winkelrichtgröße
 es zu bestimmen gilt. Wenn man eine Federwaage senkrecht zum Radius der vom Körper beschriebenen Kreisbahn mit einem Haken an der Stange
-in einem bestimmten Abstand $r$ ansetzt, misst man für eine Auslenkung $varphi$ eine Kraft $F$. Mit der vorausgesetzten Orthogonalität
+in einem bestimmten Abstand $r$ ansetzt, misst man für eine Auslenkung $\varphi$ eine Kraft $F$. Mit der vorausgesetzten Orthogonalität
 des Kraft- und Ortsvektors, kann man die Winkelrichtgröße nach \eqref{eq_winkel} berechnen
 \begin{align}
  D = \frac{F\cdot r}{\varphi}.
@@ -129,15 +129,207 @@ die einzelnen Bestandteile als Zylinder angenähert und ihre einzelnen Trägheit
 
 
 \section{Auswertung}
+\subsection{Winkelrichtgröße und Eigenträgheitsmoment}
+Zur Bestimmung der Winkelrichtgröße wird die Feder mit der Querstange daran um verschiedene Winkel ausgelenkt und mittels einer Federwaage die Rückstellkraft bestimmt.\\
+Gemessen wurden folgende Werte:
+\begin{table}[htbp]
+\begin{tabular}{|c|c|}
+\hline 
+Winkel [Grad]&	Kraft [Newton]\\ \hline
+20	&0,13\\ \hline
+40	&0,16\\ \hline
+60	&0,21\\ \hline
+80	&0,23\\ \hline
+100	&0,29\\ \hline
+120	&0,34\\ \hline
+140	&0,39\\ \hline
+160	&0,43\\ \hline
+180	&0,48\\ \hline
+200	&0,55\\ \hline
+220	&0,60\\ \hline
+\end{tabular} 
+\caption{Messung der Rückstellkraft im Abstand 20cm zur Drehachse}
+\end{table}
 
-Eigenträgheit
-a               = 69.1233          +/- 0.9629       (1.393%)
-b               = 0.218126         +/- 0.008669     (3.974%)
+Mit Gleichung \eqref{eq_winkel} ergibt sich daraus eine Winkelrichtgröße des Aufbaus von:
+\begin{align*}
+D=0.072 \pm0.023
+\end{align*}
 
 
+Um Eigenträgheit der Drillachse $I_D$ zu bestimmen, ersetzt man das Trägheitsmoment I in Gleichung \eqref{eq_periode} durch
+\begin{align*}
+I&=I_D+I_{Stab}+I_{Zylinder} \qquad \text{, wobei}\\
+I_{Zylinder}&=2m\cdot\left(\frac{R^2}{4}+\frac{l^2}{12}\right)
+\end{align*}
+das Trägheitsmoment der beiden Zylinder inklusive dem Betrag durch den Satz von Steiner beschreibt.
+Quadriert man die Gleichung und stellt diese um, so erhält man:
+\begin{align}
+T^2=\frac{8m\pi^2}{D}\cdot a^2 + \frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]
+\end{align}
+
+\begin{table}[htbp]
+\begin{tabular}{|c|c|}
+\hline
+Abstand [m] &	t [s]\\ \hline
+0.02&	10.565\\ \hline
+0.04&	11.85\\ \hline
+0.06&	13.185\\ \hline
+0.08&	15.56\\ \hline
+0.10&	17.01\\ \hline
+0.12&	19.225\\ \hline
+0.14&	21.43\\ \hline
+0.16&	23.47\\ \hline
+0.18&	25.665\\ \hline
+0.20&	28.05\\ \hline
+\end{tabular} 
+\caption{Messwerte bei schwingenden Massen, die Zeiten sind bereits gemittelt}
+\end{table}
+
+Plottet man nun $T^2$ gegen $a^2$, so erhält man eine Gerade, mit:
+\begin{figure}[htbp]
+\includegraphics[width=0.8\textwidth]{pics/eigentr.jpg}
+\end{figure}
+\begin{align*}
+\text{Steigung:} \qquad m&=\frac{8m\pi^2}{D}=16843.9 \pm 234.6\\
+\text{Y-Achsenabschnitt }\qquad b&=\frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]s=118.86 \pm 4.72
+\end{align*}
+
+Dadurch erhält man einen weiteren Wert für die Winkelrichtgröße
+\begin{align*}
+D'=(1,0481\pm 0,0115) \cdot10^{-3}
+\end{align*}
+Und es kann erstmals das Eigenträgheitsmoment der Drillachse bestimmt werden (mit dem ungestrichenen D)
+\begin{align*}
+I_D=0,22 \pm 0,07
+\end{align*}
+
+\subsection{Trägheitsmoment zweier Zylinder}
+Als nächstes soll das Trägheitsmoment zweier Zylinder berechnet und anschließend mit den gemessenen Werten verglichen werden.
+
+Das Trägheitsmoment eines Zylinders durch seine Symmetrieachse berechnet sich zu:
+
+\begin{align}
+I_{Z}=\frac{mR^2}{2}
+\label{eq_Izyl}
+\end{align}
+
+Die Zylinder haben folgende Daten:
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & Höhe [m] & Radius [m] & Gewicht [kg]\\ 
+\hline 
+Zylinder 1 & 0,1008 & 0,04965 & 0,36864 \\ 
+\hline 
+Zylinder 2 & 0,0302 & 0,0371 & 1,2728 \\ 
+\hline 
+\end{tabular} 
+\caption{}
+\end{table}
+
+Eingesetzt in Gleichung \eqref{eq_Izyl} ergibt dies:
+\begin{align*}
+I_{Zyl 1}&=4,5437\cdot10^{-4}\\
+I_{Zyl 2}&=8,76\cdot10^{-4}
+\end{align*}
+
+Berechnet man das Trägheitsmoment über Gleichung \eqref{eq_periode}, so benötigt man die Schwingzeit der Zylinder:
+\begin{table}[htbp]
+\begin{tabular}{|c|c|}
+\hline 
+$t_1$ [s] & $t_2$ [s]\\ \hline
+0.74&	1.34\\ \hline
+0.73&	1.33\\ \hline
+0.76&	1.33\\ \hline
+0.74&	1.32\\ \hline
+0.75&	1.32\\ \hline
+0.73&	1.35\\ \hline
+0.73&	1.33\\ \hline
+0.75&	1.30\\ \hline
+0.73&	1.33\\ \hline
+0.74&	1.31\\ \hline
+\end{tabular} 
+\caption{Die Zeiten wurden über fünf Perioden gemittelt}
+\end{table}
+\newpage
+Die Werte ergeben:
+\begin{align*}
+t_{Zyl 1}&=0.739 \pm 0.010\\
+I'_{Zyl 1}&=1,0026959\cdot10^{-3}\\
+\end{align*}
+\begin{align*}
+t_{Zyl 2}&=1.325 \pm  0.014\\
+I'_{Zyl 1}&=3,2219312\cdot10^{-3}
+\end{align*}
+
+\subsection{Trägheitsmoment einer Puppe}
+Zum Schluss soll das Trägheitsmoment einer Puppe bestimmt werden. Die Gliedmaßen werden dabei als Zylinder angenährt und ihr Umfang wird an 10 verschiedenen Stellen gemessen, um einen präzisen Mittelwert zu erhalten.
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|c|}
+\hline 		
+&	Bein&	Arm	&Oberk	&Kopf	\\ \hline	
+Durchmesser [m]&	0.01643&	0.01403&	0.03337&	0.02113	m\\ \hline				
+Länge [m] &	0.1539	&0.138	&0.1	&0.0548	m\\ \hline	
+					
+Volumen [$m^3$]	&0.000032629	&0.0000213346	&0.000087459	&0.000019216	\\ \hline	
+Anteil am Gesamtvolumen	&0.203	&0.133	&0.5444	&0.120	\\ \hline		
+Masse [kg]	&0.0326618101	&0.0213560501	&0.0875465257	&0.0192356141\\ \hline
+Abstand [m]	&0.0218	&0.1678	&&\\ \hline	
+					
+Trägheit&	0.000001102	&0.000034155&	0.000012186	&0.0000010735\\ \hline	
+TrägheitStein	&0.0000155222	&0.0006013189	&&	\\ \hline	
+\end{tabular} 
+\caption{Puppe mit ausgestreckten Armen}
+\end{table}
+
+Summiert man alle Teilträgheiten und die beiden Terme, die durch den Satz von Steiner entstehen auf, so erhält man als Trägheitsmoment der Puppe:
+\begin{align*}
+I_{Puppe 1}= 0.001317
+\end{align*}
+
+\begin{table}[htbp]
+\begin{tabular}{|c|c|c|c|c|}
+\hline 		
+&	Bein&	Arm	&Oberk	&Kopf	\\ \hline	
+Durchmesser [m]	&0.01643&	0.01403	&0.03337	&0.02113	\\ \hline		
+Länge [m]	&0.1539	&0.138	&0.1	&0.0548\\ \hline	
+Volumen [$m^3$]	&0.000032629	&0.0000213346	&0.0000874586	&0.0000192163\\ \hline	
+VolGes [$m^3$]	&0.0001606384	&&&		\\ \hline	
+Anteil am Gesamtvolumen&	0.203	&0.133&	0.544	&0.120\\ \hline
+Masse [kg]	&0.0326618101&	0.0213560501	&0.0875465257	&0.0192356141\\ \hline	
+Abstand [m]&	0.093635	&0.1678&&\\ \hline	
+Trägheit&	0.000066671&	0.0000341548&	0.000012186&	0.000001074\\ \hline	
+TrägheitStein&	0.0002863629&	0.0006013189&&	\\ \hline	
+\end{tabular} 
+\caption{Puppe mit ausgestreckten Armen und Beinen}
+\end{table}
+
+Man erhält als Trägheitsmoment der Puppe:
+\begin{align*}
+I_{Puppe 2}=0.00199
+\end{align*}
+
+Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnen. Dazu wird die Puppe als langer Zylinder angenährt, indem alle Teilradien mit der Länge des jeweiligen Körperteils gewichtet aufsummiert und dann durch die Höhe der Puppe dividiert wird. Es ergibt sich der Radius:
+\begin{align*}
+R_{Puppe 1}=1,65cm\\
+R_{Puppe 2}=1,70cm
+\end{align*}
+Und damit das Trägheitsmoment:
+\begin{align*}
+I'_{Puppe 2}=2,19\cdot10^{-5}\\
+I'_{Puppe 2}=2,32\cdot10^{-5}
+\end{align*}
 
 \section{Diskussion}
+Das Eigenträgheitsmoment der Drehachse lässt sich relativ genau berechnen, dagegen weichen die Werte für die Winkelrichtgröße bei den verschiedenen Auswertmethoden stark von einander ab. Dies ist vermutlich darauf zurückzuführen, dass die Apparatur eine relativ hohe Reibung hat, die sich besonders bei kleinen Auslenkungen bemerkbar macht. Die Gleichung gilt jedoch nur für kleine Winkel, daher ist die Auswertung über die Federwaage aussagekräftiger.
 
+Die Trägheitsmomente der beiden Zylinder liegen um einen Faktor von ungefähr 3 auseinander, wenn man die theoretischen mit den gemessenen Werten vergleicht. Auch dies lässt sich vermutlich darauf zurückführen, dass die Apparatur zu stark gedämpft ist. Die Körper schwingen recht schnell und um den statistischen Fehler zu minimieren muss man über mehrere Schwingungen mitteln. Da die Amplitude jedoch um gut 15\% pro Periode abnimmt, schlägt dieser Fehler dann mehr ins Gewicht.
+
+Bei den Trägheitsmomenten der Puppe merkt man den Unterschied zu den Theoriewerten am deutlichsten. Die Werte liegen eine ganze Größenordnung auseinander. Das die Differenz hier besonders groß ist, hat verschiedene Gründe. Zum einen wirkt wieder die Dämpfung der Apparatur auf die Messung ein. Zum anderen ist die Figur aber auch nicht genau mittig auf ihrer Symmetrie befestigt und ihre Haltung ist relativ instabil. Außerdem ist die Puppe nicht richtig fest auf dem Stab befestigt und rutscht bei größeren Beschleunigungen hin und her.
+Bei den Theoriewerten schlägt am härtesten zu Buche, dass die Puppe nur grob aus Zylindern angenährt wurde. Die genaue Mittelung minimiert diesen Fehler zwar, dennoch ist er deutlich zu spüren. Zudem wurden Füße und Hände der Puppe, sowie der Metallstab völlig vernachlässigt.
+
+Das die Messwerte dennoch so nah beieinander liegen, ist als Erfolg zu werten.
 % ========================================
 %	Literaturverzeichnis
 % ========================================

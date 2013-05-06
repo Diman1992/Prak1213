@@ -2,8 +2,8 @@
 set term wxt
 
 set title ""
-set xlabel "m*(a^2)"
-set ylabel "(D*T^2)/(4pi^2)"
+set xlabel "a^2"
+set ylabel "T^2"
 
 set key bottom right
 

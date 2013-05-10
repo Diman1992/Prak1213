@@ -63,6 +63,72 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 \section{Durchführung}
 
 \section{Auswertung}
+\subsection{Wärmekapazität des Kalorimeters}
+\label{sec_kalorimeter}
+Zu Beginn wird die Wärmekapazität des Kalorimeters $c_g m_g$ ermittelt. In Tabelle \ref{tab_cgmg} sind die Messreihen aufgeführt und der
+Wert für die Wärmekapazität aus Gleichung \eqref{eq_cgmg} errechnet. Mit Gleichung \eqref{eq_interpol} werden im Zuge der restlichen 
+Auswertung die gemessenen Thermospannungen in Temperaturen umgerechnet. Masse $m_y$ und $m_x$ werden in Durchführung auf gleichen Wert
+gebracht. Die spezifische Wärmekapazität von Wasser wird zu $c_w$ = 4,18 J/gK angegeben.
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c|c|c|c|c}
+ $U_x$ in V & $T_x$ in $^\circ$C & $U_y$ in V & $T_y$ in $^\circ$C & $U_m$ in V & $T_m$ in $^\circ$C & $m_{x,y}$ in g & $c_g m_g$ in J/K\\
+ \hline
+0,74&	18,5&	3,66&	89,5&	2,00&	49,6&	300&	360,89\\
+0,87&	21,7&	4,08&	99,5&	2,24&	55,4&	300&	388,39\\
+ \end{tabular}
+\caption{Wärmekapazität des Kalorimeters}
+\label{tab_cgmg}
+\end{table}
+Somit ergibt sich die Wärmekapazität des Kalorimeters ohne Fehlerrechnung zu 
+\begin{align}
+c_g m_g = 374,64 \, \frac{\text{J}}{\text{K}}.
+\end{align}
+
+\subsection[spezifische Wärmekapazität verschiedener Materialien]{spezifische Wärmekapazität bei konstantem Druck von verschiedenen Materialien}
+Um annehmbare Werte für den weiteren Verlauf zu erhalten, wird der deutlich zu hohe Wert für die Wärmekapazität des Kalorimeters aus Abschnitt
+\ref{sec_kalorimeter} von nun an als 100 J/K angenommen. 
+
+Zur Berechnung der spezifischen Wärmekapazität bei konstantem Druck der untersuchten Materialien wird Gleichung \eqref{eq_ck} unter Verwendung der in Tabelle
+\ref{tab_ck} aufgeführten Größen verwandt. Die Masse des Wassers ist hierbei fortwährend $m_w$ = 300 g sein.
+
+\begin{table}[H]
+ \begin{tabular}{l|c|c|c|c|c|c|c}
+ Probe ($m_k$)& $U_w$ in V & $T_w$ in $^\circ$C & $U_k$ in V & $T_k$ in $^\circ$C & $U_m$ in V & $T_m$ in $^\circ$C & $c_k$ in J/gK\\
+ \hline
+Blei&	0,79&	19,8&	3,99&	97,4&	0,86&	21,5 & 0,06\\
+526,13 g&	0,73&	18,3&	3,99&	97,4&	0,91&	22,7 & 0,15\\
+	&0,84&	21,0&	3,99&	97,4&	0,92&	23,0 & 0,07\\
+	\hline
+Graphit	&0,84&	21,0&	3,99&	97,4&	0,98&	24,5 & 0,26\\
+247,29	g&0,87&	21,7&	3,99&	97,4&	0,98&	24,5 & 0,20\\
+	&0,85&	21,2&	3,99&	97,4&	0,98&	24,5 & 0,24\\
+	\hline
+Aluminium&	0,86&	21,5&	3,99&	97,4&	0,98&	24,5 & 0,22\\
+253,10 g	& & & & & &				
+
+ \end{tabular}
+\caption{spezifische Wärmekapazität verschiedener Proben}
+\label{tab_ck}
+\end{table}
+
+\subsection{Atomwärme bei konstantem Volumen}
+Die gesuchte Atomwärme bei konstantem Druck $C_P$ lässt sich aus folgender Beziehung bestimmen
+\begin{align}
+ C_P = c_k \cdot M_{mol}.
+\end{align}
+Mit den Konstanten aus Tabelle \ref{tab_const} ergeben sich die Werte in Tabelle \ref{tab_cp}.
+\begin{table}[H]
+ \begin{tabular}{l|c}
+ Probe & $C_P$ in J/MolK\\
+ \hline
+Blei &19,47\\
+Graphit &2,83\\
+Aluminium &5,90
+ \end{tabular}
+\caption{Atomwärme bei konstantem Druck der untersuchten Proben}
+\label{tab_cp}
+\end{table}
+
 
 \section{Diskussion}
 

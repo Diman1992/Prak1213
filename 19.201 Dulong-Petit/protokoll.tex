@@ -56,11 +56,111 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
+%\section{Einleitung}				% Bei Bedarf
 
 \section{Theorie}
+In diesem Versuch soll ermittelt werden, ob die oszillirenden Molekülbewegungen in einem Festkörper noch mit Methoden der klassischen Mechanik beschrieben werden können, oder ob die Anwendung der Quantenmechanik unerlässlich ist. Untersucht wird dazu die sogenannte Molwärme, diese ist nach der klassischen Mechanik temperatur- und materialunabhängig und hat den konstanten Wert
+\begin{formel}[H]
+\centering
+c=3R
+\caption*{\small{R = allgemeine Gaskonstante}}
+\end{formel}
+
+\subsection{Klassische Betrachtung}
+Erhöht sich die Temperatur eines Körpers um $\Delta T$, ohne dass Arbeit an ihm geleistet wird, so sagt man, der Körper habe eine Wärmemenge $\Delta Q$ aufgenommen und schreibt
+\begin{align}
+\Delta Q = mc \Delta T
+\end{align}
+Die Molwärme ist also die Proportionalitäts konstante zwischen der zugeführten Energie und der Änderung der Temperatur.
+
+Nach der klassischen Physik folgt für die mittlere Energie eines Atoms:
+\begin{align*}
+\langle u\rangle = \frac{1}{\tau} \int^\tau_0 u(t) dt
+\end{align*}
+
+Die gemittelte innere Energie setzt sich dabei sowohl aus der kinetischen, als auch aus der potentiellen Energie zusammen.
+Diese lassen sich herleiten, indem man die Festkörpermoleküle als harmonische Oszillatoren betrachtet. Da die Moleküle durch die Gitterkräfte auf ihre Positionen gebunden sind, ist diese Betrachtung sicherlich zutreffend. Es gilt:
+\begin{formel}[H]
+\centering
+$F_R + F_T $= m $\frac{d^2x}{dt^2} + Dx  = 0$
+\caption*{\small{mit
+$F_T$=Trägheitskraft und $F_R$ = Rücktreibende Kraft}}
+\end{formel}
+
+Die mittlere Potentielle Energie errechnet sich zu:
+\begin{align*}
+\langle E_{pot}\rangle &= \frac{1}{\tau} \int^\tau_0 \frac{1}{2} D \left( x(t) \right)^2 dt =  \frac{1}{4} D A^2 \qquad \text{mit}\\
+x(t)&=Acos\left(\frac{2\pi}{\tau}t\right)
+\end{align*}
+
+Entsprechend folgt für $\langle E_{kin}\rangle$:
+\begin{align*}
+\langle E_{kin}\rangle = \frac{1}{4} DA^2
+\end{align*}\\
+
+Nach dem äuipartitionstheorem, welches besagt, dass ein Atom bei der absoluten Temperatur T pro Bewegungsfreiheitsgrad eine
+mittlere kinetische Energie von $\frac{1}{2}$ kT besitzt, wenn es im thermischen Gleichgewicht mit seiner Umgebung ist. Damit folgt für die mittlere innere Energie pro Freiheitsgrad:
+\begin{align*}
+\langle u_{kl} \rangle = \langle E_{kin}\rangle + \langle E_{pot}\rangle = 2\langle E_{kin}\rangle = k_B T
+\end{align*}
+Da ein Mol eines Stoffes $N_L = 6,023\cdot 10^{23}$ Teilchen beinhaltet und jedes Teilchen über drei Freiheitsgrade verfügt, ist somit:
+\begin{align*}
+\langle u_{kl} \rangle = 3\cdot N_L k_B T = 3RT
+\end{align*}
+und die Atomwärme $C_V$:
+\begin{align*}
+C_V =3R
+\end{align*}
+
+\subsection{Quantenmechanische Betrachtung}
+In der Quantenmechanik können die Oszillatoren im Kristallgitter nicht beliebig langsam schwingen, sondern können ihre Gesamtenergie nur in Beträgen von $\Delta u = n\hbar \omega$ ändern. Für hohe Energien und Temperaturen macht dies keinen Unterschied, bei entsprechend niedrigen Temperaturen ergeben sich jedoch eklatante Unterschiede zur klassischen Betrachtung. Da sich bei Messungen $C_V = 3R$ nur für hohe Temperaturen und geringe Atommassen bewahrheitet hat, muss das Problem quantenmechanisch betrachtet werden.
+
+Man integriert dazu über alle möglichen Zustände, die mit der entsprechenden Wahrscheinlichkeit aus der Boltzmann-Verteilung gewichtet wurden und erhält:
+\begin{align*}
+\langle u_{qu} \rangle = \hbar \omega \left[ e^{-\frac{\hbar \omega}{k_BT}} +e^{-\frac{2\hbar \omega}{k_BT}}+\cdots\right]
+\end{align*} 
+
+Dies lässt sich zu einer geometrischen Reihe vereinfachen. Ergänzt man noch einen Faktor 3 für die Freiheitsgrade und $N_L$ für die Energie pro Mol, so erhält man schlussendlich:
+
+\begin{align}
+\langle u_{qu} \rangle = \frac{3N_L\hbar\omega}{e^{\frac{\hbar \omega}{k_BT}}-1}
+\end{align}
+
+Für $T\rightarrow\inf$ nähert sich dies dem Grenzwert 3R, während es für $T\rightarrow 0$ gegen 0 läuft. Dies deckt sich mit den experimentellen Beobachtungen.\\
+
+Das Dulong-Petitsche Gesetz ist somit ein Spezialfall, der gültig wird, sobald $kT \gg \hbar \omega$. 
+Da $\omega \sim \frac{1}{\sqrt{m}}$, wird die klassi-
+sche Näherung für Elemente mit kleinem Atomgewicht erst bei viel höheren Temperaturen gültig als für Elemente mit hohem Atomgewicht.
+
+\subsection{Das Mischkaloriemeter}
+Die spezifische Wärmekapazität wird im Versuch mit einem Mischkaloriemeter bestimmt. Ein röhrenförmiger Probenkörper der Masse m k wird in einem Wasserbad auf die Temperatur Tk gebracht und in ein Dewar-Gefäß eingetaucht, das mit Wasser der Temperatur Tw < Tk und der Masse m w gefüllt ist. Beim Abkühlen gibt er seine Wärme an das ihn umgebende Wasser sowie die Innenwände des Kalorimeters ab und erwärmt es auf die Mischtemperatur $T_m$.
+Beim Abkühlen von $T_k$ auf $T_m$ gibt der Probenkörper die Wärmemenge
+\begin{align*}
+Q_1=c_km_k (T_k-T_m)
+\end{align*}
+ab. Wasser und Wände des Kalorimeters nehmen bei der Temperaturzunahme von $T_w$ auf $T_m$ die Wärmemenge
+\begin{formel}[H]
+\centering
+$Q_2 = (c_wm_w+c_gm_g) (T_m - T_w)$
+\caption*{\small{$c_w$ - spezifische Wärmekapazität des Wassers, $c_gm_g$ - Wärmekapazität des Kalorimeters}}
+\end{formel}
+Unter der Voraussetzung, dass es sich um ein abgeschlossenes System handelt, gilt:
+\begin{align*}
+Q_1 = Q_2
+\end{align*}
+womit folgt:
+\begin{align}
+c_k = \frac{(c_wm_w+c_gm_g)(T_m - T_w)}{m_k (T_k - T_m)}
+\label{eq_ck}
+\end{align}
+
 
 \section{Durchführung}
+Zunächst muss die Wärmekapazität des Mischkaloriemeters $c_gm_g$ bestimmt werden. Dazu mischt man zwei Wassermengen der Masse $m_x, m_y$ und Temperatur $T_x, T_y$ und erhält nach Anpassung der Formel \eqref{eq_ck}:
+\begin{align}
+c_gm_g = \frac{c_wm_y\left(T_y-T'_m\right) - c_wm_x\left(T'_m-T_x\right)}{\left( T'_m -T_x\right)}
+\end{align}
+
 
 \section{Auswertung}
 \subsection{Wärmekapazität des Kalorimeters}

@@ -62,7 +62,7 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 In diesem Versuch soll ermittelt werden, ob die oszillirenden Molekülbewegungen in einem Festkörper noch mit Methoden der klassischen Mechanik beschrieben werden können, oder ob die Anwendung der Quantenmechanik unerlässlich ist. Untersucht wird dazu die sogenannte Molwärme, diese ist nach der klassischen Mechanik temperatur- und materialunabhängig und hat den konstanten Wert
 \begin{formel}[H]
 \centering
-c=3R
+$C_v=3R$
 \caption*{\small{R = allgemeine Gaskonstante}}
 \end{formel}
 
@@ -107,7 +107,7 @@ Da ein Mol eines Stoffes $N_L = 6,023\cdot 10^{23}$ Teilchen beinhaltet und jede
 \begin{align*}
 \langle u_{kl} \rangle = 3\cdot N_L k_B T = 3RT
 \end{align*}
-und die Atomwärme $C_V$:
+und die Atomwärme $C_V$ im festen Aggregatzustand:
 \begin{align*}
 C_V =3R
 \end{align*}
@@ -169,7 +169,12 @@ c_gm_g = \frac{c_wm_y\left(T_y-T'_m\right) - c_wm_x\left(T'_m-T_x\right)}{\left(
 
 Anschließend berechnet man die Wärmekapazitäten von Blei, Graphit und Aluminium und vergleicht diese mit den Literaturwerten, sowie den vom Dulong-Petitschen Gesetzt vorausgesagten. Die Messung von Blei und Graphit wird drei mal durchgeführt, um eine höhere Genauigkeit zu erreichen.
 
-Für die Berechnungen benötigt man des weiteren noch einige Materialkonstanten, die folgender Tabelle entnommen werden können.
+Für die Berechnungen benötigt man des weiteren noch einige Materialkonstanten, die der unten stehenden Tabelle entnommen werden können.\\
+
+Da es schwierig ist, der thermischen Ausdehnung der Stoffe entgegen zu wirken, wird anstelle der spezifischen Wärmekapazität bei konstantem Volumen die Kapazität bei konstantem Druck bestimmt. Der Zusammenhang zwischen beiden Größen lautet:
+\begin{align}
+C_p - C_v = 9 \alpha^2 \kappa V_0 T
+\end{align}
 \begin{figure}[h]
 \includegraphics[width=0.8\textwidth]{pics/litwerte.jpg}
 \caption{Tabelle der Versuchsanleitung entnommen}
@@ -207,7 +212,7 @@ Zur Berechnung der spezifischen Wärmekapazität bei konstantem Druck der unters
 \ref{tab_ck} aufgeführten Größen verwandt. Die Masse des Wassers ist hierbei fortwährend $m_w$ = 300 g sein.
 
 \begin{table}[H]
- \begin{tabular}{l|c|c|c|c|c|c|c}
+ \begin{tabular}{|l|c|c|c|c|c|c|c|}
  Probe ($m_k$)& $U_w$ in V & $T_w$ in $^\circ$C & $U_k$ in V & $T_k$ in $^\circ$C & $U_m$ in V & $T_m$ in $^\circ$C & $c_k$ in J/gK\\
  \hline
 Blei&	0,79&	19,8&	3,99&	97,4&	0,86&	21,5 & 0,06\\
@@ -219,7 +224,7 @@ Graphit	&0,84&	21,0&	3,99&	97,4&	0,98&	24,5 & 0,26\\
 	&0,85&	21,2&	3,99&	97,4&	0,98&	24,5 & 0,24\\
 	\hline
 Aluminium&	0,86&	21,5&	3,99&	97,4&	0,98&	24,5 & 0,22\\
-253,10 g	& & & & & &				
+253,10 g	& & & & & & &				\\ \hline
 
  \end{tabular}
 \caption{spezifische Wärmekapazität verschiedener Proben}

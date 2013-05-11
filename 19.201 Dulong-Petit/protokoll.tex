@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+\date{07. Mai 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -99,7 +99,7 @@ Entsprechend folgt für $\langle E_{kin}\rangle$:
 \end{align*}\\
 
 Nach dem äuipartitionstheorem, welches besagt, dass ein Atom bei der absoluten Temperatur T pro Bewegungsfreiheitsgrad eine
-mittlere kinetische Energie von $\frac{1}{2}$ kT besitzt, wenn es im thermischen Gleichgewicht mit seiner Umgebung ist. Damit folgt für die mittlere innere Energie pro Freiheitsgrad:
+mittlere kinetische Energie von $\frac{1}{2}$ kT besitzt, wenn es im thermischen Gleichgewicht mit seiner Umgebung ist, folgt für die mittlere innere Energie pro Freiheitsgrad:
 \begin{align*}
 \langle u_{kl} \rangle = \langle E_{kin}\rangle + \langle E_{pot}\rangle = 2\langle E_{kin}\rangle = k_B T
 \end{align*}
@@ -111,7 +111,6 @@ und die Atomwärme $C_V$:
 \begin{align*}
 C_V =3R
 \end{align*}
-
 \subsection{Quantenmechanische Betrachtung}
 In der Quantenmechanik können die Oszillatoren im Kristallgitter nicht beliebig langsam schwingen, sondern können ihre Gesamtenergie nur in Beträgen von $\Delta u = n\hbar \omega$ ändern. Für hohe Energien und Temperaturen macht dies keinen Unterschied, bei entsprechend niedrigen Temperaturen ergeben sich jedoch eklatante Unterschiede zur klassischen Betrachtung. Da sich bei Messungen $C_V = 3R$ nur für hohe Temperaturen und geringe Atommassen bewahrheitet hat, muss das Problem quantenmechanisch betrachtet werden.
 
@@ -119,7 +118,6 @@ Man integriert dazu über alle möglichen Zustände, die mit der entsprechenden 
 \begin{align*}
 \langle u_{qu} \rangle = \hbar \omega \left[ e^{-\frac{\hbar \omega}{k_BT}} +e^{-\frac{2\hbar \omega}{k_BT}}+\cdots\right]
 \end{align*} 
-
 Dies lässt sich zu einer geometrischen Reihe vereinfachen. Ergänzt man noch einen Faktor 3 für die Freiheitsgrade und $N_L$ für die Energie pro Mol, so erhält man schlussendlich:
 
 \begin{align}
@@ -129,11 +127,10 @@ Dies lässt sich zu einer geometrischen Reihe vereinfachen. Ergänzt man noch ei
 Für $T\rightarrow\inf$ nähert sich dies dem Grenzwert 3R, während es für $T\rightarrow 0$ gegen 0 läuft. Dies deckt sich mit den experimentellen Beobachtungen.\\
 
 Das Dulong-Petitsche Gesetz ist somit ein Spezialfall, der gültig wird, sobald $kT \gg \hbar \omega$. 
-Da $\omega \sim \frac{1}{\sqrt{m}}$, wird die klassi-
-sche Näherung für Elemente mit kleinem Atomgewicht erst bei viel höheren Temperaturen gültig als für Elemente mit hohem Atomgewicht.
+Dass die klassische Näherung für Elemente mit kleinem Atomgewicht erst bei viel höheren Temperaturen gültig wird als für Elemente mit hohem Atomgewicht folgt aus dem Zusammenhang $\omega \sim \frac{1}{\sqrt{m}}$.
 
 \subsection{Das Mischkaloriemeter}
-Die spezifische Wärmekapazität wird im Versuch mit einem Mischkaloriemeter bestimmt. Ein röhrenförmiger Probenkörper der Masse m k wird in einem Wasserbad auf die Temperatur Tk gebracht und in ein Dewar-Gefäß eingetaucht, das mit Wasser der Temperatur Tw < Tk und der Masse m w gefüllt ist. Beim Abkühlen gibt er seine Wärme an das ihn umgebende Wasser sowie die Innenwände des Kalorimeters ab und erwärmt es auf die Mischtemperatur $T_m$.
+Die spezifische Wärmekapazität wird im Versuch mit einem Mischkaloriemeter bestimmt. Ein röhrenförmiger Probenkörper der Masse m k wird in einem Wasserbad auf die Temperatur Tk gebracht und in ein Dewar-Gefäß eingetaucht, das mit Wasser der Temperatur $T_w < T_k$ und der Masse $m_w$ gefüllt ist. Beim Abkühlen gibt er seine Wärme an das ihn umgebende Wasser sowie die Innenwände des Kalorimeters ab und erwärmt es auf die Mischtemperatur $T_m$.
 Beim Abkühlen von $T_k$ auf $T_m$ gibt der Probenkörper die Wärmemenge
 \begin{align*}
 Q_1=c_km_k (T_k-T_m)
@@ -154,19 +151,37 @@ c_k = \frac{(c_wm_w+c_gm_g)(T_m - T_w)}{m_k (T_k - T_m)}
 \label{eq_ck}
 \end{align}
 
+\subsection{Das Thermoelement}
+Die Temperatur wird mit einem Thermoelement bestimmt. Es besteht aus zwei Metallen, die sich in Hinblick auf ihre Austrittsarbeit von Elektronen unterscheiden. An der Kontaktstelle wandern daher Elektronen von dem Metall mit der niedrigen in das mit höherer Austrittsarbeit, bis schließlich das entstehende Potential den Elektronendrift unterbindet. Da die dadurch entstehende Spannung an beiden Drähten gleich groß ist, kann man keine Spannungsdifferenz feststellen. Werden die Drähte jedoch auf eine unterschiedliche Temperatur gebracht, so sind die Energien der Leitungselektronen nicht mehr gleich und es kann eine Spannungsdifferenz $U_{th}$ gemessen werden.\\
+Kühlt man einen Draht mit Eiswasser konstant auf $0^\circ$ C, so kann die Temperatur am zweiten Draht bestimmt werden:
+\begin{align}
+T= 25,157 U_{th} -0,19 (U_{th})^2
+\label{eq_temp}
+\end{align} 
+
 
 \section{Durchführung}
-Zunächst muss die Wärmekapazität des Mischkaloriemeters $c_gm_g$ bestimmt werden. Dazu mischt man zwei Wassermengen der Masse $m_x, m_y$ und Temperatur $T_x, T_y$ und erhält nach Anpassung der Formel \eqref{eq_ck}:
+Zunächst muss die Wärmekapazität des Mischkaloriemeters $c_gm_g$ bestimmt werden. Dazu mischt man zwei Wassermengen der Masse $m_x, m_y$ und Temperatur $T_x, T_y$ und verwendet die Angepasste Formel \eqref{eq_ck}:
 \begin{align}
 c_gm_g = \frac{c_wm_y\left(T_y-T'_m\right) - c_wm_x\left(T'_m-T_x\right)}{\left( T'_m -T_x\right)}
+\label{eq_cgmg}
 \end{align}
+
+Anschließend berechnet man die Wärmekapazitäten von Blei, Graphit und Aluminium und vergleicht diese mit den Literaturwerten, sowie den vom Dulong-Petitschen Gesetzt vorausgesagten. Die Messung von Blei und Graphit wird drei mal durchgeführt, um eine höhere Genauigkeit zu erreichen.
+
+Für die Berechnungen benötigt man des weiteren noch einige Materialkonstanten, die folgender Tabelle entnommen werden können.
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{pics/litwerte.jpg}
+\caption{Tabelle der Versuchsanleitung entnommen}
+\label{pic_const}
+\end{figure}
 
 
 \section{Auswertung}
 \subsection{Wärmekapazität des Kalorimeters}
 \label{sec_kalorimeter}
 Zu Beginn wird die Wärmekapazität des Kalorimeters $c_g m_g$ ermittelt. In Tabelle \ref{tab_cgmg} sind die Messreihen aufgeführt und der
-Wert für die Wärmekapazität aus Gleichung \eqref{eq_cgmg} errechnet. Mit Gleichung \eqref{eq_interpol} werden im Zuge der restlichen 
+Wert für die Wärmekapazität aus Gleichung \eqref{eq_cgmg} errechnet. Mit Gleichung \eqref{eq_temp} werden im Zuge der restlichen 
 Auswertung die gemessenen Thermospannungen in Temperaturen umgerechnet. Masse $m_y$ und $m_x$ werden in Durchführung auf gleichen Wert
 gebracht. Die spezifische Wärmekapazität von Wasser wird zu $c_w$ = 4,18 J/gK angegeben.
 \begin{table}[H]
@@ -216,7 +231,7 @@ Die gesuchte Atomwärme bei konstantem Druck $C_P$ lässt sich aus folgender Bez
 \begin{align}
  C_P = c_k \cdot M_{mol}.
 \end{align}
-Mit den Konstanten aus Tabelle \ref{tab_const} ergeben sich die Werte in Tabelle \ref{tab_cp}.
+Mit den Konstanten aus Abbildung \ref{pic_const} ergeben sich die Werte in Tabelle \ref{tab_cp}.
 \begin{table}[H]
  \begin{tabular}{l|c}
  Probe & $C_P$ in J/MolK\\

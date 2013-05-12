@@ -8,7 +8,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Versuch\\				% Titel des Versuchs 
+\title{Versuch 201 - Das Dulong-Petitsche Gesetz\\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -174,6 +174,7 @@ Für die Berechnungen benötigt man des weiteren noch einige Materialkonstanten,
 Da es schwierig ist, der thermischen Ausdehnung der Stoffe entgegen zu wirken, wird anstelle der spezifischen Wärmekapazität bei konstantem Volumen die Kapazität bei konstantem Druck bestimmt. Der Zusammenhang zwischen beiden Größen lautet:
 \begin{align}
 C_p - C_v = 9 \alpha^2 \kappa V_0 T
+\label{eq_molwaerme}
 \end{align}
 \begin{figure}[h]
 \includegraphics[width=0.8\textwidth]{pics/litwerte.jpg}
@@ -209,10 +210,10 @@ Um annehmbare Werte für den weiteren Verlauf zu erhalten, wird der deutlich zu 
 \ref{sec_kalorimeter} von nun an als 100 J/K angenommen. 
 
 Zur Berechnung der spezifischen Wärmekapazität bei konstantem Druck der untersuchten Materialien wird Gleichung \eqref{eq_ck} unter Verwendung der in Tabelle
-\ref{tab_ck} aufgeführten Größen verwandt. Die Masse des Wassers ist hierbei fortwährend $m_w$ = 300 g sein.
+\ref{tab_ck} aufgeführten Größen verwandt. Die Masse des Wassers ist hierbei fortwährend $m_w$ = 300 g.
 
 \begin{table}[H]
- \begin{tabular}{|l|c|c|c|c|c|c|c|}
+ \begin{tabular}{l|c|c|c|c|c|c|c}
  Probe ($m_k$)& $U_w$ in V & $T_w$ in $^\circ$C & $U_k$ in V & $T_k$ in $^\circ$C & $U_m$ in V & $T_m$ in $^\circ$C & $c_k$ in J/gK\\
  \hline
 Blei&	0,79&	19,8&	3,99&	97,4&	0,86&	21,5 & 0,06\\
@@ -232,6 +233,7 @@ Aluminium&	0,86&	21,5&	3,99&	97,4&	0,98&	24,5 & 0,22\\
 \end{table}
 
 \subsection{Atomwärme bei konstantem Volumen}
+\label{sec_atomwaerme}
 Die gesuchte Atomwärme bei konstantem Druck $C_P$ lässt sich aus folgender Beziehung bestimmen
 \begin{align}
  C_P = c_k \cdot M_{mol}.
@@ -248,9 +250,55 @@ Aluminium &5,90
 \caption{Atomwärme bei konstantem Druck der untersuchten Proben}
 \label{tab_cp}
 \end{table}
-
+Mit den erlangten Werten lässt sich nun die Atomwärme bei konstantem Volumen aus der Relation \eqref{eq_molwaerme} errechnen 
+(siehe Tabelle \ref{tab_cv}), die für den Vergleich zum Dulong-Petitschen Gesetz nötig ist. Die benötigten Konstanten sind ebenfalls 
+Abbildung \ref{pic_const} entnehmen.
+\begin{table}[H]
+ \begin{tabular}{l|c}
+ Probe & $C_V$ in J/MolK\\
+ \hline
+Blei &17,76\\
+Graphit &2,80\\
+Aluminium &5,93
+\end{tabular}
+\caption{Atomwärme bei konstantem Volumen der untersuchten Proben}
+\label{tab_cv}
+\end{table}
 
 \section{Diskussion}
+Der Wert für die Molwärme aus dem Dulong-Petitschen Gesetz beträgt
+
+\begin{align}
+ C_V = 3R = 24,94  \, \frac{\text{J}}{\text{K}}.
+\end{align}
+
+Für die experimentelle Bestimmung eben jener ist letztlich die Ermittlung der spezifischen Wärmekapazität entscheidend. In Tabelle 
+\ref{tab_diskussion} sind die aus Literaturwerten für die spezifischen Wärmekapazitäten$^{[2]}$ die theoretischen Molwärmewerte, sowie
+jene in Abschnitt \ref{sec_atomwaerme} errechneten Werte und die Abweichung zum Dulong-Petit Gesetz aufgeführt.
+\begin{table}[H]
+ \begin{tabular}{l|c|c|c}
+ Probe & $C_{theo}$ in J/K	& $C_{exp}$ in J/K & $\Delta C_{exp,DP}$ in J/K\\
+ \hline
+Blei	&25,01	&17,76	&29\% \\
+Graphit	&8,55	&2,80	&89\% \\
+Aluminium	&23,08	&4,92	&80\% 
+ \end{tabular}
+\caption{Theoretische Werte und Vergleich experimenteller Werten zum Dulong-Petit}
+\label{tab_diskussion}
+\end{table}
+
+Es lässt sich unschwer erkennen, dass die experimentellen Werte allesamt deutlich unter den theoretischen Erwartungen liegen. Im Falle
+für Aluminium lässt sich das darauf zurückführen, dass lediglich eine Messreihe besteht und diese wohl starken Messfehlern unterliegt,
+wie die zu kurze Abwartezeit für die Einstellung einer Ausgleichstemperatur. Die Werte für Blei zeigen als einzige eine etwaige 
+Übereinstimmung.
+
+Aus den aufgeführten Werten kann man erkennen, dass Blei und Aluminium dem Dulong-Petitschen Gesetz folgen. Das liegt an den hohen Massen
+der Stoffe. Daher fällt Graphit, als recht leichtes Material auch hinaus.
+
+\parskip 400pt
+\Large{Literatur}\\\\
+\large{[1] Versuchsanleitung - Das Dulong-Petitsche Gesetz}\\\\
+\large{[2] Hoppe A., \textit{Periodensystem der Elemente}, URL: \href{http://www.periodensystem.info}{http://www.periodensystem.info}}\\\\
 
 % ========================================
 %	Literaturverzeichnis

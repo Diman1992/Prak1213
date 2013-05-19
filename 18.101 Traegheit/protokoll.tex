@@ -174,7 +174,7 @@ T^2=\frac{8m\pi^2}{D}\cdot a^2 + \frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\f
 \hline 
  & Gewicht [g] & Länge [cm] & Breite [cm] \\ 
 \hline 
-Stab & 96,6 & 30,025$\pm 0,005$ & ------------------ \\ 
+Stab & 96,6 & 30,025 & ----- \\ 
 \hline 
 Gewichte & 223,6 & 3,04 & 3,5 \\ 
 \hline 
@@ -261,7 +261,7 @@ $t_1$ [s] & $t_2$ [s]\\ \hline
 0,73&	1,33\\ \hline
 0,74&	1,31\\ \hline
 \end{tabular} 
-\caption{Schwingungsdauer der zwei vermessenen Zylinder - über fünf Perioden gemittelt}
+\caption{Schwingungsdauer der zwei vermessenen Zylinder - über fünf Perioden \mbox{gemittelt}}
 \end{table}
 
 Die Werte ergeben:
@@ -271,11 +271,31 @@ I'_{Zyl 1}&=(1,00\pm0,69)\cdot10^{-3}\text{ kg m$^2$}\\
 \end{align*}
 \begin{align*}
 t_{Zyl 2}&=(1,325 \pm  0,014)s\\ 
-I'_{Zyl 1}&=(3,22\pm5,86)\cdot10^{-3}\text{ kg m$^2$}
+I'_{Zyl 2}&=(3,22\pm5,86)\cdot10^{-3}\text{ kg m$^2$}
 \end{align*}
 
 \subsection{Trägheitsmoment einer Puppe}
-Zum Schluss soll das Trägheitsmoment einer Puppe bestimmt werden. Die Gliedmaßen werden dabei als Zylinder angenährt und ihr Umfang wird an 10 verschiedenen Stellen gemessen, um einen präzisen Mittelwert zu erhalten.
+Zum Schluss soll das Trägheitsmoment einer Puppe bestimmt werden. Die Gliedmaßen werden dabei als Zylinder angenährt und ihr Umfang wird an ungefähr 10 verschiedenen Stellen gemessen, um einen präzisen Mittelwert zu erhalten.
+
+Folgende Tabelle beinhaltet alle gemessenen Größen:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Bein&	Arm	&Oberk	&Kopf	\\ \hline
+1.79&	1.69&	3.49&	1.44\\ \hline
+2.13&	1.58&	4.06&	1.55\\ \hline
+1.90&	1.64&	3.76&	1.89\\ \hline
+1.71&	1.50&	3.37&	2.38\\ \hline
+1.62&	1.35&	3.02&	2.55\\ \hline
+1.29&	1.11&	2.53&	2.79\\ \hline
+1.69&	1.39&	2.56&	2.95\\ \hline
+1.63&	1.51&	2.97&	3.07\\ \hline
+1.36&	1.26&	3.64&	2.51\\ \hline
+1.31&	1.00&	3.97&		\\ \hline
+	&	3.89&		&		\\ \hline
+\end{tabular}
+\caption{Durchmesser der entsprechenden Körperteilen an verschiedenen Stellen gemessen - die gemittelten Werte d finden sich in den folgenden Tabelle}
+\end{table}
 \begin{table}[htbp]
 \begin{tabular}{|c|c|c|c|c|}
 \hline 		
@@ -293,7 +313,7 @@ I[$\cdot 10^{-6}$kg m$^2$]&		 1,66	&63,55&	1,22	&1,0735\\ \hline
 \caption{Puppe mit ausgestreckten Armen (Position 1)}
 \end{table}
 
-Summiert man alle Teilträgheiten und die beiden Terme, die durch den Satz von Steiner entstehen auf, so erhält man als Trägheitsmoment der Puppe:
+Summiert man über alle Teilträgheiten I, so erhält man als Trägheitsmoment der Puppe:
 \begin{align*}
 I_{Pos 1}= 1,317\cdot 10^{-3}\text{ kg m$^2$}
 \end{align*}
@@ -302,8 +322,8 @@ I_{Pos 1}= 1,317\cdot 10^{-3}\text{ kg m$^2$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 		
 &	Bein&	Arm	&Oberkörper	&Kopf	\\ \hline	
-d [cm]	&1,64&	1,40	&3,34	&2,11	\\ \hline		
-l [m]	&15,39	&13,80	&10,00	&5,48\\ \hline	
+d [cm]	&1,64	&	1,40	&	3,34	&	2,11	\\ \hline		
+l [m]	&15,39	&	13,80	&	10,00	&	5,48\\ \hline	
 V [$\cdot10^{-6}m^3$]	&32,63	&21,33	&87,46	&19,22\\ \hline	
 Anteil am Gesamtvolumen&	0,203	&0,133&	0,544	&0,120\\ \hline
 m [g]	&32,66&	21,36	&87,55	&19,24\\ \hline	
@@ -318,19 +338,51 @@ Man erhält als Trägheitsmoment der Puppe:
 I_{Pos 2}=1,99\cdot 10^{-3}\text{ kg m$^2$}
 \end{align*}
 
-Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnen. Dazu wird die Puppe als langer Zylinder angenährt, indem alle Teilradien mit der Länge des jeweiligen Körperteils gewichtet aufsummiert und dann durch die Höhe der Puppe dividiert wird. Es ergibt sich der Radius:
+Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnen. Man benötigt dazu die Schwingzeiten:
+\begin{table}[H]
+\begin{tabular}{|c|c|}
+\hline 
+Position 1 [s] & Position 2 [s]\\ \hline 
+2,92&	4,35\\ \hline 
+2,89&	4,32\\ \hline 
+2,78&	4,21\\ \hline 
+2,81&	4,27\\ \hline 
+2,84&	4,16\\ \hline 
+2,84&	4,28\\ \hline 
+2,78&	4,25\\ \hline 
+2,87&	4,34\\ \hline 
+2,87&	4,19\\ \hline 
+2,78&	4,16\\ \hline 
+\end{tabular} 
+\caption{Gemessene Schwingzeiten in Sekunden für beide Körperhaltungen}
+\end{table}
+
+Und erhält damit für die Trägheitsmomente:
 \begin{align*}
-R_{Pos 1}=1,65\text{cm}\\
-R_{Pos 2}=1,70\text{cm}
-\end{align*}
-Und damit das Trägheitsmoment:
-\begin{align*}
-I'_{Puppe 2}=2,19\cdot10^{-5}\text{ kg m$^2$}\\
-I'_{Puppe 2}=2,32\cdot10^{-5}\text{ kg m$^2$}
+I'_{Pos 1}=(12,3 \pm 2,9)\cdot 10^{-3} \text{ kg m$^2$}\\
+I'_{Pos 2}=(27,7 \pm 6,5)\cdot 10^{-3} \text{ kg m$^2$}
 \end{align*}
 
 \section{Diskussion}
 Das Eigenträgheitsmoment der Drehachse lässt sich relativ genau berechnen, dagegen weichen die Werte für die Winkelrichtgröße bei den verschiedenen Auswertmethoden stark von einander ab. Dies ist vermutlich darauf zurückzuführen, dass die Apparatur eine relativ hohe Reibung hat, die sich besonders bei kleinen Auslenkungen bemerkbar macht. Die Gleichung gilt jedoch nur für kleine Winkel, daher ist die Auswertung über die Federwaage aussagekräftiger.
+
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline 
+$D$ [\text{Nm}]  & $(0,072 \pm0,023)$ \\ \hline 
+$I_D[\text{ kg m$^2$}]$ & $(0,22 \pm 0,07)$ \\ \hline 
+$I_{Zyl 1}[\text{ kg m$^2$}]$&$(0,454\pm0,001)\cdot10^{-3}$\\ \hline 
+$I'_{Zyl 1}[\text{ kg m$^2$}]$&$(1,00\pm0,69)\cdot10^{-3}$\\ \hline 
+$I_{Zyl 2}[\text{ kg m$^2$}]$&$(0,876\pm0,004)\cdot10^{-3}$\\ \hline 
+$I'_{Zyl 2}[\text{ kg m$^2$}]$&$(3,22\pm5,86)\cdot10^{-3}$\\ \hline 
+$I_{Pos1}[\text{ kg m$^2$}]$&$1,317\cdot 10^{-3}$\\ \hline 
+$I'_{Pos1}[\text{ kg m$^2$}]$&$(12,3 \pm 2,9)\cdot 10^{-3}$ \\ \hline 
+$I_{Pos2}[\text{ kg m$^2$}]$&$1,99\cdot 10^{-3}$\\ \hline 
+$I'_{Pos2}[\text{ kg m$^2$}] $&$(27,7 \pm 6,5)\cdot 10^{-3}$\\ \hline 
+\hline 
+\end{tabular}
+\caption{Alle Ergebnisse des Versuches zusammengestellt}
+\end{table}
 
 Die Trägheitsmomente der beiden Zylinder liegen um einen Faktor von ungefähr 3 auseinander, wenn man die theoretischen mit den gemessenen Werten vergleicht. Auch dies lässt sich vermutlich darauf zurückführen, dass die Apparatur zu stark gedämpft ist. Die Körper schwingen recht schnell und um den statistischen Fehler zu minimieren muss man über mehrere Schwingungen mitteln. Da die Amplitude jedoch um gut 15\% pro Periode abnimmt, schlägt dieser Fehler dann mehr ins Gewicht.
 

@@ -135,7 +135,7 @@ Gemessen wurden folgende Werte:
 \begin{table}[htbp]
 \begin{tabular}{|c|c|}
 \hline 
-Winkel [Grad]&	Kraft [Newton]\\ \hline
+$\varphi$ [Grad]&	F [N]\\ \hline
 20	&0,13\\ \hline
 40	&0,16\\ \hline
 60	&0,21\\ \hline
@@ -148,19 +148,20 @@ Winkel [Grad]&	Kraft [Newton]\\ \hline
 200	&0,55\\ \hline
 220	&0,60\\ \hline
 \end{tabular} 
-\caption{Messung der Rückstellkraft im Abstand 20cm zur Drehachse}
+\caption{Messung der Rückstellkraft im Abstand r = 20cm zur Drehachse. Die Winkel wurden relativ groß gewählt, da die Federwaage für kleine Winkel kaum eine Kraft angezeigt hat.}
 \end{table}
 
 Mit Gleichung \eqref{eq_winkel} ergibt sich daraus eine Winkelrichtgröße des Aufbaus von:
 \begin{align*}
-D=0.072 \pm0.023
+D=(0,072 \pm0,023) \text{Nm}
 \end{align*}
 
 
 Um Eigenträgheit der Drillachse $I_D$ zu bestimmen, ersetzt man das Trägheitsmoment I in Gleichung \eqref{eq_periode} durch
 \begin{align*}
 I&=I_D+I_{Stab}+I_{Zylinder} \qquad \text{, wobei}\\
-I_{Zylinder}&=2m\cdot\left(\frac{R^2}{4}+\frac{l^2}{12}\right)
+I_{Zyl}&=2m\cdot\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\\
+I_{Stab}&= \frac{1}{12}ml^2
 \end{align*}
 das Trägheitsmoment der beiden Zylinder inklusive dem Betrag durch den Satz von Steiner beschreibt.
 Quadriert man die Gleichung und stellt diese um, so erhält man:
@@ -169,43 +170,53 @@ T^2=\frac{8m\pi^2}{D}\cdot a^2 + \frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\f
 \end{align}
 
 \begin{table}[htbp]
-\begin{tabular}{|c|c|}
-\hline
-Abstand [m] &	t [s]\\ \hline
-0.02&	10.565\\ \hline
-0.04&	11.85\\ \hline
-0.06&	13.185\\ \hline
-0.08&	15.56\\ \hline
-0.10&	17.01\\ \hline
-0.12&	19.225\\ \hline
-0.14&	21.43\\ \hline
-0.16&	23.47\\ \hline
-0.18&	25.665\\ \hline
-0.20&	28.05\\ \hline
-\end{tabular} 
-\caption{Messwerte bei schwingenden Massen, die Zeiten sind bereits gemittelt}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & Gewicht [g] & Länge [cm] & Breite [cm] \\ 
+\hline 
+Stab & 96,6 & 30,025$\pm 0,005$ & ------------------ \\ 
+\hline 
+Gewichte & 223,6 & 3,04 & 3,5 \\ 
+\hline 
+\end{tabular}\newline
+\caption{Ausmaßen und Massen der Apparatur}
 \end{table}
 
-Plottet man nun $T^2$ gegen $a^2$, so erhält man eine Gerade, mit:
+\begin{table}[htbp]
+\begin{tabular}{|c|c|}
+\hline
+a [m] &	T [s]\\ \hline
+0,02&	10,57\\ \hline
+0,04&	11,85\\ \hline
+0,06&	13,19\\ \hline
+0,08&	15,56\\ \hline
+0,10&	17,01\\ \hline
+0,12&	19,23\\ \hline
+0,14&	21,43\\ \hline
+0,16&	23,47\\ \hline
+0,18&	25,67\\ \hline
+0,20&	28,05\\ \hline
+\end{tabular} 
+\caption{Schwingungsdauer der schwingenden Massen. Die Zeiten sind bereits zeitlich gemittelt}
+\end{table}
+
+Wird nun $T^2$ gegen $a^2$ aufgetrgagen, so erhält man eine Gerade f(x)= mx+b, mit:
 \begin{figure}[htbp]
 \includegraphics[width=0.8\textwidth]{pics/eigentr.jpg}
+\caption{Gemessene Schwingzeit des Systems [s], quadratisch gegen das Quadrat des Abstandes [m] zur Drehachse aufgetragen.}
 \end{figure}
 \begin{align*}
-\text{Steigung:} \qquad m&=\frac{8m\pi^2}{D}=16843.9 \pm 234.6\\
-\text{Y-Achsenabschnitt }\qquad b&=\frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]s=118.86 \pm 4.72
+ m&=\frac{8m\pi^2}{D}=16843,9 \pm 234,6\\
+b&=\frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]s=118,86 \pm 4,72
 \end{align*}
 
-Dadurch erhält man einen weiteren Wert für die Winkelrichtgröße
+Dadurch kann erstmals das Eigenträgheitsmoment der Drillachse bestimmt werden:
 \begin{align*}
-D'=(1,0481\pm 0,0115) \cdot10^{-3}
-\end{align*}
-Und es kann erstmals das Eigenträgheitsmoment der Drillachse bestimmt werden (mit dem ungestrichenen D)
-\begin{align*}
-I_D=0,22 \pm 0,07
+I_D=(0,22 \pm 0,07) \text{ kg m$^2$}
 \end{align*}
 
 \subsection{Trägheitsmoment zweier Zylinder}
-Als nächstes soll das Trägheitsmoment zweier Zylinder berechnet und anschließend mit den gemessenen Werten verglichen werden.
+Anschließend wird das Trägheitsmoment zweier Zylinder berechnet und anschließend mit den gemessenen Werten verglichen.
 
 Das Trägheitsmoment eines Zylinders durch seine Symmetrieachse berechnet sich zu:
 
@@ -220,18 +231,18 @@ Die Zylinder haben folgende Daten:
 \hline 
  & Höhe [m] & Radius [m] & Gewicht [kg]\\ 
 \hline 
-Zylinder 1 & 0,1008 & 0,04965 & 0,36864 \\ 
+Zylinder 1 & 0,1008 & 0,0497 & 0,3686 \\ 
 \hline 
 Zylinder 2 & 0,0302 & 0,0371 & 1,2728 \\ 
 \hline 
 \end{tabular} 
-\caption{}
+\caption{Mase der beiden ausgemessenen Zylinder}
 \end{table}
 
 Eingesetzt in Gleichung \eqref{eq_Izyl} ergibt dies:
 \begin{align*}
-I_{Zyl 1}&=(4,5437\pm0,0092)\cdot10^{-4}\\
-I_{Zyl 2}&=(8,76\pm0,036)\cdot10^{-4}
+I_{Zyl 1}&=(4,54\pm0,0092)\cdot10^{-4}\text{ kg m$^2$}\\
+I_{Zyl 2}&=(8,76\pm0,036)\cdot10^{-4}\text{ kg m$^2$}
 \end{align*}
 
 Berechnet man das Trägheitsmoment über Gleichung \eqref{eq_periode}, so benötigt man die Schwingzeit der Zylinder:
@@ -239,28 +250,28 @@ Berechnet man das Trägheitsmoment über Gleichung \eqref{eq_periode}, so benöt
 \begin{tabular}{|c|c|}
 \hline 
 $t_1$ [s] & $t_2$ [s]\\ \hline
-0.74&	1.34\\ \hline
-0.73&	1.33\\ \hline
-0.76&	1.33\\ \hline
-0.74&	1.32\\ \hline
-0.75&	1.32\\ \hline
-0.73&	1.35\\ \hline
-0.73&	1.33\\ \hline
-0.75&	1.30\\ \hline
-0.73&	1.33\\ \hline
-0.74&	1.31\\ \hline
+0,74&	1,34\\ \hline
+0,73&	1,33\\ \hline
+0,76&	1,33\\ \hline
+0,74&	1,32\\ \hline
+0,75&	1,32\\ \hline
+0,73&	1,35\\ \hline
+0,73&	1,33\\ \hline
+0,75&	1,30\\ \hline
+0,73&	1,33\\ \hline
+0,74&	1,31\\ \hline
 \end{tabular} 
-\caption{Die Zeiten wurden über fünf Perioden gemittelt}
+\caption{Schwingungsdauer der zwei vermessenen Zylinder - über fünf Perioden gemittelt}
 \end{table}
-\newpage
+
 Die Werte ergeben:
 \begin{align*}
-t_{Zyl 1}&=0.739 \pm 0.010\\
-I'_{Zyl 1}&=(1,0027\pm0,69)\cdot10^{-3}\\
+t_{Zyl 1}&=(0,739 \pm 0,010)s\\
+I'_{Zyl 1}&=(1,00\pm0,69)\cdot10^{-3}\text{ kg m$^2$}\\
 \end{align*}
 \begin{align*}
-t_{Zyl 2}&=1.325 \pm  0.014\\
-I'_{Zyl 1}&=(3,2219312\pm5,86)\cdot10^{-3}
+t_{Zyl 2}&=(1,325 \pm  0,014)s\\ 
+I'_{Zyl 1}&=(3,22\pm5,86)\cdot10^{-3}\text{ kg m$^2$}
 \end{align*}
 
 \subsection{Trägheitsmoment einer Puppe}
@@ -269,56 +280,53 @@ Zum Schluss soll das Trägheitsmoment einer Puppe bestimmt werden. Die Gliedmaß
 \begin{tabular}{|c|c|c|c|c|}
 \hline 		
 &	Bein&	Arm	&Oberkörper	&Kopf	\\ \hline	
-Durchmesser [m]&	0.01643&	0.01403&	0.03337&	0.02113\\ \hline				
-Länge [m] &	0.1539	&0.138	&0.1	&0.0548\\ \hline	
+d [cm]&	1,643&	1,40&	3,34&	2,113\\ \hline				
+l [cm] &	15,39	&13,80	&10,00	&5,48\\ \hline	
 					
-Volumen [$m^3$]	&0.000032629	&0.0000213346	&0.000087459	&0.000019216	\\ \hline	
-Anteil am Gesamtvolumen	&0.203	&0.133	&0.5444	&0.120	\\ \hline		
-Masse [kg]	&0.0326618101	&0.0213560501	&0.0875465257	&0.0192356141\\ \hline
-Abstand [m]	&0.0218	&0.1678	&&\\ \hline	
+V [$\cdot 10^{-6} m^3$]	&32,63	&21,33	&87,46	&19,22	\\ \hline	
+Anteil am Gesamtvolumen	&0,203	&0,133	&0,544	&0,120	\\ \hline		
+m [g]	&32,66	&21,35	&87,55 &19,24\\ \hline
+Abstand [cm]	&2,18	&16,78	&&\\ \hline	
 					
-Trägheit&	0.000001102	&0.000034155&	0.000012186	&0.0000010735\\ \hline	
-TrägheitSteiner	&0.0000155222	&0.0006013189	&&	\\ \hline	
+I[$\cdot 10^{-6}$kg m$^2$]&		 1,66	&63,55&	1,22	&1,0735\\ \hline	
 \end{tabular} 
-\caption{Puppe mit ausgestreckten Armen}
+\caption{Puppe mit ausgestreckten Armen (Position 1)}
 \end{table}
 
 Summiert man alle Teilträgheiten und die beiden Terme, die durch den Satz von Steiner entstehen auf, so erhält man als Trägheitsmoment der Puppe:
 \begin{align*}
-I_{Puppe 1}= 0.001317
+I_{Pos 1}= 1,317\cdot 10^{-3}\text{ kg m$^2$}
 \end{align*}
 
 \begin{table}[htbp]
 \begin{tabular}{|c|c|c|c|c|}
 \hline 		
 &	Bein&	Arm	&Oberkörper	&Kopf	\\ \hline	
-Durchmesser [m]	&0.01643&	0.01403	&0.03337	&0.02113	\\ \hline		
-Länge [m]	&0.1539	&0.138	&0.1	&0.0548\\ \hline	
-Volumen [$m^3$]	&0.000032629	&0.0000213346	&0.0000874586	&0.0000192163\\ \hline	
-VolGes [$m^3$]	&0.0001606384	&&&		\\ \hline	
-Anteil am Gesamtvolumen&	0.203	&0.133&	0.544	&0.120\\ \hline
-Masse [kg]	&0.0326618101&	0.0213560501	&0.0875465257	&0.0192356141\\ \hline	
-Abstand [m]&	0.093635	&0.1678&&\\ \hline	
-Trägheit&	0.000066671&	0.0000341548&	0.000012186&	0.000001074\\ \hline	
-TrägheitSteiner&	0.0002863629&	0.0006013189&&	\\ \hline	
+d [cm]	&1,64&	1,40	&3,34	&2,11	\\ \hline		
+l [m]	&15,39	&13,80	&10,00	&5,48\\ \hline	
+V [$\cdot10^{-6}m^3$]	&32,63	&21,33	&87,46	&19,22\\ \hline	
+Anteil am Gesamtvolumen&	0,203	&0,133&	0,544	&0,120\\ \hline
+m [g]	&32,66&	21,36	&87,55	&19,24\\ \hline	
+Abstand [cm]&	9,36	&16,78&&\\ \hline	
+I[$\cdot 10^{-6}$kg m$^2$]&		539,39&	635,46&	12,19&	1,07\\ \hline	
 \end{tabular} 
-\caption{Puppe mit ausgestreckten Armen und Beinen}
+\caption{Puppe mit ausgestreckten Armen und Beinen (Position 2)}
 \end{table}
 
 Man erhält als Trägheitsmoment der Puppe:
 \begin{align*}
-I_{Puppe 2}=0.00199
+I_{Pos 2}=1,99\cdot 10^{-3}\text{ kg m$^2$}
 \end{align*}
 
 Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnen. Dazu wird die Puppe als langer Zylinder angenährt, indem alle Teilradien mit der Länge des jeweiligen Körperteils gewichtet aufsummiert und dann durch die Höhe der Puppe dividiert wird. Es ergibt sich der Radius:
 \begin{align*}
-R_{Puppe 1}=1,65cm\\
-R_{Puppe 2}=1,70cm
+R_{Pos 1}=1,65\text{cm}\\
+R_{Pos 2}=1,70\text{cm}
 \end{align*}
 Und damit das Trägheitsmoment:
 \begin{align*}
-I'_{Puppe 2}=2,19\cdot10^{-5}\\
-I'_{Puppe 2}=2,32\cdot10^{-5}
+I'_{Puppe 2}=2,19\cdot10^{-5}\text{ kg m$^2$}\\
+I'_{Puppe 2}=2,32\cdot10^{-5}\text{ kg m$^2$}
 \end{align*}
 
 \section{Diskussion}

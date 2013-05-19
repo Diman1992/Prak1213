@@ -1,0 +1,62 @@
+#-----Beschriftungen-----#
+set term wxt
+
+set title ""
+set xlabel "Strom [A]"
+set ylabel "Spannung [V]"
+
+set key top right
+
+
+#-----Formatierung-----#
+set grid
+#set logscale x
+#set logscale y
+set xrange [0:0.09]
+set yrange [0:1.6]
+
+
+
+#-----Konstanten definieren-----#
+pi=3.1415926
+c0=299792458
+
+D=0.072450974
+
+
+#-----Rechenfunktionen-----#
+
+
+#-----Fitfunktion-----#
+f(x)=a*(x)+b
+a=1
+b=1
+
+
+#-----Fitting-----#
+fit f(x) "daten" index 1 using (($2)/1000):($1) via a,b
+
+
+
+#-----Plot-----#
+#Monozelle
+#plot "daten" index 0 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
+
+#Rechteckspannung
+plot "daten" index 1 using ($2)/1000:($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
+#, "daten" index 1 using ($2):($1) title "Nicht ausgewertet"
+
+
+#plot "daten" index 2 using ($2)/1000:($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
+#, "daten" index 1 using ($2):($1) title "Nicht ausgewertet"
+
+#-----Sonderkram-----#
+#set arrow from 0,-26 to 1.6,-26 lc 2 lw 3 front nohead
+
+
+
+#Zurücksetzen
+
+
+
+

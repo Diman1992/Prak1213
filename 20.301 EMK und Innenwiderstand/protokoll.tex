@@ -8,7 +8,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Versuch\\				% Titel des Versuchs 
+\title{Versuch 301 - Leerlaufspannung und Innenwiderstand von Spannungsquellen\\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+\date{14.Mai 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -57,11 +57,89 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 % ========================================
 
 \section{Einleitung}				% Bei Bedarf
-
+\setcounter{page}{1}
+Im Zuge dieses Versuchs werden die Innenwiderstände $R_i$ und die Leerlaufspannungen $U_0$ verschiedener Spannungsquellen ermittelt
 \section{Theorie}
+\subsection{Innenwiderstand und Leerlaufspannung}
+Leerlaufspannung ist jene Spannung, die an den Ausgangsquellen einer Spannungsquelle anliegt, wenn ihr kein Strom entnommen wird. Durch
+einen Lastwiderstand $R_a$ fließt ein endlicher Strom mit einer Klemmspannung $U_k$, die kleiner als $U_0$ ist. Das lässt sich durch
+den Innenwiderstand $R_i$ der Spannungsquelle erklären. Abbildung \ref{pic_reell} zeigt das entsprechende Ersatzschaltbild.
+\begin{figure}[H]
+ \includegraphics[width=0.4\textwidth]{pics/reell.png}
+ \caption{Ersatzschaltbild einer realen Spannungsquelle mit Lastwiderstand $R_a ^{[1]}$}
+ \label{pic_reell}
+\end{figure}
+Aus dem zweiten Kirchhhoffschen Gesetz, der Maschenregel, folgt für das Problem
+\begin{align}
+\nonumber
+ \sum U_{0_n} &= \sum I_m R_m\\ 
+ U_0 &= IR_i + IR_a,
+\end{align}
+woraus sich für die Klemmspannung ergibt
+\begin{align}
+ U_k = IR_a = U_0-IR_i.
+ \label{eq_klemmspannung}
+\end{align}
+Um die Leerlaufspannung zu ermitteln, sollte idealerweise kein Strom durch das Messgerät mit dem Lastwiderstand $R_a$ fließen. Durch ein
+hochohmiges Voltmeter ist dies erreichbar, womit sich \eqref{eq_klemmspannung} ergibt zu
+\begin{align}
+ U_0 \approx U_k
+\end{align}
+
+\subsection{Leistungsanpassung}
+Aufgrund des Innenwiderstands existiert ein Maximum der entnehmbaren Leistung $P$, die am Verbraucher $R_a$ genutzt werden kann.
+\begin{align}
+ P = U_k I = R_a I^2
+\end{align}
+Aus \eqref{eq_klemmspannung} ergibt sich
+\begin{align}
+ P = \frac{U^2_0\cdot R_a}{(R_a+R_i)^2}.
+ \label{eq_leistung}
+\end{align}
+Um das Leistungsmaximum in Abhängigkeit des Lastwiderstands zu bestimmen, wird \eqref{eq_leistung} nach $R_a$ abgeleitet und die 
+entstehende Gleichung 0 gleichgesetzt.
+\begin{align}
+ \nonumber
+ \frac{\partial P}{\partial R_a} = \frac{U^2_0\,(R_a+R_i)-2U^2_0R_a}{(R_a+R_i)^3}&=0\\
+ \nonumber
+ U^2_0\,(R_a+R_i)-2U^2_0R_a&=0\\
+ R_i &= R_a
+\end{align}
+Die Maximalleistung $P_{max}$ wird demnach erreicht, wenn der Innenwiderstand dem Lastwiderstand gleich ist. Der Wert lässt sich errechnen
+durch 
+\begin{align}
+ P_{max} = \frac{U^2_0}{4R_i}.
+ \label{eq_maxleistung}
+\end{align}
+Aufgrund des schlechten Wirkungsgrads der Leistungsanpassung wird sie in Starkstromtechnik nicht angewandt. Jedoch in der Signalübertragung
+findet sie Gebrauch.
 
 \section{Durchführung}
-
+Im Verlauf des Experiments werden vier Messreihen zur Bestimmung des Innenwiderstands und der Leerlaufspannung vorgenommen, sowie eine
+Direktmessung mittels eines Voltmeters.
+\subsection{Monozelle}
+\subsubsection{ohne Gegenspannung}
+\label{sec_ogegen}
+Entsprechend Schaltbild \ref{pic_ogegenspannung} werden ein regelbarer Widerstand im Bereich von 0-50 $\Omega$ und die Messgeräte aufgebaut.
+\begin{figure}[H]
+ \includegraphics[width=0.5\textwidth]{pics/ohne.png}
+ \caption{Versuchsaufbau für die Monozelle ohne Gegenspannung$^{[1]}$}
+ \label{pic_ogegenspannung}
+\end{figure}
+Zu verschiedenen Widerständen im angegeben Bereich werden die Klemmspannungen $U_k$ mit den entsprechenden Strömen $I$ mit den entsprechenden
+Messgeräten notiert.
+\subsubsection{mit Gegenspannung}
+Eine zweite Spannungsquelle wird nun gemäß Schaltbild \ref{pic_mgegenspannung} in den Verlauf integriert und die Messwerte identisch zu Abschnitt
+\ref{sec_ogegen} aufgenommen.
+\begin{figure}[H]
+ \includegraphics[width=0.5\textwidth]{pics/mit.png}
+ \caption{Versuchsaufbau für die Monozelle mit Gegenspannung$^{[1]}$}
+ \label{pic_mgegenspannung}
+\end{figure}
+\subsection{RC-Generator}
+Hierbei wird die Monozelle durch einen RC-Generator ersetzt. Es wird je eine Messreihe ensprechend Abschnitt \ref{sec_ogegen} aufgenommen
+für den Betrieb mit Rechtecksspannung mit dem regelbaren Widerstand im Bereich von 20-250 $\Omega$, sowie mit Sinusspannung im Bereich von
+0,1-5 k$\Omega$.
 \section{Auswertung}
 
 \section{Diskussion}

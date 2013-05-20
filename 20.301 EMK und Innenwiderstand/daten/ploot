@@ -1,6 +1,5 @@
 #-----Beschriftungen-----#
 set term wxt
-
 set title ""
 set xlabel "Strom [A]"
 set ylabel "Spannung [V]"
@@ -12,8 +11,8 @@ set key top right
 set grid
 #set logscale x
 #set logscale y
-set xrange [0:0.09]
-set yrange [0:1.6]
+set xrange [0:0.0014]
+set yrange [0.05:0.21]
 
 
 
@@ -34,8 +33,9 @@ b=1
 
 
 #-----Fitting-----#
+#fit f(x) "daten" index 0 using (($2)/1000):($1) via a,b
+#fit f(x) "daten" index 1 using (($2)/1000):($1) via a,b
 fit f(x) "daten" index 2 using (($2)/1000):($1) via a,b
-
 
 
 #-----Plot-----#
@@ -44,7 +44,6 @@ fit f(x) "daten" index 2 using (($2)/1000):($1) via a,b
 
 #Rechteckspannung
 #plot "daten" index 1 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
-#, "daten" index 1 using ($2):($1) title "Nicht ausgewertet"
 
 
 plot "daten" index 2 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"

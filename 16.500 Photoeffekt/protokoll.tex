@@ -126,7 +126,7 @@ Aufteilung der einzelnen Spektrallinien, welche eine Photokathode bestrahlen, di
 die Photokathode immer mit monochromatischem Licht beleuchtet. 
 
 Für vier Spektrallinien wird der Photostrom in Abhängigkeit der Bremsspannung gemessen, welche in einem Bereich von -2V $\leq \,U \, \leq 2$V
-liegt. Für die Wellenlänge $\lambda$ = 438,8 nm wird zusätzlich der Bereich von -20V $\leq \,U \, \leq$ 20V gegen den Photostrom gemessen.
+liegt. Für die Wellenlänge $\lambda$ = 578 nm wird zusätzlich der Bereich von -20V $\leq \,U \, \leq$ 20V gegen den Photostrom gemessen.
 
 
 \section{Auswertung}
@@ -134,21 +134,22 @@ Um die $I_{pk} \propto U^2$
 Gesetzmäßigkeit nachzuweisen, wird die Wurzel des Stroms gegen die Spannung aufgetragen.
 
 \begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{pics/wurzel578.jpg}
+\caption{Photostrom gegen die Spannung aufgetragen - 578nm}
+\end{figure}
+
+\begin{figure}[H]
 \includegraphics[width=0.8\textwidth]{pics/wurzel404.jpg}
 \caption{Photostrom gegen die Spannung aufgetragen - 404,7nm}
 \end{figure}
 
-\begin{figure}[H]
-\includegraphics[width=0.8\textwidth]{pics/wurzel407.jpg}
-\caption{Photostrom gegen die Spannung aufgetragen - 407,8nm}
-\end{figure}
 \newpage
 Verwendet wurden dabei folgende Messwerte:
 \renewcommand{\arraystretch}{.95}
 \begin{table}[H]
 \begin{tabular}{|c|c!{\vrule width 1.5pt} c|c!{\vrule width 1.5pt} c|c!{\vrule width 1.5pt} c|c|}
 \hline
-435.8nm &  & 404.7nm &  & 407.8nm & & 546.1nm & \\ \hline
+578nm &  & 404.7nm &  & 407.8nm & & 546.1nm & \\ \hline
 V	&		A&		V&		A&	V&A			&V	&A \\ \hline
 -1.0 & 0 	& -1.5 & 0 		& -1.1 & 0 		& -0.6&0 \\ \hline
 -0.9 & 0.01 & -1.4 & 0.002 	& -1.0 & 0.008 	& -0.5&0 \\ \hline
@@ -195,8 +196,8 @@ V	&		A&		V&		A&	V&A			&V	&A \\ \hline
 \end{table}
 
 \begin{figure}[H]
-\includegraphics[width=0.8\textwidth]{pics/wurzel4358.jpg}
-\caption{Photostrom gegen die Spannung aufgetragen - 435,8nm}
+\includegraphics[width=0.8\textwidth]{pics/wurzel407.jpg}
+\caption{Photostrom gegen die Spannung aufgetragen - 407,8nm}
 \end{figure}
 
 \begin{figure}[H]
@@ -204,32 +205,54 @@ V	&		A&		V&		A&	V&A			&V	&A \\ \hline
 \caption{Photostrom gegen die Spannung aufgetragen - 546,1nm}
 \end{figure}
 
-Als Y-Achsenabschnitt liest sich dann die Spannung ab, ab der ein Photostrom gemessen werden kann:
+Legt man eine Regressionsgrade $f(x) = mx + b$ durch die linearen Bereiche des Graphen, so lassen sich als b dann folgende Gegenspannungen ablesen.
 
 \begin{align*}
-0.600\text{V}	=	404.7\text{nm}\\
-0.486\text{V}	=	407.8\text{nm}\\
-0.222\text{V}	=	435.8\text{nm}\\
-0.386\text{V}	=	546.1\text{nm}\\
+(0.627 \pm0.004)\text{V}	=	404.7\text{nm}\\
+%a               = 0.40451          +/- 0.005221     (1.291%)
+%b               = 0.626529         +/- 0.004044     (0.6455%)
+(0.507\pm 0.005)\text{V}	=	407.8\text{nm}\\
+%a               = 0.417371         +/- 0.007905     (1.894%)
+%b               = 0.507056         +/- 0.00461      (0.9091%)
+(0.39\pm0.01)\text{V}	=	546.1\text{nm}\\
+%a               = 0.80131          +/- 0.03409      (4.254%)
+%b               = 0.39486          +/- 0.009938     (2.517%)
+(0.227\pm0.002)\text{V}	=	578\text{nm}\\
+%a					0.203153         +/- 0.003779     (1.86%)
+%b               =   0.226654         +/- 0.00207      (0.9132%)
 \end{align*}
 
-Für Licht der Wellenlänge 435,8nm wurde der Photostrom über einen weiteren Spannungsbereich aufgenommen. Der Plot ergab folgendes Diagram:
+Für Licht der Wellenlänge 578 nm wurde der Photostrom über einen weiteren Spannungsbereich aufgenommen. Der Plot ergab folgendes Diagram:
 
 \begin{figure}[H]
 \includegraphics[width=0.6\textwidth]{pics/gesamt.jpg}
-\caption{Photostrom und Spannung für 435,8nm}
+\caption{Photostrom und Spannung für 578nm}
 \end{figure}
 
-Zunächst lässt sich festhalten, dass selbst bei negativen Beschleunigungsspannung bereits ein schwacher Phtotostrom messbar ist. Die liegt daran, dass die Elektronen im Metal, eine der Dirac-Verteilung entsprechende Energieverteilung haben und die Energie für einige der Elektronen ausreicht, um das Metal spontan zu verlassen und gegen das Gegenfeld anzulaufen. Der Kurvenverlauf in diesem Bereich stimmt auch sehr gut mit der Dirac-Kurve überein.\
-Sobald die Spannung größer wird, beginnt die Kurve zu steigen. Die liegt daran, dass zunehmend mehr Elektronen vom elektrischen Feld eingefangen und zur Anode transportiert werden. Die Steigung der Kurve ist hier nahezu linear.\\
-Bei höheren Spannung stellt sich schließlich eine Sättigung des Stromes ein. Dies kennzeichnet den Bereich, ab dem quasi alle Elektronen, die das Metal verlassen auch durch das elektrische Feld zur Anode gelangen. Bei noch größeren Spannungen kann ihre Anzahl nicht weiter steigen.
-
-Die vier Werte, die sich aus der Gegenspannung und der Frequenz zusammensetzen, ergeben leider keine schöne Gerade. Möglicherweise hat sich aus den vorherigen Rechnungen ein Folgefehler eingeschlichen, so dass diese Auswertung kein brauchbares Ergebnis liefert. (Ich werde das nochmal am Wochenende nachprüfen.)
+Um das Verhältnis $\frac{h}{e_0}$ zu bestimmen, stellt man Gleichung \eqref{eq_photoerweitert} nach:
+\begin{align*}
+U_g = \frac{h}{e_0}\nu - \frac{A_k}{e_0}
+\end{align*}
+um und plottet die zuvor erhaltenen Gegenspannungen $U_k$ gegen die zugehörigen Frequenzen $\nu$. 
 
 \begin{figure}[H]
 \includegraphics[width=0.6\textwidth]{pics/4werte.jpg}
 \caption{Gegenspannung gegen Frequenz}
 \end{figure} 
+Lineare Regression mit einer Geraden der Form $f(\nu)=m\nu + b$ ergibt für die Konstanten m und b:
+
+\begin{align*}
+m&=\frac{h}{e_0}= (1.31561 \pm 0.4)\cdot10^{-15}\\
+b&=A_k= -(0.40 \pm 0.26) eV
+\end{align*}
+
+\section{Diskussion}
+Zunächst lässt sich festhalten, dass selbst bei negativen Beschleunigungsspannung bereits ein schwacher Phtotostrom messbar ist. Die liegt daran, dass die Elektronen im Metal, eine der Dirac-Verteilung entsprechende Energieverteilung haben und die Energie für einige der Elektronen ausreicht, um das Metal spontan zu verlassen und gegen das Gegenfeld anzulaufen. Der Kurvenverlauf in diesem Bereich stimmt auch sehr gut mit der Dirac-Kurve überein.\
+Sobald die Spannung größer wird, beginnt die Kurve zu steigen. Die liegt daran, dass zunehmend mehr Elektronen vom elektrischen Feld eingefangen und zur Anode transportiert werden. Die Steigung der Kurve ist hier nahezu linear.\\
+Bei höheren Spannung stellt sich schließlich eine Sättigung des Stromes ein. Dies kennzeichnet den Bereich, ab dem quasi alle Elektronen, die das Metal verlassen auch durch das elektrische Feld zur Anode gelangen. Bei noch größeren Spannungen kann ihre Anzahl nicht weiter steigen. Dieser Wert wird jedoch nur Asymptotisch angenähert, da die Elektronen in verschiedenen Richtungen aus dem Metall geschlagen werden und sich daher einige zunächst von der Auffangelektrode wegbewegen. Für diese ist eine höhere Beschleunigungsspannung erforderlich.
+
+Der berechnete Wert $\frac{h}{e_0}$ weicht um fast 70\% vom Literaturwert ab. Dies ist darauf zurück zu führen, dass die Messwerte relativ weit auseinanderliegen. Da die Photozellen sehr empfindlich auf Lichteinfall reagieren hätte der Versuch in absoluter Dunkelheit stattfinden müssen. Es wirkten dennoch immer wieder externe Lichtquellen auf die Messung ein und auch die Quecksilberlampe hatte mehrere Intensitätsschwankungen, so dass die größeren Abweichungen zu erklären sind.
+
 %\section{Diskussion}
 
 % ========================================

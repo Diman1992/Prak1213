@@ -137,6 +137,7 @@ Eine zweite Spannungsquelle wird nun gemäß Schaltbild \ref{pic_mgegenspannung}
  \caption{Versuchsaufbau für die Monozelle mit Gegenspannung$^{[1]}$}
  \label{pic_mgegenspannung}
 \end{figure}
+\newpage
 \subsection{RC-Generator}
 Hierbei wird die Monozelle durch einen RC-Generator ersetzt. Es wird je eine Messreihe ensprechend Abschnitt \ref{sec_ogegen} aufgenommen
 für den Betrieb mit Rechtecksspannung mit dem regelbaren Widerstand im Bereich von 20-250 $\Omega$, sowie mit Sinusspannung im Bereich von
@@ -151,20 +152,20 @@ U_0\approx U_k=1,57V
 \end{align*}
 
 \subsubsection{indirekt}
-Genauer errechnet sich die Leerlaufspannung unter Einbeziehung des Innenwiderstandes nach Gleichung \eqref{eq_klemmspannung}. Hierzu trägt man den gemessenen Strom I gegen die Spannung $U_k$  auf und erhält nach linearer regression mit einer Ausgleichsgeraden der Form $f(x)=ax +b$ den Innenwiderstand als -a und die Leerspannung als b.
+Genauer errechnet sich die Leerlaufspannung unter Einbeziehung des Innenwiderstandes nach Gleichung \eqref{eq_klemmspannung}. Hierzu trägt man den gemessenen Strom I gegen die Spannung $U_k$  auf und erhält nach linearer Regression mit einer Ausgleichsgeraden der Form $f(x)=ax +b$ den Innenwiderstand als -a und die Leerspannung als b.
 \begin{figure}[htbp]
 \includegraphics[width=0.8\textwidth]{pics/konst_beide.jpeg}
 \caption{Spannungs- und Stromverläufe der Monozelle}
 \end{figure}
 \begin{align*}
 -a &= R_{i,mono} &= (17,2\pm 0.4) \Omega\\
-b &= U_0 &= (1.52 \pm 0.02) V
+b &= U_{0, mono} &= (1.52 \pm 0.02) V
 \end{align*}
 \subsubsection{indirekt mit Gegenspannung}
-Legt man eine Gegenspannung an den Stromkreis an, so ändert sich Gleichung \eqref{eq_klemmspannung} nur um ein Vorzeichen am Innenwiderstand. Die entsprechende Ausgleichsgerade $g(x)=cx +d$ schneidet entsprechend die Y-Achse des Graphen an der gleichen Stelle und die so bestimmten Leerspannungen sind identisch.
+Legt man eine Gegenspannung an den Stromkreis an, so ändert sich Gleichung \eqref{eq_klemmspannung} nur um ein Vorzeichen am Innenwiderstand. Die entsprechende Ausgleichsgerade $g(x)=cx +d$ schneidet entsprechend die Y-Achse des Graphen an der gleichen Stelle und die so bestimmte Leerspannunge sollte mit der zuvor bestimmten übereinstimmen.
 \begin{align*}
 -c &= R_{i,mono} &= (547.7    \pm 7.6) \Omega\\
-d &= U_0 &= (2.47   \pm 0.02) V
+d &= U_{0, mono} &= (2.47   \pm 0.02) V
 \end{align*}
 
 \subsection{Rechteckspannung}
@@ -174,25 +175,40 @@ Die gleiche Messung wird nun mit einer Rechteckspannung durchgeführt. Der Plott
 \caption{Spannungs- und Stromverläufe der Rechteckspannung}
 \end{figure}
 \begin{align*}
--a &= R_{i_Rechteck}               &= (1.42  \pm 0.01) \Omega\\
-b &= U_0 &= (0.0700  \pm 0.0002) V
+-a &= R_{i,Rechteck}               &= (1.42  \pm 0.01) \Omega\\
+b &= U_{0, Rechteck} &= (0.0700  \pm 0.0002) V
 \end{align*}
 
 \subsection{Sinusspannung}
 Zum Schluss wird die Messung noch mal mit einer Sinusspannung durchgeführt. Der Plott der Werte ergibt folgenden Graphen:
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[width=0.8\textwidth]{pics/sinus.jpeg}
 \caption{Spannungs- und Stromverläufe der Sinusspannung}
 \end{figure}
 \begin{align*}
--a &= R_{i_Rechteck}               &= (109.3    \pm 1.5) \Omega\\
-b &= U_0 &= (0.204       \pm 0.001) V
+-a &= R_{i,Sinus}   &= (109.3    \pm 1.5) \Omega\\
+b &= U_{0, Sinus} &= (0.204 \pm 0.001) V
 \end{align*}
 
-\section{Diskussion}
-Die Spannungen der Monozelle, die sich aus der gewöhnliche Messung der Klemmspannung (U=1,57V)und der Berechnung einer Ausgleichsgeraden (U=1,52V) ergeben, stimmen sehr gut überein. Hier zeigt sich, dass der Fehler, der durch das Vernachlässigen des Innenwiderstandes entsteht, tatsächlich verschwindend gering ist. Bei der Berechnung wurde zuvor nämlich ausgenutzt, dass der hochohmige Widerstand des Volmeters im Bereich von 10-20M$\Omega$ im Vergleich zum Innenwiderstand in der Größenordnung von 10$\Omega$ so groß ist, dass an ihm quasi die gesamte Spannung abfällt.\\
-Würde man das Voltmeter hinter das Amperemeter (im Punkt H) schalten, so würde man dessen Widerstand 
+\subsection{Leistung}
+Zu guter letzt tragen wir die am Widerstand $R_a$ abfallende Leistung $P_a = U_k \cdot I$ gegen den Widerstand $R_a$ auf. Das zusätzlihe Einfügen einer Regressionsfunktion entsprechend Gleichung \ref{eq_leistung} ergibt folgenden Graphen und Konstanten:
 
+\begin{figure}[htbp]
+\includegraphics[width=0.8\textwidth]{pics/leistung_wid.jpeg}
+\caption{Leistung gegen Widerstand aufgetragen - Regressionsfunktion vom Typ $f(x)=\frac{a}{(x+b)^2}+c$ wurde verwendet}
+\end{figure}
+
+\begin{align*}
+a = -1.05 \pm 0.27    \\
+b = 4.95 \pm 0.76      \\
+c = 0.0352 \pm 0.0007   
+\end{align*}
+\section{Diskussion}
+Die Spannungen der Monozelle, die sich aus der gewöhnliche Messung der Klemmspannung (U=1,57V)und der Berechnung einer Ausgleichsgeraden (U=1,52V) ergeben, stimmen sehr gut überein. Hier zeigt sich, dass der Fehler, der durch das Vernachlässigen des Innenwiderstandes entsteht, tatsächlich verschwindend gering ist. Bei der Berechnung wurde zuvor nämlich ausgenutzt, dass der hochohmige Widerstand des Volmeters im Bereich von (10-20)M$\Omega$ im Vergleich zum Innenwiderstand in der Größenordnung von 10$\Omega$ so groß ist, dass an ihm quasi die gesamte Spannung abfällt.\\
+
+Würde man das Voltmeter hinter das Amperemeter (Abbildung \ref{pic_ogegenspannung}, Punkt H) schalten, so würde man dessen Widerstand mitmessen. Dieser systematische Fehler wird in dieser Auswertung jedoch vermieden.\\
+
+Dem Verlauf der Leistungs-Messwerte nach, war die Auswertung hinreichend genau. Nur im Bereich um 14 $\Omega$ gibt es eine Unerwartete Abweichung der Werte nach oben, die auf einen nichtsystematischen Fehler oder eine Messungenauigkeit schließen lässt. Ansonsten stimmen die Messwerte und der Graph sehr gut überein.
 % ========================================
 %	Literaturverzeichnis
 % ========================================

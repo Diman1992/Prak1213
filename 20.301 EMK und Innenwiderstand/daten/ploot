@@ -4,21 +4,22 @@ set title ""
 set xlabel "Strom [A]"
 set ylabel "Spannung [V]"
 
-set key top right
+set key bottom right
 
 
 #-----Formatierung-----#
 set grid
 #set logscale x
 #set logscale y
-set xrange [0:0.0014]
-set yrange [0.05:0.21]
+set xrange [0:30]
+set yrange [0:0.036]
 
 
 
 #-----Konstanten definieren-----#
 pi=3.1415926
 c0=299792458
+U0=1.57
 
 D=0.072450974
 
@@ -28,26 +29,36 @@ D=0.072450974
 
 #-----Fitfunktion-----#
 f(x)=a*(x)+b
+g(x)=c*(x)+d
 a=1
 b=1
+c=1
+d=1
 
 
 #-----Fitting-----#
-#fit f(x) "daten" index 0 using (($2)/1000):($1) via a,b
+#fit f(x) "daten" index 0 using (($2)/1000):($1) via a,b 
+#fit g(x) "daten" index 3 using ($4):($2+3.5) via c,d
+
 #fit f(x) "daten" index 1 using (($2)/1000):($1) via a,b
-fit f(x) "daten" index 2 using (($2)/1000):($1) via a,b
+#fit f(x) "daten" index 2 using (($2)/1000):($1) via a,b
+
 
 
 #-----Plot-----#
 #Monozelle
-#plot "daten" index 0 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
+#plot "daten" index 0 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade", "daten" index 3 using ($4):($2+3.5) title "Strom gegen Spannung mit Gegenspannung", g(x) title "Ausgleichsgerade Gegenspannung", U0 title "1.57 V"
 
 #Rechteckspannung
 #plot "daten" index 1 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
 
+#Sinusspannung
+#plot "daten" index 2 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
 
-plot "daten" index 2 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
-#, "daten" index 1 using ($2):($1) title "Nicht ausgewertet"
+#Leistung
+plot "daten" index 0 using ($1/($2/1000)):($1*($2/1000)) title "Leistung gegen Widerstand"
+#, f(x) title "Ausgleichsgerade"
+
 
 #-----Sonderkram-----#
 #set arrow from 0,-26 to 1.6,-26 lc 2 lw 3 front nohead

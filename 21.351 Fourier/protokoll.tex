@@ -8,7 +8,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Versuch\\				% Titel des Versuchs 
+\title{Versuch 351 Fourieranalyse\\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+\date{21. Mai 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -56,12 +56,71 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
+%\section{Einleitung}				% Bei Bedarf
 
 \section{Theorie}
+Räumlich undn zeitlich periodische Funktionen erfüllen die Bedingungen
+\begin{align*}
+f(x)=f(x+D)\\
+f(t)=f(t+T)
+\end{align*}
+und sind in der Physik von großer Bedeutung. Besonders interessant sind dabei die beiden Trigometrischen Funktionen Sinus und Cosinus:
+\begin{align*}
+f(t)=a~ sin\left(\frac{2\pi}{T}t\right)\\
+f(t)=b~ cos\left(\frac{2\pi}{T}t\right)
+\end{align*}
+
+\subsection{Fourieranalyse}
+Das Fouriersche Theorem besagt, dass jede stetige und periodische Funktion als Linearkombination aus Sinus- und Cosinusfunktionen dargestellt werden kann. 
+\begin{align}
+f(t)\approx \frac{1}{2} a_0 + \sum^\infty_{n=1} \left[ a_n~cos\left(n\frac{2\pi}{T}t\right)+ b_b~ sin\left(n\frac{2\pi}{T}t\right)\right]
+\label{eq_fanalyse}
+\end{align}
+Dabei setzten sich die Konstanten $a_n$ und $b_n$ wie folgt zusammen:
+\begin{align}
+ a_n&=\frac{2}{T}\int^T_{0} f(t)~cos\left(n\frac{2\pi}{T}t\right) dt\\
+ b_n&=\frac{2}{T}\int^T_{0} f(t)~sin\left(n\frac{2\pi}{T}t\right) dt \qquad n=1,2,...
+\end{align}
+Abgesehen von der Grundfrequenz $v_1 =\frac{1}{T}$ treten nur ihre ganzzahligen Vielfachen, die sogenannten Oberschwingungen auf. Auch die Phasenverschiebungen verteilen sich nicht kontinuierlich sonder können nur die Werte 0, $\frac{1}{2}\pi$ , $\pi$ oder $\frac{3}{2}\pi$. Die Berechnung der Amplituden $a_n$, $b_n$ bezeichnet man dabei als Fourieranalyse.\\
+Diese Rechnung vereinfacht sich, wenn die zu approximierende Funktion gerade oder ungerade ist. In diesem Fall besteht die Fourierreihe nicht aus Sinus- bzw. Cosinusschwingungen und der Faktor $b_n$ bzw $a_n$ ist = 0.\\
+Trägt man die Amplituden gegen die Frequenz auf, so erhält man das sog. Spektrum der Schwinung. In Grafik \ref{pic_spec} ist ein solches Spektrum für eine periodische Funktion dargestellt. 
+\begin{figure}[htbp]
+\includegraphics[width=0.6\textwidth]{pics/amplitude_frequenz.jpeg}
+\caption{Spektrum einer $v$ periodischen Funktion - Bild aus der Versuchsanleitung entnommen}
+\label{pic_spec}
+\end{figure} Das Spektrum einer nicht-periodischen Funktion ist kontinuierlich.\\
+
+Wird versucht, eine nicht-stetige Funktion mittels einer Fourierreihe zu entwickeln, so konvergiert diese an der Sprungstelle nicht gegen die Funktion, sondern hat dort eine, mit genauer werdender Approximation größer werdende, endliche Abweichung. Dies wird als Gibbsches Phänomen bezeichnet.
+
+\subsection{Fouriertransformation}
+Die Fouriertransformation einer Funktion $f(t)$ bezeichnet das Ausführen folgenden Integrals:
+\begin{align}
+g(v) = \int \limits _{-\infty}^\infty f(t) e^{ivt} dt
+\label{eq_ftrafo}
+\end{align}
+Dabei stellt die Funktion $g(v)$ das gesamte Frequenzspektrum der Funktion $f(t)$ dar (vlg. Grafik \ref{pic_spec}). Im Falle einer periodischen Funktion sind die so entstehenden $\delta$ Peaks äquidistant und konvergieren gegen 0, damit die Reihe abbricht.\\
+
+Die Fouriertransformation ist auch umkehrbar. So erhält man durch Anwenden des Integrals
+\begin{align}
+f(t) = \frac{1}{2\pi} \int \limits ^\infty _{-\infty} g(v) e^{-ivt} dv
+\label{eq-ruecktrafo}
+\end{align}
+aus dem Frequenzspektrum wieder die ursprüngliche Funktion.\\
+
+Sollen in der Praxis periodische Signale mit der Fourieranalyse untersucht werden, so erhält man anstelle der scharfen $\delta$ Peaks, stetige und differenzierbare Peaks, da man nicht über eine unendlich lange Zeit (dh. unendlich viele Perioden) integrieren kann. Die Funktion ist somit nur noch auf einem endlichen Bereich periodisch. 
 
 \section{Durchführung}
+Mit einem Funktionsgenerator werden periodische Funktionen erzeugt, die dann mittels Fourieranalyse untersucht werden sollen. Das verwendete Messgerät ist ein sog. Analysator. Dieser besteht aus einem Schwingkreis, an den das Signal über einen hochohmigen Widerstand angelegt wird. 
+\begin{figure}[htbp]
+\includegraphics[width=0.6\textwidth]{pics/analysator.jpeg}
+\caption{Für den Versuch verwendeter Analysator - Bild aus der Versuchsanleitung entnommen}
+\end{figure}
 
+Verändert man die Kapazität und somit die Resonanzfrequenz des Schwingkreises
+\begin{align}
+v_R=\frac{1}{2\pi\sqrt{LC}},
+\end{align}
+so beobachtet man beim Resonanzfall eine Spannungszunahme proportional zur Eingangsamplitude. Um die Werte gut am Graphen ablesen zu können, müssen die Resonanzkurven steil abfallen. Verwendet man nur einen Schwingkreis, so fällt diese mit $v^2$ ab. Höhere Potenzen kann man erhalten, indem man mehrere Schwingkreise miteinander kombiniert.
 \section{Auswertung}
 
 \section{Diskussion}

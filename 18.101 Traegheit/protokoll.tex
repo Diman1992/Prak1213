@@ -62,8 +62,9 @@ Weiterhin soll der Satz von Steiner geprüft werden.
 
 \section{Theorie}
 Charakteristisch für die Dynamik von Rotationsbewegungen sind die Größen Drehmoment $M$, Trägheitsmoment $I$ und Winkelbeschleunigung
-$\dot \omega$. Das Trägheitsmoment einer punktförmigen masse ist durch $I = m\,r^2$ gegeben. Entsprechend bei ausgedehnten Körpern, bei
-denen sich die Massenelemente um eine feste Achse drehen, werden die einzelnen Trägheitsmomente aufsummiert
+$\dot \omega$. Das Trägheitsmoment einer punktförmigen Masse ist durch $I = m\,r^2$ gegeben. $r$ beschreibt hierbei den Abstand des 
+Massepunkts zur Drehachse. Bei ausgedehnten Körpern, bei denen sich die Massenelemente um eine feste Achse drehen, werden 
+die einzelnen Trägheitsmomente aufsummiert
 \begin{align}
  I = \sum_i r^2_i\,m_i.
 \end{align}
@@ -71,9 +72,9 @@ Bei einer kontinuierlichen Massenverteilung gilt allgemein
 \begin{align}
  I = \int r^2 \dx m.
 \end{align}
-$r$ beschreibt hierbei den Abstand des Massepunkts zur Drehachse. Daher ist das Trägheitsmoment einfacher, symmetrischer Körper leicht
-bestimmbar, das komplexerer Körper durch Summation einzelner Trägheitsmomente. Sofern die Drehachse aber nicht mit einem betrachteten
-Körper übereinstimmt, sondern um eine Strecke $a$ parallel zu ihr verschoben ist, so kann der Satz von Steiner Abhilfe schaffen
+Daher ist das Trägheitsmoment einfacher, symmetrischer Körper leicht bestimmbar, das komplexerer Körper durch Summation einzelner 
+Trägheitsmomente. Sofern die Drehachse aber nicht mit einer Achse des betrachteten Körpers übereinstimmt, sondern um eine Strecke $a$ 
+parallel zu  ihr verschoben ist, so kann der Satz von Steiner Abhilfe schaffen
 \begin{align}
  I = I_s + m \cdot a^2,
 \end{align}
@@ -81,7 +82,7 @@ wobei $I_s$ das Trägheitsmoment bezüglich der Drehachse durch den Schwerpunkt 
 
 Bei Rotationsbewegungen von Körpern ist das Drehmoment durch $M = \vec{F} \times \vec{r}$ gegeben. Wenn nun ein schwingbarer Körper
 durch eine Auslenkung um den Winkel $\varphi$ aus seiner Ruhelage gebracht wird, wirkt eine Feder ein rücktreibendes Drehmoment auf ihn.
-Die Schwingungdauer des Körpers $T$ ist durch sein Trägheitsmoment $I$ und die zu bestimmende Winkelrichtgröße $D$ gegeben
+Die Schwingungdauer des Körpers $T$ ist durch sein Trägheitsmoment $I$ und die Winkelrichtgröße $D$ gegeben
 \begin{align}
  T = 2\pi \sqrt{\frac{I}{D}}.
  \label{eq_periode}
@@ -94,32 +95,32 @@ Das Drehmoment ist mit der Winkelrichtgröße über den Auslenkwinkel verknüpft
 
 \section{Durchführung}
 In Abbildung \eqref{pic_aufbau} ist der Aufbau skizziert. Der zu untersuchende Körper ist mit einer Feder gekoppelt, deren Winkelrichtgröße
-es zu bestimmen gilt. Wenn man eine Federwaage senkrecht zum Radius der vom Körper beschriebenen Kreisbahn mit einem Haken an der Stange
-in einem bestimmten Abstand $r$ ansetzt, misst man für eine Auslenkung $\varphi$ eine Kraft $F$. Mit der vorausgesetzten Orthogonalität
-des Kraft- und Ortsvektors, kann man die Winkelrichtgröße nach \eqref{eq_winkel} berechnen
-\begin{align}
- D = \frac{F\cdot r}{\varphi}.
-\end{align}
-
+es zu bestimmen gilt. Wenn eine Federwaage senkrecht zum Radius der vom Körper beschriebenen Kreisbahn mit einem Haken an der Stange
+in einem bestimmten Abstand $r$ angesetzt wird, kann für eine Auslenkung $\varphi$ eine Kraft $F$ gemessen werden. 
 \begin{figure}[H]
  \includegraphics[width=0.3\textwidth]{pics/aufbau.png}
- \caption{Experimenteller Versuchsaufbau (aus Versuchsanleitung)}
+ \caption{Experimenteller Versuchsaufbau$^{[1]}$}
  \label{pic_aufbau}
 \end{figure}
 
 Selbst ohne Körper hat die Drillachse ein Eigenträgheitsmoment $I_D$, welches über eine massearme Stange mit zwei Gewichten in Abstand $a$
 , welche senkrecht zur Achse angebracht, ermittelt werden kann. Das System, in Schwingung gebracht, oszilliert harmonisch mit einer 
-zu messenden Periodendauer $T$. Nach \eqref{eq_periode} kann $I_D$ bestimmt werden.
+zu messenden Periodendauer $T$. Ohne die Gewichte wird diese wird mittels Stoppuhren über fünf Schwingungsperioden für elf Winkel 
+gemessen, woraus der  Mittelwert in die Rechnung eingeht. Mit den Gewichten werden die Schwingungszeiten über je fünf Perioden für 
+zehn Abstände $a$ gestoppt. 
 
-Das Trägheitsmoment zweier verschiedener Zylinder wird ebenfalls durch Messung von Periodendauer, sowie Ausdehnungen und Masse bestimmt.
-\eqref{eq_periode} liefert ebenfalls die Lösung.
+Das Trägheitsmoment zweier in Ausdehnungen und Gewicht verschiedener Zylinder wird ebenfalls durch Messung von Periodendauer, sowie 
+genannte Ausdehnungen und Masse bestimmt. Die Zeitmessung geschieht analog zu vorangehenden Versuchabschnitten, jedoch lediglich für
+fünf Messungen. Ausdehnungen werden mit einer Schieblehre und Massen mit einer Waage bestimmt.
 
 Für eine Holzpuppe soll das Trägheitsmoment in zwei Stellungen (vergleiche Abbildung \ref{pic_puppe}) berechnet werden. Hierbei werden
-die einzelnen Bestandteile als Zylinder angenähert und ihre einzelnen Trägheitsmomente aufsummiert.
+die einzelnen Bestandteile, heißt Gliedmaßen und Rumpf, als Zylinder angenähert und ihre einzelnen Trägheitsmomente aufsummiert. Ihre 
+Ausdehnungen werden an mehreren Stellen gemessen und für die Körperteile jeweils gemittelt. Die Masse ergibt sich dem Produkt von Dichte für Holz
+und Volumen aus den Teilvolumina.
 
 \begin{figure}[H]
 \includegraphics[width=0.8\textwidth]{pics/puppe.png}
-\caption{Verwandte Stellungen der Holzpuppe (101 - Trägheitsmomente starrer Körper)}
+\caption{Verwandte Stellungen der Holzpuppe $^{[2]}$}
 \label{pic_puppe}
 \end{figure}
 
@@ -387,6 +388,12 @@ Die Trägheitsmomente der beiden Zylinder liegen um einen Faktor von ungefähr 3
 Bei den Trägheitsmomenten der Puppe merkt man den Unterschied zu den Theoriewerten am deutlichsten. Die Werte liegen eine ganze Größenordnung auseinander. Das die Differenz hier besonders groß ist, hat verschiedene Gründe. Zum einen wirkt sich wieder die Dämpfung der Apparatur auf die Messung aus. Zum anderen ist die Figur aber auch nicht genau mittig auf ihrer Symmetrie befestigt und ihre Haltung ist relativ instabil. Lässt man sie Schwingen bewegen sich die Gliedmaßen auf Grund der Fliehkraft automatisch ein wenig nach außen, wodurch sich das Trägheitsmoment ändert.\\
 Außerdem ist die Puppe nicht richtig fest auf dem Stab befestigt und rutscht bei größeren Beschleunigungen hin und her.
 Bei den Theoriewerten schlägt am härtesten zu Buche, dass die Puppe nur grob aus Zylindern angenährt wurde. Die genaue Mittelung minimiert diesen Fehler zwar, dennoch ist er deutlich zu spüren. Zudem wurden Füße und Hände der Puppe, sowie der Metallstab völlig vernachlässigt.
+
+
+\parskip 100pt
+\Large{Literatur}\\\\
+\large{[1] Versuchsanleitung - Das Trägheitsmoment}\\\\
+\large{[2] Cauet C. \& Brambach T. (2006), \textit{Protokoll zu Versuch 101 - Trägheitsmomente starrer Körper}, S.4}\\\\
 
 % ========================================
 %	Literaturverzeichnis

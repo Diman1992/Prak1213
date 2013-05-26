@@ -59,27 +59,27 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %\section{Einleitung}				% Bei Bedarf
 
 \section{Theorie}
-Räumlich undn zeitlich periodische Funktionen erfüllen die Bedingungen
+Räumlich und zeitlich periodische Funktionen erfüllen die Bedingungen
 \begin{align*}
 f(x)=f(x+D)\\
 f(t)=f(t+T)
 \end{align*}
-und sind in der Physik von großer Bedeutung. Besonders interessant sind dabei die beiden Trigometrischen Funktionen Sinus und Cosinus:
+und sind in der Physik von großer Bedeutung. Besonders interessant sind dabei die beiden trigometrischen Funktionen Sinus und Cosinus:
 \begin{align*}
-f(t)=a~ sin\left(\frac{2\pi}{T}t\right)\\
-f(t)=b~ cos\left(\frac{2\pi}{T}t\right)
+f(t)=a~ \sin \left(\frac{2\pi}{T}t\right)\\
+f(t)=b~ \cos \left(\frac{2\pi}{T}t\right)
 \end{align*}
 
 \subsection{Fourieranalyse}
 Das Fouriersche Theorem besagt, dass jede stetige und periodische Funktion als Linearkombination aus Sinus- und Cosinusfunktionen dargestellt werden kann. 
 \begin{align}
-f(t)\approx \frac{1}{2} a_0 + \sum^\infty_{n=1} \left[ a_n~cos\left(n\frac{2\pi}{T}t\right)+ b_b~ sin\left(n\frac{2\pi}{T}t\right)\right]
+f(t)\approx \frac{1}{2} a_0 + \sum^\infty_{n=1} \left[ a_n~\cos\left(n\frac{2\pi}{T}t\right)+ b_b~ \sin\left(n\frac{2\pi}{T}t\right)\right]
 \label{eq_fanalyse}
 \end{align}
 Dabei setzten sich die Konstanten $a_n$ und $b_n$ wie folgt zusammen:
 \begin{align}
- a_n&=\frac{2}{T}\int^T_{0} f(t)~cos\left(n\frac{2\pi}{T}t\right) dt\\
- b_n&=\frac{2}{T}\int^T_{0} f(t)~sin\left(n\frac{2\pi}{T}t\right) dt \qquad n=1,2,...
+ a_n&=\frac{2}{T}\int\limits_{0}^T f(t)~\cos\left(n\frac{2\pi}{T}t\right) \dx t\\
+ b_n&=\frac{2}{T}\int\limits_{0}^T f(t)~\sin\left(n\frac{2\pi}{T}t\right) \dx t\qquad n=1,2,...
 \end{align}
 Abgesehen von der Grundfrequenz $v_1 =\frac{1}{T}$ treten nur ihre ganzzahligen Vielfachen, die sogenannten Oberschwingungen auf. Auch die Phasenverschiebungen verteilen sich nicht kontinuierlich sonder können nur die Werte 0, $\frac{1}{2}\pi$ , $\pi$ oder $\frac{3}{2}\pi$. Die Berechnung der Amplituden $a_n$, $b_n$ bezeichnet man dabei als Fourieranalyse.\\
 Diese Rechnung vereinfacht sich, wenn die zu approximierende Funktion gerade oder ungerade ist. In diesem Fall besteht die Fourierreihe nicht aus Sinus- bzw. Cosinusschwingungen und der Faktor $b_n$ bzw $a_n$ ist = 0.\\
@@ -95,14 +95,14 @@ Wird versucht, eine nicht-stetige Funktion mittels einer Fourierreihe zu entwick
 \subsection{Fouriertransformation}
 Die Fouriertransformation einer Funktion $f(t)$ bezeichnet das Ausführen folgenden Integrals:
 \begin{align}
-g(v) = \int \limits _{-\infty}^\infty f(t) e^{ivt} dt
+g(\nu) = \int \limits _{-\infty}^\infty f(t) e^{i\nu t} \dx t
 \label{eq_ftrafo}
 \end{align}
 Dabei stellt die Funktion $g(v)$ das gesamte Frequenzspektrum der Funktion $f(t)$ dar (vlg. Grafik \ref{pic_spec}). Im Falle einer periodischen Funktion sind die so entstehenden $\delta$ Peaks äquidistant und konvergieren gegen 0, damit die Reihe abbricht.\\
 
 Die Fouriertransformation ist auch umkehrbar. So erhält man durch Anwenden des Integrals
 \begin{align}
-f(t) = \frac{1}{2\pi} \int \limits ^\infty _{-\infty} g(v) e^{-ivt} dv
+f(t) = \frac{1}{2\pi} \int \limits ^\infty _{-\infty} g(\nu) e^{-i\nu t} \dx \nu
 \label{eq-ruecktrafo}
 \end{align}
 aus dem Frequenzspektrum wieder die ursprüngliche Funktion.\\
@@ -121,7 +121,53 @@ Verändert man die Kapazität und somit die Resonanzfrequenz des Schwingkreises
 v_R=\frac{1}{2\pi\sqrt{LC}},
 \end{align}
 so beobachtet man beim Resonanzfall eine Spannungszunahme proportional zur Eingangsamplitude. Um die Werte gut am Graphen ablesen zu können, müssen die Resonanzkurven steil abfallen. Verwendet man nur einen Schwingkreis, so fällt diese mit $v^2$ ab. Höhere Potenzen kann man erhalten, indem man mehrere Schwingkreise miteinander kombiniert.
+
 \section{Auswertung}
+\begin{align*}			
+f(t) =
+\left\{
+	\begin{array}{l l}
+	U_0  & \text{falls } t \leq \frac{nT}{2}\\
+	-U_0 & \text{falls } t > \frac{nT}{2}+\frac{T}{2}
+	\end{array}
+\right.
+\end{align*}
+
+\begin{figure}[H]
+ \input{rechteck.tex}
+ \caption{Rechteckspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_rechteckfourier}
+\end{figure}
+
+
+\begin{figure}[H]
+ \input{Saegezahn.tex}
+ \caption{Sägezahnspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_saegezahnfourier}
+\end{figure}
+
+
+\begin{align*}			
+f(t) =
+	\left\{
+	\begin{array}{ll}
+	U_0 \cdot \left( 4\frac{t}{T} - 1 \right)
+	& \text{falls } \frac{(2k-2)T}{2} < t \leq \frac{(2k-1)T}{2}
+	\vspace{10pt}
+	\\
+	U_0 \cdot \left( 3 - 4 \frac{t}{T} \right)
+	& \text{falls } \frac{(2k-1)T}{2} < t \leq kT
+	\end{array}
+\right.
+\end{align*}
+				
+
+\begin{figure}[H]
+ \input{Dreieck.tex}
+ \caption{Dreiecksspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_dreieckfourier}
+\end{figure}
+
 
 \section{Diskussion}
 

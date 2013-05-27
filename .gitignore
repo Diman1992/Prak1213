@@ -9,4 +9,4 @@
 *.pdf
 *.dvi
 *.orig
-!Anleitungen/*.pdf
+!_Anleitungen/*.pdf

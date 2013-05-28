@@ -1,0 +1,17 @@
+
+\definecolor{qqqqcc}{rgb}{0,0,0.8}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-5.71,-4.72) rectangle (6.05,6.4);
+\draw [line width=1.6pt,color=ffqqqq] (-6.28,4)-- (-3.14,-4);
+\draw [line width=1.6pt,color=ffqqqq] (-3.14,-4)-- (0,4);
+\draw [line width=1.6pt,color=ffqqqq] (0,4)-- (3.1415,-4);
+\draw [line width=1.6pt,color=ffqqqq] (3.1415,-4)-- (6.28,4);
+\draw [->] (-9,0) -- (6,0);
+\draw [->] (0,-5) -- (0,6);
+\draw (0.33,5.97) node[anchor=north west] {$U(t)$};
+\draw (5.69,-0.08) node[anchor=north west] {$t$};
+\draw[line width=1.6pt,color=qqqqcc, smooth,samples=100,domain=-7.712913383777725:8.649149805031307] plot(\x,{32/3.1415926535^2*cos(((\x))*180/pi)+32/(9*3.1415926535^2)*cos((3*(\x))*180/pi)+32/(25*3.1415926535^2)*cos((5*(\x))*180/pi)});
+\draw [color=ffqqqq](-4.6,4.48) node[anchor=north west] {$Dreieckspannung$};
+\draw [color=qqqqcc](2.88,4.31) node[anchor=north west] {$Fourierreihe$};
+\end{tikzpicture}

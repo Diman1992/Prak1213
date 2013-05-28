@@ -1,0 +1,19 @@
+
+\definecolor{qqqqcc}{rgb}{0,0,0.8}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-5.16,-5.96) rectangle (7.12,7.06);
+\draw [line width=1.6pt,color=ffqqqq] (0,4)-- (3.14,4);
+\draw [line width=1.6pt,color=ffqqqq] (3.14,-4)-- (6.28,-4);
+\draw [line width=1.6pt,color=ffqqqq] (6.28,4)-- (9.42,4);
+\draw [line width=1.6pt,color=ffqqqq] (0,-4)-- (-3.14,-4);
+\draw [line width=1.6pt,color=ffqqqq] (-3.14,4)-- (-6.28,4);
+\draw [line width=1.6pt,color=ffqqqq] (-6.28,-4)-- (-9.54,-3.98);
+\draw[line width=1.6pt,color=qqqqcc, smooth,samples=100,domain=-10.160000000000002:10.119999999999997] plot(\x,{16/3.1415926535*sin(((\x))*180/pi)+16/(3*3.1415926535)*sin((3*(\x))*180/pi)+16/(5*3.1415926535)*sin((5*(\x))*180/pi)});
+\draw [->] (-9,0) -- (5.54,0);
+\draw [->] (0,-5) -- (0,5.34);
+\draw (-0.98,5.22) node[anchor=north west] {$U(t)$};
+\draw (5.24,0) node[anchor=north west] {$t$};
+\draw [color=ffqqqq](-3.2,2.8) node[anchor=north west] {$Rechteckspannung$};
+\draw [color=qqqqcc](3.0,2.68) node[anchor=north west] {$Fourierreihe$};
+\end{tikzpicture}

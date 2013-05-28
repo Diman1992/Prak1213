@@ -1,0 +1,16 @@
+
+\definecolor{qqqqcc}{rgb}{0,0,0.8}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-5.29,-5.51) rectangle (8.43,5.25);
+\draw [line width=1.6pt,color=ffqqqq] (-3.14,-4)-- (3.14,4);
+\draw [line width=1.6pt,color=ffqqqq] (3.14,-4)-- (9.42,4);
+\draw [line width=1.6pt,color=ffqqqq] (-3.14,4)-- (-9.42,-4);
+\draw[line width=1.6pt,color=qqqqcc, smooth,samples=100,domain=-7.290578512396695:10.428429752066108] plot(\x,{8/3.1415926535*sin(((\x))*180/pi)-8/(2*3.1415926535)*sin((2*(\x))*180/pi)+8/(3*3.1415926535)*sin((3*(\x))*180/pi)-2/3.1415926535*sin((4*(\x))*180/pi)+8/(5*3.1415926535)*sin((5*(\x))*180/pi)});
+\draw [->] (-7,0) -- (7,0);
+\draw [->] (0,-5) -- (0,5);
+\draw [color=ffqqqq](-2.6,3.54) node[anchor=north west] {$Saegezahnspannung$};
+\draw [color=qqqqcc](4.74,3.31) node[anchor=north west] {$Fourierreihe$};
+\draw (0.41,4.83) node[anchor=north west] {$U(t)$};
+\draw (6.68,-0.36) node[anchor=north west] {$t$};
+\end{tikzpicture}

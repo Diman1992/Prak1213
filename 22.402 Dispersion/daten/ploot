@@ -1,0 +1,54 @@
+#-----Beschriftungen-----#
+set term wxt
+set title ""
+set xlabel "Wellenlänge [nm]"
+set ylabel "Brechungsindize ^2"
+
+set key top right
+
+
+#-----Formatierung-----#
+set grid
+set xrange [0:75000000]
+set yrange [2.99:3.07]
+#set logscale x
+#set logscale y
+
+#-----Konstanten definieren-----#
+pi=3.1415926
+c0=299792458
+
+
+#-----Rechenfunktionen-----#
+
+
+#-----Fitfunktion-----#
+
+e=300
+
+#f(x)=-a*(x)**2+c
+f(x)=d/((x))+f
+
+
+#-----Fitting-----#
+#fit f(x) "daten" index 0 using ($1**2):(($2**2)) via a,c
+fit f(x) "daten" index 0 using ($1**2):(($2**2)) via d,f
+
+#-----Plot-----#
+
+#Brechung gegen Wellenlänge
+plot "daten" index 0 using ($1**2):($2**2) title "Brechungsindizes ^2", f(x) title "Dispersionskurve ~x^2" 
+#g(x) title "Dispersionskurve ~x^(-2)"
+
+
+#-----Sonderkram-----#
+#set arrow from 0,-26 to 1.6,-26 lc 2 lw 3 front nohead
+
+
+
+#-----Zurücksetzen-----#
+
+unset logscale x
+unset logscale y
+
+

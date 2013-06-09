@@ -34,7 +34,7 @@ a=1; b=1
 c=1; d=1
 
 u=1.7
-p(x)=a/((x+b)**2)+c
+p(x)=(1.57**2*x)/(x+17.2)**2
 
 
 #-----Fitting-----#
@@ -44,7 +44,7 @@ p(x)=a/((x+b)**2)+c
 #fit f(x) "daten" index 1 using (($2)/1000):($1) via a,b
 #fit f(x) "daten" index 2 using (($2)/1000):($1) via a,b
 
-fit p(x) "daten" index 0 using ($1/($2/1000)):($1*($2/1000)) via a,b,c
+#fit p(x) "daten" index 0 using ($1/($2/1000)):($1*($2/1000)) via a,b,c
 
 #-----Plot-----#
 #Monozelle
@@ -57,7 +57,7 @@ fit p(x) "daten" index 0 using ($1/($2/1000)):($1*($2/1000)) via a,b,c
 #plot "daten" index 2 using (($2)/1000):($1) title "Strom gegen Spannung", f(x) title "Ausgleichsgerade"
 
 #Leistung
-plot "daten" index 0 using ($1/($2/1000)):($1*($2/1000)) title "Leistung gegen Widerstand", p(x) title "Fitfunktion vom Typ a/(x+b)^2 +c"
+plot "daten" index 0 using ($1/($2/1000)):($1*($2/1000)) title "Leistung gegen Widerstand", p(x) title "theoretische Leistungskurve"
 
 
 #-----Sonderkram-----#

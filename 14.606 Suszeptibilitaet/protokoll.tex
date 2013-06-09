@@ -66,13 +66,13 @@ abhängig. Auch in der Relation von magnetischer Flussdichte und magnetischer Fe
 \begin{align}
  \vec B = \mu_0 \vec H + \vec M
 \end{align}
-tritt sie auf, wobei $\vec M$ die Magnetisierung ist und durch atomare magnetische Momente einer Probe entsteht und mit $\chi$ verknüpft ist
+tritt sie auf, wobei $\vec M$ die Magnetisierung und $\mu_0$ die magnetische Feldkonstante ist und durch atomare magnetische Momente einer Probe entsteht und mit $\chi$ verknüpft ist
 \begin{align}
  \vec M = N \mu_0 \,  \bar{\vec{\mu}} =\mu_0 \chi \vec H.
  \label{eqMagnetisierung}
 \end{align}
 
-Im Gegensatz zum Diamagnetismus, der die Induktion eines Magnetfelds antiparallel zum Außenfeld beschreibt, handelt es sich beim
+Hierbei ist N die Zahl aller vorkommenden magnetischen Momente und $\bar{\vec{\mu}}$ der Mittelwert jener. Im Gegensatz zum Diamagnetismus, der die Induktion eines Magnetfelds antiparallel zum Außenfeld beschreibt, handelt es sich beim
 Phänomen des Paramagnetismus um die Induktion eines Magnetfeld, das sich parallel ausrichtet. Diese Eigenschaft ist nur bei Stoffen
 zu finden, die einen von Null verschiedenen Drehimpuls haben. Dieser Drehimpuls hängt mit den zum Außenfeld relativen, magnetischen 
 Momenten zusammen.
@@ -85,7 +85,7 @@ $\vec S$ zusammen. Die Beträge der zugehörigen magnetischen Momente ergeben si
  | \mu_L | = \mu_B \sqrt{L(L+1)} \qquad \text{und} \qquad |\mu_S| = \mu_B \, g_S \sqrt{S(S+1)}.
 \end{align}
 
-$\mu_B$ ist hierbei das Bohrsche Magneton und $g_S$ das gyromagnetische Verhältnis des freien Elektrons. Das magnetische Moment zum
+Das Bohrsche Magneton ist hierbei $\mu_B$ und $g_S$ das gyromagnetische Verhältnis des freien Elektrons. Das magnetische Moment zum
 Gesamtdrehimpuls $\mu_J$ ergibt sich über Winkelbeziehungen der Zwischenwinkel der beiden Vektoren $\mu_L$ und $\mu_S$ zu dem Ausdruck
 
 \begin{align}
@@ -98,10 +98,10 @@ nun zu berechnen, wird die Häufigkeit jeder Orientierung ermittelt, mit dem zug
 und aufsummiert. Die Häufigkeitsverteilung $Z(E,T)$ ist hierbei Boltzmann-verteilt
 
 \begin{equation}
- Z(E,T) = \exp \left(-\frac{E}{kT}\right) = \exp\left(-\frac{\mu_B\,g_J\,m\,B}{kT}\right).
+ Z(E,T) = \exp \left(-\frac{E}{kT}\right) = \exp\left(-\frac{\mu_B\,g_J\,m\,B}{kT}\right)
 \end{equation}
 
-Das in Gleichung \eqref{eqMagnetisierung} aufgeführte mittlere magnetische Moment $\bar{\vec{\mu}}$ ergibt sich aus der Brillouin-Funktion 
+mit $m$ als magnetische Quantenzahl des Drehimpulses, $k$ als Boltzmann-Konstante und der Temperatur $T$. Das in Gleichung \eqref{eqMagnetisierung} aufgeführte mittlere magnetische Moment $\bar{\vec{\mu}}$ ergibt sich aus der Brillouin-Funktion 
 von der Boltzmann-Verteilung. Dieser komplizierte Ausdruck wird um Null mit der Taylor-Entwicklung genähert, da das Argument deutlich 
 kleiner als Eins ist. Somit ergibt sich der endgültige Ausdruck, welcher dem Curie-Gesetz für große Temperaturen genügt, für die 
 magnetische Suszeptibilität zu
@@ -123,7 +123,7 @@ Abstoßung der Hüllenelektronen und lauten im einzelnen:
 \end{enumerate}
 
 \subsection{Apparatur zur Messung der Suszeptibilität}
-Da die Suszeptibilität paramagnetischer Substanzen eines Außenfeld verstärkt, ist es naheliegend zu ihrer Messung Spulen zu verwenden.
+Da die Suszeptibilität paramagnetischer Substanzen ein magnetisches Außenfeld verstärkt, ist es naheliegend zu ihrer Messung Spulen zu verwenden.
 Die Induktivität $L_M$ einer Spule mit Länge $l$ und Windungszahl $n$, welche mit einer Probe gefüllt ist, deren Durchmesser $Q$ kleiner 
 als der Spulenquerschnitt $F$ ist, ergibt sich zu
 
@@ -149,22 +149,37 @@ beide über eine Brückenschaltung nach Abbildung \ref{picBruecke} verbunden sin
  \label{picBruecke}
 \end{figure}
 
-Die Brückenspannung $U_{Br}$ hat folgenden Ausdruck
-
+Die Messung der Suszeptibilität ist hierbei mit zwei Methoden durchführbar. Über die in Abbildung \ref{picBruecke} angegebenen Widerstände
+$r_1$ bis $r_4$ führen zum Zusammenhang von Brückenspannung $U_{Br}$ und Spannung der Spannungsquelle $U_{Sp}$ mit
+\begin{align}
+ U_{Br} = \frac{r_4 r_1 - r_3 r_2}{(r_1 \, + \, r_2)(r_3 \, + \, r_4)} U_{Sp},
+\end{align}
+mit den teilweise komplexen Widerständen
+\begin{align*}
+ r_1 &= R_M + j\omega L_M &\frac{1}{r_2} = \frac{1}{R_P}\,+\, \frac{1}{R_P + j \omega L}\\
+ r_3 &= R_3	&r_4 = R_4
+\end{align*}
+Mit der Näherung für $r_2 \approx R  + j\omega L$ wegen $R_P \gg L$ und der Aussage, dass $R_3 \approx R_4$ aufgrund gleicher Herstellung,
+sowie dem Ansatz $L_M = L + \Delta L$ mit $\Delta L \ll L$, kommt man auf den Betrag der Brückenspannung zu folgendem Ausdruck
 \begin{align}
  U_{Br} = \frac{\omega \Delta L}{4} \frac{1}{\sqrt{R^2+\omega^2L^2}} U_{Sp},
 \end{align}
-
-was mit \eqref{eqIndu} und für hohe Frequenzen zur Formel für die Suszeptibilität wird
-
+was mit \eqref{eqIndu} und für hohe Frequenzen zur Formel für die Suszeptibilität mittels Spannungsuntersuchung wird
 \begin{align}
- \chi(\omega \to \inf) = 4 \frac{F}{Q} \frac{U_{Br}}{U_{Sp}}.
+ \chi(\omega \to \infty) = 4 \frac{F}{Q} \frac{U_{Br}}{U_{Sp}}.
 \end{align}
-
-Die Abgleichbedingung für die Brücke mit eingesetzter Probe errechnet sich zu 
-
+Ohne Probe lautet die Abgleichbedingung 
+\begin{equation}
+ r_1 R_3 = r_2 R_4.
+\end{equation}
+Nach Einfügen der Probe muss der Wert von $R_3 \approx R_4$ um $\Delta R$ auf $R'$ geändert werden. Der Imaginärteil der daraus entstehenden
+Gleichung lässt sich nach Anwendung desselben Ansatzes für $L_M$ formulieren durch
 \begin{align}
- \chi = 2 \frac{\Delta R}{r_3} \frac{F}{Q}.
+ \Delta R \approx \frac{\Delta L R_3}{2L}.
+\end{align}
+Aus \eqref{eqIndu} ergibt sich die Gleichung für Die Suszeptibilität mittels Widerstandsmessung zu
+\begin{align}
+ \chi = 2 \frac{\Delta R}{R_3} \frac{F}{Q}.
  \label{eq_chi_rechnung}
 \end{align}
 
@@ -181,11 +196,11 @@ wie in Abbildung \ref{picfilter} die Gestalt einer Glockenkurve hat.
 \end{figure}
 
 Den Quotienten aus Durchlassfrequenz und der Differenz von $\nu_-$ und $\nu_+$, bei der ein Verhältnis von $1/\sqrt{2}$ bezüglich der 
-Spannungen $U_A$ und $U_E$ auftritt, nennt man die Güte $Q$.
+maximalen Spannungen $U_A$ und $U_E$ auftritt, nennt man die Güte $Q$.
 
-Um die Filterkurve nun zu ermitteln, wird ein Sinusgenerator mit einer Effektivspannung von $U_{eff}$ = 1 V in einem Frequenzbereich 
-zwischen 20 und 40 kHz betrieben. Die Brückenschaltung wird damit gespeist und nach Vorverstärkungen der geringen Ausgangsspannung,
-wird ihr Wert auf einem Millivoltmeter in Abhängigkeit der verwandten Frequenz angezeigt.
+Um die Filterkurve nun zu ermitteln, wird ein Sinusgenerator mit einer Effektivspannung von $U_{\text{eff}}$ = 1 V in einem Frequenzbereich 
+zwischen 20 und 40 kHz betrieben. Die Ausgangsspannung $U_A$ des Selektivverstärkers wird bei konstanter Eingangsspannung $U_E$ in Abhängigkeit
+der Frequenz gemessen. Dadurch ergibt eine Durchlasskurve ähnlich Abbildung \ref{picfilter}
 
 \subsection{Messung der Suszeptibilität}
 Zu Beginn wird die Durchlassfrequenz des Selektiv-Verstärkers auf die Signalfrequenz eingestellt, die man zuvor als Frequenz zur maximalen

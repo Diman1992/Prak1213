@@ -201,7 +201,94 @@ Der Winkel $\eta$ erechnet sich aus
 	 
 
 \section{Auswertung}
+\subsection{Winkel $\varphi$}
+Zunächst soll der Winkel $\varphi$ zwischen den beiden Prismenflächen bestimmt werden. Die parallel einfallenden Lichtstrahlen werden unter einem Winkel von:
+\begin{align*}
+\varphi_1=140,6^\circ\\
+\varphi_2=260,6^\circ
+\end{align*}
+reflektiert. Mit Gleichung \eqref{eq_phi} ergibt sich für den Winkel $\varphi$:
+\begin{align*}
+\varphi = \frac{\varphi_2-\varphi_1}{2}=60^\circ
+\end{align*}
+\subsection{Brechungswinkel des Heliumspektrums}
+Das Spektrum einer Heliumdampflampe besteht aus folgenden charakteristischen Emissionslinien:
+\begin{table}[H]
+\begin{tabular}{|c|c|}
+Farbe & Wellenlänge [nm]\\ \hline
+dunkelrot	&706,5 \\ \hline
+rot	&	667,8\\ \hline
+gelb	&	587,8\\ \hline
+grün	&	504,8\\ \hline
+grün	&	501,6\\ \hline
+blaugrün	&	492,2\\ \hline
+blau	&	471,3\\ \hline
+violett	&	447,1\\ \hline
+violett	&	438,8\\ \hline
+\end{tabular} 
+\caption{Heliumspektrum}
+\end{table}
+Mit der Aparatur ließen sich für die Farben folgende relative Brechungswinkel ausmachen:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|}
+Farbe &		$\Omega_l$&	$\Omega_r$ \\ \hline
+dunkelrot	&15,5		&255,35 \\ \hline
+rot			&15,3		&255,4 	\\ \hline
+gelb		&15,2		&255,6 	\\ \hline
+grün		&14,9		&255,7 	\\ \hline
+grün		&14,8		&255,8 	\\ \hline
+blaugrün	&14,6		&256,0 	\\ \hline
+blau		& ---		&256,5 	\\ \hline
+violett		&14,5		&256,6 	\\ \hline
+violett		& ---		& --- 	\\ \hline
+\end{tabular} 
+\caption{Gemessene Brechungswinkel $\Omega_{l/r}$}
+\label{tab_messwerte}
+\end{table}
 
+Mit Gleichung \eqref{eq:eta_ohm_rl} folgen daraus die eigentlichen Brechungswinkel $\eta$ und dann mit Gleichung \eqref{eq_brechung} die Brechungsindizes n($\lambda$).
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|}
+Wellenlänge [nm] & $\eta$ [Grad] & n \\ \hline
+706,5	&59,85	&1,7307 \\ \hline
+667,8	&60,1	&1,7329 \\ \hline
+587,8	&60,4	&1,7355 \\ \hline
+504,8	&60,8	&1,7390 \\ \hline
+501,6	&61,0		&1,7407 \\ \hline
+492,2	&61,4	&1,7441 \\ \hline
+471,3	&---&		---		 \\ \hline
+447,1	&62,1&	1,7501 \\ \hline
+438,8	&---	&	--- \\ \hline
+\end{tabular} 
+\end{table}
+
+\subsection{Bestimmung der Dispersionskurve}
+Es soll nun anhand der Messdaten entschieden werden, ob das Dispersionsverhalten des Prismas für den entsprechenden Wellenlängenbereich besser durch eine Gleichung der Form \eqref{eq_dispgg} oder der Form \eqref{eq_displl} beschrieben wird.\\
+Dazu werden die Brechungsindizes quadratisch gegen das Quadrat der Wellenlänge aufgetragen.\\
+
+Anschließend führt man eine Ausgleichsrechnung durch, um die bestmöglichen Werte für die Gleichungen
+\begin{align*}
+n^2(\lambda) &= A_0 + \frac{A_2}{\lambda^2} \qquad \text{ und}\\
+n'^2(\lambda) &= A'_0 - A'_2\cdot\lambda^2
+\end{align*}
+zu erhalten.
+
+Man erhält für die Faktoren folgende Werte:
+\begin{table}[H]
+\begin{tabular}{c|c|c}
+ & $A_0$ & $A_2$ \\ 
+\hline 
+$n^2(\lambda)$ &  $2,95 \pm 0.008$ & $(2.1 \pm 0,23)\cdot 10^{-14}$ \\ 
+\hline 
+$n'^2(\lambda)$ & $3,08 \pm 0.013$ & $(1,9 \pm 0,38)\cdot 10^{11}$ \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+\begin{figure}[htbp]
+\includegraphics[width=0.8\textwidth]{pics/kurve.jpeg}
+\end{figure}
 \section{Diskussion}
 
 

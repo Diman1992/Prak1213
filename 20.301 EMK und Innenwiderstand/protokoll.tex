@@ -61,15 +61,16 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 Im Zuge dieses Versuchs werden die Innenwiderstände $R_i$ und die Leerlaufspannungen $U_0$ verschiedener Spannungsquellen ermittelt
 \section{Theorie}
 \subsection{Innenwiderstand und Leerlaufspannung}
-Leerlaufspannung ist jene Spannung, die an den Ausgangsquellen einer Spannungsquelle anliegt, wenn ihr kein Strom entnommen wird. Durch
+Die Leerlaufspannung ist jene Spannung, die an den Ausgangsquellen einer Spannungsquelle anliegt, wenn ihr kein Strom entnommen wird. Durch
 einen Lastwiderstand $R_a$ fließt ein endlicher Strom mit einer Klemmspannung $U_k$, die kleiner als $U_0$ ist. Das lässt sich durch
-den Innenwiderstand $R_i$ der Spannungsquelle erklären. Abbildung \ref{pic_reell} zeigt das entsprechende Ersatzschaltbild.
+den Innenwiderstand $R_i$ der Spannungsquelle erklären. In Abbildung \ref{pic_reell} ist das entsprechende Ersatzschaltbild im mit Strichen 
+gekennzeichneten Kasten gezeigt.
 \begin{figure}[H]
- \includegraphics[width=0.4\textwidth]{pics/reell.png}
+ \includegraphics[width =0.4\textwidth]{pics/reell.png}
  \caption{Ersatzschaltbild einer realen Spannungsquelle mit Lastwiderstand $R_a ^{[1]}$}
  \label{pic_reell}
 \end{figure}
-Aus dem zweiten Kirchhhoffschen Gesetz, der Maschenregel, folgt für das Problem
+Aus dem zweiten Kirchhoffschen Gesetz, der Maschenregel, folgt für die Schaltung in Abbildung \ref{pic_reell}
 \begin{align}
 \nonumber
  \sum U_{0_n} &= \sum I_m R_m\\ 
@@ -80,8 +81,8 @@ woraus sich für die Klemmspannung ergibt
  U_k = IR_a = U_0-IR_i.
  \label{eq_klemmspannung}
 \end{align}
-Um die Leerlaufspannung zu ermitteln, sollte idealerweise kein Strom durch das Messgerät mit dem Lastwiderstand $R_a$ fließen. Durch ein
-hochohmiges Voltmeter ist dies erreichbar, womit sich \eqref{eq_klemmspannung} ergibt zu
+Um die Leerlaufspannung zu ermitteln, wird ein hochohmiges Voltmeter genutzt, um den Beitrag des Lastwiderstands $R_a$ zu minimieren, 
+womit sich \eqref{eq_klemmspannung} ergibt zu
 \begin{align}
  U_0 \approx U_k
  \label{eq_U0Uk}

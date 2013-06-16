@@ -56,9 +56,78 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 %	Kapitel
 % ========================================
 
-\section{Einleitung}				% Bei Bedarf
+%\section{Einleitung}				% Bei Bedarf
 
 \section{Theorie}
+Mit dem Franck-Hertz-Versuch konnten erstmals einige Aspekte der Bohrschen Postulate überprüft werden. In diesem Versuch werden Quecksilberatome durch Stöße mit Elektronen angeregt, so dass diese beim Zurückfallen in den Grundzustand Photonen mit der Differenzenergie zwischen den diskreten Elektronenhüllenniveaus erzeugen. Es treten dabei sowohl elastische, als auch inelastische Stöße auf.\\
+Die Energiedifferenz des Elektrons nach dem unelastischen Stoß beträgt klassisch:
+\begin{formel}[H]
+$\Delta E = E_1-E_0 = \frac{1}{2}m_0v_{vor}^2 - \frac{1}{2}m_0v_{nach}^2$
+\centering
+\caption*{\small{$m_0$ - Ruhemasse des Elektrons, v - Geschwindigkeit vor/nach dem Stoß}}
+\end{formel}
+Den Betrag der Energie kann man mit der Gegenfeldmethode bestimmen.
+
+Für den Franck-Hertz Versuch wird ein evakuierter Behälter mit einem Tröpfchen Quecksilber darin verwendet. Ein Teil des Quecksilbers verdampft  entsprechend der Gasdruckkurve, bis sich ein Gleichgewichtsdampfdruck einstellt. Der Druck und somit auch die Konzentration des Quecksilbers im Gefäß ist damit von der Temperatur abhängig. Diese kann mit einem Heizgenerator verändert werden.\\
+Die freien Elektronen werden mittels Glühemission aus einem geheizten Wolframdraht erzeugt und über ein elektrisches Feld zur Gitteranode hin beschleunigt. Hinter der Gitteranode wird ein elektrisches Gegenfeld mit der Spannung $U_A$ angelegt, so dass nur Elektronen die Auffängereletrode erreichen können, die die Beziehung:
+\begin{align}
+\frac{m_o}{2} v^2_z \geq e_0 U_A
+\label{eq_gegenfeld}
+\end{align}
+erfüllen. Dabei ist $v_z$ die Geschwindigkeitskomponente des Elektrons, die parallel zu den Feldlinien steht. Die an der Auffängerelektrode gemessene Stromstärke ist direkt proportional zur Anzahl der auftreffenden Elektronen und beschreibt daher, wieviele Elektronen die Beziehung \eqref{eq_gegenfeld} erfüllen.\\
+Auf dem Weg zur Elektrode können die Elektronen mit den Quecksilberatomen zusammenstoßen. Ist die Energie der Elektronen gering, so finden elastische Stöße statt. Da die Masse des Hg-Atoms im Vergleich zum Elektron um mehrere Größenordnungen größer ist, ist die übertragene Energie nur gering, aber die Richtungsänderung des Elektrons kann massiv sein.\\
+Hat das Elektron jedoch eine Energie erreicht, die größer oder gleich der Energiedifferenz zwischen dem Grundzustand und dem 1. angeregten Zustand
+ist, so kann das Hg-Atom vom Elektron angeregt werden. Es übernimmt dabei die benötigte Energiedifferenz zwischen den beiden Zuständen vom Elektron $\Delta E=E_1-E_0$ und fällt nach etwa $10^{-8}$ Sekunden in seinen Grundzustand zurück, wobei es ein Photon mit der Energie 
+\begin{align}
+E_{Photon}=\Delta E = E_1-E_0 = h\nu
+\label{eq_energie_phtoton}
+\end{align}
+emittiert.\\
+Betrachtet man nun den Strom $I_A$ an der Auffängerelektrode in Abhängigkeit zur Beschleunigungsspannung $U_B$, so stellt man fest, dass der Strom mit wachsender Spannung zunächst steigt, dann jedoch auf ein Minimum abfällt und anschließend wieder steigt, bevor er erneut abfällt. Das Abfallen des Stromes erklärt sich dadurch, dass die Elektronen gerade genug Ernergie aus dem Elektrischen Feld aufgenommen haben, um das Hg-Atom anzuregen. Die Energie, die sie dabei abgeben, fehlt ihnen dann um das Gegenfeld zu überwinden. Erhöht man die Beschleunigungsspannung weiter, so erhalten die Elektronen nach dem Stoß wieder genug Energie, um die Gegenspannung zu überwinden. Ab einer bestimmten Spannung $U_B$ bekommt das Elektron nach dem ersten Stoß jedoch so viel Energie, dass es ein zweites Hg-Atom anregen kann und dann jedoch wieder an der Gegenspannung scheitert. Trägt man den Strom gegen die Spannung auf, so erhält man folgenden Graphen:
+\begin{figure}[H]
+\includegraphics[width=0.7\textwidth]{pics/strom_spannung.jpeg}
+\caption{Auffängerstrom gegen Beschleunigungsspannung aufgetragen (idealisiert)}
+\label{pic_strom_spannung}
+\end{figure}
+Der Abstand zwischen den Peaks muss daher der Energiedifferenz zwischen dem Grundzustand und dem 1. angeregten Zustand des Hg-Atoms entsprechen:
+\begin{align}
+U_1:= \frac{1}{e_0}(E_1-E_0)
+\end{align}
+\subsection{Nebeneinflüsse}
+Der Graph in Abbildung \ref{pic_strom_spannung} ist nur eine idealisierte Darstellung der Tatsächlichen Kurve. Es gibt noch drei Effekte, die das Bild des Graphen beeinflussen.
+\subsubsection{Das Kontaktpotential}
+Um bereits bei Zimmertemperatur viele Elektronen aus der Glühkathode austreten zu lassen, besteht diese aus einem Material mit einer geringen Austrittsarbeit als die Anode. Dies wirkt sich auf die Beschleunigungsspannung aus. Auf die austretenden Elektronen wirkt daher nur das effektive Potential
+\begin{formel}[H]
+\centering
+$U_{eff}= U_B - \frac{1}{e_0}(\Phi_B-\Phi_G)$
+\caption*{\small{$\Phi_G$ - Austrittsarbeit Glühdrat, $\Phi_B$ - Austrittsarbeit Beschleunigungselektrode}}
+\end{formel}
+Die Franck-Hertz Kurve ist daher um den Wert
+\begin{align}
+K:=\frac{1}{e_0}(\Phi_B-\Phi_G)
+\end{align}
+nach rechts verschoben.
+\subsubsection{Energie-Spektrum der Elektronen}
+Den Aussagen der Quantenmechanik zufolge besitzten die Elektronen bereits im Metal eine Energie, die ungleich Null ist. Diese wird durch die Dirac-Verteilung beschrieben und muss der Energie $e_0 U_B$ hinzuaddiert werden.
+Die Elektronen haben daher nicht alle die gleiche Energie und folglich sind die in Abbildung \ref{pic_strom_spannung} dargestellten scharf abfallende Kanten in Wahrheit etwas breiter verschmiert.\\
+Auf die Geschwindigkeit der Elektronen wirkt sich ebenfalls aus, wenn diese noch nach dem Durchlaufen der Beschleunigungsspannung mit einem Hg-Atom kollidieren. Bei einem inelastischen Stoß können die Elektronen wie bereits erwähnt, teils sehr stark abgelenkt werden. Geschieht dies nach der Beschleunigung, so kann  es sein, dass die Geschwindigkeitskomponente parallel zu den Feldlinien nicht mehr groß genug ist, um das Feld zu überwinden.
+\subsubsection{Der Dampfdruck}
+Um gute Ergebnisse zu erhalten, müssen während des Durchlaufens der Beschleunigungsspannung hinreichend viele Hg-Atome getroffen werden können. Die mittlere freie Weglänge $\overline{w}$ sollte daher um einen Faktor 1000-4000 kleiner sein, als die Beschleunigungsstrecke a (hier etwa 1cm).\\
+
+$\overline{w}$ berechnet sich zu:
+\begin{formel}[H]
+\centering
+$\overline{w}$ = $\frac{0,0029}{p_{sät}}$
+\caption*{\small{$\overline{w}$ in [cm], $p_{sät}$ der Sättigungsgasdruck in [mbar]}}
+\end{formel}
+$p_{sät}$ lässt sich wiederum aus der Gasdruckkurve bestimmen. Diese lautet für Quecksilber:
+\begin{align}
+p_{sät} = 	e^{-\frac{6876}{T}} \cdot 5,5 \cdot10^{7}
+\label{eq_sättigungsdruck}
+\end{align}
+Für die mittlere freie Weglänge $\overline{w}$ gibt es dabei Beschränkungen in beide Richtungen. Ist $\overline{w}$ zu groß, so kann es passieren, dass das Elektron die Beschleunigungsstrecke a durchfliegt ohne jeden Stoß mit einem Atom oder es erreicht eine so hohe Energie, dass es das Hg-Atom in höhere Anregungszustände bringen kann.\\
+Ist $\overline{w}$ zu klein, so finden zuviele elastische Stöße statt, die die Flugbahn des Elektrons ablenken. Es erreichen zuwenigeg Elektronen die Auffängerelektrode.
+\section{Aufbau}
 
 \section{Durchführung}
 

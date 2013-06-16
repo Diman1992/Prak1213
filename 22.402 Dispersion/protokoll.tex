@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{28.Mai 2013}				% Das Datum der Versuchsdurchführung
+\date{28. Mai 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -198,7 +198,15 @@ Der Winkel $\eta$ erechnet sich aus
 \caption{Winkel $\Omega_r$ und $\Omega_l$ bezüglich der symmetrischen Anordnung des Prismas}
 \label{pic:prisma_ohmlr}
 \end{figure}
-	 
+	
+\subsection{Abbesche Zahl}
+	Als Maß für die Farbstreuung eines Materials dient die sogenannte Abbersche Zahl. Sie ist wie folgt über die Fraunhoferschen Linien ($\lambda_C = 656$ nm, $\lambda_D = 589$ nm und $\lambda_F = 486$ nm) beziehungsweise ihren zugehörigen Brechungsindizes $n_i$ definiert
+\begin{align}
+\nu = \frac{n_D -1 }{n_F - n_C}.
+\label{eq_abbe}
+\end{align}
+
+Diese soll für das verwendete Glasprisma berechnet werden.
 
 \section{Auswertung}
 \subsection{Winkel $\varphi$}
@@ -268,12 +276,13 @@ Es soll nun anhand der Messdaten entschieden werden, ob das Dispersionsverhalten
 Dazu werden die Brechungsindizes quadratisch gegen das Quadrat der Wellenlänge aufgetragen.\\
 
 Anschließend führt man eine Ausgleichsrechnung durch, um die bestmöglichen Werte für die Gleichungen
-\begin{align*}
-n^2(\lambda) &= A_0 + \frac{A_2}{\lambda^2} \qquad \text{ und}\\
+\begin{align}
+n^2(\lambda) &= A_0 + \frac{A_2}{\lambda^2} \qquad \text{ und}
+\label{eq_n^2}\\
 n'^2(\lambda) &= A'_0 - A'_2\cdot\lambda^2
-\end{align*}
+\end{align}
 zu erhalten.
-
+\newpage
 Man erhält für die Faktoren folgende Werte:
 \begin{table}[H]
 \begin{tabular}{c|c|c}
@@ -288,9 +297,70 @@ $n'^2(\lambda)$ & $3,08 \pm 0.013$ & $(1,9 \pm 0,38)\cdot 10^{11}$ \\
 
 \begin{figure}[htbp]
 \includegraphics[width=0.8\textwidth]{pics/kurve.jpeg}
+\caption{Dispersion quadratisch gegen die Wellenlänge aufgetragen - mit beiden Ausgleichsfunktionen $n^2(\lambda)$ und $n'^2(\lambda)$}
+\label{kurve}
 \end{figure}
-\section{Diskussion}
 
+\subsection{Berechnung der kleinesten Quadrate}
+Um zu entscheiden, welche der beiden Regressionsgeraden besser zu den Messwerten passen, berechnet man mit der Methode der kleinsten Quadrate, welche der beiden Kurven die kleinere Abweichung zu den Messwerte hat.\\
+Man berechnet dazu die Summen:
+\begin{align}
+s^2_n &= \frac{1}{z-2}\sum^z_{z-2}\left[n^2(\lambda_i) - A_0 - \frac{A_2}{\lambda^2_i}\right]^2\\
+s^2_{n'} &= \frac{1}{z-2}\sum^z_{z-2}\left[n^2(\lambda_i) - A'_0 +A'_2\lambda^2_i\right]^2
+\end{align}
+
+Einsetzten der Werte ergibt:
+\begin{align*}
+s^2_n &=3,92 \cdot10^{-5}\\
+s^2_{n'}&=13,04\cdot10^{-5}
+\end{align*}
+
+\subsection{Abbesche Zahl}
+Da die Gleichung\eqref{eq_n^2} die kleinere quadratische Abweichung besitzt, wird diese für die Berechnung der Abbeschen Zahl verwendet. Um Gleichung \eqref{eq_abbe} anwenden zu können, müssen zunächst die Brechungsindizes der  Frauenhoferschen Linien: $\lambda_C$= 656nm, $\lambda_D$= 589nm und $\lambda_F$ = 486nm.\\
+Man setzt dazu die Wellenlängen in Gleichung \eqref{eq_n^2} ein und verwendet für $A_0$ und $A_2$ die Werte aus der Ausgleichsrechnung.\\
+Man erhält:
+
+\begin{table}[H]
+\begin{tabular}{c|c|c|c}
+Wellenlänge [nm]&	656 &	589 &	486\\ \hline
+n &	1,7323 &	1,7356 &	1,7436\\
+\end{tabular} 
+\end{table}
+
+Mit Gleichung \eqref{eq_abbe} ergibt sich für die Abbesche Zahl:
+\begin{align*}
+\nu = 64,98
+\end{align*}
+
+\subsection{Auflösungsvermögen}
+Das Auflösungsvermögen des Aparates errechnet sich nach Gleichung \eqref{eq_resolution}:
+\begin{align*}
+A = \frac{\lambda}{\Delta \lambda} = b\frac{dn}{d\lambda} &= b \frac{d}{d\lambda}\left(\sqrt{A_0 + \frac{A_2}{\lambda^2}}\right)\\
+ &= -\frac{A_2}{\lambda^2\sqrt{A_0+\frac{A_2}{\lambda^2}}}
+\end{align*}
+Setzt man die Werte ein, so ergeben sich folgende Auflösungsvermögen:
+\begin{table}[H]
+\begin{tabular}{c|c|c|c}
+Wellenlänge [nm]&	656 &	589 &	486\\ \hline
+A &	0.00083 & 0.001 & 0.0015\\
+\end{tabular} 
+\end{table}
+\subsection{Absorbtionsstelle}
+Für die Koeffizienten $A_i$ gilt:
+\begin{align*}
+A_0=1+\frac{N_1q^2_1\lambda^2_1}{4\pi^2c^2\epsilon_0m_1}\\
+A_0=1+\frac{N_1q^2_1\lambda^2_1}{4\pi^2c^2\epsilon_0m_1}
+\end{align*}
+Daraus folgt für die Absorbtionskante:
+\begin{align*}
+\lambda_a&=\sqrt{\frac{A_2}{A_0-1}}\\
+\intertext{setzt man die Werte ein, so erhält man als Absorbtionskante:}\\
+\lambda_a&=102,8\text{nm}
+\end{align*}
+\section{Diskussion}
+Die Zahlenwerte liegen alle in einem Bereich, der zu erwarten war. Beim Fit der Funktionen sind die Fehler leider relativ groß, da eine der violetten Spektrallinien garnicht sichtbar war und die blaue nur von rechts. Daher fehlen zwei Messwerte und die Abweichung wird relativ groß. Dennoch kann man sehr gut am Verlauf der Messwerte erkennen, dass die Absorbtionskante links der Aufgenommenen Werte liegen muss.\\
+Der berechnete Wert der Absorbtionskante von 102,8nm stimmt mit dieser Vorhersage sehr gut überein.\\
+Auch die Abbesche Zahl liegt mit 64,98 in einer Größenordnung, die für Gläser typisch ist.
 
 % ========================================
 %	Literaturverzeichnis
@@ -302,7 +372,7 @@ $n'^2(\lambda)$ & $3,08 \pm 0.013$ & $(1,9 \pm 0,38)\cdot 10^{11}$ \\
 % ========================================
 %	Das Dokument endent
 % ========================================
-\parskip 50pt
+\parskip 300pt
 \Large{Literatur}\\\\
 \large{[1] Versuchsanleitung - Dispersionsmessung am Glasprisma}\\\\
 \end{document}

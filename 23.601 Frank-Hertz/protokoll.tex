@@ -86,7 +86,7 @@ emittiert.\\
 Betrachtet man nun den Strom $I_A$ an der Auffängerelektrode in Abhängigkeit zur Beschleunigungsspannung $U_B$, so stellt man fest, dass der Strom mit wachsender Spannung zunächst steigt, dann jedoch auf ein Minimum abfällt und anschließend wieder steigt, bevor er erneut abfällt. Das Abfallen des Stromes erklärt sich dadurch, dass die Elektronen gerade genug Ernergie aus dem Elektrischen Feld aufgenommen haben, um das Hg-Atom anzuregen. Die Energie, die sie dabei abgeben, fehlt ihnen dann um das Gegenfeld zu überwinden. Erhöht man die Beschleunigungsspannung weiter, so erhalten die Elektronen nach dem Stoß wieder genug Energie, um die Gegenspannung zu überwinden. Ab einer bestimmten Spannung $U_B$ bekommt das Elektron nach dem ersten Stoß jedoch so viel Energie, dass es ein zweites Hg-Atom anregen kann und dann jedoch wieder an der Gegenspannung scheitert. Trägt man den Strom gegen die Spannung auf, so erhält man folgenden Graphen:
 \begin{figure}[H]
 \includegraphics[width=0.7\textwidth]{pics/strom_spannung.jpeg}
-\caption{Auffängerstrom gegen Beschleunigungsspannung aufgetragen (idealisiert)}
+\caption{Auffängerstrom gegen Beschleunigungsspannung (idealisiert)$^{[1]}$}
 \label{pic_strom_spannung}
 \end{figure}
 Der Abstand zwischen den Peaks muss daher der Energiedifferenz zwischen dem Grundzustand und dem 1. angeregten Zustand des Hg-Atoms entsprechen:
@@ -128,86 +128,21 @@ p_{sät} = 	e^{-\frac{6876}{T}} \cdot 5,5 \cdot10^{7}
 Für die mittlere freie Weglänge $\overline{w}$ gibt es dabei Beschränkungen in beide Richtungen. Ist $\overline{w}$ zu groß, so kann es passieren, dass das Elektron die Beschleunigungsstrecke a durchfliegt ohne jeden Stoß mit einem Atom oder es erreicht eine so hohe Energie, dass es das Hg-Atom in höhere Anregungszustände bringen kann.\\
 Ist $\overline{w}$ zu klein, so finden zuviele elastische Stöße statt, die die Flugbahn des Elektrons ablenken. Es erreichen zuwenigeg Elektronen die Auffängerelektrode.
 \section{Aufbau}
-
+Die Apparatur besteht im Wesentlichen aus einem mit Quecksilberdampf gefülltem Glaskolben, in dem sich außerdem eine Glühkathode, eine Beschleunigungsanode und eine Auffangelektrode befinden. Der Kolben kann über ein heizbares Blechgehäuse erwärmt und seine Temperatur über ein Thermometer abgelesen werden.\\
+Die Beschleunigungsspannung kann auf Werte zwischen 0V und 60V eingestellt werden. Die Gegenspannung auf Werte zwischen 0V und 11V. Die aus der Glühkathode austretenden Elektronen werden im elektrischen Feld beschleunigt, regen auf ihrem Weg ein oder mehrere Hg-Atome an und laufen dann gegen das Gegenfeld an. Die Elektronen, die es überwinden, werden als Auffängerstrom $I_A$ mit einem Picoamperemeter vermessen.\\
+Mit einem X-Y-Schreiber wird dann der Strom gegen die Beschleunigungs-, bzw. Gegenspannung aufgezeichnet.
+\begin{figure}[htbp]
+\includegraphics[width=0.7\textwidth]{pics/aufbau_detail.jpeg}
+\caption{Verwendeter Aufbau inklusive X-Y-Schreiber$^{[1]}$}
+\end{figure}
 \section{Durchführung}
+Zunächst soll die integrale Energieverteilung der Elektronen bestimmt werden. Man stellt dazu die Beschleunigungsspannung $U_B$ auf konstante 11V ein und lässt den X-Y-Schreiber dann den Auffängerstrom gegen die Gegenspannung aufzeichnen.
 
+Anschließend soll eine Franck-Hertz-Kurve im Temperaturbereich von 160 - 200$^\circ$ C gezeichnet werden. Hierzu schließt man die Beschleunigungsspannung an den X-Eingang des Schreibers an.
+
+Zum Schluss soll die Ionisierungsspannung von Quecksilber bestimmt werden. Hierzu legt man eine Gegenspannung von -30V an und misst bei einer Temperatur zwischen 100 und 110$^\circ$ C den Auffängerstrom.
 \section{Auswertung}
-\subsection{Fehlerrechnung}
-Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
-Größen herauszufinden. Neben den, von den Messapparaturen verursachten Fehlern, dienen der Mittelwert
-\begin{formel}[H]
-\begin{equation}
- \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
- \label{eq_mittel}
-\end{equation}
-\caption*{\small{$\bar{x}$ = Mittelwert, N = Anzahl der Messungen}}
-\end{formel}
-die Gaußsche Fehlerfortpflanzung
-\begin{formel}[H]
-\begin{equation}
-\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
-\label{gauss}
-\end{equation}
-\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
-\end{formel}
-und die Standardabweichung des Mittelwerts
-\begin{equation}
- \bar s = \sqrt{\frac{1}{N(N-1)} \sum_{i}^{N} (x_i - \bar{x})^2}.
- \label{eq_standard}
-\end{equation}
 
-\subsection{Freie Weglänge}
-
-\begin{table}[H]
- \begin{tabular}{c|c|r|r|r}
-  Erwähnung	&$T$ in K	&$p_{\text{sät}}$ in mbar&$\bar w$ in cm	&$a/w$ \\
-  \hline
-\ref{sec_energie}&	301,6	&0,007&	42,160&	2,4\\
-\ref{sec_anregung}&	424,2&	5,011	&0,058&	1727,9\\
-\ref{sec_anregung}&	448,2&	11,938&	0,024&	4116,7\\
-\ref{sec_ionisation}&	381,2&	0,805&	0,360&	277,5
- \end{tabular}
-\caption{freie Weglänge}
-\label{tab_weglaenge}
-\end{table}
-
-\subsection{Energieverteilung und Kontaktpotenzial}
-\label{sec_energie}
-
-\begin{figure}[H]
- \includegraphics[width=0.8 \textwidth]{pics/energie28.pdf}
- \caption{Auffangstromstärke $I_A$ gegen Bremsspannung $U_A$ bei 28,4 $^{\circ}$C und die negative, numerische Ableitung}
- \label{pic_energie28}
-\end{figure}
-
-\begin{figure}[H]
- \includegraphics[width=0.8 \textwidth]{pics/energie151.pdf}
- \caption{Auffangstromstärke $I_A$ gegen Bremsspannung $U_A$ bei 151 $^{\circ}$C und die negative, numerische Ableitung}
- \label{pic_energie151}
-\end{figure}
-
-
-\subsection{Anregungsenergie des Quecksilberatoms}
-\label{sec_anregung}
-
-\begin{table}[H]
- \begin{tabular}{c|r|r|r}
-Maximum& $x$ in cm &	$U_B$ in V&	$\Delta U$ in V\\
-\hline
-1& 	2,46& 	6,51& -	\\
-2& 	4,25	& 11,25&	4,74 \\
-3& 	6,07&	16,07&	4,82\\
-4& 	7,94&	21,02&	4,95\\
-5& 	9,87&	26,13&	5,11\\
-6& 	11,79&  31,21&	5,08\\
-7& 	13,90& 	36,80&	5,59
- \end{tabular}
-\caption{Beschleunigungsspannung $U_B$ für die jeweiligen Maxima der Franck-Hertz-Kurve, sowie Spannungsdifferenzen der Maxima zueinander}
-\label{tab_franckhertz}
-\end{table}
-
-\subsection{Ionisationsspannung von Quecksilber}
-\label{sec_ionisation}
 \section{Diskussion}
 
 % ========================================
@@ -216,6 +151,10 @@ Maximum& $x$ in cm &	$U_B$ in V&	$\Delta U$ in V\\
 
 %\bibliographystyle{plainnat}			% Bibliographie-Style auswählen
 %\bibliography{BIBDATEI}			% Literaturverzeichnis
+\parskip 300pt
+\Large{Literatur}\\\\
+\large{[1] Versuchsanleitung - Der Franck-Hertz-Versuch}\\\\
+\end{document}
 
 % ========================================
 %	Das Dokument endent

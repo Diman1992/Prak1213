@@ -122,6 +122,145 @@ v_R=\frac{1}{2\pi\sqrt{LC}},
 \end{align}
 so beobachtet man beim Resonanzfall eine Spannungszunahme proportional zur Eingangsamplitude. Um die Werte gut am Graphen ablesen zu können, müssen die Resonanzkurven steil abfallen. Verwendet man nur einen Schwingkreis, so fällt diese mit $v^2$ ab. Höhere Potenzen kann man erhalten, indem man mehrere Schwingkreise miteinander kombiniert.
 \section{Auswertung}
+\subsection{Berechnung von Fourierkoeffizienten}
+\label{sec_berechnung}
+Um Vergleiche zu den experimentellen Ergebnissen für das Aussehen der Fourierreihe verschiedener Spannungen ziehen zu können, werden
+die jeweiligen Fourierkoeffizienten $a_n$ und $b_n$ nach den Gleichungen \eqref{eq_an} und \eqref{eq_bn} berechnet. Die zu untersuchenden
+periodischen Schwingungen sind die Rechteckspannung, die Sägezahnspannung, sowie die Dreieckspannung. 
+\subsubsection{Rechteckspannung}
+Die Rechteckspannung ist als stückweise definierte Funktion wie folgt gegeben
+\begin{align*}			
+f(t) =
+\left\{
+	\begin{array}{l l}
+	U_0  & \text{falls } t \leq \frac{nT}{2}\\
+	-U_0 & \text{falls } t > \frac{nT}{2}+\frac{T}{2}.
+	\end{array}
+\right.
+\end{align*}
+Die zugehörigen Fourierkoeffizienten werden berechnet zu
+\begin{align}
+ a_n = 0 \hspace{3cm} b_n = \frac{4U_0}{n \pi} \qquad \text{für}\, n\, \text{ungerade}.
+\end{align}
+In Abbildung \ref{pic_rechteckfourier} ist die Funktion $f$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.
+\begin{figure}[H]
+ \input{rechteck.tex}
+ \caption{Rechteckspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_rechteckfourier}
+\end{figure}
+
+\subsubsection{Sägezahnspannung}
+Die Sägezahnspannung ist als Funktion wie folgt gegeben
+\begin{align*}			
+ g(t) = \frac{2U_0}{nT}t - U_0.
+\end{align*}
+Die zugehörigen Fourierkoeffizienten werden berechnet zu
+\begin{align}
+ a_n = 0 \hspace{3cm} b_n = - \frac{2U_0 (-1)^n}{n \pi}.
+\end{align}
+In Abbildung \ref{pic_saegezahnfourier} ist die Funktion $g$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.
+\begin{figure}[H]
+ \input{Saegezahn.tex}
+ \caption{Sägezahnspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_saegezahnfourier}
+\end{figure}
+
+\subsubsection{Dreieckspannung}
+Die Rechteckspannung ist als stückweise definierte Funktion wie folgt gegeben
+\begin{align*}			
+h(t) =
+	\left\{
+	\begin{array}{ll}
+	U_0 \cdot \left( 4\frac{t}{T} - 1 \right)
+	& \text{falls } \frac{(2n-2)T}{2} < t \leq \frac{(2n-1)T}{2}
+	\vspace{10pt}
+	\\
+	U_0 \cdot \left( 3 - 4 \frac{t}{T} \right)
+	& \text{falls } \frac{(2n-1)T}{2} < t \leq nT.
+	\end{array}
+\right.
+\end{align*}
+Die zugehörigen Fourierkoeffizienten werden berechnet zu
+\begin{align}
+  a_n = \frac{8U_0}{n^2 \pi^2} \qquad \text{für}\, n\, \text{ungerade}  \hspace{3cm} b_n = 0.
+\end{align}
+In Abbildung \ref{pic_dreieckfourier} ist die Funktion $h$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.			
+
+\begin{figure}[H]
+ \input{Dreieck.tex}
+ \caption{Dreieckspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_dreieckfourier}
+\end{figure}
+
+\subsection{Fourier-Transformation}
+Zur Messung der verschiedenen Amplitudenwerte für die untersuchten Spannungen gibt ein Funktionsgenerator Schwingungen mit einer
+Frequenz von 10 kHz aus. Der relative Fehler der gemessenen Werte zu den theoretischen ist wie folgt gegeben durch
+\begin{align}
+ F_{rel}=\left (\frac{\frac{A_{n,mess}}{A_{1,mess}}}{\frac{A_{n,th}}{A_{1,th}}}-1\right)\cdot 100,
+\end{align}
+wobei $\frac{A_i}{A_1}$ sowohl im Zähler, als auch im Nenner für das Verhältnis der n-ten Oberschwingung zur 1. Oberschwingung steht.
+Die Ergebnisse aus den Messungen sind in Tabelle \ref{tab_fouriertrafo} aufgeführt.
+
+\begin{table}[H]
+ \begin{tabular}{l|c|r|r|r|r|r}
+ & 	$n$	& $A_{mess}$ in [mV]	& $A_{th}$ in [mV] & $\frac{A_{n,mess}}{A_{1,mess}}$	& $\frac{A_{n,th}}{A_{1,th}}$ & $F_{rel}$ in \%\\
+  	\hline
+Rechteck &	1&	4280,0&	4280,0&	1&	1 &	0,000\\
+	&3&	1400,0&	1426,7	&0,327&	0,333&	-1,869\\
+&	5&	912,0&	856,0	&0,213&	0,200&	6,542\\
+&	7&	592,0&	611,4&	0,138&	0,143&	-3,178\\
+&	9&	452,0&	475,6&	0,106&	0,111&	-4,953\\
+&	11&	408,0&	428,0&	0,095&	0,100&	-4,673\\
+&	13&	364,0&	329,2&	0,085&	0,077&	10,561\\
+&	15&	284,0&	285,3&	0,066&	0,067&	-0,467\\
+&	17&	236,0&	251,8&	0,055&	0,059&	-6,262\\
+&	19&	224,0&	225,3&	0,052&	0,053&	-0,561 \\
+	\hline					
+Sägezahn&	1&	1740,0&	1740,0&	1&	1&	0,000\\
+&	2&	920,0&	870,0&	0,529&	0,500&	5,747\\
+&	3&	620,0&	580,0&	0,356&	0,333&	6,897\\
+&	4&	420,0&	435,0&	0,241&	0,250&	-3,448\\
+&	5&	374,0&	348,0&	0,215&	0,200&	7,471\\
+&	6&	296,0&	290,0&	0,170&	0,167&	2,069\\
+&	7&	256,0&	248,6&	0,147&	0,143&	2,989\\
+&	8&	232,0&	217,5&	0,133&	0,125&	6,667\\
+&	9&	180,0&	193,3&	0,103&	0,111&	-6,897\\
+&	10&	180,0&	174,0&	0,103&	0,100&	3,448\\
+	\hline					
+Dreieck&	1&	2220,0&	2220,0&	1&	1&	0,000\\
+&	3&	260,0&	246,7&	0,117&	0,111&	5,405\\
+&	5&	96,0&	88,8&	0,043&	0,040&	8,108\\
+&	7&	40,0&	45,3&	0,018&	0,020&	-11,712\\
+&	9&	23,8&	27,4&	0,011&	0,012&	-13,162\\
+&	11&	19,4&	18,3&	0,009&	0,008&	5,739\\
+ \end{tabular}
+\caption{Amplitudenwerte der Spannungen im Vergleich zu Theoriewerten}
+\label{tab_fouriertrafo}
+\end{table}
+
+\subsection{Fourier-Synthese}
+Mit einem Signalgenerator können verschiedene Sinusschwingungen mit n-facher Frequenz der Ursprungsfrequenz und einstellbaren Amplituden
+erzeugt werden. Nachdem ihre Gleichphasigkeit gesichert ist, werden die benötigten Spannungsamplituden nach den Koeffizientenregeln aus
+Abschnitt \ref{sec_berechnung} eingestellt, bei einem $U_0$ =  Die Überlagerung der Sinuswellen sind für die Rechteck-, Sägezahn- und Dreieckspannung 
+in den Abbildungen \ref{pic_rechteckoszi}, \ref{pic_saegzahnoszi} und \ref{pic_dreieckoszi} zu sehen.
+
+\begin{figure}[H]
+ \includegraphics[width = 0.7\textwidth]{pics/rechteck.png}
+ \caption{Überlagerung von Sinuswellen zur Approximation der Rechteckspannung}
+ \label{pic_rechteckoszi}
+\end{figure}
+
+\begin{figure}[H]
+ \includegraphics[width = 0.7\textwidth]{pics/saegezahn.png}
+ \caption{Überlagerung von Sinuswellen zur Approximation der Sägezahnspannung}
+ \label{pic_saegzahnoszi}
+\end{figure}
+
+\begin{figure}[H]
+ \includegraphics[width = 0.7\textwidth]{pics/dreieck.png}
+ \caption{Überlagerung von Sinuswellen zur Approximation der Dreieckspannung}
+ \label{pic_dreieckoszi}
+\end{figure}
 
 \section{Diskussion}
 

@@ -119,42 +119,37 @@ Ausdehnungen werden an mehreren Stellen gemessen und für die Körperteile jewei
 und Volumen aus den Teilvolumina.
 
 \begin{figure}[H]
-\includegraphics[width=0.8\textwidth]{pics/puppe.png}
+\includegraphics[width=0.7\textwidth]{pics/puppe.png}
 \caption{Verwandte Stellungen der Holzpuppe $^{[2]}$}
 \label{pic_puppe}
 \end{figure}
 
-
-
-
-
-
 \section{Auswertung}
 \subsection{Winkelrichtgröße und Eigenträgheitsmoment}
 Zur Bestimmung der Winkelrichtgröße wird die Feder mit der Querstange daran um verschiedene Winkel ausgelenkt und mittels einer Federwaage die Rückstellkraft bestimmt.\\
-Gemessen wurden folgende Werte:
-\begin{table}[htbp]
+Abzüglich eines Off-sets von 0,4N an der Federwaage wurden folgende Werte abgelesen:
+\begin{table}[H]
 \begin{tabular}{|c|c|}
 \hline 
 $\varphi$ [Grad]&	F [N]\\ \hline
-20	&0,13\\ \hline
-40	&0,16\\ \hline
-60	&0,21\\ \hline
-80	&0,23\\ \hline
-100	&0,29\\ \hline
-120	&0,34\\ \hline
-140	&0,39\\ \hline
-160	&0,43\\ \hline
-180	&0,48\\ \hline
-200	&0,55\\ \hline
-220	&0,60\\ \hline
+20	&0,09\\ \hline
+40	&0,12\\ \hline
+60	&0,17\\ \hline
+80	&0,19\\ \hline
+100	&0,25\\ \hline
+120	&0,30\\ \hline
+140	&0,35\\ \hline
+160	&0,39\\ \hline
+180	&0,43\\ \hline
+200	&0,51\\ \hline
+220	&0,56\\ \hline
 \end{tabular} 
 \caption{Messung der Rückstellkraft im Abstand r = 20cm zur Drehachse. Die Winkel wurden relativ groß gewählt, da die Federwaage für kleine Winkel kaum eine Kraft angezeigt hat.}
 \end{table}
 
 Mit Gleichung \eqref{eq_winkel} ergibt sich nach einer Umrechnung in Bogenmaß daraus eine Winkelrichtgröße des Aufbaus von:
 \begin{align*}
-D=(0.035 \pm 0.007) \text{Nm}
+D=(0.035 \pm 0.007) \left[\frac{\text{Nm}}{\text{rad}}\right]
 \end{align*}
 
 
@@ -169,55 +164,57 @@ Quadriert man die Gleichung und stellt diese um, so erhält man:
 \begin{align}
 T^2=\frac{8m\pi^2}{D}\cdot a^2 + \frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]
 \end{align}
-
-\begin{table}[htbp]
+Durch lineare Ausgleichsrechnung in Abbildung 3 kann man dann das Eigenträgheitsmoment der Drillachse bestimmen.
+\begin{table}[H]
 \begin{tabular}{|c|c|c|c|}
 \hline 
- & Gewicht [g] & Länge [cm] & Breite [cm] \\ 
+ & Gewicht [g] & Länge/Höhe [cm] & Durchmesser [cm] \\ 
 \hline 
-Stab & 96,6 & 30,025 & ----- \\ 
+Stab & 96,6 & 60 & ----- \\ 
 \hline 
-Gewichte & 223,6 & 3,04 & 3,5 \\ 
+Zylinder & 223,6 & 3,04 & 3,5 \\ 
 \hline 
 \end{tabular}\newline
 \caption{Ausmaßen und Massen der Apparatur}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \begin{tabular}{|c|c|}
 \hline
 a [m] &	T [s]\\ \hline
-0,02&	10,57\\ \hline
-0,04&	11,85\\ \hline
-0,06&	13,19\\ \hline
-0,08&	15,56\\ \hline
-0,10&	17,01\\ \hline
-0,12&	19,23\\ \hline
-0,14&	21,43\\ \hline
-0,16&	23,47\\ \hline
-0,18&	25,67\\ \hline
-0,20&	28,05\\ \hline
+0,02	&2,11\\ \hline
+0,04&	2,37\\ \hline
+0,06&	2,64\\ \hline
+0,08&	3,11\\ \hline
+0,10&	3,40\\ \hline
+0,12&	3,85\\ \hline
+0,14&	4,29\\ \hline
+0,16&	4,69\\ \hline
+0,18&	5,13\\ \hline
+0,20&	5,61\\ \hline
 \end{tabular} 
 \caption{Schwingungsdauer der schwingenden Massen. Die Zeiten sind bereits zeitlich gemittelt}
 \end{table}
 
-Wird nun $T^2$ gegen $a^2$ aufgetrgagen, so erhält man eine Gerade f(x)= mx+b, mit:
+Wird nun $T^2$ gegen $a^2$ aufgetragen, so erhält man eine Gerade f(x)= mx+b, mit:
 \begin{figure}[htbp]
 \includegraphics[width=0.8\textwidth]{pics/eigentr.jpg}
-\caption{Gemessene Schwingzeit des Systems [s], quadratisch gegen das Quadrat des Abstandes [m] zur Drehachse aufgetragen.}
+\label{pic_plot}
+\caption{Gemessene Schwingzeit des Systems, quadratisch gegen das Quadrat des Abstandes zur Drehachse aufgetragen.}
+
 \end{figure}
 \begin{align*}
- m&=\frac{8m\pi^2}{D}=16843,9 \pm 234,6\\
-b&=\frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]s=118,86 \pm 4,72
+ m&=\frac{8m\pi^2}{D}=673,754 \pm 9,385\\
+b&=\frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]=4,75 \pm 0,19
 \end{align*}
 
 Dadurch kann erstmals das Eigenträgheitsmoment der Drillachse bestimmt werden:
 \begin{align*}
-I_D=(0,22 \pm 0,07) \text{ kg m$^2$}
+I_D=0,66  \text{ kg m$^2$}
 \end{align*}
 
 \subsection{Trägheitsmoment zweier Zylinder}
-Anschließend wird das Trägheitsmoment zweier Zylinder berechnet und anschließend mit den gemessenen Werten verglichen.
+Anschließend werden die Trägheitsmomente zweier Zylinder berechnet und diese mit den theoretischen Werten verglichen.
 
 Das Trägheitsmoment eines Zylinders durch seine Symmetrieachse berechnet sich zu:
 
@@ -225,9 +222,9 @@ Das Trägheitsmoment eines Zylinders durch seine Symmetrieachse berechnet sich z
 I_{Z}=\frac{mR^2}{2}
 \label{eq_Izyl}
 \end{align}
-
+\newpage
 Die Zylinder haben folgende Daten:
-\begin{table}[htbp]
+\begin{table}[H]
 \begin{tabular}{|c|c|c|c|}
 \hline 
  & Höhe [m] & Radius [m] & Gewicht [kg]\\ 
@@ -268,75 +265,84 @@ $t_1$ [s] & $t_2$ [s]\\ \hline
 Die Werte ergeben:
 \begin{align*}
 t_{Zyl 1}&=(0,739 \pm 0,010)s\\
-I'_{Zyl 1}&=(1,00\pm0,69)\cdot10^{-3}\text{ kg m$^2$}\\
+I'_{Zyl 1}&=(4.79\pm1,10)\cdot10^{-4}\text{ kg m$^2$}\\
 \end{align*}
 \begin{align*}
 t_{Zyl 2}&=(1,325 \pm  0,014)s\\ 
-I'_{Zyl 2}&=(3,22\pm5,86)\cdot10^{-3}\text{ kg m$^2$}
+I'_{Zyl 2}&=(1,54\pm0,34)\cdot10^{-3}\text{ kg m$^2$}
 \end{align*}
 
 \subsection{Trägheitsmoment einer Puppe}
 Zum Schluss soll das Trägheitsmoment einer Puppe bestimmt werden. Die Gliedmaßen werden dabei als Zylinder angenährt und ihr Umfang wird an ungefähr 10 verschiedenen Stellen gemessen, um einen präzisen Mittelwert zu erhalten.
 
-Folgende Tabelle beinhaltet alle gemessenen Größen:
+Folgende Tabelle beinhaltet alle gemessenen Durchmesser:
 \begin{table}[H]
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Bein&	Arm	&Oberk	&Kopf	\\ \hline
-1.79&	1.69&	3.49&	1.44\\ \hline
-2.13&	1.58&	4.06&	1.55\\ \hline
-1.90&	1.64&	3.76&	1.89\\ \hline
-1.71&	1.50&	3.37&	2.38\\ \hline
-1.62&	1.35&	3.02&	2.55\\ \hline
-1.29&	1.11&	2.53&	2.79\\ \hline
-1.69&	1.39&	2.56&	2.95\\ \hline
-1.63&	1.51&	2.97&	3.07\\ \hline
-1.36&	1.26&	3.64&	2.51\\ \hline
-1.31&	1.00&	3.97&		\\ \hline
-	&	3.89&		&		\\ \hline
+1,79&	1,69&	3,49&	1,44\\ \hline
+2,13&	1,58&	4,06&	1,55\\ \hline
+1,90&	1,64&	3,76&	1,89\\ \hline
+1,71&	1,50&	3,37&	2,38\\ \hline
+1,62&	1,35&	3,02&	2,55\\ \hline
+1,29&	1,11&	2,53&	2,79\\ \hline
+1,69&	1,39&	2,56&	2,95\\ \hline
+1,63&	1,51&	2,97&	3,07\\ \hline
+1,36&	1,26&	3,64&	2,51\\ \hline
+1,31&	1,00&	3,97&		\\ \hline
+	&	&		3,89		&		\\ \hline
 \end{tabular}
-\caption{Durchmesser der entsprechenden Körperteilen an verschiedenen Stellen gemessen - die gemittelten Werte d finden sich in den folgenden Tabelle}
+\caption{Durchmesser der entsprechenden Körperteilen an verschiedenen Stellen gemessen - die gemittelten Werte d befinden sich in Tabelle \ref{tab_pos1} und Tabelle \ref{tab_pos2}}
 \end{table}
-\begin{table}[htbp]
+\begin{table}[H]
+\begin{tabular}{|c|c|}
+\hline
+Gesamtmasse der Puppe & 160g \\ \hline
+\end{tabular} 
+\end{table}
+
+\begin{table}[H]
 \begin{tabular}{|c|c|c|c|c|}
 \hline 		
 &	Bein&	Arm	&Oberkörper	&Kopf	\\ \hline	
-d [cm]&	1,643&	1,40&	3,34&	2,113\\ \hline				
-l [cm] &	15,39	&13,80	&10,00	&5,48\\ \hline	
-					
-V [$\cdot 10^{-6} m^3$]	&32,63	&21,33	&87,46	&19,22	\\ \hline	
-Anteil am Gesamtvolumen	&0,203	&0,133	&0,544	&0,120	\\ \hline		
-m [g]	&32,66	&21,35	&87,55 &19,24\\ \hline
-Abstand [cm]	&2,18	&16,78	&&\\ \hline	
-					
-I[$\cdot 10^{-6}$kg m$^2$]&		 1,66	&63,55&	1,22	&1,0735\\ \hline	
+d[cm]&	16,43	&14,03&	33,37&	21,13		\\ \hline		
+l[cm]&	15,39&	13,80&	10,00	&5,48\\ \hline
+V [$\cdot 10^{-6}m^{-3}$]& 65,26&	42,67	&87,46&	19,22\\ \hline		
+Anteil am Gesamtvolumen&	0,30	&0,20&	0,41&	0.09\\ \hline
+m [g]&	48,90&	31,97	&65,53&	14,40\\ \hline
+Abstand [cm] & 2,18	& 9,88	&&\\ \hline	
+I[$\cdot 10^{-6}$kg m$^2$]&1,65&	51,13&	9,12&	0,80\\ \hline
 \end{tabular} 
 \caption{Puppe mit ausgestreckten Armen (Position 1)}
+\label{tab_pos1}
 \end{table}
 
 Summiert man über alle Teilträgheiten I, so erhält man als Trägheitsmoment der Puppe:
 \begin{align*}
-I_{Pos 1}= 1,317\cdot 10^{-3}\text{ kg m$^2$}
+I_{Pos 1}= 7,86
+\cdot 10^{-4}\text{ kg m$^2$}
 \end{align*}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \begin{tabular}{|c|c|c|c|c|}
 \hline 		
 &	Bein&	Arm	&Oberkörper	&Kopf	\\ \hline	
-d [cm]	&1,64	&	1,40	&	3,34	&	2,11	\\ \hline		
-l [m]	&15,39	&	13,80	&	10,00	&	5,48\\ \hline	
-V [$\cdot10^{-6}m^3$]	&32,63	&21,33	&87,46	&19,22\\ \hline	
-Anteil am Gesamtvolumen&	0,203	&0,133&	0,544	&0,120\\ \hline
-m [g]	&32,66&	21,36	&87,55	&19,24\\ \hline	
-Abstand [cm]&	9,36	&16,78&&\\ \hline	
-I[$\cdot 10^{-6}$kg m$^2$]&		539,39&	635,46&	12,19&	1,07\\ \hline	
+d[cm]&	16,43	&14,03&	33,37&	21,13		\\ \hline		
+l[cm]&	15,39&	13,80&	10,00	&5,48\\ \hline
+V [$\cdot 10^{-6}m^{-3}$]& 65,26&	42,67	&87,46&	19,22\\ \hline		
+Anteil am Gesamtvolumen&	0,30	&0,20&	0,41&	0.09\\ \hline
+m [g]&	48,90&	31,97	&65,53&	14,40\\ \hline
+Abstand [cm] & 9,3635	&9,88	&&\\ \hline	
+I[$\cdot 10^{-6}$kg m$^2$]&99,81	&51,13	&9,12&   0,80
+\\ \hline
 \end{tabular} 
-\caption{Puppe mit ausgestreckten Armen und Beinen (Position 2)}
+\caption{Puppe mit ausgestreckten Armen (Position 2)}
+\label{tab_pos2}
 \end{table}
 
 Man erhält als Trägheitsmoment der Puppe:
 \begin{align*}
-I_{Pos 2}=1,99\cdot 10^{-3}\text{ kg m$^2$}
+I_{Pos 2}=1,79\cdot 10^{-3}\text{ kg m$^2$}
 \end{align*}
 
 Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnen. Man benötigt dazu die Schwingzeiten:
@@ -344,48 +350,43 @@ Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode
 \begin{tabular}{|c|c|}
 \hline 
 Position 1 [s] & Position 2 [s]\\ \hline 
-2,92&	4,35\\ \hline 
-2,89&	4,32\\ \hline 
-2,78&	4,21\\ \hline 
-2,81&	4,27\\ \hline 
-2,84&	4,16\\ \hline 
-2,84&	4,28\\ \hline 
-2,78&	4,25\\ \hline 
-2,87&	4,34\\ \hline 
-2,87&	4,19\\ \hline 
-2,78&	4,16\\ \hline 
+0,584&	0,870\\ \hline 
+0,578&	0,864\\ \hline 
+0,556&	0,842\\ \hline 
+0,562&	0,854\\ \hline 
+0,568&	0,832\\ \hline 
+0,568&	0,856\\ \hline 
+0,556&	0,850\\ \hline 
+0,574&	0,868\\ \hline 
+0,574&	0,838\\ \hline 
+0,556&	0,832\\ \hline 
 \end{tabular} 
 \caption{Gemessene Schwingzeiten in Sekunden für beide Körperhaltungen}
 \end{table}
 
 Und erhält damit für die Trägheitsmomente:
 \begin{align*}
-I'_{Pos 1}=(12,3 \pm 2,9)\cdot 10^{-3} \text{ kg m$^2$}\\
-I'_{Pos 2}=(27,7 \pm 6,5)\cdot 10^{-3} \text{ kg m$^2$}
+I'_{Pos 1}=(2,82 \pm0,67)\cdot 10^{-4} \text{ kg m$^2$}\\
+I'_{Pos 2}=(6,34 \pm1,50)\cdot 10^{-4} \text{ kg m$^2$}
 \end{align*}
 
 \section{Diskussion}
-Das Eigenträgheitsmoment der Drehachse lässt sich relativ genau berechnen, dagegen weichen die Werte für die Winkelrichtgröße bei kleinen Winkeln stark von dem Ergebnis ab. Dies ist vermutlich darauf zurückzuführen, dass die Apparatur eine relativ hohe Reibung hat, die sich besonders bei kleinen Auslenkungen bemerkbar macht. Die Gleichung gilt jedoch eigentlich nur für kleine Winkel, daher ist die Auswertung über die Federwaage aussagekräftiger, denn bei ihr werden Reibungen nicht berücksichtigt.
+Das Eigenträgheitsmoment der Drehachse lässt sich mit einem kleinen Fehler relativ berechnen, dagegen weichen die Werte für die Winkelrichtgröße bei kleinen Winkeln stark von dem Ergebnis ab. Dies ist vermutlich darauf zurückzuführen, dass die Apparatur eine relativ hohe Reibung hat, die sich besonders bei kleinen Auslenkungen bemerkbar macht. Die Gleichung gilt jedoch eigentlich nur für kleine Winkel, daher ist die Auswertung über die Federwaage aussagekräftiger, denn bei ihr werden Reibungen nicht berücksichtigt.
 \begin{table}[htbp]
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline 
-$D$ [\text{Nm}]  & $(0,072 \pm0,023)$ \\ \hline 
-$I_D[\text{ kg m$^2$}]$ & $(0,22 \pm 0,07)$ \\ \hline 
-$I_{Zyl 1}[\text{ kg m$^2$}]$&$(0,454\pm0,001)\cdot10^{-3}$\\ \hline 
-$I'_{Zyl 1}[\text{ kg m$^2$}]$&$(1,00\pm0,69)\cdot10^{-3}$\\ \hline 
-$I_{Zyl 2}[\text{ kg m$^2$}]$&$(0,876\pm0,004)\cdot10^{-3}$\\ \hline 
-$I'_{Zyl 2}[\text{ kg m$^2$}]$&$(3,22\pm5,86)\cdot10^{-3}$\\ \hline 
-$I_{Pos1}[\text{ kg m$^2$}]$&$1,317\cdot 10^{-3}$\\ \hline 
-$I'_{Pos1}[\text{ kg m$^2$}]$&$(12,3 \pm 2,9)\cdot 10^{-3}$ \\ \hline 
-$I_{Pos2}[\text{ kg m$^2$}]$&$1,99\cdot 10^{-3}$\\ \hline 
-$I'_{Pos2}[\text{ kg m$^2$}] $&$(27,7 \pm 6,5)\cdot 10^{-3}$\\ \hline 
-\end{tabular}
+ & I & I' & Abweichung [\%] \\ \hline 
+Zylinder 1 & $(4,54\pm0,0092)\cdot10^{-4}$ & $(4.79\pm1,10)\cdot10^{-4}$ & 0,05 \\ \hline 
+Zylinder 2 & $(8,76\pm0,036)\cdot10^{-4}$ & $(1,54\pm0,34)\cdot10^{-3}$ & 56,88 \\ \hline 
+Puppe Position 1 & $7,86\cdot 10^{-4}$ & $(2,82 \pm0,67)\cdot 10^{-4}$ & 64,12 \\ \hline 
+Puppe Position 2 & $1,79\cdot 10^{-3}$ & $(6,34 \pm1,50)\cdot 10^{-4}$ & 64,58 \\ \hline 
+\end{tabular} 
 \caption{Alle Ergebnisse des Versuches zusammengestellt. Die gestrichenen Werte sind dabei Ergebnisse aus einer Berechnung über die Schwingzeit.}
 \end{table}
 
 Die Trägheitsmomente der beiden Zylinder liegen um einen Faktor von ungefähr 3 auseinander, wenn man die theoretischen mit den gemessenen Werten vergleicht. Auch dies lässt sich vermutlich darauf zurückführen, dass die Apparatur zu stark gedämpft ist. Die Körper schwingen recht schnell und um den statistischen Fehler zu minimieren muss man über mehrere Schwingungen mitteln. Da die Amplitude jedoch um gut 15\% pro Periode abnimmt, schlägt dieser Fehler dann mehr ins Gewicht.
 
-Bei den Trägheitsmomenten der Puppe merkt man den Unterschied zu den Theoriewerten am deutlichsten. Die Werte liegen eine ganze Größenordnung auseinander. Das die Differenz hier besonders groß ist, hat verschiedene Gründe. Zum einen wirkt sich wieder die Dämpfung der Apparatur auf die Messung aus. Zum anderen ist die Figur aber auch nicht genau mittig auf ihrer Symmetrie befestigt und ihre Haltung ist relativ instabil. Lässt man sie Schwingen bewegen sich die Gliedmaßen auf Grund der Fliehkraft automatisch ein wenig nach außen, wodurch sich das Trägheitsmoment ändert.\\
+Bei den Trägheitsmomenten der Puppe merkt man den Unterschied zu den Theorie-werten am deutlichsten. Die Werte liegen eine ganze Größenordnung auseinander. Das die Differenz hier besonders groß ist, hat verschiedene Gründe. Zum einen wirkt sich wieder die Dämpfung der Apparatur auf die Messung aus. Zum anderen ist die Figur aber auch nicht genau mittig auf ihrer Symmetrie befestigt und ihre Haltung ist relativ instabil. Lässt man sie Schwingen bewegen sich die Gliedmaßen auf Grund der Fliehkraft automatisch ein wenig nach außen, wodurch sich das Trägheitsmoment ändert.\\
 Außerdem ist die Puppe nicht richtig fest auf dem Stab befestigt und rutscht bei größeren Beschleunigungen hin und her.
 Bei den Theoriewerten schlägt am härtesten zu Buche, dass die Puppe nur grob aus Zylindern angenährt wurde. Die genaue Mittelung minimiert diesen Fehler zwar, dennoch ist er deutlich zu spüren. Zudem wurden Füße und Hände der Puppe, sowie der Metallstab völlig vernachlässigt.
 

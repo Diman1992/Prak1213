@@ -2,8 +2,8 @@
 set term wxt
 
 set title ""
-set xlabel "a^2"
-set ylabel "T^2"
+set xlabel "a² [m²]"
+set ylabel "T² [s²]"
 
 set key bottom right
 

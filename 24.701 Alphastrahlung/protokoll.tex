@@ -8,7 +8,7 @@
 %	Angaben für das Titelblatt
 % ========================================
 
-\title{Versuch\\				% Titel des Versuchs 
+\title{Versuch 701 - Reichweite von $\alpha$-Strahlung\\				% Titel des Versuchs 
 \large TU Dortmund, Fakultät Physik\\ 
 \normalsize Anfänger-Praktikum}
 
@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{21.Dezember 2012}				% Das Datum der Versuchsdurchführung
+\date{18.Juni 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -57,8 +57,59 @@ Dimitrios Skodras\\					% Name Praktikumspartner B
 % ========================================
 
 \section{Einleitung}				% Bei Bedarf
-
+\setcounter{page}{1}
+Bei radioaktiven Zerfällen entstehen je nach Nuklid verschiedene Strahlungen, wie auch die sogenannte $\alpha$-Strahlung. Im Verlauf
+des Experiments soll ihre Reichweite in Luft ermittelt werden.
 \section{Theorie}
+\subsection{Bethe-Bloch-Gleichung}
+Ein $\alpha$-Teilchen ist ein zweifach positiv geladener $^4_2$He-Kern, der beim gleichnamigen $\alpha$-Zerfall von einem radioaktiven
+Atom emittiert wird. Durch die Coulomb-Abstoßung des zerfallenen Kerns erhält der Heliumkern kinetische Energie $E_\alpha$. Die zu bestimmende
+Reichweite wird beim Durchschreiten von Materie von verschiedenen Effekten beeinflusst. Zum einen treten elastische Stöße zwischen den
+$\alpha$-Teilchen und der Materie auf, wenn es auch einen gerinen Einfluss hat. Weiterhin kann die Energie neben Ionisation auch durch
+Anregung und Dissoziation von Molekülen abgegeben werden. Der Verlust an Energie auf einer Wegstrecke $x$ hängt von der anfänglichen
+Energie, sowie von der Dichte des Mediums $\rho$ ab. Für hinreichend große Energien beschreibt die Bethe-Bloch-Gleichung diesen Verlust
+durch
+\begin{align}
+ -\frac{\dx E_\alpha}{\dx x} = \frac{z^2 \, e^4}{4 \pi \epsilon_0 \,m_e} \frac{nZ}{v^2}\, \ln \left(\frac{2 m_e v^2}{I}\right),
+ \label{eq_bethebloch}
+\end{align}
+mit Ladung $z$ und Geschwindigkeit $v$ der $\alpha$-Strahlung. $Z$ ist die Ordnungszahl, $n$ die Teilchendichte und $I$ die Ionisationsenergie
+des Targetgases. Gleichung \eqref{eq_bethebloch} verliert bei sehr kleinen Energien ihre Gültigkeit aufgrund von Ladungsaustauschprozessen.
+Die gesuchte Reichweite $R$ ist die Distanz von Quelle bis zur völligen Abbremsung und wird ermittelt durch
+\begin{align}
+ R = \int\limits_0^{E_\alpha} -\frac{\dx E_\alpha}{\dx E_\alpha / \dx x}
+ \label{eq_reichweite_integral}
+\end{align}
+
+\subsection{Empirische, mittlere Reichweite}
+Wegen dem Gültigkeitsbereich von \eqref{eq_bethebloch}, welcher nicht in der Auswertung erreicht wird, nimmt man eine empirisch gewonnene
+Gleichung, um die mittlere Reichweite $R_m$ zu bestimmen. Das ist jene Reichweite, die die Hälfte der der $\alpha$-Teilchen erreicht.
+\begin{align}
+ R_m = 3,1\cdot E^{3/2}_\alpha  \hspace{1cm} R_m \, \text{in mm und}\, E_\alpha\, \text{in MeV}
+ \label{eq_reichweite_empirisch}
+\end{align}
+Die Reichweite ist bei konstanter Temperatur und konstantem Volumen proportional zum Druck $p$. Für den Abstand $x_0$ zwischen Quelle und Detektor
+gilt für die effektive Weglänge $x$ die Beziehung
+\begin{align}
+ x = x_0 \frac{p}{p_0} \hspace{1cm} p_0 = 1013\, \text{mbar},
+\end{align}
+wobei $p_0$ der Normaldruck ist. 
+
+\subsection{Wahrscheinlichkeitsverteilungen}
+Die Wahrscheinlichkeit für einen Kern, ein $\alpha$-Teilchen zu emittieren folgt zwei möglichen Verteilungen. Die Gauss-Verteilung gibt
+die Wahrscheinlichkeit $P(x)$ an, für eine stetige Messgröße $x$. Die Verteilung ergibt sich, wenn $x$ einer zufälligen Verteilung um den Mittelwert
+$\mu$ folgt. Berechnet wird die Wahrscheinlichkeit durch
+\begin{align}
+ P(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \e^{\frac12\left(\frac{x-\mu}{\sigma} \right)},
+ \label{eq_gauss}
+\end{align}
+mit $\sigma$ als Varianz. Die Poisson-Verteilung ist eine Verteilung für Ereignisse, deren Eintrittswahrscheinlichkeit in einem gegebenen
+Intervall sehr klein ist. Die Wahrscheinlichkeit für das $k$-malige Auftreten eines Ereignisses ist gegeben durch
+\begin{align}
+ P(k) = \frac{\mu^k}{k!}\e^{-\mu}.
+ \label{eq_poisson}
+\end{align}
+Der Parameter $\mu$ ist hierbei gleichzeitig Mittelwert und Varianz.
 
 \section{Durchführung}
 

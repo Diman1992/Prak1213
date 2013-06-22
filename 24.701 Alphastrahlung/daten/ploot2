@@ -1,0 +1,47 @@
+reset
+n=5 #number of intervals
+max=499. #max value
+min=433. #min value
+
+width=(max-min)/n #interval width
+
+#function used to map a value to the intervals
+hist(x,width)=width*floor(x/width)+width/2.0
+
+
+set term wxt #output terminal and file
+set xrange [min:max]
+set yrange [0:]
+
+#to put an empty boundary around the
+#data inside an autoscaled graph.
+set offset graph 0.05,5.5,0.05,0.0
+set xtics min,(max-min)/5,max
+set boxwidth width*0.9
+set style fill solid 0.5 #fillstyle
+set tics out nomirror
+set xlabel "Zählrate"
+set ylabel "Wahrscheinlichkeit"
+
+#########gauß
+a=-0.004
+b=450
+
+f(x)=a/(12.04*sqrt(2*3.1415926))*exp(-0.5*((x-b)/12.04)**2)
+
+fit f(x) "daten" u ($2):($1/100) via a,b
+
+#boxen
+set boxwidth 12.8
+set style fill solid 0.25 border lt -1
+
+#count and plot
+plot "daten" index 4 using 2:($1/100) with boxes title "aufgenommene Statistik", f(x) lc rgb "blue" title "gefittete Gaußverteilung", "daten" index 4 using 2:($1/100) notitle
+
+
+
+
+set term png #output terminal and file
+set output "poisson.png"
+
+replot

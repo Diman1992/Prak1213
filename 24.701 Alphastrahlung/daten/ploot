@@ -1,0 +1,61 @@
+#-----Beschriftungen-----#
+set term wxt
+set title ""
+set xlabel "Weglänge [cm]"
+set ylabel "Zählrate"
+
+set key bottom left
+
+
+#-----Formatierung-----#
+set grid
+set xrange [0:3]
+set yrange [0:600]
+#set logscale x
+#set logscale y
+
+#-----Konstanten definieren-----#
+pi=3.1415926
+c0=299792458
+
+
+#-----Rechenfunktionen-----#
+
+
+#-----Fitfunktion-----#
+c=-700
+d=2000
+f(x)=a*x+b
+g(x)=c*x+d
+h(x)=e*x+f
+
+
+
+#-----Fitting-----#
+#Zählrate gegen Weglänge
+fit f(x) "daten" index 1 using ($1):($2) via a,b
+fit g(x) "daten" index 3 using ($1):($2) via c,d
+fit h(x) "daten" index 5 using ($5):($4) via e,f
+
+#Energie gegen Weglänge
+
+#-----Plot-----#
+
+#Zählrate gegen Weglänge
+#plot "daten" index 0 using ($5):($6) title "Zählrate -- eff. Weglänge", f(x) title "Regressionsgerade" , 571.27/2 title "1/2 max. Zählrate", "daten" index 1 using ($1):($2) pt 6 ps 2 lc rgb "red" notitle
+
+plot "daten" index 2 using ($5):($6) title "Zählrate -- eff. Weglänge", g(x) title "Regressionsgerade" , 493.74/2 title "1/2 max. Zählrate", "daten" index 3 using ($1):($2) pt 6 ps 2 lc rgb "red" notitle
+
+#plot "daten" index 0 using ($5):($4) title "Energie -- eff. Weglänge", h(x) title "Regressionsgerade", "daten" index 6 using ($5):($4) pt 6 ps 2 notitle
+
+
+#-----Sonderkram-----#
+#set arrow from 0,-26 to 1.6,-26 lc 2 lw 3 front nohead
+
+#-----Ausgabe-----#
+set term png
+set output "zaehlrate_weglaenge2.png"
+replot
+
+#-----Zurücksetzen-----#
+reset

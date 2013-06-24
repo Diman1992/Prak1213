@@ -103,9 +103,7 @@ in einem bestimmten Abstand $r$ angesetzt wird, kann für eine Auslenkung $\varp
  \label{pic_aufbau}
 \end{figure}
 
-Selbst ohne Körper hat die Drillachse ein Eigenträgheitsmoment $I_D$, welches über eine massearme Stange mit zwei Gewichten in Abstand $a$
-, welche senkrecht zur Achse angebracht, ermittelt werden kann. Das System, in Schwingung gebracht, oszilliert harmonisch mit einer 
-zu messenden Periodendauer $T$. Ohne die Gewichte wird diese wird mittels Stoppuhren über fünf Schwingungsperioden für elf Winkel 
+Auch ohne Körper hat die Drillachse ein Eigenträgheitsmoment $I_D$, welches über eine Stange mit zwei Gewichten, deren Masse $\gg$ der Masse des Stabes sind, in Abstand $a$, welche senkrecht zur Achse angebracht, ermittelt werden kann. Das System, in Schwingung gebracht, oszilliert harmonisch mit einer zu messenden Periodendauer $T$. Ohne die Gewichte wird diese wird mittels Stoppuhren über fünf Schwingungsperioden für elf Winkel 
 gemessen, woraus der  Mittelwert in die Rechnung eingeht. Mit den Gewichten werden die Schwingungszeiten über je fünf Perioden für 
 zehn Abstände $a$ gestoppt. 
 
@@ -129,6 +127,7 @@ und Volumen aus den Teilvolumina.
 Zur Bestimmung der Winkelrichtgröße wird die Feder mit der Querstange daran um verschiedene Winkel ausgelenkt und mittels einer Federwaage die Rückstellkraft bestimmt.\\
 Abzüglich eines Off-sets von 0,4N an der Federwaage wurden folgende Werte abgelesen:
 \begin{table}[H]
+\renewcommand{\arraystretch}{.95}
 \begin{tabular}{|c|c|}
 \hline 
 $\varphi$ [Grad]&	F [N]\\ \hline
@@ -144,27 +143,23 @@ $\varphi$ [Grad]&	F [N]\\ \hline
 200	&0,51\\ \hline
 220	&0,56\\ \hline
 \end{tabular} 
+\renewcommand{\arraystretch}{1}
 \caption{Messung der Rückstellkraft im Abstand r = 20cm zur Drehachse. Die Winkel wurden relativ groß gewählt, da die Federwaage für kleine Winkel kaum eine Kraft angezeigt hat.}
 \end{table}
 
-Mit Gleichung \eqref{eq_winkel} ergibt sich nach einer Umrechnung in Bogenmaß daraus eine Winkelrichtgröße des Aufbaus von:
+Mit Gleichung \eqref{eq_winkel} ergibt sich daraus eine Winkelrichtgröße des Aufbaus von:
 \begin{align*}
-D=(0.035 \pm 0.007) \left[\frac{\text{Nm}}{\text{rad}}\right]
+D=(0,035 \pm 0,007) \left[\frac{\text{Nm}}{\text{rad}}\right]
 \end{align*}
 
 
-Um Eigenträgheit der Drillachse $I_D$ zu bestimmen, ersetzt man das Trägheitsmoment I in Gleichung \eqref{eq_periode} durch
+Zur Bestimmung der Eigenträgheit der Drillachse $I_D$ zu bestimmen, muss das Trägheitsmoment I in Gleichung \eqref{eq_periode} durch
 \begin{align*}
 I&=I_D+I_{Stab}+I_{Zylinder} \qquad \text{, wobei}\\
 I_{Zyl}&=2m\cdot\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\\
 I_{Stab}&= \frac{1}{12}ml^2
 \end{align*}
-das Trägheitsmoment der beiden Zylinder inklusive dem Betrag durch den Satz von Steiner beschreibt.
-Quadriert man die Gleichung und stellt diese um, so erhält man:
-\begin{align}
-T^2=\frac{8m\pi^2}{D}\cdot a^2 + \frac{4\pi}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]
-\end{align}
-Durch lineare Ausgleichsrechnung in Abbildung 3 kann man dann das Eigenträgheitsmoment der Drillachse bestimmen.
+ersetzt werden.
 \begin{table}[H]
 \begin{tabular}{|c|c|c|c|}
 \hline 
@@ -177,6 +172,12 @@ Zylinder & 223,6 & 3,04 & 3,5 \\
 \end{tabular}\newline
 \caption{Ausmaßen und Massen der Apparatur}
 \end{table}
+das Trägheitsmoment der beiden Zylinder inklusive dem Betrag durch den Satz von Steiner beschreibt.
+Durch Quadrieren und Umstellen der Gleichung ergibt sich:
+\begin{align}
+T^2=\frac{8m\pi^2}{D}\cdot a^2 + \frac{4\pi^2}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]
+\end{align}
+Durch lineare Ausgleichsrechnung in Abbildung 3 kann dann das Eigenträgheitsmoment der Drillachse bestimmt werden.
 
 \begin{table}[H]
 \begin{tabular}{|c|c|}
@@ -196,7 +197,7 @@ a [m] &	T [s]\\ \hline
 \caption{Schwingungsdauer der schwingenden Massen. Die Zeiten sind bereits zeitlich gemittelt}
 \end{table}
 
-Wird nun $T^2$ gegen $a^2$ aufgetragen, so erhält man eine Gerade f(x)= mx+b, mit:
+Wird nun $T^2$ gegen $a^2$ aufgetragen, so ergibt sich eine Gerade f(x)= mx+b, mit:
 \begin{figure}[htbp]
 \includegraphics[width=0.8\textwidth]{pics/eigentr.jpg}
 \label{pic_plot}
@@ -208,9 +209,9 @@ Wird nun $T^2$ gegen $a^2$ aufgetragen, so erhält man eine Gerade f(x)= mx+b, m
 b&=\frac{4\pi^2}{D}  \left[  I_D+I_{Stab}+2m\left(\frac{R^2}{4}+\frac{l^2}{12}\right)\right]=4,75 \pm 0,19
 \end{align*}
 
-Dadurch kann erstmals das Eigenträgheitsmoment der Drillachse bestimmt werden:
+Dadurch kann das Eigenträgheitsmoment der Drillachse bestimmt werden:
 \begin{align*}
-I_D=0,66  \text{ kg m$^2$}
+I_D=0,009 \text{ kg m$^2$}
 \end{align*}
 
 \subsection{Trägheitsmoment zweier Zylinder}
@@ -227,11 +228,11 @@ Die Zylinder haben folgende Daten:
 \begin{table}[H]
 \begin{tabular}{|c|c|c|c|}
 \hline 
- & Höhe [m] & Radius [m] & Gewicht [kg]\\ 
+ & Höhe [cm] & Radius [m] & Gewicht [kg]\\ 
 \hline 
-Zylinder 1 & 0,1008 & 0,0497 & 0,3686 \\ 
+Zylinder 1 & 10,08 & 4,97 & 0,3686 \\ 
 \hline 
-Zylinder 2 & 0,0302 & 0,0371 & 1,2728 \\ 
+Zylinder 2 & 3,02 & 3,71 & 1,2728 \\ 
 \hline 
 \end{tabular} 
 \caption{Mase der beiden ausgemessenen Zylinder}
@@ -243,7 +244,7 @@ I_{Zyl 1}&=(4,54\pm0,0092)\cdot10^{-4}\text{ kg m$^2$}\\
 I_{Zyl 2}&=(8,76\pm0,036)\cdot10^{-4}\text{ kg m$^2$}
 \end{align*}
 
-Berechnet man das Trägheitsmoment über Gleichung \eqref{eq_periode}, so benötigt man die Schwingzeit der Zylinder:
+Um das Trägheitsmoment über Gleichung \eqref{eq_periode} zu bestimmen,  wird die Schwingzeit der Zylinder benötigt:
 \begin{table}[htbp]
 \begin{tabular}{|c|c|}
 \hline 
@@ -264,11 +265,11 @@ $t_1$ [s] & $t_2$ [s]\\ \hline
 
 Die Werte ergeben:
 \begin{align*}
-t_{Zyl 1}&=(0,739 \pm 0,010)s\\
+t_{Zyl 1}&=(0,74 \pm 0,01)s\\
 I'_{Zyl 1}&=(4.79\pm1,10)\cdot10^{-4}\text{ kg m$^2$}\\
 \end{align*}
 \begin{align*}
-t_{Zyl 2}&=(1,325 \pm  0,014)s\\ 
+t_{Zyl 2}&=(1,33 \pm  0,01)s\\ 
 I'_{Zyl 2}&=(1,54\pm0,34)\cdot10^{-3}\text{ kg m$^2$}
 \end{align*}
 
@@ -297,7 +298,7 @@ Bein&	Arm	&Oberk	&Kopf	\\ \hline
 \begin{table}[H]
 \begin{tabular}{|c|c|}
 \hline
-Gesamtmasse der Puppe & 160g \\ \hline
+Gesamtmasse der Puppe & 160,8g \\ \hline
 \end{tabular} 
 \end{table}
 
@@ -317,7 +318,7 @@ I[$\cdot 10^{-6}$kg m$^2$]&1,65&	51,13&	9,12&	0,80\\ \hline
 \label{tab_pos1}
 \end{table}
 
-Summiert man über alle Teilträgheiten I, so erhält man als Trägheitsmoment der Puppe:
+Durch Aufsummieren aller Teilträgheiten I, ergibt sich das Trägheitsmoment der Puppe:
 \begin{align*}
 I_{Pos 1}= 7,86
 \cdot 10^{-4}\text{ kg m$^2$}
@@ -340,12 +341,12 @@ I[$\cdot 10^{-6}$kg m$^2$]&99,81	&51,13	&9,12&   0,80
 \label{tab_pos2}
 \end{table}
 
-Man erhält als Trägheitsmoment der Puppe:
+Es ergibt sich als Trägheitsmoment der Puppe:
 \begin{align*}
 I_{Pos 2}=1,79\cdot 10^{-3}\text{ kg m$^2$}
 \end{align*}
 
-Zum Vergleich kann man die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnen. Man benötigt dazu die Schwingzeiten:
+Zum Vergleich kann die Trägheit immer noch nach Gleichung \eqref{eq_periode} berechnet werden. Dazu werden die Schwingzeiten benötigt:
 \begin{table}[H]
 \begin{tabular}{|c|c|}
 \hline 
@@ -371,7 +372,7 @@ I'_{Pos 2}=(6,34 \pm1,50)\cdot 10^{-4} \text{ kg m$^2$}
 \end{align*}
 
 \section{Diskussion}
-Das Eigenträgheitsmoment der Drehachse lässt sich mit einem kleinen Fehler relativ berechnen, dagegen weichen die Werte für die Winkelrichtgröße bei kleinen Winkeln stark von dem Ergebnis ab. Dies ist vermutlich darauf zurückzuführen, dass die Apparatur eine relativ hohe Reibung hat, die sich besonders bei kleinen Auslenkungen bemerkbar macht. Die Gleichung gilt jedoch eigentlich nur für kleine Winkel, daher ist die Auswertung über die Federwaage aussagekräftiger, denn bei ihr werden Reibungen nicht berücksichtigt.
+Das Eigenträgheitsmoment der Drehachse lässt sich auf Grund eines kleinen Fehlers relativ genau berechnen, dagegen weichen die Werte für die Winkelrichtgröße bei kleinen Winkeln stark von dem Ergebnis ab. Dies ist vermutlich darauf zurückzuführen, dass die Apparatur eine relativ hohe Reibung hat, die sich besonders bei kleinen Auslenkungen bemerkbar macht. Die Gleichung gilt jedoch eigentlich nur für kleine Winkel, daher ist die Auswertung über die Federwaage aussagekräftiger, denn bei ihr werden Reibungen nicht berücksichtigt.
 \begin{table}[htbp]
 \begin{tabular}{|c|c|c|c|}
 \hline 
@@ -384,9 +385,9 @@ Puppe Position 2 & $1,79\cdot 10^{-3}$ & $(6,34 \pm1,50)\cdot 10^{-4}$ & 64,58 \
 \caption{Alle Ergebnisse des Versuches zusammengestellt. Die gestrichenen Werte sind dabei Ergebnisse aus einer Berechnung über die Schwingzeit.}
 \end{table}
 
-Die Trägheitsmomente der beiden Zylinder liegen um einen Faktor von ungefähr 3 auseinander, wenn man die theoretischen mit den gemessenen Werten vergleicht. Auch dies lässt sich vermutlich darauf zurückführen, dass die Apparatur zu stark gedämpft ist. Die Körper schwingen recht schnell und um den statistischen Fehler zu minimieren muss man über mehrere Schwingungen mitteln. Da die Amplitude jedoch um gut 15\% pro Periode abnimmt, schlägt dieser Fehler dann mehr ins Gewicht.
+Das Trägheitsmoment des ersten Zylinders konnte ergab über beide Rechnungen ebenfalls fast den gleichen Wert. Bei Zylinder 2 lässt sich jedoch eine Abweichung von knapp 57\% feststellen. Auch dies lässt sich vermutlich darauf zurückführen, dass die Apparatur zu stark gedämpft ist. Die Körper schwingen recht schnell und um den statistischen Fehler zu minimieren musste über mehrere Schwingungen gemittelt werden. Da die Amplitude jedoch um gut 15\% pro Periode abnimmt, schlägt dieser Fehler dann mehr ins Gewicht.
 
-Bei den Trägheitsmomenten der Puppe merkt man den Unterschied zu den Theorie-werten am deutlichsten. Die Werte liegen eine ganze Größenordnung auseinander. Das die Differenz hier besonders groß ist, hat verschiedene Gründe. Zum einen wirkt sich wieder die Dämpfung der Apparatur auf die Messung aus. Zum anderen ist die Figur aber auch nicht genau mittig auf ihrer Symmetrie befestigt und ihre Haltung ist relativ instabil. Lässt man sie Schwingen bewegen sich die Gliedmaßen auf Grund der Fliehkraft automatisch ein wenig nach außen, wodurch sich das Trägheitsmoment ändert.\\
+Bei den Trägheitsmomenten der Puppe macht sich der Unterschied zu den Theorie-werten am deutlichsten bemerkbar. Die Werte weichen um über 60\% von einander ab. Dass die Differenz hier besonders groß ist, hat verschiedene Gründe. Zum einen wirkt sich wieder die Dämpfung der Apparatur auf die Messung aus. Zum anderen ist die Figur aber auch nicht genau mittig auf ihrer Symmetrieachse befestigt und ihre Haltung ist relativ instabil. Beim Schwingen der Puppe bewegen sich ihre Gliedmaßen auf Grund der Fliehkraft automatisch ein wenig nach außen, wodurch sich das Trägheitsmoment ändert.\\
 Außerdem ist die Puppe nicht richtig fest auf dem Stab befestigt und rutscht bei größeren Beschleunigungen hin und her.
 Bei den Theoriewerten schlägt am härtesten zu Buche, dass die Puppe nur grob aus Zylindern angenährt wurde. Die genaue Mittelung minimiert diesen Fehler zwar, dennoch ist er deutlich zu spüren. Zudem wurden Füße und Hände der Puppe, sowie der Metallstab völlig vernachlässigt.
 
@@ -394,8 +395,7 @@ Bei den Theoriewerten schlägt am härtesten zu Buche, dass die Puppe nur grob a
 \parskip 80pt
 \Large{Literatur}\\\\
 \large{[1] Versuchsanleitung - Das Trägheitsmoment}\\\\
-\large{[2] Cauet C. \& Brambach T. (2006), \textit{Protokoll zu Versuch 101 - Trägheitsmomente starrer Körper}, S.4}\\\\
-
+\large{[2] Cauet C. \& Brambach T. (2006), \textit{Protokoll zu Versuch 101 - Trägheitsmomente starrer Körper}, S.4}
 % ========================================
 %	Literaturverzeichnis
 % ========================================

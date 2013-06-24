@@ -189,7 +189,7 @@ Die zwei Stellungen des Prismas sind in Abbildung \ref{pic:prisma_etasym} erkenn
 In Abbildung \ref{pic:prisma_ohmlr} sind die Winkelgrößen $\Omega_l$, $\Omega_r$ und die Prismaanordnung erkennbar. 
 Der Winkel $\eta$ erechnet sich aus
 \begin{align}
-\eta = 180 -(\Omega_r-\Omega_l).
+-\eta = 180 -(\Omega_r-\Omega_l).
 \label{eq:eta_ohm_rl}
 \end{align}
 	
@@ -209,51 +209,71 @@ Der Winkel $\eta$ erechnet sich aus
 Diese soll für das verwendete Glasprisma berechnet werden.
 
 \section{Auswertung}
+\subsection{Fehlerrechnung}
+Da viele für die Auswertung notwendigen Größen fehlerbehaftet sind, ist es wichtig, den Einfluss dieser Fehler auf die ermittelten
+Größen herauszufinden. Dazu werden der Mittelwert
+\begin{formel}[H]
+\begin{equation}
+ \bar{x} = \frac1N \sum_{i=1}^{N} x_i,
+ \label{eq_mittel}
+\end{equation}
+\caption*{\small{$\bar{x}$ = Mittelwert, N = Anzahl der Messungen}}
+\end{formel}
+die Gaußsche Fehlerfortpflanzung
+\begin{formel}[H]
+\begin{equation}
+\Delta G = \sqrt{\sum_{i=1}^{N}\left( \frac{\partial G}{\partial x_i}\cdot \Delta x_i\right)^2},
+\label{gauss}
+\end{equation}
+\caption*{$x_i$ = Variable, $\Delta x_i$ = Fehler der Variable}
+\end{formel}
+und die Standardabweichung des Mittelwerts
+\begin{equation}
+ \bar s = \sqrt{\frac{1}{N-1} \sum_{i}^{N} (x_i - \bar{x})^2}.
+ \label{eq_standard}
+\end{equation}
+ benötigt.
 \subsection{Winkel $\varphi$}
-Zunächst soll der Winkel $\varphi$ zwischen den beiden Prismenflächen bestimmt werden. Die parallel einfallenden Lichtstrahlen werden unter einem Winkel von:
+Zunächst soll der Winkel $\varphi$ zwischen den beiden Prismenflächen bestimmt werden. Die Messung erfolgte zwei mal und die parallel einfallenden Lichtstrahlen werden unter einem Winkel von:
 \begin{align*}
-\varphi_1=140,6^\circ\\
-\varphi_2=260,6^\circ
+\varphi_{1,1}=140,6^\circ \qquad \varphi_{2,1}=158,1^\circ\\
+\varphi_{2,1}=260,6^\circ \qquad \varphi_{2,2}=265,0^\circ
 \end{align*}
 reflektiert. Mit Gleichung \eqref{eq_phi} ergibt sich für den Winkel $\varphi$:
 \begin{align*}
-\varphi = \frac{\varphi_2-\varphi_1}{2}=60^\circ
+\varphi_1 &= \frac{\varphi_2-\varphi_1}{2}=60^\circ\\
+\varphi_2 &=53,45^\circ
 \end{align*}
+Es folgen Mittelung und Fehlerrechnung:
+\begin{align*}
+\overline{\varphi} &= \frac{60+53,45}{2}&=56,73^\circ\\
+\sigma&= \sqrt{\frac{1}{2-1}\cdot\left[ \left(53,45-56,73\right)^2+\left(60-56,73\right)^2\right]}&=4,6^\circ
+\end{align*}
+Ergebnis:
+\begin{align*}
+\varphi=(56,73\pm4,6)^\circ
+\end{align*}
+Es wird im folgenden jedoch mit einem Wert von $\varphi=60^\circ$ entsprechend der Versuchsanleitung weitergerechnet.
 \subsection{Brechungswinkel des Heliumspektrums}
-Das Spektrum einer Heliumdampflampe besteht aus folgenden charakteristischen Emissionslinien:
+Das Spektrum einer Heliumdampflampe besteht aus den folgenden charakteristischen Emissionslinien.
+Mit der Aparatur lassen sich für die Farben folgende relative Brechungswinkel ausmachen:
 \begin{table}[H]
-\begin{tabular}{|c|c|}
-Farbe & Wellenlänge [nm]\\ \hline
-dunkelrot	&706,5 \\ \hline
-rot	&	667,8\\ \hline
-gelb	&	587,8\\ \hline
-grün	&	504,8\\ \hline
-grün	&	501,6\\ \hline
-blaugrün	&	492,2\\ \hline
-blau	&	471,3\\ \hline
-violett	&	447,1\\ \hline
-violett	&	438,8\\ \hline
+\begin{tabular}{|c|c|c|c|}
+Farbe &		Wellenlänge [nm] &$\Omega_l$&	$\Omega_r$ \\ \hline
+dunkelrot	&706,5 		&15,5		&255,35 \\ \hline
+rot			&	667,8	&15,3		&255,4 	\\ \hline
+gelb		&	587,8	&15,2		&255,6 	\\ \hline
+grün		&	504,8	&14,9		&255,7 	\\ \hline
+grün		&	501,6	&14,8		&255,8 	\\ \hline
+blaugrün	&	492,2	&14,6		&256,0 	\\ \hline
+blau		&	471,3	& ---		&256,5 	\\ \hline
+violett		&	447,1	&14,5		&256,6 	\\ \hline
+violett		&	438,8	& ---		& --- 	\\ \hline
 \end{tabular} 
-\caption{Heliumspektrum}
-\end{table}
-Mit der Aparatur ließen sich für die Farben folgende relative Brechungswinkel ausmachen:
-\begin{table}[H]
-\begin{tabular}{|c|c|c|}
-Farbe &		$\Omega_l$&	$\Omega_r$ \\ \hline
-dunkelrot	&15,5		&255,35 \\ \hline
-rot			&15,3		&255,4 	\\ \hline
-gelb		&15,2		&255,6 	\\ \hline
-grün		&14,9		&255,7 	\\ \hline
-grün		&14,8		&255,8 	\\ \hline
-blaugrün	&14,6		&256,0 	\\ \hline
-blau		& ---		&256,5 	\\ \hline
-violett		&14,5		&256,6 	\\ \hline
-violett		& ---		& --- 	\\ \hline
-\end{tabular} 
-\caption{Gemessene Brechungswinkel $\Omega_{l/r}$}
+\caption{Spektrum einer Heliumdampflampe - Gemessene Brechungswinkel $\Omega_{l/r}$}
 \label{tab_messwerte}
 \end{table}
-
+\newpage
 Mit Gleichung \eqref{eq:eta_ohm_rl} folgen daraus die eigentlichen Brechungswinkel $\eta$ und dann mit Gleichung \eqref{eq_brechung} die Brechungsindizes n($\lambda$).
 
 \begin{table}[H]
@@ -275,22 +295,21 @@ Wellenlänge [nm] & $\eta$ [Grad] & n \\ \hline
 Es soll nun anhand der Messdaten entschieden werden, ob das Dispersionsverhalten des Prismas für den entsprechenden Wellenlängenbereich besser durch eine Gleichung der Form \eqref{eq_dispgg} oder der Form \eqref{eq_displl} beschrieben wird.\\
 Dazu werden die Brechungsindizes quadratisch gegen das Quadrat der Wellenlänge aufgetragen.\\
 
-Anschließend führt man eine Ausgleichsrechnung durch, um die bestmöglichen Werte für die Gleichungen
+Anschließend wird eine Ausgleichsrechnung durchgeführt, um die bestmöglichen Werte für die Gleichungen
 \begin{align}
 n^2(\lambda) &= A_0 + \frac{A_2}{\lambda^2} \qquad \text{ und}
 \label{eq_n^2}\\
 n'^2(\lambda) &= A'_0 - A'_2\cdot\lambda^2
 \end{align}
 zu erhalten.
-\newpage
-Man erhält für die Faktoren folgende Werte:
+Für die Faktoren ergeben sich folgende Werte:
 \begin{table}[H]
 \begin{tabular}{c|c|c}
  & $A_0$ & $A_2$ \\ 
 \hline 
-$n^2(\lambda)$ &  $2,95 \pm 0.008$ & $(2.1 \pm 0,23)\cdot 10^{-14}$ \\ 
+$n^2(\lambda)$ &  $2,95 \pm 0.008$ & $(2.1 \pm 0,23)\cdot 10^{-14}[\text{nm}]^2$ \\ 
 \hline 
-$n'^2(\lambda)$ & $3,08 \pm 0.013$ & $(1,9 \pm 0,38)\cdot 10^{11}$ \\ 
+$n'^2(\lambda)$ & $3,08 \pm 0.013$ & $(1,9 \pm 0,38)\cdot 10^{11}[\text{nm}]^{-2}$ \\ 
 \hline 
 \end{tabular} 
 \end{table}
@@ -302,8 +321,8 @@ $n'^2(\lambda)$ & $3,08 \pm 0.013$ & $(1,9 \pm 0,38)\cdot 10^{11}$ \\
 \end{figure}
 
 \subsection{Berechnung der kleinesten Quadrate}
-Um zu entscheiden, welche der beiden Regressionsgeraden besser zu den Messwerten passen, berechnet man mit der Methode der kleinsten Quadrate, welche der beiden Kurven die kleinere Abweichung zu den Messwerte hat.\\
-Man berechnet dazu die Summen:
+Um zu entscheiden, welche der beiden Regressionsgeraden besser zu den Messwerten passen, wird mit der Methode der kleinsten Quadrate berechnet, welche der beiden Kurven die kleinere Abweichung zu den Messwerte hat.\\
+Dazu werden folgende Summen berechnet:
 \begin{align}
 s^2_n &= \frac{1}{z-2}\sum^z_{z-2}\left[n^2(\lambda_i) - A_0 - \frac{A_2}{\lambda^2_i}\right]^2\\
 s^2_{n'} &= \frac{1}{z-2}\sum^z_{z-2}\left[n^2(\lambda_i) - A'_0 +A'_2\lambda^2_i\right]^2
@@ -316,35 +335,47 @@ s^2_{n'}&=13,04\cdot10^{-5}
 \end{align*}
 
 \subsection{Abbesche Zahl}
-Da die Gleichung\eqref{eq_n^2} die kleinere quadratische Abweichung besitzt, wird diese für die Berechnung der Abbeschen Zahl verwendet. Um Gleichung \eqref{eq_abbe} anwenden zu können, müssen zunächst die Brechungsindizes der  Frauenhoferschen Linien: $\lambda_C$= 656nm, $\lambda_D$= 589nm und $\lambda_F$ = 486nm.\\
-Man setzt dazu die Wellenlängen in Gleichung \eqref{eq_n^2} ein und verwendet für $A_0$ und $A_2$ die Werte aus der Ausgleichsrechnung.\\
-Man erhält:
+Da die Gleichung\eqref{eq_n^2} die kleinere quadratische Abweichung besitzt, wird diese für die Berechnung der Abbeschen Zahl verwendet. Um Gleichung \eqref{eq_abbe} anwenden zu können, müssen zunächst die Brechungsindizes der  Frauenhoferschen Linien: $\lambda_C$= 656nm, $\lambda_D$= 589nm und $\lambda_F$ = 486nm berechnet werden.\\
+Dazu werden die Wellenlängen in Gleichung \eqref{eq_n^2} eingesetzt und für $A_0$ und $A_2$ werden die Werte aus der Ausgleichsrechnung verwendet.\\
+
+Es ergibt sich:
 
 \begin{table}[H]
 \begin{tabular}{c|c|c|c}
 Wellenlänge [nm]&	656 &	589 &	486\\ \hline
-n &	1,7323 &	1,7356 &	1,7436\\
+n &	1,7323 &	1,7356 &	1,7436\\ \hline
+$\Delta$ n [$\cdot 10^{-3}$] & 2,31 & 2,31 & 2,29 
 \end{tabular} 
 \end{table}
 
 Mit Gleichung \eqref{eq_abbe} ergibt sich für die Abbesche Zahl:
 \begin{align*}
-\nu = 64,98
+\nu = 64,98 \pm 37,21
+\end{align*}
+
+Der Fehler errechnet sich aus der Gleichung:
+\begin{align*}
+\Delta \nu = \sqrt{\left(\frac{1}{n_F-n_C}\Delta n_D\right)^2 + \left(\frac{n_D-1}{(n_F-n_C)^2}\Delta n_F\right)^2 + \left(\frac{n_D-1}{(n_F-n_C)^2}\Delta n_C\right)^2} = 37,21
 \end{align*}
 
 \subsection{Auflösungsvermögen}
 Das Auflösungsvermögen des Aparates errechnet sich nach Gleichung \eqref{eq_resolution}:
 \begin{align*}
 A = \frac{\lambda}{\Delta \lambda} = b\frac{dn}{d\lambda} &= b \frac{d}{d\lambda}\left(\sqrt{A_0 + \frac{A_2}{\lambda^2}}\right)\\
- &= -\frac{A_2}{\lambda^2\sqrt{A_0+\frac{A_2}{\lambda^2}}}
+ &= -\frac{A_2 \cdot b}{\lambda^3\sqrt{A_0+\frac{A_2}{\lambda^2}}}
 \end{align*}
-Setzt man die Werte ein, so ergeben sich folgende Auflösungsvermögen:
+Durch Einsetzten der Werte ergeben sich folgende Auflösungsvermögen:
 \begin{table}[H]
 \begin{tabular}{c|c|c|c}
 Wellenlänge [nm]&	656 &	589 &	486\\ \hline
-A &	0.00083 & 0.001 & 0.0015\\
+A &	1263,75 &1742,60 &3087,71
+\\
 \end{tabular} 
 \end{table}
+%Der dazugehörende Fehler lautet
+%\begin{align*}
+%\Delta A = \frac{b}{\lambda^3} \sqrt{(\Delta A_2)^2 + \left(\frac{A_2}{n^2}\Delta n\right)^2}
+%\end{align*}
 \subsection{Absorbtionsstelle}
 Für die Koeffizienten $A_i$ gilt:
 \begin{align*}
@@ -354,13 +385,18 @@ A_0=1+\frac{N_1q^2_1\lambda^2_1}{4\pi^2c^2\epsilon_0m_1}
 Daraus folgt für die Absorbtionskante:
 \begin{align*}
 \lambda_a&=\sqrt{\frac{A_2}{A_0-1}}\\
-\intertext{setzt man die Werte ein, so erhält man als Absorbtionskante:}\\
-\lambda_a&=102,8\text{nm}
+\intertext{durch Einsetzten der Werte, ergibt sich als Absorbtionskante:}\\
+\lambda_a&=(102,8 \pm 5,67)\text{nm}
+\end{align*}
+Der Fehler errechnet sich mittels Gauß nach der Gleichung:
+\begin{align*}
+\Delta \lambda_a &= \sqrt{\left[\frac{1}{2\sqrt{A_2(A_0-1)}}\Delta A_2\right]^2+\left[\frac{A_2}{2\sqrt{(A_0-1)^3}}\Delta A_0\right]^2}\\
+&=5,67 \text{nm}
 \end{align*}
 \section{Diskussion}
-Die Zahlenwerte liegen alle in einem Bereich, der zu erwarten war. Beim Fit der Funktionen sind die Fehler leider relativ groß, da eine der violetten Spektrallinien garnicht sichtbar war und die blaue nur von rechts. Daher fehlen zwei Messwerte und die Abweichung wird relativ groß. Dennoch kann man sehr gut am Verlauf der Messwerte erkennen, dass die Absorbtionskante links der Aufgenommenen Werte liegen muss.\\
+Die Zahlenwerte liegen alle in einem Bereich, der zu erwarten war. Beim Fit der Funktionen sind die Fehler leider relativ groß, da eine der violetten Spektrallinien garnicht sichtbar war und die blaue nur von rechts. Daher fehlen zwei Messwerte und die Abweichung wird relativ groß. Dennoch ist am Verlauf der Messwerte sehr gut erkennbar, dass die Absorbtionskante links der Aufgenommenen Werte liegen muss.\\
 Der berechnete Wert der Absorbtionskante von 102,8nm stimmt mit dieser Vorhersage sehr gut überein.\\
-Auch die Abbesche Zahl liegt mit 64,98 in einer Größenordnung, die für Gläser typisch ist.
+Auch die Abbesche Zahl liegt mit 64,98 in einer Größenordnung, die für Gläser typisch ist. Der Fehler ist auch hier mit ca. 50\% sehr groß, aber auch das folgt aus der geringen Anzahl an Messwerten. 
 
 % ========================================
 %	Literaturverzeichnis
@@ -372,7 +408,7 @@ Auch die Abbesche Zahl liegt mit 64,98 in einer Größenordnung, die für Gläse
 % ========================================
 %	Das Dokument endent
 % ========================================
-\parskip 300pt
+\parskip 200pt
 \Large{Literatur}\\\\
 \large{[1] Versuchsanleitung - Dispersionsmessung am Glasprisma}\\\\
 \end{document}

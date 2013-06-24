@@ -3,6 +3,7 @@
 % ========================================
 
 \input{longheader.tex}
+\usepackage[version=3]{mhchem}
 
 % ========================================
 %	Angaben für das Titelblatt
@@ -113,8 +114,32 @@ Intervall sehr klein ist. Die Wahrscheinlichkeit für das $k$-malige Auftreten e
 Der Parameter $\mu$ ist hierbei gleichzeitig Mittelwert und Varianz.
 
 \section{Durchführung}
+Die zur Messung der Reichweite benutzten $\alpha$-Teilchen werden von einem Americium-Präparat mit einer Halbwertszeit von $T_\frac12$ = 
+458 a nach 
+\begin{align}
+ \ce{^{241}_{95}Am} \ce{->} \ce{^{237}_{93}Np} + \ce{^{4}_{2}He^{2+}}
+\end{align}
+emittiert. Der experimentelle Aufbau ist in Abbildung \ref{pic_aufbau} mit den notwendigen Bauteilen dargestellt. Neben dem verschiebbaren
+Halter, auf dem das Präparat fixiert ist befindet sich in dem vakuumierbaren Glaszylinder der Halbleiter-Sperrschichtzähler, der als Detektor
+dient. Aufgebaut ist er ähnlich einer Diode, die in Sperrrichtung betrieben wird. Ein p- und ein n-dotiertes Material sorgen für eine 
+Verarmungszone, in der ein einfallender, geladener Kern Elektronen-Loch-Paare erzeugt. Das wiederum führt zu einem Strompuls, der proportional
+zur Energie des Kerns ist. Zur Auswertung dieser Energie werden ein Vorverstärker zur Verstärkung des Pulses, sowie ein Vielkanalanalysator
+zur Analyse der entsprechenden Pulsintensität benötigt. Die Vakuumpumpe erniedrigt den Druck im Glaszylinder fast bis zum völligen Vakuum.
+Mit dem Ventil kann Luft in den Zylinder gelassen werden, um den Druck abzubauen, der Druckmessgerät abgelesen werden kann.
+
+
+\begin{figure}[H]
+ \includegraphics[width=0.8\textwidth]{pics/aufbau.png}
+ \caption{experimenteller Aufbau $^{[1]}$}
+ \label{pic_aufbau}
+\end{figure}
+
+Mit dem Programm ``Multichannel Analyzer'' wird der Versuch am Computer durchgeführt. Es spricht dabei den Vielkanalanalysator an und
+zeigt die insgesamt gemessenen Pulse und ermittelt den Channel mit den meisten Pulsen.
+
+
 \subsection{Reichweite von $\alpha$-Strahlung}
-Für zwei Abstände werden Anzahl und Energie, der im evakuierten Glaszylinder pro Sekunde auf die Sonde auftreffenden $\alpha$-Teilchen gemessen. Die Messzeit beträgt 120 Sekunden. Nach jeder Messung wird der Druck im Gefäß erhöht. Gemessen wird im Bereich zwischen (0 - 1000)mbar.\\
+Für zwei Abstände werden Anzahl der Pulse und der Channel$_{\text{max}}$, der im evakuierten Glaszylinder pro Sekunde auf die Sonde auftreffenden $\alpha$-Teilchen gemessen. Die Messzeit beträgt 120 Sekunden. Nach jeder Messung wird der Druck im Gefäß erhöht. Gemessen wird im Bereich zwischen (0 - 1000)mbar.\\
 
 \subsection{Statistik des radioaktiven Zerfalls}
 Es soll die Verteilung des radioaktiven Zerfalls untersucht werden. Hierzu wird 150 mal über 10 Sekunden die Anzahl der auftreffenden Teilchen gemessen und die daraus ermittelten Zerfallsraten in ein Histogramm eingezeichnet.\\

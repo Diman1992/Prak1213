@@ -79,7 +79,11 @@ f(t)\approx \frac{1}{2} a_0 + \sum^\infty_{n=1} \left[ a_n~cos\left(n\frac{2\pi}
 Dabei setzten sich die Konstanten $a_n$ und $b_n$ wie folgt zusammen:
 \begin{align}
  a_n&=\frac{2}{T}\int^T_{0} f(t)~cos\left(n\frac{2\pi}{T}t\right) dt\\
+ \label{eq_an}
+ \end{align}
+ \begin{align}
  b_n&=\frac{2}{T}\int^T_{0} f(t)~sin\left(n\frac{2\pi}{T}t\right) dt \qquad n=1,2,...
+ \label{eq_bn}
 \end{align}
 Abgesehen von der Grundfrequenz $v_1 =\frac{1}{T}$ treten nur ihre ganzzahligen Vielfachen, die sogenannten Oberschwingungen auf. Auch die Phasenverschiebungen verteilen sich nicht kontinuierlich sonder können nur die Werte 0, $\frac{1}{2}\pi$ , $\pi$ oder $\frac{3}{2}\pi$. Die Berechnung der Amplituden $a_n$, $b_n$ bezeichnet man dabei als Fourieranalyse.\\
 Diese Rechnung vereinfacht sich, wenn die zu approximierende Funktion gerade oder ungerade ist. In diesem Fall besteht die Fourierreihe nicht aus Sinus- bzw. Cosinusschwingungen und der Faktor $b_n$ bzw $a_n$ ist = 0.\\
@@ -89,6 +93,79 @@ Trägt man die Amplituden gegen die Frequenz auf, so erhält man das sog. Spektr
 \caption{Spektrum einer $v$ periodischen Funktion - Bild aus der Versuchsanleitung entnommen}
 \label{pic_spec}
 \end{figure} Das Spektrum einer nicht-periodischen Funktion ist kontinuierlich.\\
+
+\subsection{Berechnung von Fourierkoeffizienten}
+\label{sec_berechnung}
+Um Vergleiche zu den experimentellen Ergebnissen für das Aussehen der Fourierreihe verschiedener Spannungen ziehen zu können, werden
+die jeweiligen Fourierkoeffizienten $a_n$ und $b_n$ nach den Gleichungen \eqref{eq_an} und \eqref{eq_bn} berechnet. Die zu untersuchenden
+periodischen Schwingungen sind die Rechteckspannung, die Sägezahnspannung, sowie die Dreieckspannung. 
+\subsubsection{Rechteckspannung}
+Die Rechteckspannung ist als stückweise definierte Funktion wie folgt gegeben
+\begin{align*}			
+f(t) =
+\left\{
+	\begin{array}{l l}
+	U_0  & \text{falls } t \leq \frac{nT}{2}\\
+	-U_0 & \text{falls } t > \frac{nT}{2}+\frac{T}{2}.
+	\end{array}
+\right.
+\end{align*}
+Die zugehörigen Fourierkoeffizienten werden berechnet zu
+\begin{align}
+ a_n = 0 \hspace{3cm} b_n = \frac{4U_0}{n \pi} \qquad \text{für}\, n\, \text{ungerade}.
+ \label{eq_rechteckkoeff}
+\end{align}
+In Abbildung \ref{pic_rechteckfourier} ist die Funktion $f$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.
+\begin{figure}[H]
+ \input{rechteck.tex}
+ \caption{Rechteckspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_rechteckfourier}
+\end{figure}
+
+\subsubsection{Sägezahnspannung}
+Die Sägezahnspannung ist als Funktion wie folgt gegeben
+\begin{align*}			
+ g(t) = \frac{2U_0}{nT}t - U_0.
+\end{align*}
+Die zugehörigen Fourierkoeffizienten werden berechnet zu
+\begin{align}
+ a_n = 0 \hspace{3cm} b_n = - \frac{2U_0 (-1)^n}{n \pi}.
+ \label{eq_saegezahnkoeff}
+\end{align}
+In Abbildung \ref{pic_saegezahnfourier} ist die Funktion $g$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.
+\begin{figure}[H]
+ \input{Saegezahn.tex}
+ \caption{Sägezahnspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_saegezahnfourier}
+\end{figure}
+
+\subsubsection{Dreieckspannung}
+Die Rechteckspannung ist als stückweise definierte Funktion wie folgt gegeben
+\begin{align*}			
+h(t) =
+	\left\{
+	\begin{array}{ll}
+	U_0 \cdot \left( 4\frac{t}{T} - 1 \right)
+	& \text{falls } \frac{(2n-2)T}{2} < t \leq \frac{(2n-1)T}{2}
+	\vspace{10pt}
+	\\
+	U_0 \cdot \left( 3 - 4 \frac{t}{T} \right)
+	& \text{falls } \frac{(2n-1)T}{2} < t \leq nT.
+	\end{array}
+\right.
+\end{align*}
+Die zugehörigen Fourierkoeffizienten werden berechnet zu
+\begin{align}
+  a_n = \frac{8U_0}{n^2 \pi^2} \qquad \text{für}\, n\, \text{ungerade}  \hspace{3cm} b_n = 0.
+  \label{eq_dreieckkoeff}
+\end{align}
+In Abbildung \ref{pic_dreieckfourier} ist die Funktion $h$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.			
+
+\begin{figure}[H]
+ \input{Dreieck.tex}
+ \caption{Dreieckspannung und ihre Fourierreihe bis $n=5$}
+ \label{pic_dreieckfourier}
+\end{figure}
 
 Wird versucht, eine nicht-stetige Funktion mittels einer Fourierreihe zu entwickeln, so konvergiert diese an der Sprungstelle nicht gegen die Funktion, sondern hat dort eine, mit genauer werdender Approximation größer werdende, endliche Abweichung. Dies wird als Gibbsches Phänomen bezeichnet.
 
@@ -121,124 +198,87 @@ Verändert man die Kapazität und somit die Resonanzfrequenz des Schwingkreises
 v_R=\frac{1}{2\pi\sqrt{LC}},
 \end{align}
 so beobachtet man beim Resonanzfall eine Spannungszunahme proportional zur Eingangsamplitude. Um die Werte gut am Graphen ablesen zu können, müssen die Resonanzkurven steil abfallen. Verwendet man nur einen Schwingkreis, so fällt diese mit $v^2$ ab. Höhere Potenzen kann man erhalten, indem man mehrere Schwingkreise miteinander kombiniert.
+
 \section{Auswertung}
-\subsection{Berechnung von Fourierkoeffizienten}
-\label{sec_berechnung}
-Um Vergleiche zu den experimentellen Ergebnissen für das Aussehen der Fourierreihe verschiedener Spannungen ziehen zu können, werden
-die jeweiligen Fourierkoeffizienten $a_n$ und $b_n$ nach den Gleichungen \eqref{eq_an} und \eqref{eq_bn} berechnet. Die zu untersuchenden
-periodischen Schwingungen sind die Rechteckspannung, die Sägezahnspannung, sowie die Dreieckspannung. 
-\subsubsection{Rechteckspannung}
-Die Rechteckspannung ist als stückweise definierte Funktion wie folgt gegeben
-\begin{align*}			
-f(t) =
-\left\{
-	\begin{array}{l l}
-	U_0  & \text{falls } t \leq \frac{nT}{2}\\
-	-U_0 & \text{falls } t > \frac{nT}{2}+\frac{T}{2}.
-	\end{array}
-\right.
-\end{align*}
-Die zugehörigen Fourierkoeffizienten werden berechnet zu
-\begin{align}
- a_n = 0 \hspace{3cm} b_n = \frac{4U_0}{n \pi} \qquad \text{für}\, n\, \text{ungerade}.
-\end{align}
-In Abbildung \ref{pic_rechteckfourier} ist die Funktion $f$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.
-\begin{figure}[H]
- \input{rechteck.tex}
- \caption{Rechteckspannung und ihre Fourierreihe bis $n=5$}
- \label{pic_rechteckfourier}
-\end{figure}
-
-\subsubsection{Sägezahnspannung}
-Die Sägezahnspannung ist als Funktion wie folgt gegeben
-\begin{align*}			
- g(t) = \frac{2U_0}{nT}t - U_0.
-\end{align*}
-Die zugehörigen Fourierkoeffizienten werden berechnet zu
-\begin{align}
- a_n = 0 \hspace{3cm} b_n = - \frac{2U_0 (-1)^n}{n \pi}.
-\end{align}
-In Abbildung \ref{pic_saegezahnfourier} ist die Funktion $g$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.
-\begin{figure}[H]
- \input{Saegezahn.tex}
- \caption{Sägezahnspannung und ihre Fourierreihe bis $n=5$}
- \label{pic_saegezahnfourier}
-\end{figure}
-
-\subsubsection{Dreieckspannung}
-Die Rechteckspannung ist als stückweise definierte Funktion wie folgt gegeben
-\begin{align*}			
-h(t) =
-	\left\{
-	\begin{array}{ll}
-	U_0 \cdot \left( 4\frac{t}{T} - 1 \right)
-	& \text{falls } \frac{(2n-2)T}{2} < t \leq \frac{(2n-1)T}{2}
-	\vspace{10pt}
-	\\
-	U_0 \cdot \left( 3 - 4 \frac{t}{T} \right)
-	& \text{falls } \frac{(2n-1)T}{2} < t \leq nT.
-	\end{array}
-\right.
-\end{align*}
-Die zugehörigen Fourierkoeffizienten werden berechnet zu
-\begin{align}
-  a_n = \frac{8U_0}{n^2 \pi^2} \qquad \text{für}\, n\, \text{ungerade}  \hspace{3cm} b_n = 0.
-\end{align}
-In Abbildung \ref{pic_dreieckfourier} ist die Funktion $h$ mit ihrer Fourierreihe nach \eqref{eq_fanalyse} dargestellt.			
-
-\begin{figure}[H]
- \input{Dreieck.tex}
- \caption{Dreieckspannung und ihre Fourierreihe bis $n=5$}
- \label{pic_dreieckfourier}
-\end{figure}
-
 \subsection{Fourier-Transformation}
 Zur Messung der verschiedenen Amplitudenwerte für die untersuchten Spannungen gibt ein Funktionsgenerator Schwingungen mit einer
-Frequenz von 10 kHz aus. Der relative Fehler der gemessenen Werte zu den theoretischen ist wie folgt gegeben durch
-\begin{align}
- F_{rel}=\left (\frac{\frac{A_{n,mess}}{A_{1,mess}}}{\frac{A_{n,th}}{A_{1,th}}}-1\right)\cdot 100,
-\end{align}
-wobei $\frac{A_i}{A_1}$ sowohl im Zähler, als auch im Nenner für das Verhältnis der n-ten Oberschwingung zur 1. Oberschwingung steht.
-Die Ergebnisse aus den Messungen sind in Tabelle \ref{tab_fouriertrafo} aufgeführt.
+Frequenz von 10 kHz aus. Zu den jeweiligen $n$ Oberschwingungen, die nach \eqref{eq_rechteckkoeff}, \eqref{eq_saegezahnkoeff} und
+\eqref{eq_dreieckkoeff} beitragen, werden die Spannungen durch Ablesen gemessen. Die Ergebnisse aus den Messungen sind in Tabelle 
+\ref{tab_fouriertrafo} aufgeführt. $A_{\text{th}}$ dient zum groben Vergleich für die Richtigkeit der Messung.
 
 \begin{table}[H]
  \begin{tabular}{l|c|r|r|r|r|r}
- & 	$n$	& $A_{mess}$ in [mV]	& $A_{th}$ in [mV] & $\frac{A_{n,mess}}{A_{1,mess}}$	& $\frac{A_{n,th}}{A_{1,th}}$ & $F_{rel}$ in \%\\
-  	\hline
-Rechteck &	1&	4280,0&	4280,0&	1&	1 &	0,000\\
-	&3&	1400,0&	1426,7	&0,327&	0,333&	-1,869\\
-&	5&	912,0&	856,0	&0,213&	0,200&	6,542\\
-&	7&	592,0&	611,4&	0,138&	0,143&	-3,178\\
-&	9&	452,0&	475,6&	0,106&	0,111&	-4,953\\
-&	11&	408,0&	428,0&	0,095&	0,100&	-4,673\\
-&	13&	364,0&	329,2&	0,085&	0,077&	10,561\\
-&	15&	284,0&	285,3&	0,066&	0,067&	-0,467\\
-&	17&	236,0&	251,8&	0,055&	0,059&	-6,262\\
-&	19&	224,0&	225,3&	0,052&	0,053&	-0,561 \\
-	\hline					
-Sägezahn&	1&	1740,0&	1740,0&	1&	1&	0,000\\
-&	2&	920,0&	870,0&	0,529&	0,500&	5,747\\
-&	3&	620,0&	580,0&	0,356&	0,333&	6,897\\
-&	4&	420,0&	435,0&	0,241&	0,250&	-3,448\\
-&	5&	374,0&	348,0&	0,215&	0,200&	7,471\\
-&	6&	296,0&	290,0&	0,170&	0,167&	2,069\\
-&	7&	256,0&	248,6&	0,147&	0,143&	2,989\\
-&	8&	232,0&	217,5&	0,133&	0,125&	6,667\\
-&	9&	180,0&	193,3&	0,103&	0,111&	-6,897\\
-&	10&	180,0&	174,0&	0,103&	0,100&	3,448\\
-	\hline					
-Dreieck&	1&	2220,0&	2220,0&	1&	1&	0,000\\
-&	3&	260,0&	246,7&	0,117&	0,111&	5,405\\
-&	5&	96,0&	88,8&	0,043&	0,040&	8,108\\
-&	7&	40,0&	45,3&	0,018&	0,020&	-11,712\\
-&	9&	23,8&	27,4&	0,011&	0,012&	-13,162\\
-&	11&	19,4&	18,3&	0,009&	0,008&	5,739\\
+	&$n$	&$A_{\text{mess}}$&	$A_{\text{th}}$\\
+	\hline
+Rechteck&	1&	4280,0&	4280,0\\
+	&2&	1400,0&	1426,7\\
+	&3&	912,0&	856,0\\
+	&4&	592,0&	611,4\\
+	&5&	452,0&	475,6\\
+	&6&	408,0&	428,0\\
+	&7&	364,0&	329,2\\
+	&8&	284,0&	285,3\\
+	&9&	236,0&	251,8\\
+	&10	&224,0&	225,3 \\
+	\hline
+Sägezahn&	1&	1740,0&	1740,0\\
+&	2&	920,0&	870,0\\
+&	3&	620,0&	580,0\\
+&	4&	420,0&	435,0\\
+&	5&	374,0&	348,0\\
+&	6&	296,0&	290,0\\
+&	7&	256,0&	248,6\\
+&	8&	232,0&	217,5\\
+&	9&	180,0&	193,3\\
+&	10&	180,0&	174,0\\
+\hline
+Dreieck	&1&	2220,0&	2220,0\\
+&	2&	260,0	&246,7\\
+&	3&	96,0&	88,8\\
+&	4&	40,0&	45,3\\
+&	5&	23,8&	27,4\\
+&	6	&19,4&	18,3\\
+
  \end{tabular}
 \caption{Amplitudenwerte der Spannungen im Vergleich zu Theoriewerten}
 \label{tab_fouriertrafo}
 \end{table}
+Zur Auswertung der Genauigkeit der Messung wird der Messwert $n$ gegen $A_{\text{mess}}$ aufgetragen und mittels GNUplot entsprechend
+der Geradengleichung 
+\begin{align}
+ h(x)=m*x +t
+ \label{eq_geradex}
+\end{align}
+gefittet. In den Abbildungen \ref{pic_rechteckfit}, \ref{pic_saegezahnfit} und \ref{pic_dreieckfit} sind die Graphen, sowie die 
+theoretischen Erwartungen dargestellt.
+
+\begin{figure}[H]
+ \includegraphics[width=1\textwidth]{pics/rechteck.pdf}
+ \caption{$\ln(n)$ aufgetragen gegen $\ln(A_{\text{mess}}/\text{mV})$}
+ \label{pic_rechteckfit}
+ \begin{align}
+ m_{\text{Rechteck}} = -1,274 \pm 0,067 \hspace{2cm} t_{\text{Rechteck}} = 8,24 \pm 0,09
+\end{align}
+\end{figure}
+\begin{figure}[H]
+ \includegraphics[width=1\textwidth]{pics/saegezahn.pdf}
+ \caption{$\ln(n)$ aufgetragen gegen $\ln(A_{\text{mess}}/\text{mV})$}
+ \label{pic_saegezahnfit}
+ \begin{align}
+ m_{\text{Sägezahn}} = -0.994 \pm 0,025 \hspace{2cm} t_{\text{Sägezahn}} = 7,48 \pm 0,03
+\end{align}
+\end{figure}
+\begin{figure}[H]
+ \includegraphics[width=1\textwidth]{pics/dreieck.pdf}
+ \caption{$\ln(n)$ aufgetragen gegen $\ln(A_{\text{mess}}/\text{mV})$}
+ \label{pic_dreieckfit}
+\end{figure}
+\begin{align}
+ m_{\text{Dreieck}} = -2,700 \pm 0,115 \hspace{2cm} t_{\text{Dreieck}} = 7,57 \pm 0,14
+\end{align}
 
 \subsection{Fourier-Synthese}
+\label{sec_fourier}
 Mit einem Signalgenerator können verschiedene Sinusschwingungen mit n-facher Frequenz der Ursprungsfrequenz und einstellbaren Amplituden
 erzeugt werden. Nachdem ihre Gleichphasigkeit gesichert ist, werden die benötigten Spannungsamplituden nach den Koeffizientenregeln aus
 Abschnitt \ref{sec_berechnung} eingestellt, bei einem $U_0$ =  Die Überlagerung der Sinuswellen sind für die Rechteck-, Sägezahn- und Dreieckspannung 
@@ -249,13 +289,11 @@ in den Abbildungen \ref{pic_rechteckoszi}, \ref{pic_saegzahnoszi} und \ref{pic_d
  \caption{Überlagerung von Sinuswellen zur Approximation der Rechteckspannung}
  \label{pic_rechteckoszi}
 \end{figure}
-
 \begin{figure}[H]
  \includegraphics[width = 0.7\textwidth]{pics/saegezahn.png}
  \caption{Überlagerung von Sinuswellen zur Approximation der Sägezahnspannung}
  \label{pic_saegzahnoszi}
 \end{figure}
-
 \begin{figure}[H]
  \includegraphics[width = 0.7\textwidth]{pics/dreieck.png}
  \caption{Überlagerung von Sinuswellen zur Approximation der Dreieckspannung}
@@ -263,6 +301,26 @@ in den Abbildungen \ref{pic_rechteckoszi}, \ref{pic_saegzahnoszi} und \ref{pic_d
 \end{figure}
 
 \section{Diskussion}
+Wesentlich für die Untersuchung der Fourier-Transformation sind die Steigungen $m$ der drei Spannungen. In Tabelle \ref{tab_diskus}
+sind sie unter Anderem aufgeführt
+\begin{table}[H]
+ \begin{tabular}{c|c|c|c}
+&  	$m_{\text{mess}}$&	$m_{\text{th}}$&	Fehler in \% \\
+\hline
+Rechteck&	-1,274&	-1&	27,4\\
+Sägezahn&	-0,994&	-1&	0,6\\
+Dreieck&	-2,700&	-2&	35,0
+ \end{tabular}
+\caption{Aufführung der Steigungen und ihre Abweichungen zu den erwarteten Werten}
+\label{tab_diskus}
+\end{table}
+
+
+
+Wenn die Abbildungen aus Abschnitt \ref{sec_berechnung} mit den zugehörigen aus Abschnitt \ref{sec_fourier} verglichen werden, lässt
+sich schnell festellen, dass die Synthese geglückt ist.
+
+
 
 % ========================================
 %	Literaturverzeichnis

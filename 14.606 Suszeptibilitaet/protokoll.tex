@@ -176,7 +176,7 @@ Gleichung lässt sich nach Anwendung desselben Ansatzes für $L_M$ formulieren d
 \begin{align}
  \Delta R \approx \frac{\Delta L R_3}{2L}.
 \end{align}
-Aus \eqref{eqIndu} ergibt sich die Gleichung für Die Suszeptibilität mittels Widerstandsmessung zu
+Aus \eqref{eqIndu} ergibt sich die Gleichung für die Suszeptibilität mittels Widerstandsmessung zu
 \begin{align}
  \chi = 2 \frac{\Delta R}{R_3} \frac{F}{Q}.
  \label{eq_chi_rechnung}
@@ -210,12 +210,18 @@ neue Brückenspannung gemessen. Zuletzt wird die Brücke erneut abgeglichen und 
 Zunächst soll die Güte des Selektivverstärkers untersucht werden. Hierzu stellt man eine beliebige Filterfrequenz ein und lässt Signale mit der selben Amplitute aber verschiedenen Frequenzen den Filter passieren. In folgendem Diagram ist die Signalamplitude gegen die Signalfrequenz aufgetragen. Die Filterfrequenz beträgt 35KHz und die Amplitude wurde auf 1 normiert.
 \begin{figure}[htbp]
 \includegraphics[width=0.8\textwidth]{pics/guete.jpg}
-\caption{Gaußfunktion: $e^{-a\cdot (x-c)^2}$ mit a = $10.6\pm 1.5$ und c = $35,08 \pm 0,01$}
+\caption{Gaußfunktion: $f(x)=ae^{-b\cdot (x-c)^2+d}$ mit a = $0.73\pm 0,04$ ; b = $10,62\pm 1,46$ ; c = $35,09 \pm 0,01$ und d = $0,22\pm0,02$}
 \end{figure}
 
+Es müssen die Schnittpunkte der Geraden mit dem Graphen bestimmt werden:
+\begin{align*}
+\frac{1}{\sqrt{2}} &= 0,73e^{-10,62(x-35,08)^2+0,22} \\
+x&= 35,08 \pm \sqrt{\frac{ln\sqrt{2} +ln 0,73 +0,22}{10,62}}\\
+&= 35,08\pm 0,2374
+\end{align*}
 Die Güte errechnet sich entspechend Abbildung \ref{picfilter} zu:
 \begin{align*}
-Q=\frac{v_0}{v_+ - v_-}=\frac{35080}{35250-34900}=100,23
+Q=\frac{v_0}{v_+ - v_-}=\frac{35080\text{Hz}}{(35317-34843)\text{Hz}}=74,01
 \end{align*}
 
 \section{Theoretische Berechnung von $\chi$}
@@ -305,7 +311,7 @@ Die Werte für $\chi$ lassen sich auch mit dem im Versuch benutzen Aufbau errech
 
 \begin{table}[htbp]
 \begin{tabular}{|c|c|c|}
-Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
+Messung	& R [m$\Omega]$	&$U_\text{min}$ [mV]\\ \hline
 1&	2830&	1.20\\ \hline
 2&	2830&	1.90\\ \hline
 3&	2775&	1.85\\ \hline
@@ -313,7 +319,7 @@ Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
 5&	2825&	1.75\\ \hline
 \end{tabular}
 \begin{tabular}{|c|c|c|}
-Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
+Messung	& R$+\Delta$R [m$\Omega]$&$U_\text{min}$ [mV] \\ \hline
 1&	2735&	2.21\\ \hline
 2&	2705&	1.90\\ \hline
 3&	2650&	1.80\\ \hline
@@ -326,7 +332,7 @@ Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
 
 \begin{table}[htbp]
 \begin{tabular}{|c|c|c|}
-Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
+Messung	& R [m$\Omega]$	&$U_\text{min}$ [mV]\\ \hline
 1&	2833&	1.15\\ \hline
 2&	2750&	1.75\\ \hline
 3&	2780&	1.87\\ \hline
@@ -334,7 +340,7 @@ Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
 5&	2835&	1.80\\ \hline
 \end{tabular}
 \begin{tabular}{|c|c|c|}
-Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
+Messung	& R$+\Delta$R [m$\Omega]$&$U_\text{min}$ [mV] \\ \hline
 1&	2064&	1.32\\ \hline
 2&	1985&	1.40\\ \hline
 3&	2060&	1.41\\ \hline
@@ -347,7 +353,7 @@ Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
 
 \begin{table}[htbp]
 \begin{tabular}{|c|c|c|}
-Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
+Messung	& R [m$\Omega]$	&$U_\text{min}$ [mV]\\ \hline
 1&	2835&	1.70\\ \hline
 2&	2770&	1.80\\ \hline
 3&	2835&	1.90\\ \hline
@@ -356,7 +362,7 @@ Messung	& R $[m\Omega]$	&$U_{min}$ [mV]\\ \hline
 
 \end{tabular}
 \begin{tabular}{|c|c|c|}
-Messung	& R$+\Delta$R $[m\Omega]$&$U_{min}$ [mV] \\ \hline
+Messung	& R$+\Delta$R [m$\Omega]$ & $U_\text{min}$ [mV] \\ \hline
 1&	1173&	1.50\\ \hline
 2&	1125&	1.60\\ \hline
 3&	1160&	1.59\\ \hline

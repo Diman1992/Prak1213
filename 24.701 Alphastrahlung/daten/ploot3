@@ -36,7 +36,7 @@ set boxwidth 0.44
 set style fill solid 0.25 border lt -1
 
 #count and plot
-plot "daten" index 7 u ($1-0.22):2 with boxes title "aufgenommene Statistik", "daten" index 8 u ($2+0.22):($1/100) with boxes title "berechnete Poisonverteilung"
+plot "daten" index 7 u ($1-0.22):2 with boxes title "berechnete Poisonverteilung", "daten" index 8 u ($2+0.22):($1/100) with boxes title "aufgenommene Statistik"
 
 
 

@@ -18,7 +18,7 @@
 Dimitrios Skodras\\					% Name Praktikumspartner B
 {\small \href{dimitrios.skodras@tu-dortmund.de}{dimitrios.skodras@tu-dortmund.de}}		% Erzeugt interaktiven einen Link
 }
-\date{14.Mai 2013}				% Das Datum der Versuchsdurchführung
+\date{14. Mai 2013}				% Das Datum der Versuchsdurchführung
 
 % ========================================
 %	Das Dokument beginnt
@@ -207,22 +207,17 @@ b &= U_{0, Sinus} &= (0.204 \pm 0.001) V
 \end{align*}
 
 \subsection{Leistung}
-Zu guter letzt tragen wir die am Widerstand $R_a$ abfallende Leistung $P_a = U_k \cdot I$ gegen den Widerstand $R_a$ auf. Das zusätzlihe Einfügen einer Regressionsfunktion entsprechend Gleichung \ref{eq_leistung} ergibt folgenden Graphen und Konstanten:
+Zu guter letzt tragen wir die am Widerstand $R_a$ abfallende Leistung $P_a = U_k \cdot I$ gegen den Widerstand $R_a$ auf. Zusätzlich wird die theoretische Leistungskurve entsprechend Gleichung \ref{eq_leistung} eingezeichnet. Dies ergibt folgenden Graphen:
 
 \begin{figure}[htbp]
 \includegraphics[width=0.7\textwidth]{pics/leistung.jpeg}
-\caption{Leistung gegen Widerstand aufgetragen und theoretischer Leistungsverlauf nach Gleichung \eqref{eq_leistung} mit $U_K$ = 1,57V}
+\caption{Leistung gegen Widerstand aufgetragen und theoretischer Leistungsverlauf nach Gleichung \eqref{eq_leistung} mit $U_0=U_K$ = 1,57V}
 \label{pic_leistung}
 \end{figure}
 
-\begin{align*}
-a &= -1.05 \pm 0.27    \\
-b &= 4.95 \pm 0.76      \\
-c &= 0.0352 \pm 0.0007   
-\end{align*}
 
 \section{Systematischer Fehler}
-Bei der Berechnung der Innenwiderstände macht man einen systematischen Fehler, da man das Voltmeter mit einem unendlich hohen Innenwiderstand annährert. In Wahrheit besitzt das Gerät jedoch einen endlichen Widerstand ($R_v$ = 10 M$\Omega$), weshalb die Leerspannung $U_0$ eigentlich durch
+Bei der Berechnung der Innenwiderstände macht man einen systematischen Fehler, da man das Voltmeter mit einem unendlich hohen Innenwiderstand annährt. In Wahrheit besitzt das Gerät jedoch einen endlichen Widerstand ($R_v$ = 10 M$\Omega$), weshalb die Leerspannung $U_0$ eigentlich durch
 
 \begin{align}
 U_0 = U_K \left(1 + \frac{R_i}{R_v} \right)
@@ -245,12 +240,12 @@ Die Spannungen der Monozelle, die sich aus der gewöhnliche Messung der Klemmspa
 
 Würde man das Voltmeter hinter das Amperemeter (Abbildung \ref{pic_ogegenspannung}, Punkt H) schalten, so würde man dessen Widerstand mitmessen. Dieser systematische Fehler wird in dieser Auswertung jedoch vermieden.\\
 
-Die in Diagram \ref{pic_leistung} dargestellten Messwerte stimmen sehr gut mit dem theoretischen Verlauf der Kurve bei $U_K$ = 1,57V überein. Der Verlauf der Messwerte liegt ab etwa 5 $\Omega$ jedoch konstant unterhalb der Theoriekurve. Dies liegt daran, dass  
+Die in Diagram \ref{pic_leistung} dargestellten Messwerte stimmen sehr gut mit dem theoretischen Verlauf der Kurve bei $U_K$ = 1,57V überein. Der Verlauf der Messwerte liegt ab etwa 5 $\Omega$ jedoch konstant unterhalb der Theoriekurve. Dies liegt daran, dass der reale Widerstand des Schaltkreises höher ist, als der idealisierte theoretische. Da die Leistung entsprechend Gleichung \eqref{eq_leistung} antiproportional zu R ist, ist die Leistung entsprechend kleiner.\\
 
 
-\parskip 180pt
+\parskip 8pt
 \Large{Literatur}\\\\
-\large{[1] Versuchsanleitung - Leerlaufspannung und Innenwiderstand von Spannungsquellen}\\\\
+\large{[1] Versuchsanleitung - Leerlaufspannung und Innenwiderstand von Spannungsquellen}
 % ========================================
 %	Literaturverzeichnis
 % ========================================

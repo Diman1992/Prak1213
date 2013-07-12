@@ -169,11 +169,11 @@ und die Standardabweichung des Mittelwerts benötigt.
 \end{equation}
 \newpage
 \subsection{Aufgenommene Daten}
-In folgenden Tabellen sind die, für den ersten Teil der Durchführung ermittelten Werte eingetragen.
+In Tabelle 1 und 2 sind die, für den ersten Teil der Durchführung ermittelten Werte eingetragen.
 \begin{table}[H]
 \renewcommand{\arraystretch}{.95}
 \begin{tabular}{|c|c|c|c|} 
-Druck [mbar]	&Channel$_{max}$	&$N$	&$\Delta N$\\ \hline
+Druck [mbar]	&Channel$_\text{max}$	&$N$	&$\Delta N$\\ \hline
 0		&1470	&68552	&571.27\\ \hline
 100		&1355	&68560	&571.33\\ \hline
 200		&1364	&68018	&566.82\\ \hline
@@ -193,13 +193,13 @@ Druck [mbar]	&Channel$_{max}$	&$N$	&$\Delta N$\\ \hline
 1000	&841	&3		&0.03\\ \hline
 \end{tabular}
 \renewcommand{\arraystretch}{1}
-\caption{Gemessene Werte im Abstand von 2,9cm über 120s}
+\caption{Gemessene Werte im Abstand von 2,9~cm über 120~s}
 \end{table}
 
 \begin{table}[H]
 \renewcommand{\arraystretch}{.95}
 \begin{tabular}{|c|c|c|c|} 
-Druck [mbar]	&Channel$_{max}$	&$N$	&$\Delta N$\\ \hline
+Druck [mbar]	&Channel$_\text{max}$	&$N$	&$\Delta N$\\ \hline
 0	&1318	&59249	&493.74 \\ \hline
 100	&1336	&58709	&489.24\\ \hline
 200	&1295	&58689	&489.08\\ \hline
@@ -217,11 +217,11 @@ Druck [mbar]	&Channel$_{max}$	&$N$	&$\Delta N$\\ \hline
 900	&692	&4		&0.03\\ \hline
 \end{tabular} 
 \renewcommand{\arraystretch}{1}
-\caption{Gemessene Werte im Abstand von 3,1cm über 120s}
+\caption{Gemessene Werte im Abstand von 3,1~cm über 120~s}
 \end{table}
 
 \subsection{Energie -- Druck}
-Entsprechend der Versuchsanleitung wird nun angenommen, dass der für den Druck p=0mbar gemessene Channel einer Energie von 4MeV entspricht und dass eine lineare Abhängigkeit vorliegt. Die Steigung $\Delta E$ beträgt somit:
+Entsprechend der Versuchsanleitung wird nun angenommen, dass der für den Druck p=0~mbar gemessene Channel einer Energie von 4~MeV entspricht und dass eine lineare Abhängigkeit vorliegt. Die Steigung $\Delta E$ beträgt somit:
 \begin{align*}
 \Delta E_{2,9}=\frac{4}{1470}~[\text{MeV}] = 2,72\cdot10^{-3}[\text{MeV}]\\
 \Delta E_{3,1}=\frac{4}{1318}~[\text{MeV}] = 3,03\cdot10^{-3}[\text{MeV}]
@@ -231,7 +231,7 @@ In Abhängigkeit des Druckes ergeben sich damit die Energien wie folgt:\\
 
 \begin{minipage}[t]{0.3\textwidth}
 \begin{tabular}{|c|c|c|} 
-Druck [mbar]	&Channel$_{max}$	& E [meV]\\ \hline
+Druck [mbar]	&Channel$_\text{max}$	& E [MeV]\\ \hline
 0		&1470			&4\\ \hline
 100		&1355			&3.69\\ \hline
 200		&1364			&3.71\\ \hline
@@ -250,12 +250,12 @@ Druck [mbar]	&Channel$_{max}$	& E [meV]\\ \hline
 950		&608			&1.65\\ \hline
 1000	&841			&2.29\\ \hline
 \end{tabular}
-\captionof{table}{\mbox{Energien in 2,9cm}}
+\captionof{table}{\mbox{Energien in 2,9~cm}}
 \end{minipage}
 \hspace{3cm}
 \begin{minipage}[t]{0.3\textwidth}
 \begin{tabular}{|c|c|c|}
-Druck [mbar]	&Channel$_{max}$	& E [meV]\\ \hline
+Druck [mbar]	&Channel$_\text{max}$	& E [MeV]\\ \hline
 0	&1318			&4\\ \hline
 100	&1336			&4.05\\ \hline
 200	&1295			&3.93\\ \hline
@@ -272,7 +272,7 @@ Druck [mbar]	&Channel$_{max}$	& E [meV]\\ \hline
 850	&621			&1.88\\ \hline
 900	&692			&2.10\\ \hline
 \end{tabular}
-\captionof{table}{\mbox{Energien in 3,1cm}}
+\captionof{table}{\mbox{Energien in 3,1~cm}}
 \end{minipage}
 
 \subsection{Zählrate -- effektive Länge}
@@ -323,52 +323,63 @@ bestimmt:
 \subsubsection{Abbildung \ref{pic_zw1}}
 \begin{align*}
 m&=-792,14 \pm 73,4\\
-b&= 2050,54 \pm 163.8
+b&= 2050,54 \pm 163,8 \text{ cm}^{-1}
 \end{align*}
 Die halbe maximale Zählrate beträgt:
 \begin{align*}
- \frac{1}{2}\Delta N_{max} = \frac{571.27}{2} = 285,64
+ \frac{1}{2}\Delta N_\text{max} = \frac{571,27}{2} = 285,64
 \end{align*}
-Stellt man die Gleichung um und setzt die halbe maximale Zählrate ein, so erhalt man als mittlere effektive Weglänge:
+Stellt man die Gleichung um und setzt die halbe maximale Zählrate ein, so erhalt man als mittlere maximale Reichweite:
 \begin{align*}
-x_{eff1}=\frac{2050,54-285,64}{792,14} = 2,23\pm0,29
+R_\text{m}=\frac{2050,54-285,64}{792,14} = (2,23\pm0,29)\text{ cm}
 \end{align*}
 Der Fehler $\Delta x_1$ errechnet sich aus der Gaußschen Fehlerfortpflanzung
 \begin{align*}
-\Delta x_1&=\sqrt{\left(\frac{1}{792,14}\Delta b\right)^2+\left(\frac{285,64-2050,54}{792,14^2}\right)^2}\\ 
-&= 0,29
+\Delta R_m&=\sqrt{\left(\frac{1}{792,14}\Delta b\right)^2+\left(\frac{285,64-2050,54}{792,14^2}\Delta m\right)^2}\\ 
+&= 0,29 \text{ cm}
 \end{align*}
-Dies entspricht einer Energie von etwa 1,7MeV.
+
+Um die entsprechende Energie zu erhalten, wird dieser Wert in die umgestellte Gleichung \eqref{eq_reichweite_empirisch} eingesetzt. 
+Diese Reichweite entspricht einer Energie von etwa 
+\begin{align*}
+E_\alpha=\sqrt[3]{\left(\frac{R_m}{3,1}\right)^2} = (3,7 \pm 0,1)\text{ MeV} \qquad ,R_m \text{ in mm}
+\end{align*}
+
+Der Fehler $\Delta E_\alpha$ errechnet sich aus der Gaußschen Fehlerfortpflanzung
+\begin{align*}
+\Delta E_\alpha&={\frac{2}{3\sqrt[3]{3,1^2}}\left({R_m}\right)^{-\frac{1}{3}}}\Delta R_m\\
+&= 0,11\text{ MeV}
+\end{align*}
 
 \subsubsection{Abbildung \ref{pic_zw2}}
 \begin{align*}
-m&=-804,79 \pm 59,64\\
+m&=-804,79 \pm 59,64 \text{ cm}^{-1}\\
 b&= 2012,73  \pm 132,8
 \end{align*}
 Die halbe maximale Zählrate beträgt:
 \begin{align*}
- \frac{1}{2}\Delta N_{max} = \frac{493.74}{2} = 246,87
+ \frac{1}{2}\Delta N_\text{max} = \frac{493.74}{2} = 246,87
 \end{align*}
-Stellt man die Gleichung um und setzt die halbe maximale Zählrate ein, so erhalt man als mittlere effektive Weglänge:
+Stellt man die Gleichung um und setzt die halbe maximale Zählrate ein, so erhalt man als mittlere Reichweite:
 \begin{align*}
-x_{eff1}=\frac{2012,73-246,87}{804,79} = 2,19\pm0,17
+R_\text{m}=\frac{2012,73-246,87}{804,79} = (2,19\pm0,17) \text{ cm}
 \end{align*}
-Der Fehler $\Delta x_2$ errechnet sich aus der Gaußschen Fehlerfortpflanzung
+Der Fehler $\Delta R_2$ errechnet sich aus der Gaußschen Fehlerfortpflanzung
 \begin{align*}
-\Delta x_2&=\sqrt{\left(\frac{1}{804,79}\Delta b\right)^2+\left(\frac{246,87-2012,73}{804,79^2}\right)^2}\\ 
-&= 0,17
+\Delta R_2&=\sqrt{\left(\frac{1}{804,79}\Delta b\right)^2+\left(\frac{246,87-2012,73}{804,79^2}\Delta m\right)^2}\\ 
+&= 0,17 \text{ cm}
 \end{align*}
-Dies entspricht einer Energie von etwa 1,8MeV.
+Dies entspricht einer Energie von etwa $3,7\pm0,1 $ MeV.
 \subsection{Energie -- effektive Länge}
 Die Energie aufgetragen in Abhängigkeit von der effektiven Länge ergibt folgenden Graphen:
 
 \begin{figure}[H]
 \includegraphics[width=0.8\textwidth]{pics/energie_weglaenge.png}
-\caption{Energer gegen die effektive Länge aufgetragen; die eingekreisten Werte wurden nicht für die Regression verwendet}
+\caption{Energie gegen die effektive Länge aufgetragen; die eingekreisten Werte wurden nicht für die Regression verwendet}
 \end{figure}
 Die Steigung der Regressionsgeraden entspricht $-\frac{\Delta E}{\Delta x}$ und wurde mit Gnuplot bestimmt.
 \begin{align*}
--\frac{\Delta E}{\Delta x} = 1.03   \pm 0.063
+-\frac{\Delta E}{\Delta x} = 1.03   \pm 0.063 \text{ MeV/cm}
 \end{align*}
 \subsection{Statistik des radioaktiven Zerfalls}
 Um die Statistik des radioaktiven Zerfalls zu überprüfen, wurde 150mal die Zerfallsrate bestimmt und anschließend der Mittelwert, sowie die Standartabweichung berechnet. Die Werte finden sich in Tabelle \ref{tab_zaehlraten}\\
@@ -439,12 +450,15 @@ Summe	&150	&100
 \end{figure}
 
 \section{Diskussion}
-Die experiment bestimmten Reichweiten der Alphastrahlung liegen im Bereich weniger Zentimeter. Dies stimmt mit den theoretischen Behauptungen sehr gut überein.\\
+Die experimentell bestimmten Reichweiten der Alphastrahlung liegen im Bereich weniger Zentimeter. Dies stimmt mit den theoretischen Behauptungen sehr gut überein.\\
+Die, diesen Reichweiten zugeordnete Energie, liegt knapp unter 4 MeV, was den Vorgaben aus der Versuchsanleitung entspricht.
 
-Betrachtet man Abbildungen 4 und 5 kann man weiterhin sagen, dass sowohl die Gaußverteilung, als auch die Poissonverteilung die Statistik des radioaktiven Zerfalls treffend beschreiben. Kleinere Abweichungen der Messwerte vom idealen Graphen sind vorallem darauf zurückzuführen, dass mit n=150 noch lange nicht genug Messwerte aufgenommen worden sind. In diesem Fall würden sich die Messwerte dem Graphen weiter annähern.
+Aus der Regressionsgeraden lässt sich der Abfall der Energie mit etwa 1 MeV/cm ablesen. Falls die Teilchen eine Energie von knapp 4 MeV besitzen, so sollten sie die Hälfte ihrer Energie bei etwa 2 cm erreichen. Auch dies wird aus den Messergebnissen ersichtlich.
+
+Unter Betrachtung der Abbildungen 4 und 5 kann weiterhin gesagt werden, dass sowohl die Gaußverteilung, als auch die Poissonverteilung die Statistik des radioaktiven Zerfalls treffend beschreiben. Kleinere Abweichungen der Messwerte vom idealen Graphen sind vorallem darauf zurückzuführen, dass mit n=150 noch lange nicht genug Messwerte aufgenommen worden sind. In diesem Fall würden sich die Messwerte dem Graphen weiter annähern.
 
 
-\parskip 380pt
+\parskip 300pt
 \Large{Literatur}\\\\
 \large{[1] Versuchsanleitung - Reichweite von $\alpha$-Strahlung}\\\\
 % ========================================

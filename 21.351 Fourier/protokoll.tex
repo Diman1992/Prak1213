@@ -236,49 +236,49 @@ Sollen in der Praxis periodische Signale mit der Fourieranalyse untersucht werde
 Zur Messung der verschiedenen Amplitudenwerte für die untersuchten Spannungen gibt ein Funktionsgenerator Schwingungen mit einer
 Frequenz von 10 kHz aus. Zu den jeweiligen $n$ Oberschwingungen, die nach \eqref{eq_rechteckkoeff}, \eqref{eq_saegezahnkoeff} und
 \eqref{eq_dreieckkoeff} beitragen, werden die Spannungen durch Ablesen gemessen. Die Ergebnisse aus den Messungen sind in Tabelle 
-\ref{tab_fouriertrafo} aufgeführt. $A_{\text{th}}$ dient zum groben Vergleich für die Richtigkeit der Messung.
+\ref{tab_fouriertrafo} aufgeführt. 
 
 \begin{table}[H]
- \begin{tabular}{l|c|r|r|r|r|r}
-	&$n$	&$A_{\text{mess}}$&	$A_{\text{th}}$\\
-	\hline
-Rechteck&	1&	4280,0&	4280,0\\
-	&2&	1400,0&	1426,7\\
-	&3&	912,0&	856,0\\
-	&4&	592,0&	611,4\\
-	&5&	452,0&	475,6\\
-	&6&	408,0&	428,0\\
-	&7&	364,0&	329,2\\
-	&8&	284,0&	285,3\\
-	&9&	236,0&	251,8\\
-	&10	&224,0&	225,3 \\
-	\hline
-Sägezahn&	1&	1740,0&	1740,0\\
-&	2&	920,0&	870,0\\
-&	3&	620,0&	580,0\\
-&	4&	420,0&	435,0\\
-&	5&	374,0&	348,0\\
-&	6&	296,0&	290,0\\
-&	7&	256,0&	248,6\\
-&	8&	232,0&	217,5\\
-&	9&	180,0&	193,3\\
-&	10&	180,0&	174,0\\
+ \begin{tabular}{l|c|r|c|c}
+&	$n$&	$A_\text{mess}$	&$\ln n$	&$\ln A_\text{mess}$ \\
 \hline
-Dreieck	&1&	2220,0&	2220,0\\
-&	2&	260,0	&246,7\\
-&	3&	96,0&	88,8\\
-&	4&	40,0&	45,3\\
-&	5&	23,8&	27,4\\
-&	6	&19,4&	18,3\\
+Rechteck	&1&	4280,0&	0,0&	8,4\\
+&	3&	1400,0&	1,1&	7,2\\
+&	5&	912,0&	1,6&	6,8\\
+&	7&	592,0&	1,9&	6,4\\
+&	9&	452,0&	2,2&	6,1\\
+&	11&	408,0&	2,4&	6,0\\
+&	13&	364,0&	2,6&	5,9\\
+&	15&	284,0&	2,7&	5,6\\
+&	17&	236,0&	2,8&	5,5\\
+&	19&	224,0&	2,9&	5,4\\
+				\hline
+Sägezahn&	1&	1740,0&	0,0&	7,5\\
+&	2&	920,0&	0,7&	6,8\\
+&	3&	620,0&	1,1&	6,4\\
+&	4&	420,0&	1,4&	6,0\\
+&	5&	374,0&	1,6&	5,9\\
+&	6&	296,0&	1,8&	5,7\\
+&	7&	256,0&	1,9&	5,5\\
+&	8&	232,0&	2,1&	5,4\\
+&	9&	180,0&	2,2&	5,2\\
+&	10&	180,0&	2,3&	5,2\\
+				\hline
+Dreieck	&1&	2220,0&	0,0&	7,7\\
+&	3&	260,0&	1,1&	5,6\\
+&	5&	96,0&	1,6&	4,6\\
+&	7&	40,0&	1,9&	3,7\\
+&	9&	23,8&	2,2&	3,2\\
+&	11&	19,4&	2,4&	3,0\\
 
  \end{tabular}
 \caption{Amplitudenwerte der Spannungen im Vergleich zu Theoriewerten}
 \label{tab_fouriertrafo}
 \end{table}
-Zur Auswertung der Genauigkeit der Messung wird der Messwert $n$ gegen $A_{\text{mess}}$ aufgetragen und mittels GNUplot entsprechend
+Zur Auswertung der Genauigkeit der Messung wird der Messwert $A_{\text{mess}}$ gegen die Ordnung $n$ aufgetragen und mittels GNUplot entsprechend
 der Geradengleichung 
 \begin{align}
- h(x)=m*x +t
+ \ln A_\text{mess}=m \cdot \ln (n) +t
  \label{eq_geradex}
 \end{align}
 gefittet. In den Abbildungen \ref{pic_rechteckfit}, \ref{pic_saegezahnfit} und \ref{pic_dreieckfit} sind die Graphen, sowie die 
@@ -289,7 +289,7 @@ theoretischen Erwartungen dargestellt.
  \caption{$\ln(n)$ aufgetragen gegen $\ln(A_{\text{mess}}/\text{mV})$}
  \label{pic_rechteckfit}
  \begin{align}
- m_{\text{Rechteck}} = -1,274 \pm 0,067 \hspace{2cm} t_{\text{Rechteck}} = 8,24 \pm 0,09
+ m_{\text{Rechteck}} = -1,001 \pm 0,021 \hspace{2cm} t_{\text{Rechteck}} = 8,37 \pm 0,05
 \end{align}
 \end{figure}
 \begin{figure}[H]
@@ -297,7 +297,7 @@ theoretischen Erwartungen dargestellt.
  \caption{$\ln(n)$ aufgetragen gegen $\ln(A_{\text{mess}}/\text{mV})$}
  \label{pic_saegezahnfit}
  \begin{align}
- m_{\text{Sägezahn}} = -0.994 \pm 0,025 \hspace{2cm} t_{\text{Sägezahn}} = 7,48 \pm 0,03
+ m_{\text{Sägezahn}} = -1.004 \pm 0,022 \hspace{2cm} t_{\text{Sägezahn}} = 7,49 \pm 0,04
 \end{align}
 \end{figure}
 \begin{figure}[H]
@@ -306,7 +306,7 @@ theoretischen Erwartungen dargestellt.
  \label{pic_dreieckfit}
 \end{figure}
 \begin{align}
- m_{\text{Dreieck}} = -2,700 \pm 0,115 \hspace{2cm} t_{\text{Dreieck}} = 7,57 \pm 0,14
+ m_{\text{Dreieck}} = -2,027 \pm 0,051 \hspace{2cm} t_{\text{Dreieck}} = 7,74 \pm 0,09
 \end{align}
 
 \subsection{Fourier-Synthese}
@@ -339,16 +339,17 @@ sind sie unter Anderem aufgeführt
  \begin{tabular}{c|c|c|c}
 & $m_{\text{mess}}$&	$m_{\text{th}}$&	Fehler in \% \\
 \hline
-Rechteck&	-1,274&	-1&	27,4\\
-Sägezahn&	-0,994&	-1&	0,6\\
-Dreieck&	-2,700&	-2&	35,0
+Rechteck&	-1,001&	-1&	0,1\\
+Sägezahn&	-1,004&	-1&	0,4\\
+Dreieck&	-2,027&	-2&	1,4
  \end{tabular}
 \caption{Aufführung der Steigungen und ihre Abweichungen zu den erwarteten Werten}
 \label{tab_diskus}
 \end{table}
 Die erwähnten Abweichungen von den erwarteten Werten lässt sich hauptsächlich durch die Ableseungenauigkeit am Oszilloskop erklären.
 Weiterhin ist die endliche Integrationsdauer eine Fehlerquelle, da nach \eqref{eq_ftrafo} ein unendliches Zeitintervall eine exakte
-Lösung liefert.
+Lösung liefert. Jedoch sind die kleinen Fehler aussagekräftig für ein gelungenes Experiment.
+
 Wenn die Abbildungen aus Abschnitt \ref{sec_berechnung} mit den zugehörigen aus Abschnitt \ref{sec_fourier} verglichen werden, lässt
 sich schnell festellen, dass die Synthese geglückt ist.
 
